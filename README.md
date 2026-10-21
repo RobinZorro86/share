@@ -22,4 +22,4 @@
 
 - 发布/更新/下线：由 Catherine 经 Muse 的 GitHub 连接器推送（Robin 在 Muse 内点批准即可，无需登录 GitHub）
 - 部署状态：Cloudflare Dashboard → Workers & Pages → share
-- 自定义域：share.qidi.jp（qidi.jp 的 DNS zone 在 dnsv.jp（GMO 系 DNS 服务），以 CNAME 指向 share.pages.dev）
+- 自定义域：share.qidi.jp（qidi.jp 的 DNS zone 在 dnsv.jp（GMO 系 DNS 服务），以 CNAME 指向项目的 pages.dev 地址 share-2rz.pages.dev；项目名 share 的 share.pages.dev 已被他人占用，故 Cloudflare 分配了带后缀的地址，自定义域不受影响）
