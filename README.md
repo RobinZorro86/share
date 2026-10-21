@@ -10,7 +10,7 @@
 - **本仓为公开仓库**：不要放含个人数据、客户机密、凭证的文件；敏感资料应走 Cloudflare Access 保护或其它渠道
 - 全站已设 `noindex`（`_headers` + `robots.txt`），搜索引擎不会收录；但“知道链接即可访问”，不要把链接当密码
 - 过期资料：删除对应文件夹并推送即下线；重要分享可配合定时任务自动删除
-- **署名（2026-10-21 Robin 定为固定规范）**：每份发布的网页须标注署名——Robin 用「Qidi」署名（通常为企划/监修），实际参与的 Agent 按其分工署名（如 Catherine 调研・执笔、Pi 数据复核、Hermes 检索）。署名行放在标题下方，完整分工可同时写入页脚。
+- **署名（2026-10-21 Robin 定为固定规范）**：每份发布的网页须标注署名——Robin 用「Qidi」署名（通常为企划/监修），实际参与的 Agent 按其分工署名，署名用全名（「名 + 归属」格式）：Catherine Muse（调研・执笔）、Pi Ollama（数据复核）、Luffy Hermes（检索）。署名行放在标题下方，完整分工可同时写入页脚。
 - **分享卡片（OG）为必需项（2026-10-21 Robin 定为固定规范）**：每个发布文件夹须包含 `og.jpg`（1200×630），`index.html` 的 `<head>` 必须写入完整 Open Graph + Twitter Card 标签（og:type / og:title / og:description / og:url / og:image 及宽高、twitter:card=summary_large_image）。标题与简介须在发布前定稿（各平台爬虫有缓存，事后改版需给链接加参数如 `?v=2` 触发重新抓取）。`og.jpg` 是二进制文件，GitHub 连接器推不了，须经 GitHub 网页端上传到同一文件夹；首个按此规范发布的页面为 `eb-5/`
 
 ## 结构
