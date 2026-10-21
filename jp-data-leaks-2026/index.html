@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light" />
 <link rel="icon" href="data:," />
 <title>2026 年日本信息泄露之年：事件全景、原因与各方应对</title>
-<meta name="description" content="2026 年日本信息泄露事件综述：从 1 月第一周到 10 月的政府系统失守，勒索被害创半期新高、千万级事故连发。事件时间线、原因解剖、社会舆论与个人、企业、政府的应对，数据截至 2026 年 10 月 21 日。" />
+<meta name="description" content="2026 年日本信息泄露事件综述：勒索被害创半期新高、千万级事故连发、政府系统自身失守。事件时间线、原因解剖、社会舆论与个人、企业、政府的应对，数据截至 2026 年 10 月 21 日。" />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="share.qidi.jp" />
 <meta property="og:title" content="2026 年日本信息泄露之年：事件全景、原因与各方应对" />
@@ -21,260 +21,395 @@
 <meta name="twitter:image" content="https://share.qidi.jp/jp-data-leaks-2026/og.jpg" />
 <style>
   :root{
-    --bg:#ffffff; --text:#1d1d1f; --secondary:#6e6e73; --muted:#86868b;
-    --border:#e8e8ed; --border-strong:#d2d2d7; --surface:#f5f5f7; --surface-2:#fbfbfd;
-    --accent:#0066cc; --accent-soft:#eef4ff; --warn-bg:#fff8ec; --warn-border:#e6a817;
-    --red:#c81e1e;
+    --ink:#141414; --body:#2b2b2e; --mut:#6e6e73; --faint:#a1a1a6;
+    --line:#e9e9ec; --panel:#f5f5f7; --red:#d92b2b; --red-soft:#fdf1f1; --red-dim:#e8b4b4;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
-    font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none}
+  body{margin:0;background:#fff;color:var(--body);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    font-size:17px;line-height:1.8;-webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%}
+  .wrap{max-width:940px;margin:0 auto;padding:0 20px 80px}
+  .col{max-width:720px}
+  a{color:#0066cc;text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:780px;margin:0 auto;padding:0 22px 72px}
-  .top-meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:22px 0 0;color:var(--secondary);font-size:13px;letter-spacing:.01em}
-  .top-meta span+span::before{content:"·";margin-right:14px;color:var(--border-strong)}
-  h1{font-size:40px;line-height:1.15;letter-spacing:-.02em;font-weight:700;margin:18px 0 14px}
-  .lead{font-size:19px;line-height:1.6;color:#333336;margin:0 0 18px}
-  .disclaimer{background:var(--surface);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.6;color:#424245;margin:20px 0 22px}
-  .disclaimer strong{color:var(--text)}
-  .keybox{border:1px solid var(--border);border-radius:16px;padding:20px 20px 18px;background:var(--surface-2);margin:8px 0 8px}
-  .keybox h2{font-size:15px;letter-spacing:.04em;margin:0 0 8px;color:var(--text)}
-  .keybox p{margin:0;font-size:16.5px;line-height:1.7}
-  .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 6px}
-  .stat{border:1px solid var(--border);border-radius:14px;padding:16px 18px;background:#fff}
-  .stat .num{font-size:30px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
-  .stat .num small{font-size:16px;font-weight:600;color:var(--secondary)}
-  .stat .lbl{font-size:13.5px;color:var(--secondary);line-height:1.55;margin-top:4px}
-  .toc{margin:28px 0 8px;padding:18px 0 6px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-  .toc-title{font-size:13px;letter-spacing:.08em;color:var(--secondary);margin:0 0 10px;font-weight:600}
-  .toc ol{margin:0;padding:0 0 8px 20px;columns:2;column-gap:36px}
-  .toc li{margin:5px 0;break-inside:avoid;font-size:15px}
-  .toc a{color:var(--text)}
-  .toc a:hover{color:var(--accent)}
-  section{padding-top:38px}
-  .sec-head{display:flex;gap:14px;align-items:baseline;margin-bottom:6px}
-  .sec-num{flex:0 0 auto;font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;background:var(--text);width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;transform:translateY(2px)}
-  h2.sec-title{font-size:28px;line-height:1.25;letter-spacing:-.01em;margin:0;font-weight:700}
-  h3{font-size:19px;line-height:1.4;margin:24px 0 8px;font-weight:600}
-  p{margin:8px 0}
-  ul,ol{margin:8px 0 8px 20px;padding:0}
-  li{margin:5px 0}
-  .small{font-size:13.5px;color:var(--secondary);line-height:1.65}
-  .note{font-size:13.5px;color:var(--secondary);line-height:1.65;margin-top:8px}
-  .callout{background:var(--surface);border-radius:12px;padding:16px 18px;margin:16px 0}
-  .callout p:first-child{margin-top:0}
-  .callout p:last-child{margin-bottom:0}
-  .info{background:var(--accent-soft);border-radius:12px;padding:16px 18px;margin:16px 0}
-  .warn{background:var(--warn-bg);border-radius:12px;padding:16px 18px;margin:16px 0;border:1px solid #f3e2b8}
-  .warn strong{color:#7a4a00}
-  .table-wrap{margin:14px 0 18px;overflow:hidden;border:1px solid var(--border);border-radius:12px}
-  table{width:100%;border-collapse:collapse;font-size:14.5px;line-height:1.55}
-  th,td{padding:10px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border)}
-  th{background:var(--surface);font-weight:600;font-size:13.5px;color:#333336}
-  tr:last-child td{border-bottom:none}
-  td.num,th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-  .price{font-weight:600;white-space:nowrap}
-  tr.month td{background:var(--surface-2);font-weight:700;font-size:13px;letter-spacing:.05em;color:var(--secondary)}
-  .tag{display:inline-block;font-size:11.5px;line-height:1;padding:3px 7px;border-radius:6px;background:var(--surface);border:1px solid var(--border);color:var(--secondary);white-space:nowrap}
-  .tag.r{background:#fdf0f0;border-color:#f3c2c2;color:#9c1c1c}
-  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--border);color:var(--secondary);font-size:13.5px;line-height:1.7}
-  @media (max-width:640px){
-    body{font-size:16px}
-    h1{font-size:30px}
-    .lead{font-size:17px}
-    h2.sec-title{font-size:23px}
-    .toc ol{columns:1}
-    .wrap{padding:0 18px 56px}
-    .stats{grid-template-columns:1fr 1fr}
-    .stat .num{font-size:24px}
-    th,td{padding:9px 10px}
-    table{font-size:13.5px}
+  strong{color:var(--ink)}
+  p{margin:0 0 14px}
+  .meta{padding:26px 0 0;color:var(--mut);font-size:13px}
+  h1{color:var(--ink);font-size:52px;line-height:1.14;letter-spacing:-.02em;font-weight:800;margin:14px 0 16px}
+  .standfirst{font-size:19.5px;line-height:1.62;color:#3a3a3e;max-width:700px;margin:0 0 8px}
+  .caveat{font-size:13.5px;line-height:1.65;color:var(--mut);max-width:700px}
+
+  /* ---------- hero chart ---------- */
+  .chartbox{margin:34px 0 6px}
+  .chart-title{color:var(--ink);font-size:16px;font-weight:700;margin:0 0 2px}
+  .chart-sub{font-size:13px;color:var(--mut);margin:0 0 14px}
+  .skyline{display:block;width:100%;height:auto}
+  .monthlist{display:none}
+  .mrow{display:grid;grid-template-columns:52px 1fr;gap:4px 12px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .mrow .mo{color:var(--ink);font-weight:700;font-size:15px;padding-top:1px;white-space:nowrap}
+  .mrow .bar{height:14px;background:var(--red);border-radius:2px;min-width:3px}
+  .mrow .bar.none{background:var(--line)}
+  .mrow .cap{grid-column:2;font-size:13.5px;color:var(--mut);line-height:1.5}
+  .mrow .cap b{color:var(--ink);font-weight:600}
+
+  /* ---------- stats ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:44px 0 10px;border-top:2px solid var(--ink)}
+  .stat{padding:18px 18px 6px 0}
+  .stat + .stat{padding-left:18px;border-left:1px solid var(--line)}
+  .stat .n{color:var(--ink);font-size:37px;font-weight:800;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+  .stat .n small{font-size:17px;font-weight:700;color:var(--mut)}
+  .stat .d{font-size:13px;line-height:1.6;color:var(--mut);margin-top:6px}
+
+  /* ---------- sections ---------- */
+  section{margin-top:64px}
+  h2{color:var(--ink);font-size:29px;line-height:1.3;letter-spacing:-.01em;font-weight:800;margin:0 0 18px;max-width:720px}
+  h3{color:var(--ink);font-size:19px;font-weight:700;margin:28px 0 8px}
+  .phase{display:grid;grid-template-columns:120px 1fr;gap:6px 22px;padding:20px 0;border-top:1px solid var(--line)}
+  .phase .when{color:var(--red);font-weight:800;font-size:19px;line-height:1.35}
+  .phase .when span{display:block;color:var(--mut);font-size:13px;font-weight:500;margin-top:4px;line-height:1.5}
+  .phase p{margin:0 0 10px}
+  .phase p:last-child{margin-bottom:0}
+
+  /* incident rows */
+  .inc{margin-top:8px}
+  .irow{display:grid;grid-template-columns:86px 1fr 150px;gap:4px 18px;align-items:baseline;
+    padding:13px 0;border-bottom:1px solid var(--line)}
+  .irow .dt{color:var(--mut);font-size:13.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .irow .org{color:var(--ink);font-weight:700;font-size:16.5px}
+  .irow .note{grid-column:2;font-size:14.5px;color:var(--body);line-height:1.62}
+  .irow .mag{text-align:right}
+  .irow .mag .bar{height:9px;background:var(--red);border-radius:2px;margin-left:auto}
+  .irow .mag .bar.ghost{background:var(--red-dim)}
+  .irow .mag .v{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums;white-space:nowrap}
+  details.more{margin-top:16px}
+  details.more summary{cursor:pointer;color:#0066cc;font-size:15px;padding:12px 0;list-style:none}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary::after{content:" +";color:var(--mut)}
+  details.more[open ] summary::after{content:" −"}
+
+  /* paired bars */
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:10px 44px;margin:18px 0 4px}
+  .pair h4{margin:0 0 10px;font-size:15px;color:var(--ink);font-weight:700}
+  .pair h4 span{display:block;font-weight:500;color:var(--mut);font-size:12.5px;margin-top:2px}
+  .pb{margin:0 0 13px}
+  .pb .lb{display:flex;justify-content:space-between;font-size:13.5px;color:var(--body);gap:10px}
+  .pb .lb b{color:var(--ink);font-variant-numeric:tabular-nums}
+  .pb .track{height:10px;background:var(--panel);border-radius:2px;margin-top:4px}
+  .pb .fill{height:10px;background:var(--ink);border-radius:2px}
+  .pb .fill.red{background:var(--red)}
+  .pb .fill.grey{background:#c9c9ce}
+
+  /* single measure bar */
+  .measure{margin:16px 0}
+  .measure .track{height:16px;background:var(--panel);border-radius:3px;position:relative}
+  .measure .fill{height:16px;background:var(--red);border-radius:3px}
+  .measure .cap{font-size:13.5px;color:var(--mut);margin-top:6px}
+
+  /* numbered causes */
+  .cause{display:grid;grid-template-columns:52px 1fr;gap:2px 16px;padding:16px 0;border-top:1px solid var(--line)}
+  .cause .no{color:var(--red);font-size:26px;font-weight:800;line-height:1.2}
+  .cause h4{margin:2px 0 4px;color:var(--ink);font-size:17.5px}
+  .cause p{margin:0;font-size:15.5px}
+
+  /* quotes */
+  .quote{margin:34px 0;padding:6px 0 6px 26px;border-left:3px solid var(--red)}
+  .quote p{font-size:22.5px;line-height:1.55;color:var(--ink);font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
+  .quote .who{font-size:13.5px;color:var(--mut);font-weight:400}
+
+  /* gov contrast + funnel */
+  .funnel{margin:22px 0}
+  .funnel .big{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .funnel .from{font-size:44px;font-weight:800;color:var(--ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .funnel .arrow{color:var(--red);font-size:30px;font-weight:800}
+  .funnel .to{font-size:44px;font-weight:800;color:var(--red);letter-spacing:-.02em}
+  .funnel .cap{font-size:14px;color:var(--mut);margin-top:4px;max-width:640px}
+  .versus{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+  .versus ul{margin:6px 0 0;padding:0;list-style:none}
+  .versus li{padding:9px 0 9px 18px;border-bottom:1px solid var(--line);font-size:15.5px;position:relative}
+  .versus li::before{content:"";position:absolute;left:0;top:19px;width:7px;height:7px;background:var(--red);border-radius:1px}
+  .contrast{background:var(--panel);border-radius:14px;padding:20px 22px;margin:26px 0}
+  .contrast p{margin:0;font-size:16px}
+  .contrast .nums{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px}
+  .contrast .nums b{font-size:30px;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .contrast .nums .down{color:var(--red);font-weight:800;font-size:20px}
+
+  details.src{margin-top:14px;border-top:1px solid var(--line)}
+  details.src summary{cursor:pointer;color:var(--ink);font-weight:700;font-size:16px;padding:16px 0;list-style:none}
+  details.src summary::-webkit-details-marker{display:none}
+  details.src summary::after{content:" +";color:var(--mut);font-weight:400}
+  details.src[open ] summary::after{content:" −"}
+  details.src .small{font-size:13.5px;color:var(--mut);line-height:1.7}
+  details.src .small p{margin:0 0 8px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;line-height:1.7}
+
+  /* ---------- mobile ---------- */
+  @media (max-width:720px){
+    body{font-size:16.5px;line-height:1.85}
+    .wrap{padding:0 17px 64px}
+    h1{font-size:33px;line-height:1.22}
+    .standfirst{font-size:17.5px}
+    .skyline{display:none}
+    .monthlist{display:block}
+    .stats{grid-template-columns:1fr 1fr;row-gap:8px}
+    .stat{padding:14px 12px 4px 0}
+    .stat + .stat{border-left:none;padding-left:0}
+    .stat:nth-child(even){padding-left:14px;border-left:1px solid var(--line)}
+    .stat .n{font-size:29px}
+    section{margin-top:48px}
+    h2{font-size:24px}
+    .phase{grid-template-columns:1fr;gap:2px}
+    .phase .when{font-size:17px}
+    .phase .when span{display:inline;margin-left:8px}
+    .irow{grid-template-columns:1fr;gap:2px;padding:14px 0}
+    .irow .dt{order:0}
+    .irow .org{order:1;font-size:17px}
+    .irow .note{grid-column:1;order:2}
+    .irow .mag{order:3;text-align:left;margin-top:6px}
+    .irow .mag .bar{margin-left:0}
+    .pair{grid-template-columns:1fr;gap:6px}
+    .versus{grid-template-columns:1fr;gap:8px}
+    .quote{padding-left:18px}
+    .quote p{font-size:19.5px}
+    .funnel .from,.funnel .to{font-size:34px}
+    .cause{grid-template-columns:38px 1fr}
+    .cause .no{font-size:22px}
   }
-  @media print{ .toc{display:none} section{padding-top:20px} }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+  @media print{ details{open:""} .skyline{display:block} .monthlist{display:none} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="top-meta">
-    <span>数据截至 2026 年 10 月 21 日</span>
-    <span>新闻综述 · 日本信息安全</span>
-    <span>公开信息整理</span>
-  </div>
-
+  <p class="meta">数据截至 2026 年 10 月 21 日 · 新闻综述</p>
   <h1>2026 年，日本信息泄露之年</h1>
-  <p class="lead">从 1 月第一周的勒索公告，到 9 月政府系统自身失守、10 月云平台被攻击致 495 家机构停摆——这一年，日本几乎每周都有知名企业或机构发布「个人信息泄露通知」。这不是体感：官方统计、研究机构与民间集计从三个不同口径，共同指向同一个结论。</p>
+  <p class="standfirst">从 1 月第一周的勒索公告，到 9 月政府系统自身失守、10 月云平台被攻击致 495 家机构停摆——这一年，日本几乎每周都有知名企业或机构在发布「个人信息泄露通知」。下面这张图，是这一年的形状。</p>
+  <p class="caveat">本文规模数字均为企业与机构的公表值，多含「可能泄露」口径；「件 / 人 / 账号 / 记录」单位不同，不可相加。口径细节见文末。</p>
 
-  <div class="disclaimer">
-    <strong>阅读说明：</strong>本文所有规模数字均为企业与机构的<strong>公表值</strong>，多数包含「可能泄露」（漏えいのおそれ）口径，并非确认受害人数；「件」「人」「账号」「记录」是不同单位，<strong>不可相加、不可直接比较大小</strong>。不同来源的统计口径互不对齐之处，第七章逐项交代。
-  </div>
+  <div class="chartbox">
+    <p class="chart-title">每月最大的一起泄露（按公表月）</p>
+    <p class="chart-sub">柱高为泄露规模（对数刻度）。上半年的「最大」，放在 9 月只是一根中柱。</p>
 
-  <div class="keybox">
-    <h2>一句话结论</h2>
-    <p>2026 年的日本信息泄露同时发生了三件事：<strong>攻击在加速</strong>（勒索被害创统计以来半期新高，AI 让漏洞武器化周期大幅缩短）；<strong>失守点在集中</strong>（云平台、建站系统、委托商一家中招，波及成百上千家）；<strong>治理在追赶</strong>（能动网络防御 10 月刚上路，但泄露本身仍无法定罚款、监管执法与事故量严重不成比例）。而侵入口几乎没变——没打补丁的 VPN、弱口令、错误设定：多数大事故，是「本可防住」的。</p>
+    <svg class="skyline" viewBox="0 0 940 330" role="img" aria-label="2026 年 1 至 10 月每月最大泄露规模柱状图">
+      <!-- baseline -->
+      <line x1="30" y1="272" x2="918" y2="272" stroke="#e9e9ec" stroke-width="1.5"/>
+      <!-- bars: width 56, gap ~27 ; scale log -->
+      <!-- Jan: no major (Advantest scale undisclosed) marker -->
+      <rect x="52" y="250" width="56" height="22" fill="#e9e9ec"/>
+      <!-- Feb Anabuki 207,773 -->
+      <rect x="139" y="196" width="56" height="76" fill="#d92b2b"/>
+      <!-- Mar none -->
+      <rect x="226" y="264" width="56" height="8" fill="#e9e9ec"/>
+      <!-- Apr none -->
+      <rect x="313" y="264" width="56" height="8" fill="#e9e9ec"/>
+      <!-- May none -->
+      <rect x="400" y="264" width="56" height="8" fill="#e9e9ec"/>
+      <!-- Jun KDDI 12,231,954 -->
+      <rect x="487" y="52" width="56" height="220" fill="#d92b2b"/>
+      <!-- Jul Nichirei 43,709 -->
+      <rect x="574" y="238" width="56" height="34" fill="#d92b2b"/>
+      <!-- Aug ShopServe 8,853,839 -->
+      <rect x="661" y="66" width="56" height="206" fill="#d92b2b"/>
+      <!-- Sep Gyazo 23.62M -->
+      <rect x="748" y="28" width="56" height="244" fill="#d92b2b"/>
+      <!-- Oct Yakiniku 10,788,963 -->
+      <rect x="835" y="58" width="56" height="214" fill="#d92b2b"/>
+      <!-- labels -->
+      <text x="80" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">1 月</text>
+      <text x="80" y="242" font-size="11.5" fill="#a1a1a6" text-anchor="middle">无大案</text>
+      <text x="167" y="188" font-size="12.5" fill="#141414" text-anchor="middle" font-weight="700">20.8 万</text>
+      <text x="167" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">2 月</text>
+      <text x="254" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">3 月</text>
+      <text x="341" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">4 月</text>
+      <text x="428" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">5 月</text>
+      <text x="515" y="42" font-size="12.5" fill="#141414" text-anchor="middle" font-weight="700">KDDI 1,223 万</text>
+      <text x="515" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">6 月</text>
+      <text x="602" y="230" font-size="12.5" fill="#141414" text-anchor="middle" font-weight="700">4.4 万</text>
+      <text x="602" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">7 月</text>
+      <text x="689" y="56" font-size="12.5" fill="#141414" text-anchor="middle" font-weight="700">885 万</text>
+      <text x="689" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">8 月</text>
+      <text x="776" y="18" font-size="12.5" fill="#141414" text-anchor="middle" font-weight="700">Gyazo 2,362 万</text>
+      <text x="776" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">9 月</text>
+      <text x="863" y="48" font-size="12.5" fill="#141414" text-anchor="middle" font-weight="700">1,079 万</text>
+      <text x="863" y="296" font-size="13" fill="#6e6e73" text-anchor="middle">10 月</text>
+      <text x="863" y="316" font-size="11.5" fill="#a1a1a6" text-anchor="middle">（至 21 日）</text>
+    </svg>
+
+    <div class="monthlist" aria-label="每月最大泄露（移动端列表）">
+      <div class="mrow"><div class="mo">1 月</div><div class="bar none" style="width:8%"></div><div class="cap">无大案公表（Advantest 被入侵，规模未定）</div></div>
+      <div class="mrow"><div class="mo">2 月</div><div class="bar" style="width:26%"></div><div class="cap"><b>20.8 万件</b> · Anabuki 住宅服务</div></div>
+      <div class="mrow"><div class="mo">3–5月</div><div class="bar none" style="width:4%"></div><div class="cap">无大案公表（中小事案公告不断）</div></div>
+      <div class="mrow"><div class="mo">6 月</div><div class="bar" style="width:88%"></div><div class="cap"><b>KDDI 1,223 万</b> · 邮箱地址泄露</div></div>
+      <div class="mrow"><div class="mo">7 月</div><div class="bar" style="width:12%"></div><div class="cap"><b>4.4 万件</b> · Nichirei（勒索）</div></div>
+      <div class="mrow"><div class="mo">8 月</div><div class="bar" style="width:82%"></div><div class="cap"><b>885 万条</b> · ShopServe 建站平台</div></div>
+      <div class="mrow"><div class="mo">9 月</div><div class="bar" style="width:98%"></div><div class="cap"><b>Gyazo 2,362 万条</b> · 图片托管服务</div></div>
+      <div class="mrow"><div class="mo">10 月</div><div class="bar" style="width:86%"></div><div class="cap"><b>1,079 万件</b> · 烧肉 King 应用（至 21 日）</div></div>
+    </div>
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="num">123 <small>件</small></div><div class="lbl">2026 年上半年勒索软件被害报告数，创 2020 年开始统计以来半期最高（警察厅）</div></div>
-    <div class="stat"><div class="num">10 <small>件</small></div><div class="lbl">截至 10 月 5 日，上市企业公表的 100 万件以上大事故，已超 2025 全年（6 件）与历年峰值（东京商工研究）</div></div>
-    <div class="stat"><div class="num">约 2.33 <small>亿件</small></div><div class="lbl">民间手工集计（401 条公告）的 2026 年公表泄露件数总和，含重复与「可能性」口径，非官方数字</div></div>
-    <div class="stat"><div class="num">17,139 <small>件 → 3 件</small></div><div class="lbl">个保委上一年度受理的泄露报告数，与全年发出的劝告（2 件）加命令（1 件）——执法落差是日本模式的核心特征</div></div>
+    <div class="stat"><div class="n">123<small> 件</small></div><div class="d">上半年勒索被害报告，创 2020 年统计以来半期最高（警察厅）</div></div>
+    <div class="stat"><div class="n">10<small> 件</small></div><div class="d">百万件以上大事故（截至 10/5），已超 2025 全年与历年峰值（东京商工研究）</div></div>
+    <div class="stat"><div class="n">2.33<small> 亿件</small></div><div class="d">民间逐条集计 401 条公告的公表值总和，含重复与「可能性」口径</div></div>
+    <div class="stat"><div class="n">495<small> 家</small></div><div class="d">10 月云平台 IDCF 遭勒索攻击后，系统受影响的企业与自治体数</div></div>
   </div>
 
-  <nav class="toc" aria-label="目录">
-    <p class="toc-title">目录</p>
-    <ol>
-      <li><a href="#s1">今年的第一起：从 1 月第一周开始</a></li>
-      <li><a href="#s2">全年时间线：主要事案一览</a></li>
-      <li><a href="#s3">两个日本：新闻里的泄露与统计里的泄露</a></li>
-      <li><a href="#s4">为什么是今年：四个结构性原因</a></li>
-      <li><a href="#s5">三方反应：舆论、个人与企业</a></li>
-      <li><a href="#s6">政府的应对：新法上路与执法的落差</a></li>
-      <li><a href="#s7">数据来源与口径说明</a></li>
-      <li><a href="#s8">结语：这一年改变了什么</a></li>
-    </ol>
-  </nav>
-
-  <!-- 1 -->
-  <section id="s1">
-    <div class="sec-head"><span class="sec-num">1</span><h2 class="sec-title">今年的第一起：从 1 月第一周开始</h2></div>
-    <p>严格回答「今年最早一起重大泄露」，先要分清两种口径：按<em>公表日</em>，2026 年的泄露公告从 1 月上旬就没有断过——1 月 6 日前后，Canbus 公表认证服务器遭勒索软件攻击，Mizuho Lease 公表社内系统被不正访问；1 月 8 日前后兴和江守公表勒索软件致系统障碍；月中 ENEOS Globe Energy 因委托商遭勒索而公告客户信息可能外泄；下旬又有饮料商、地方信息平台、开发环境等多起公告。换句话说，<strong>今年不存在一个「平静的开始」</strong>。</p>
-    <p>按<em>分量</em>，上半年最重的一起是半导体测试设备大厂 <strong>Advantest</strong>：入侵发生在 1 月 23 日（据加州司法长官备案文件），2 月 15 日检知、2 月 19 日公表——社内网络遭不正访问并伴随勒索软件部署；到 10 月，公司开始向受影响个人发出通知，确认个人数据曾被带出服务器。一家全球半导体供应链核心企业在新年第一个月被攻破，为全年定下了基调。</p>
-    <p>但上半年的公告以中小企业、单体系统为主，千万级事故尚未出现。真正的量级跃升发生在 6 月之后——这也是公众「最近泄露特别多」的体感来源：不是今年才开始，而是<strong>从 6 月起，大事故的密度和规模同时上了一个台阶</strong>。</p>
-  </section>
-
-  <!-- 2 -->
-  <section id="s2">
-    <div class="sec-head"><span class="sec-num">2</span><h2 class="sec-title">全年时间线：主要事案一览</h2></div>
-    <p>下表为 2026 年 1 月至 10 月 21 日的主要公表事案（规模较大、影响较广或具代表性者），按公表日排列。它是「主要事案」而非全量清单——仅 8–9 月两个月，安全媒体索引到的泄露公告就有 134 条；民间集计全年已超过 400 条。</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th style="width:12%">公表日</th><th style="width:24%">组织</th><th style="width:22%">规模（公表值）</th><th>要点</th></tr></thead>
-        <tbody>
-          <tr class="month"><td colspan="4">1–2 月 · 年初即连发，上半年最重一起出现在 1 月</td></tr>
-          <tr><td>1/6</td><td>Canbus / Mizuho Lease 等</td><td>未公表</td><td>认证服务器遭勒索、社内系统被不正访问——新年第一周公告已成串</td></tr>
-          <tr><td>1/23 入侵<br>2/19 公表</td><td>Advantest</td><td>人数未定<br>（个别通知中）</td><td><span class="tag r">勒索</span> 半导体测试大厂内网被入侵并部署勒索软件，10 月确认个人数据被带出</td></tr>
-          <tr><td>2 月</td><td>Anabuki Housing Service</td><td>207,773 件</td><td>顾客等信息确认流出至外部</td></tr>
-          <tr><td>2 月</td><td>Mynavi 等多家</td><td>—</td><td>所利用的云服务被不正访问——年初已现「供应链型」身影</td></tr>
-          <tr class="month"><td colspan="4">4–6 月 · 千万级登场</td></tr>
-          <tr><td>6/2 公表<br>（4/3 检知）</td><td>CAMPFIRE</td><td>225,846 人</td><td>众筹平台用户姓名、住所、账户信息等有泄露之虞</td></tr>
-          <tr><td>6/23</td><td><strong>KDDI</strong></td><td>邮箱地址 <strong>12,231,954 件</strong><br>密码 7,616,173 件</td><td>ISP 邮件系统第三方软件漏洞被利用；按可识别个人信息计为今年最大单起之一（7/21 订正后数字）。雪上加霜的是，密码被证实为<strong>明文保存</strong>，8 月遭个保委点名指出</td></tr>
-          <tr><td>6/30</td><td>Aflac 生命</td><td>约 440 万人</td><td>顾客信息大规模泄露（7/31 公布调查结果）</td></tr>
-          <tr class="month"><td colspan="4">7–8 月 · 供应链与平台型事故凸显</td></tr>
-          <tr><td>7/13</td><td>Nichirei</td><td>43,709 件</td><td><span class="tag r">勒索</span> 冷藏仓库与冷冻食品出货停止，员工与求职者信息泄露</td></tr>
-          <tr><td>8/1</td><td>E Store「ShopServe」</td><td>8,853,839 条记录</td><td>EC 建站平台被侵害，众多店铺的购买者信息与店铺管理/FTP 凭证被外发（记录数，非人数）</td></tr>
-          <tr><td>8/17</td><td>Sakura Internet</td><td>1,360,563 账号</td><td>会员信息有受影响可能</td></tr>
-          <tr class="month"><td colspan="4">9 月 · 政府自身失守，敏感数据登场</td></tr>
-          <tr><td>9/11</td><td><strong>数字厅 GSS</strong>（政府业务系统）</td><td>约 24.6 万件</td><td><span class="tag r">政府系统</span> 维护运营担当者的账号被利用，政府共通基盘自身失守</td></tr>
-          <tr><td>9/16 公表<br>（9/11 侵害）</td><td>Helpfeel「Gyazo」</td><td>用户相关数据约 <strong>2,362 万条</strong></td><td>图片托管服务上传服务器漏洞被利用；按记录数计为今年最大，其中含无邮箱的匿名用户记录（图片元数据另有约 4.9 亿条，口径不同，不并列比较）</td></tr>
-          <tr><td>9/25</td><td>Times Mobility（Times Car）</td><td>约 660 万账号<br>含证件画像约 160 万件</td><td>会员信息与驾驶证等本人确认文件画像——今年「内容敏感性」最严重的一起；侵入原因未公表</td></tr>
-          <tr><td>9/29</td><td>Seicomart</td><td>574,647 人</td><td>便利店应用会员信息</td></tr>
-          <tr class="month"><td colspan="4">10 月 · 云平台被打，每日级连发（截至 10/21）</td></tr>
-          <tr><td>10/2</td><td>第一生命保险</td><td>约 12 万名</td><td>员工人事系统信息</td></tr>
-          <tr><td>10/5</td><td><strong>物语 Corp「烧肉 King」</strong></td><td><strong>10,788,963 件</strong></td><td>官方应用注册信息几乎全量泄露（会员号、姓名、邮箱、电话）</td></tr>
-          <tr><td>10/5</td><td>大和证券（委托商）</td><td>约 22 万件</td><td>业务委托商服务器被不正访问，约 11 万件含姓名、邮箱、证券账号</td></tr>
-          <tr><td>10/5</td><td>GMO Research &amp; AI</td><td>最大 948,498 件</td><td>会员信息泄露，并出现积分被恶意兑换的实害</td></tr>
-          <tr><td>10/7</td><td><strong>IDC Frontier「IDCF 云」</strong></td><td><strong>495 家</strong>企业・自治体受影响</td><td><span class="tag r">勒索</span> 云平台遭勒索攻击：Nissui 经物流委托商系统停摆致全国冷冻食品出货停止（二次波及约 1,200 家零售餐饮）、茨城县与小平市官网瘫痪；部分客户被告知「数据恢复困难」——波及面为组织数，非泄露件数</td></tr>
-          <tr><td>10/8 公表<br>（9/12–17 入侵）</td><td><strong>Lawson</strong></td><td><strong>2,155,345 件</strong></td><td>认证服务器与应用预约系统被直接入侵，Lawson ID 约一成会员信息流出，另有 26 件信用卡号部分信息；入侵结束约 20 天后才在定期调查中发觉</td></tr>
-          <tr><td>10/17</td><td>Second Retailing（GEO / Second Street）</td><td>未公表</td><td>社内系统被不正访问，应用、网购、二手回收业务停摆</td></tr>
-          <tr><td>10/21（今日）</td><td>Arcadia（灾害信息服务）</td><td>22 个府县警职员等</td><td>服务商遭不正访问，近半数都道府县警的职员个人信息可能外泄，一般居民亦可能波及——供应链型的最新一例</td></tr>
-        </tbody>
-      </table>
+  <section>
+    <h2>这一年是怎么一步步变大的</h2>
+    <div class="phase">
+      <div class="when">1–2 月<span>没有「平静的开始」</span></div>
+      <div>
+        <p>按公表日，今年的泄露公告从 1 月上旬就没断过：6 日前后 Canbus 的认证服务器遭勒索、Mizuho Lease 的社内系统被入侵；月中，ENEOS 旗下公司因委托商中招而公告。上半年分量最重的一起也在 1 月——半导体测试大厂 <strong>Advantest</strong> 于 1 月 23 日被入侵（2 月 19 日公表），社内网络被部署勒索软件；10 月，公司开始通知受影响个人，确认数据曾被带出。</p>
+        <p>但这个阶段的公告以中小企业与单体系统为主，规模最大的不过二十万件量级。</p>
+      </div>
     </div>
-    <p class="note">另有两起规模巨大但时点/口径需注明的：一是 Daiichi Kosho 约 872 万件（去重后的顾客与员工合计，「可能泄露」口径，最终以公司续报为准）；二是九州电力 1,090 万件——不是攻击，而是<strong>信息丢失・误废弃</strong>，它提醒人们：非攻击型事故同样可以上千万级。东京商工研究统计中 10 件百万级大事故里唯一的非攻击案，一般认为即属此类。</p>
-  </section>
-
-  <!-- 3 -->
-  <section id="s3">
-    <div class="sec-head"><span class="sec-num">3</span><h2 class="sec-title">两个日本：新闻里的泄露与统计里的泄露</h2></div>
-    <p>读今年的泄露报道，很容易得出「日本正被黑客攻陷」的印象。但把新闻口径和官方全量口径并排，出现的是两个不同的日本：</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>泄露原因</th><th class="num">新闻报道口径<br>（2026 年 8–9 月 134 条）</th><th class="num">官方报告口径<br>（个保委 FY2025 直接报告 13,345 件）</th></tr></thead>
-        <tbody>
-          <tr><td>网络攻击（不正访问、勒索等）</td><td class="num">53.7%（72 件）</td><td class="num">9.4%（1,256 件）</td></tr>
-          <tr><td>误交付 / 误发送（人的错误）</td><td class="num">10.4%（误送信・误操作）</td><td class="num"><strong>74.3%</strong>（6,443 + 3,467 件）</td></tr>
-          <tr><td>丢失、被盗、误废弃</td><td class="num">19.4%</td><td class="num">6.9%（915 件）</td></tr>
-          <tr><td>设定不备、误公开</td><td class="num">12.7%</td><td class="num">（无对应分类）</td></tr>
-          <tr><td>内部不正</td><td class="num">3.7%</td><td class="num">0.6%（86 件）</td></tr>
-          <tr><td>其他 / 未分类</td><td class="num">—</td><td class="num">8.8%（1,178 件）</td></tr>
-        </tbody>
-      </table>
+    <div class="phase">
+      <div class="when">6 月<span>量级跃升</span></div>
+      <div>
+        <p>6 月 23 日，<strong>KDDI</strong> 公表 ISP 邮件系统漏洞被利用，1,223 万个邮箱地址与 762 万个密码泄露——密码还是<strong>明文保存</strong>，8 月被个保委点名。同月，Aflac 生命约 440 万人、众筹平台 CAMPFIRE 22.6 万人相继公表。公众「最近泄露特别多」的体感，正是从这里开始的：不是今年才有，而是<strong>大事故的密度与规模同时上了一个台阶</strong>。</p>
+      </div>
     </div>
-    <p>差异的原因是统计对象不同：官方报告里 93.6% 是千人以下的小事，76.9% 只涉及纸质文件——医院药局的处方笺误交、信用卡的误寄，这类事故天天发生、从不上新闻。新闻只放大大规模与攻击型事件。两个口径都是真相：<strong>日本的泄露总量由「人的错误」构成主体，而今年的增量与恐慌感，则由「网络攻击」驱动</strong>。上市企业 2025 年公表事故中，病毒感染・不正访问已占 64.4%（东京商工研究），且比例逐年上行。</p>
-    <h3>攻击侧的「老入口、新速度」</h3>
-    <p>个保委在年度报告中点名的不正访问三大原因，全是日常运维的欠账：①已公开的漏洞没有打补丁（VPN 设备、EC 构建应用等）；②使用容易猜到的 ID 与密码；③设定错误导致数据库访问控制失效。警察厅数据亦显示，勒索软件的侵入路径约一半是 VPN 设备。这与 IPA《信息安全 10 大威胁 2026》互为印证：组织篇第 1 位是勒索攻击（连续 11 年入选），第 2 位是针对供应链与委托商的攻击，第 4 位是利用系统漏洞的攻击。</p>
-    <p>新变量在攻击者一侧的速度。Google 威胁分析部门的统计称，全球公开漏洞数从 2026 年 1 月的 5,045 件增至 8 月的 10,740 件，约两倍；AI 被用于批量发现漏洞，使「发现→被做成武器」的周期急剧缩短。日本银行总裁植田和男 10 月 6 日在全国证券大会上直言，前沿 AI 使网络攻击的速度与规模「戏剧性地加速、扩大」，要求证券行业再上一个台阶。警察厅的传感器同期观测到，针对日本的漏洞扫描类可疑访问日均每 IP 13,687 件，同比增长 50.7%。</p>
+    <div class="phase">
+      <div class="when">9–10 月<span>政府与云一起失守</span></div>
+      <div>
+        <p>9 月 11 日，数字厅的政府业务系统 GSS 因维护账号被利用，约 24.6 万件信息可能外泄——守方自己站到了公告席上。同月 Gyazo 约 2,362 万条用户数据、Times Car 约 660 万账号（含约 160 万件驾驶证等证件画像）接连爆出。10 月 7 日，云平台 IDCF 遭勒索攻击，495 家机构系统受影响，Nissui 的冷冻食品出货经物流委托商停摆、波及约 1,200 家零售餐饮；第二天，Lawson 公表 215 万件泄露，而入侵早在 9 月中旬就已发生。今天（10 月 21 日），灾害信息服务商 Arcadia 被入侵的消息传来：22 个府县警的职员信息可能外泄。</p>
+      </div>
+    </div>
+
+    <h3>主要事案一览</h3>
+    <div class="inc">
+      <div class="irow"><div class="dt">2/19 公表</div><div class="org">Advantest</div><div class="mag"><div class="v">规模未定 · 勒索</div></div><div class="note">1/23 入侵，半导体测试大厂内网被部署勒索软件，10 月确认个人数据被带出</div></div>
+      <div class="irow"><div class="dt">6/23</div><div class="org">KDDI</div><div class="mag"><div class="bar" style="width:132px"></div><div class="v">邮箱 1,223 万 · 密码 762 万</div></div><div class="note">ISP 邮件系统第三方软件漏洞；密码明文保存，后被个保委点名</div></div>
+      <div class="irow"><div class="dt">6/30</div><div class="org">Aflac 生命</div><div class="mag"><div class="bar" style="width:104px"></div><div class="v">约 440 万人</div></div><div class="note">顾客信息大规模泄露</div></div>
+      <div class="irow"><div class="dt">8/1</div><div class="org">ShopServe（E Store）</div><div class="mag"><div class="bar" style="width:124px"></div><div class="v">885 万条记录</div></div><div class="note">EC 建站平台被侵害，众多店铺的购买者信息与店铺管理凭证外流（记录数，非人数）</div></div>
+      <div class="irow"><div class="dt">8/17</div><div class="org">Sakura Internet</div><div class="mag"><div class="bar" style="width:82px"></div><div class="v">136 万账号</div></div><div class="note">会员信息有受影响可能</div></div>
+      <div class="irow"><div class="dt">9/11</div><div class="org">数字厅 GSS</div><div class="mag"><div class="bar" style="width:48px"></div><div class="v">约 24.6 万件</div></div><div class="note">政府业务系统维护账号被利用，政府共通基盘自身失守</div></div>
+      <div class="irow"><div class="dt">9/16 公表</div><div class="org">Gyazo（Helpfeel）</div><div class="mag"><div class="bar" style="width:148px"></div><div class="v">约 2,362 万条</div></div><div class="note">图片托管服务上传服务器漏洞；记录口径（含匿名用户），按记录数今年最大</div></div>
+      <div class="irow"><div class="dt">9/25</div><div class="org">Times Car</div><div class="mag"><div class="bar" style="width:118px"></div><div class="v">约 660 万账号</div></div><div class="note">含驾驶证等证件画像约 160 万件——今年内容敏感性最严重；侵入原因未公表</div></div>
+      <div class="irow"><div class="dt">10/5</div><div class="org">烧肉 King（物语 Corp）</div><div class="mag"><div class="bar" style="width:130px"></div><div class="v">1,079 万件</div></div><div class="note">官方应用注册信息几乎全量泄露（会员号、姓名、邮箱、电话）</div></div>
+      <div class="irow"><div class="dt">10/7</div><div class="org">IDCF 云（IDC Frontier）</div><div class="mag"><div class="v">495 家机构 · 勒索</div></div><div class="note">云平台遭勒索：市政府官网、协会系统、食品物流连锁停摆；部分客户被告知数据难以恢复</div></div>
+      <div class="irow"><div class="dt">10/8 公表</div><div class="org">Lawson</div><div class="mag"><div class="bar" style="width:96px"></div><div class="v">215.5 万件</div></div><div class="note">认证服务器被直接入侵；9/12–17 发生，约 25 天后靠人工调查才发觉</div></div>
+      <div class="irow"><div class="dt">10/21</div><div class="org">Arcadia</div><div class="mag"><div class="v">22 个府县警 · 今日</div></div><div class="note">灾害信息服务商被入侵，近半数都道府县警职员信息可能外泄</div></div>
+    </div>
+    <p style="font-size:14px;color:var(--mut)">另有两起需注明的：Daiichi Kosho 约 872 万件（去重后「可能泄露」口径，以公司续报为准）；九州电力 1,090 万件——不是攻击，而是信息丢失・误废弃，非攻击事故同样可以上千万级。规模条为对数示意。</p>
   </section>
 
-  <!-- 4 -->
-  <section id="s4">
-    <div class="sec-head"><span class="sec-num">4</span><h2 class="sec-title">为什么是今年：四个结构性原因</h2></div>
-    <h3>一、攻击的工业化</h3>
-    <p>勒索软件即服务（RaaS）把开发、勒索站点、谈判拆成流水线，低技能攻击者也能入场；双重勒索成为标配（上半年手口判明的 66 件中 61 件为窃取+加密）。警察厅上半年 123 件的报告数创统计以来半期新高，而这还只是「报了警」的部分。</p>
-    <h3>二、集中的数字化，集中的风险</h3>
-    <p>个保委口径下，不正访问的 26.1% 发生在委托商一侧。今年的大型案更是把这条规律放大到系统级：ShopServe 一处被破，众多店铺的购买者与店铺凭证同时外流；IDCF 云一处被破，495 家机构的系统同时停摆；数字厅 GSS 的维护账号被利用，政府自己的基盘失守；Arcadia 一家灾害信息服务商，牵连 22 个府县警。民间集计也指出：今年大量大型事故的失守点，是<strong>消费者根本没签过约的「后台公司」</strong>。当所有人共用同一批云、SaaS 与外包商时，一次失守不再是一家公司的事故。</p>
-    <h3>三、数据持有过度，单次损害被放大</h3>
-    <p>Times Car 一案中，随会员信息一同流出的还有约 160 万件驾驶证等证件画像——为了「本人确认」而集中保管的高敏感数据，把一次入侵的损害上限抬到了身份冒用的级别。个保委与国家网络统括室在今年 10 月共同发出的呼吁里，「不要持有不必要的数据」被明确列入，与打补丁、查委托商并列。</p>
-    <h3>四、看得见的，不等于全部是新增</h3>
-    <p>必须给「今年特别多」加一个限定：泄露报告义务化（一定规模以上必须向个保委报告并通知本人）与企业公表惯例的成熟，让往年沉在水下的 accident 浮了上来。可见度上升本身不是坏事。但量级的变化无法用「以前只是没报」解释：百万件以上大事故 10 件超过历年全年峰值、千万级事故一年出现 3–4 起（此前 14 年合计 3 起）、2026 年的大事故已有 5 件进入历代最差前十——<strong>分母在变透明，分子也在真实地变大</strong>。</p>
-    <div class="warn">
-      <p style="margin:0"><strong>一个常被忽略的对照组：</strong>并非所有领域都在恶化。证券账户被劫持的不正交易额，在 2025 年 4 月曾达单月约 1,625 亿日元的峰值；随着多要素认证、通行密钥等被强制推行，2026 年 8 月已降至约 2 亿日元（金融厅集计）。这证明：<strong>当对策被强制执行时，被害曲线是可以被压下去的</strong>——问题从来不是「防不住」，而是「防的成本由谁承担、不用防的代价有多低」。</p>
+  <section>
+    <h2>两个日本：新闻里的泄露，和统计里的泄露</h2>
+    <div class="col">
+      <p>把新闻口径与官方全量口径并排，会看到两个不同的日本。新闻只放大攻击与大事故；而在个保委的全部报告里，近四分之三是「人的错误」——处方笺误交、卡片误寄，93.6% 是千人以下的小事，从不上头条。</p>
+    </div>
+    <div class="pair">
+      <div>
+        <h4>新闻报道口径<span>2026 年 8–9 月公告 134 条的分类（民间计数）</span></h4>
+        <div class="pb"><div class="lb"><span>网络攻击</span><b>53.7%</b></div><div class="track"><div class="fill red" style="width:54%"></div></div></div>
+        <div class="pb"><div class="lb"><span>丢失・被盗・误废弃</span><b>19.4%</b></div><div class="track"><div class="fill" style="width:19%"></div></div></div>
+        <div class="pb"><div class="lb"><span>设定不备・误公开</span><b>12.7%</b></div><div class="track"><div class="fill" style="width:13%"></div></div></div>
+        <div class="pb"><div class="lb"><span>误送信・误操作</span><b>10.4%</b></div><div class="track"><div class="fill" style="width:10%"></div></div></div>
+      </div>
+      <div>
+        <h4>官方报告口径<span>个保委 FY2025 直接报告 13,345 件</span></h4>
+        <div class="pb"><div class="lb"><span>误交付・误发送（人的错误）</span><b>74.3%</b></div><div class="track"><div class="fill" style="width:74%"></div></div></div>
+        <div class="pb"><div class="lb"><span>网络攻击（不正访问）</span><b>9.4%</b></div><div class="track"><div class="fill red" style="width:9%"></div></div></div>
+        <div class="pb"><div class="lb"><span>丢失・被盗・误废弃</span><b>6.9%</b></div><div class="track"><div class="fill" style="width:7%"></div></div></div>
+        <div class="pb"><div class="lb"><span>其他・未分类</span><b>8.8%</b></div><div class="track"><div class="fill grey" style="width:9%"></div></div></div>
+      </div>
+    </div>
+    <div class="col">
+      <p>两个口径都是真相：<strong>日本泄露的总量由人的错误构成主体，今年的增量与恐慌感，则由网络攻击驱动</strong>——上市企业 2025 年公表事故中，攻击类已占 64.4%，且逐年上行。</p>
     </div>
   </section>
 
-  <!-- 5 -->
-  <section id="s5">
-    <div class="sec-head"><span class="sec-num">5</span><h2 class="sec-title">三方反应：舆论、个人与企业</h2></div>
-    <h3>社会舆论：从愤怒到「泄露疲劳」</h3>
-    <p>日本舆论场的关键词正在变化。评论者永江一石在 Agora 撰文写道，2026 年 6 月到 10 月初，KDDI 最大 1,422 万件（初期公表值）、Aflac 约 440 万人、Times Car 约 660 万账号——「谁都知道的大公司，每周都在发『不正访问通知』」。他的提案相当激进：对泄露按营业额课以罚款（达标者减免）、禁止支付赎金、隐瞒时追究经营者刑事责任——理由是现行制度下，应对的「行情」已经固化为道歉文加优惠券或积分延期，与真实损害完全脱钩。他自述 2013 年个人信息被盗刷 33 万日元信用卡后，收到的只是涉事自家服务的 3,000 日元折扣券。</p>
-    <p>民间集计者 zephel 在逐条整理了 401 条公告后提出的问题更尖锐：今年相当多的大型事故发生在消费者没有签约的后台公司，那么「一家你从没听说过的公司寄来的泄露通知，你如何确认它不是诈骗」？而企业若不公开入侵路径，使用同一 SaaS、同一委托商的同行就无从自查——<strong>公告越来越多，可用于防御的信息却没有同比变多</strong>。</p>
-    <p>X 上的一手声音则更为具体，情绪集中在三处。其一是<strong>「退会了，数据还在」</strong>：Times Car 的通知寄给了早已退会的用户，有人写道「只租过一次车，数据居然还留着」；更有用户指出驾驶证号码终身不变、补发新证号码也相同——证件画像一旦流出，等于一辈子无法更换的钥匙被复制。其二是<strong>发觉与公表之迟</strong>：Lawson 一案中，日经报道指自动监控未能发现异常、入侵约 25 天后靠人工调查才察觉，社长道歉时仍未提出补偿方案；有用户说自己「为了积分才注册的」，如今开始收到诈骗邮件。KDDI 一案的舆论则越过了事件本身：密码明文保存被曝光后，批评转向「主流媒体因 KDDI 是大赞助商而不敢深挖」「国内报道慢于海外」——从对一家企业的愤怒，扩散为对媒体与监管的<strong>制度性不信任</strong>。相比之下，「またか」（又来了）的麻木感反而退居其次。</p>
-    <h3>个人：真正的风险在泄露之后</h3>
-    <p>对个人而言，单次泄露的直接损失通常有限，风险在于<strong>拼接与二次利用</strong>：姓名+邮箱+电话+利用履历，再叠加证件画像，足以支撑高可信度的冒名申请与定向诈骗；KDDI 案中连同密码一并流出，则直接考验每个人的密码复用习惯。今年被反复验证的自卫清单并不复杂：重要账户开启多要素认证或通行密钥、密码不跨站复用、对「以泄露为名」的钓鱼通知保持核验（从官网入口进入，不点通知内链接）、留意信用卡与账户的异常明细。证券口座一役的数字说明，这套动作对普通人同样有效。</p>
-    <h3>企业：定型应对与它的批评者</h3>
-    <p>企业侧的应对已高度定型：公表、道歉、开设咨询窗口、个别通知、发积分或优惠券。批评集中在三点：<strong>公表迟滞与原因隐匿</strong>（Lawson 入侵结束约 20 天后才被定期调查发现；Times Car 的侵入原因至今未公表，同行无从借鉴）；<strong>恢复能力的方差</strong>（警察厅调查：勒索被害组织约六成恢复费用超过 1,000 万日元、一个月内恢复者不足五成；IDCF 事件中，有无可用备份直接决定了企业是「数日恢复」还是被通知「数据难以恢复」）；<strong>中小企业的结构性薄弱</strong>（勒索被害约六成是中企业——没有专职安全人员，VPN 补丁与多要素认证的落实率最低，而它们恰恰是大企业供应链的一环）。东京商工研究在发布「过去最差节奏」的统计时，特别补了一句要求：不要只数件数，要审视泄露内容的敏感性，并整备业务连续性计划（BCP）——这被视为今年企业应对基调的转折信号。</p>
-  </section>
-
-  <!-- 6 -->
-  <section id="s6">
-    <div class="sec-head"><span class="sec-num">6</span><h2 class="sec-title">政府的应对：新法上路与执法的落差</h2></div>
-    <h3>能动网络防御：国家开始「打出去」</h3>
-    <p>2026 年 10 月 1 日，《网络应对能力强化法》（2025 年 5 月成立）部分施行，日本的国家级应对框架完成一次实质跃升：警察与自卫队在要件满足时，经首相命令与内阁会议决定，可访问攻击源服务器并实施<strong>无害化</strong>（停止、删除恶意程序或变更设定）；电力、通信、金融等 15 个领域的 <strong>258 家基干基础设施运营商</strong>，自此负有资产申报与事件报告义务（认知后 30 日内提交详细报告）；官民网络协议会同日成立，约 100 家组织共享威胁情报。高市首相 9 月 30 日亲自在 X 发文说明此事。配套的「通信情报利用」要到 2027 年秋才施行。</p>
-    <h3>个保法这条线：高透明、低惩罚</h3>
-    <p>与之形成对照的是个人信息保护的执法强度。个保委上一年度受理 17,139 件泄露报告，全年仅发出劝告 2 件、命令 1 件。2026 年 7 月的法律修正引入了课征金制度，但<strong>泄露被排除在课征金对象之外</strong>（据 Agora 引述，2024 年的事务局原案本曾包含）。也就是说在日本，企业泄露个人信息本身仍无法定罚款——这与欧盟 GDPR 最高可达全球营业额 4% 的罚款、中国《个人信息保护法》的处罚上限相比，呈现一种鲜明的「高透明、低惩罚」模式：报告与公表义务是真实的，事后的价格标签却近乎为零。</p>
-    <h3>警察与监管的「能做的部分」</h3>
-    <p>执法侧并非无所作为：日本警察开发的勒索软件解密工具已协助 17 家组织恢复约 717 万件数据（成功率 99.9% 以上）；围绕 LockBit 的案件另涉 24 家组织、约 1,290 万件数据（警察白书）。2025 年网络犯罪检举 15,108 件，2026 年上半年 7,607 件、同比增 15%。金融厅在证券口座劫持事件后推动的认证强化，则是「监管出手即见效」的最清晰案例。日银总裁的公开发言，则把网络风险正式抬进了金融稳定的议事日程。</p>
-    <div class="callout">
-      <p style="margin:0"><strong>制度覆盖与风险分布并不重合。</strong>新法的报告义务落在 258 家基干基础设施运营商身上，而今年被害的六成是中小企业、失守点大量位于委托商与 SaaS——这些环节仍主要靠各组织的自律与个保委的事后指导。日本时事新闻的总结一针见血：「国家的网只到基干基础设施为止；堵住入口的活，仍在每个组织自己手里。」</p>
+  <section>
+    <h2>侵入口没变，变的是速度</h2>
+    <div class="col">
+      <p>个保委点名了不正访问的三大原因，全是日常运维的欠账：</p>
+    </div>
+    <div class="cause"><div class="no">1</div><div><h4>补丁欠账</h4><p>已公开的漏洞迟迟不修——VPN 设备、EC 构建应用是重灾区。警察厅数据：勒索软件的侵入路径约一半经由 VPN 设备。</p></div></div>
+    <div class="measure"><div class="track"><div class="fill" style="width:50%"></div></div><p class="cap">勒索软件侵入路径中 VPN 设备所占比例：约 50%（警察厅对被害组织的调查）</p></div>
+    <div class="cause"><div class="no">2</div><div><h4>凭证欠账</h4><p>容易猜到的 ID 与密码、无多要素认证。极端如 KDDI：762 万个密码以明文保存。</p></div></div>
+    <div class="cause"><div class="no">3</div><div><h4>设定欠账</h4><p>设定错误让数据库的访问控制形同虚设；云服务的「责任共担」被误读为「云厂商全包」。</p></div></div>
+    <div class="col">
+      <p style="margin-top:20px">新变量在攻击一侧：AI 被用于批量发现漏洞，全球公开漏洞数从 2026 年 1 月的 5,045 件增至 8 月的 10,740 件，约两倍；「发现→做成武器」的周期大幅缩短。日银总裁植田和男 10 月 6 日直言，前沿 AI 使攻击的速度与规模「戏剧性地加速、扩大」。勒索软件即服务（RaaS）则把攻击拆成流水线，上半年手口判明的 66 件中，61 件是「窃取 + 加密」的双重勒索。</p>
+      <p>另一条结构线是<strong>集中</strong>：个保委口径下 26.1% 的不正访问发生在委托商一侧。今年更被放大到系统级——ShopServe 一处被破、众多店铺同时外流；IDCF 一处被破、495 家机构同时停摆；Arcadia 一家、牵连 22 个县警。当所有人共用同一批云、SaaS 与外包商，一次失守就不再是一家公司的事故。而 Times Car 的 160 万件证件画像提醒了第三件事：<strong>持有的数据越多，单次失守的损害上限越高</strong>——个保委与国家网络统括室 10 月的共同呼吁里，「不要持有不必要的数据」与打补丁并列。</p>
     </div>
   </section>
 
-  <!-- 7 -->
-  <section id="s7">
-    <div class="sec-head"><span class="sec-num">7</span><h2 class="sec-title">数据来源与口径说明</h2></div>
-    <div class="small" style="color:#424245">
-      <p>・ 勒索软件被害数、侵入路径、恢复费用：警察厅《2026 年上半年网络空间威胁形势》及令和 8 年版警察白书（经日本时事新闻等整理转述）。「半期最高」指 2020 年下半年开始统计以来。</p>
-      <p>・ 大型事故计数（百万件以上 10 件、千万级 3 件、历代最差前十占 5 件）：东京商工研究 2026 年 10 月 7 日发布，对象为上市企业及其子公司公表的事案，截至 10 月 5 日。其「千万级 3 件」为 KDDI、九州电力、物语 Corp；本文时间线中的 Gyazo（运营方非上市）不在其统计范围内，两处数字不可互为印证。</p>
-      <p>・ 泄露原因构成：新闻口径为民间对安全媒体索引 134 条（2026 年 8–9 月）的分类计数（定時ラボ）；官方口径为个保委令和 7 年度（2025 年 4 月–2026 年 3 月）年次报告附表，与本文「2026 年」时间轴错位一个季度，仅作结构对照。FY2025 另有「其他」1,178 件（8.8%），已计入表中。</p>
-      <p>・ 约 2.33 亿件、401 条：民间作者 zephel 的手工集计（note，截至 2026 年 10 月 16 日），为公告值的简单加总，含重复计算与「可能性」口径，非官方统计，引用时已注明性质。</p>
-      <p>・ Gyazo 的 2,362 万为「用户相关数据记录数」（含无邮箱匿名用户），与 KDDI 的 1,223 万「邮箱地址」不是同一种单位；「今年最大单起」的表述因此必须带单位，本文未做不带口径的排名。ShopServe 的 8,853,839 同为记录数而非人数。</p>
-      <p>・ 能动网络防御：共同通信、产经新闻、ITmedia 对 2026 年 10 月 1 日施行的报道（法律 2025 年 5 月成立）。个保委执法数（劝告 2 件、命令 1 件）与课征金排除泄露的立法过程，分别据日本时事新闻与 Agora 评论（永江一石）——后者为评论来源，已在正文标注。</p>
-      <p>・ 第五章中的 X 用户声音，来自 2026 年 10 月对 Lawson、Times Car、KDDI 三案相关帖文的检索，为定性引用，不构成统计意义的舆论抽样；其中日经关于 Lawson「自动监控未检出、约 25 天后人工调查发觉」的说法，与企业公表时间线核对一致。KDDI 密码明文保存一事，据 ITmedia 报道为个保委指出的问题。</p>
-      <p>・ 证券账户不正交易额（2025 年 4 月约 1,625 亿日元 → 2026 年 8 月约 2 亿日元）为月度口径，据金融厅集计的媒体转述；衡量的是金钱被害而非泄露件数。</p>
-      <p>・ 本文时间线为「主要事案」选编，不构成 2026 年泄露事件的全量清单；同一事件以首次公表日排序，规模以企业最新订正值为准（KDDI 取 7 月 21 日订正后数字）。检索时点为 2026 年 10 月 21 日，多家企业的调查仍在进行，数字可能随续报变化。</p>
+  <section>
+    <h2>人们如何反应：从愤怒，到不信任</h2>
+    <div class="quote">
+      <p>「只租过一次车，数据居然还留着。」</p>
+      <p class="who">X 上的 Times Car 已退会用户。通知寄到了早已退会的人手里——「退会了，数据还在」是今年舆论最锋利的发现之一。</p>
+    </div>
+    <div class="col">
+      <p>驾驶证画像一案把情绪推到顶点：日本驾驶证号码终身不变，补发新证号码也相同。有用户的说法是，证件画像流出等于「一辈子换不掉的钥匙被复制」。Lawson 的用户则写道，自己「为了积分才注册的」，现在开始收到诈骗邮件；日经报道指其自动监控没有发现异常、约 25 天后靠人工调查才察觉，社长道歉时仍未提出补偿。</p>
+      <p>KDDI 一案，舆论越过了事件本身：密码明文保存曝光后，批评转向主流媒体「因 KDDI 是大赞助商而不敢深挖」、国内报道慢于海外——从对一家企业的愤怒，扩散成对媒体与监管的<strong>制度性不信任</strong>。民间集计者 zephel 在整理完 401 条公告后问了一个更实际的问题：今年大量事故出在消费者没签过约的后台公司，「一家你从没听说过的公司寄来的泄露通知，你如何确认它不是诈骗？」</p>
+    </div>
+    <div class="quote">
+      <p>「应对的行情已经固化：道歉文，加优惠券或积分延期。」</p>
+      <p class="who">评论者永江一石（Agora）。他自述 2013 年信息被盗刷 33 万日元信用卡后，只收到涉事自家服务的 3,000 日元折扣券。他的提案是：对泄露按营业额课以罚款（达标者减免）、禁止支付赎金、隐瞒时追究经营者刑责。</p>
+    </div>
+    <div class="col">
+      <p><strong>对个人</strong>，真正的风险在泄露之后：姓名、邮箱、电话、利用履历，再叠加证件画像，足以拼出高可信度的冒名申请与定向诈骗。被反复验证有效的自卫动作并不复杂——重要账户上多要素认证或通行密钥、密码不跨站复用、泄露通知一律从官网入口核验。</p>
+      <p><strong>对企业</strong>，批评集中在公表迟滞与原因隐匿、恢复能力的方差，以及中小企业的结构性薄弱：勒索被害约六成是中小企业，它们没有专职安全人员，却是大企业供应链的一环；恢复费用超 1,000 万日元的组织约六成，一个月内能恢复的不足五成。东京商工研究在发布「过去最差节奏」时特别要求：不要只数件数，要看内容敏感性，并整备业务连续性计划。</p>
     </div>
   </section>
 
-  <!-- 8 -->
-  <section id="s8">
-    <div class="sec-head"><span class="sec-num">8</span><h2 class="sec-title">结语：这一年改变了什么</h2></div>
-    <p>2026 年未必是日本信息泄露「变得最糟」的一年——它更像是<strong>伪装失效</strong>的一年：攻击的工业化速度、平台集中的系统性风险、以及「道歉+优惠券」的责任定价，三件长期存在的事实在同一年里同时变得不可忽视。政府的回应是真实的：国家开始主动无害化攻击源，基干基础设施被纳入强制报告网。但今年的被害名单同样说明，最薄弱的环节——中小企业的 VPN、委托商的账号、大企业后台里沉睡的证件画像——仍在制度之网的外侧。</p>
-    <p>对生活在日本的个人与经营者，这一年的教训可以压缩成三句：你的信息大概率已经在某次泄露之中，自卫的重点是让单点信息拼不出完整的你（密码不复用、重要账户上通行密钥）；你公司的风险，一半写在你签约的供应商名单里（委托商与 SaaS 的清单要拿得出来、问得下去）；而「没出过事」在 2026 年的日本，已经不能作为安全证据——只能作为尚未被统计到的证据。</p>
-    <p class="note">本综述由公开报道与官方统计整理，协作复核阶段对全部数字做过一次口径一致性检查（单位、时点、统计范围）。如发现与当事企业最新续报不符之处，以企业与监管机构的最新公表为准。</p>
+  <section>
+    <h2>政府的应对：新法上路，执法未动</h2>
+    <div class="versus">
+      <div>
+        <h3 style="margin-top:6px">2026 年 10 月 1 日起</h3>
+        <ul>
+          <li><strong>能动网络防御开始运作</strong>：《网络应对能力强化法》部分施行，警察与自卫队经首相命令可访问攻击源服务器并实施「无害化」</li>
+          <li><strong>258 家基干基础设施运营商</strong>（电力、通信、金融等 15 个领域）负资产申报与事件报告义务，认知后 30 日内提交详细报告</li>
+          <li><strong>官民网络协议会</strong>同日成立，约 100 家组织共享威胁情报</li>
+          <li>个保委与国家网络统括室 10 月共同呼吁：修补漏洞、点检委托商、不持有不必要的数据</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-top:6px">同一年，另一条线</h3>
+        <ul>
+          <li><strong>泄露无法定罚款</strong>：2026 年 7 月修法引入课征金，但泄露被排除在对象之外——与 GDPR 最高 4% 全球营业额罚款形成对照</li>
+          <li><strong>新法的网只到基础设施为止</strong>：占被害六成的中小企业、失守频发的委托商与 SaaS，仍主要靠各组织自律</li>
+          <li>警察的解密工具已为 17 家组织恢复约 717 万件数据，是执法侧最实的成果之一</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="funnel">
+      <div class="big"><span class="from">17,139</span><span class="arrow">→</span><span class="to">3</span></div>
+      <p class="cap">个保委上一年度受理的泄露报告数，与它全年发出的处分：劝告 2 件、命令 1 件。「高透明、低惩罚」是日本模式最准确的概括——报告与公表义务是真实的，事后的价格标签却近乎为零。</p>
+    </div>
+
+    <div class="contrast">
+      <div class="nums"><b>1,625 亿日元</b><span class="down">→ 约 2 亿日元</span></div>
+      <p>一个证明「防得住」的对照组：证券账户被劫持的不正交易额（月度），在多要素认证等被强制推行后，从 2025 年 4 月的峰值跌至 2026 年 8 月。当对策被强制执行，被害曲线可以被压下去——问题从来不是能不能防，而是防的成本由谁承担、不用防的代价有多低。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>结语</h2>
+    <div class="col">
+      <p>2026 年未必是日本信息泄露「变得最糟」的一年，它更像是<strong>伪装失效</strong>的一年：攻击的工业化、平台集中的系统性风险、以及「道歉加优惠券」的责任定价，三件长期存在的事实，同一年里变得不可忽视。</p>
+      <p>对生活在日本的个人与经营者，教训可以压缩成三句。你的信息大概率已在某次泄露之中，自卫的重点是让单点信息拼不出完整的你。你公司的风险，一半写在供应商名单里——委托商与 SaaS 的清单要拿得出来、问得下去。而在 2026 年的日本，「没出过事」已经不能作为安全的证据，只能作为尚未被统计到的证据。</p>
+    </div>
+
+    <details class="src">
+      <summary>数据来源与口径说明</summary>
+      <div class="small">
+        <p>・ 勒索被害数、侵入路径、恢复费用：警察厅《2026 年上半年网络空间威胁形势》及令和 8 年版警察白书（经日本时事新闻等整理转述）。「半期最高」指 2020 年下半年开始统计以来；侵入路径「约半数 VPN」为被害组织问卷口径。</p>
+        <p>・ 大型事故计数：东京商工研究 2026 年 10 月 7 日发布（上市企业及其子公司，截至 10 月 5 日）。其「千万级 3 件」为 KDDI、九州电力、物语 Corp；Gyazo 的运营方非上市，不在其范围内，两处数字不可互为印证。</p>
+        <p>・ 原因构成：新闻口径为民间对安全媒体索引 134 条（2026 年 8–9 月）的分类计数（定時ラボ）；官方口径为个保委令和 7 年度（2025 年 4 月–2026 年 3 月）年次报告，与本文「2026 年」错位一个季度，仅作结构对照。其中「其他」1,178 件（8.8%），不正访问 1,256 件中 26.1% 发生在委托商一侧。</p>
+        <p>・ 约 2.33 亿件、401 条：民间作者 zephel 的手工集计（note，截至 2026 年 10 月 16 日），为公告值简单加总，含重复与「可能性」口径，非官方统计。</p>
+        <p>・ 「每月最大」图：按各月已公表事案的最大公表值绘制（记录数口径，对数刻度）。Gyazo 的 2,362 万为用户相关数据记录（含无邮箱匿名用户），图片元数据约 4.9 亿条口径不同，未纳入；KDDI 的 1,223 万为邮箱地址数，与密码 762 万为同一批用户的不同字段，未合并。ShopServe 的 885 万同为记录数而非人数。「最大单起」的说法必须带单位，本文未做不带口径的排名。</p>
+        <p>・ 能动网络防御：共同通信、产经新闻、ITmedia 对 2026 年 10 月 1 日施行的报道（法律 2025 年 5 月成立）；「通信情报利用」2027 年秋施行。个保委执法数（劝告 2 件、命令 1 件）据日本时事新闻；课征金排除泄露的立法过程与永江提案据 Agora 评论，已在正文标注其评论来源性质。</p>
+        <p>・ X 用户声音来自 2026 年 10 月对 Lawson、Times Car、KDDI 三案相关帖文的检索，为定性引用，非统计抽样；日经关于 Lawson 检测过程的说法与企业公表时间线核对一致。KDDI 密码明文保存据 ITmedia 报道为个保委指出的问题。</p>
+        <p>・ 证券账户不正交易额为月度口径，据金融厅集计的媒体转述，衡量金钱被害而非泄露件数。本文时间线为「主要事案」选编而非全量清单；检索时点 2026 年 10 月 21 日，多家企业调查仍在进行，数字可能随续报变化。协作复核阶段曾对全部数字做过一轮口径一致性检查。</p>
+      </div>
+    </details>
   </section>
 
   <footer>
