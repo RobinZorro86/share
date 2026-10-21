@@ -13,7 +13,7 @@
 
 ## 结构
 
-- `index.html` — 域名根页面（公司资料共有页说明）
+- `index.html` — 域名根页面（Robin 个人英文简介 + 跳转 qidi.jp 的按钮；2026-10-21 按 Robin 要求改为个人版，不放公司信息）
 - `hello/` — 疎通確認用テストページ（https://share.qidi.jp/hello/）
 - `_headers` — Cloudflare Pages 全站响应头（noindex）
 - `robots.txt` — 全站禁止爬取
