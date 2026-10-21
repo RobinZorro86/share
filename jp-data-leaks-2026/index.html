@@ -113,6 +113,13 @@
   .cause h4{margin:2px 0 4px;color:var(--ink);font-size:17.5px}
   .cause p{margin:0;font-size:15.5px}
 
+  /* conclusion lessons */
+  .lessons{max-width:720px}
+  .lesson{display:grid;grid-template-columns:52px 1fr;gap:2px 16px;padding:17px 0;border-top:1px solid var(--line)}
+  .lesson .no{color:var(--red);font-size:26px;font-weight:800;line-height:1.2}
+  .lesson p{margin:0;font-size:17px}
+  .lesson p b{color:var(--ink)}
+
   /* quotes */
   .quote{margin:34px 0;padding:6px 0 6px 26px;border-left:3px solid var(--red)}
   .quote p{font-size:22.5px;line-height:1.55;color:var(--ink);font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
@@ -175,6 +182,9 @@
     .funnel .from,.funnel .to{font-size:34px}
     .cause{grid-template-columns:38px 1fr}
     .cause .no{font-size:22px}
+    .lesson{grid-template-columns:38px 1fr}
+    .lesson .no{font-size:22px}
+    .lesson p{font-size:16.5px}
   }
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
   @media print{ details{open:""} .skyline{display:block} .monthlist{display:none} }
@@ -274,7 +284,8 @@
     <div class="phase">
       <div class="when">9–10 月<span>政府与云一起失守</span></div>
       <div>
-        <p>9 月 11 日，数字厅的政府业务系统 GSS 因维护账号被利用，约 24.6 万件信息可能外泄——守方自己站到了公告席上。同月 Gyazo 约 2,362 万条用户数据、Times Car 约 660 万账号（含约 160 万件驾驶证等证件画像）接连爆出。10 月 7 日，云平台 IDCF 遭勒索攻击，495 家机构系统受影响，Nissui 的冷冻食品出货经物流委托商停摆、波及约 1,200 家零售餐饮；第二天，Lawson 公表 215 万件泄露，而入侵早在 9 月中旬就已发生。今天（10 月 21 日），灾害信息服务商 Arcadia 被入侵的消息传来：22 个府县警的职员信息可能外泄。</p>
+        <p>9 月 11 日，数字厅的政府业务系统 GSS 因维护账号被利用，约 24.6 万件信息可能外泄——守方自己站到了公告席上。同月 Gyazo 约 2,362 万条用户数据、Times Car 约 660 万账号（含约 160 万件驾驶证等证件画像）接连爆出。</p>
+        <p>10 月 7 日，云平台 IDCF 遭勒索攻击，495 家机构系统受影响，Nissui 的冷冻食品出货经物流委托商停摆、波及约 1,200 家零售餐饮；第二天，Lawson 公表 215 万件泄露，而入侵早在 9 月中旬就已发生。今天（10 月 21 日），灾害信息服务商 Arcadia 被入侵的消息传来：22 个府县警的职员信息可能外泄。</p>
       </div>
     </div>
 
@@ -333,7 +344,8 @@
     <div class="cause"><div class="no">3</div><div><h4>设定欠账</h4><p>设定错误让数据库的访问控制形同虚设；云服务的「责任共担」被误读为「云厂商全包」。</p></div></div>
     <div class="col">
       <p style="margin-top:20px">新变量在攻击一侧：AI 被用于批量发现漏洞，全球公开漏洞数从 2026 年 1 月的 5,045 件增至 8 月的 10,740 件，约两倍；「发现→做成武器」的周期大幅缩短。日银总裁植田和男 10 月 6 日直言，前沿 AI 使攻击的速度与规模「戏剧性地加速、扩大」。勒索软件即服务（RaaS）则把攻击拆成流水线，上半年手口判明的 66 件中，61 件是「窃取 + 加密」的双重勒索。</p>
-      <p>另一条结构线是<strong>集中</strong>：个保委口径下 26.1% 的不正访问发生在委托商一侧。今年更被放大到系统级——ShopServe 一处被破、众多店铺同时外流；IDCF 一处被破、495 家机构同时停摆；Arcadia 一家、牵连 22 个县警。当所有人共用同一批云、SaaS 与外包商，一次失守就不再是一家公司的事故。而 Times Car 的 160 万件证件画像提醒了第三件事：<strong>持有的数据越多，单次失守的损害上限越高</strong>——个保委与国家网络统括室 10 月的共同呼吁里，「不要持有不必要的数据」与打补丁并列。</p>
+      <p>另一条结构线是<strong>集中</strong>：个保委口径下 26.1% 的不正访问发生在委托商一侧。今年更被放大到系统级——ShopServe 一处被破、众多店铺同时外流；IDCF 一处被破、495 家机构同时停摆；Arcadia 一家、牵连 22 个县警。当所有人共用同一批云、SaaS 与外包商，一次失守就不再是一家公司的事故。</p>
+      <p>而 Times Car 的 160 万件证件画像提醒了第三件事：<strong>持有的数据越多，单次失守的损害上限越高</strong>——个保委与国家网络统括室 10 月的共同呼吁里，「不要持有不必要的数据」与打补丁并列。</p>
     </div>
   </section>
 
@@ -394,7 +406,12 @@
     <h2>结语</h2>
     <div class="col">
       <p>2026 年未必是日本信息泄露「变得最糟」的一年，它更像是<strong>伪装失效</strong>的一年：攻击的工业化、平台集中的系统性风险、以及「道歉加优惠券」的责任定价，三件长期存在的事实，同一年里变得不可忽视。</p>
-      <p>对生活在日本的个人与经营者，教训可以压缩成三句。你的信息大概率已在某次泄露之中，自卫的重点是让单点信息拼不出完整的你。你公司的风险，一半写在供应商名单里——委托商与 SaaS 的清单要拿得出来、问得下去。而在 2026 年的日本，「没出过事」已经不能作为安全的证据，只能作为尚未被统计到的证据。</p>
+      <p>对生活在日本的个人与经营者，教训可以压缩成三句：</p>
+    </div>
+    <div class="lessons">
+      <div class="lesson"><div class="no">1</div><p><b>让单点信息拼不出完整的你。</b>你的信息大概率已在某次泄露之中，自卫的重点不是「不被泄露」，而是让泄露出去的那一份拼不出完整的你——密码不复用、重要账户上通行密钥。</p></div>
+      <div class="lesson"><div class="no">2</div><p><b>你公司的风险，一半写在供应商名单里。</b>委托商与 SaaS 的清单要拿得出来、问得下去；今年最痛的几起，失守点都不在自己的机房里。</p></div>
+      <div class="lesson"><div class="no">3</div><p><b>「没出过事」不是安全的证据。</b>在 2026 年的日本，它只能作为尚未被统计到的证据。</p></div>
     </div>
 
     <details class="src">
