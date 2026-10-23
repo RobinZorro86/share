@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外企在华 2023–2026：不是撤离潮，是分化与重组</title>
+<meta name="description" content="四年间，哪些外企退出或收缩了中国业务，哪些在加码？退出、加码双清单 + 官方数据双口径 + 商会信心序列 + 权威分析梳理，截至 2026 年 10 月 23 日。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="外企在华 2023–2026：不是撤离潮，是分化与重组">
+<meta property="og:description" content="退出与加码双清单、FDI 双口径数据、商会信心序列与权威分析——同一组事实，为什么得出相反结论。">
+<meta property="og:image" content="https://share.qidi.jp/foreign-firms-china-2023-2026/og.jpg">
+<meta property="og:url" content="https://share.qidi.jp/foreign-firms-china-2023-2026/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+  --paper:#fbfbfd; --ink:#1d1d1f; --steel:#14304d; --exit:#b3402a; --entry:#177245;
+  --mist:#e8eaed; --sub:#5f6368; --card:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:var(--steel);text-decoration:none;border-bottom:1px solid #b9c9d8}
+a:hover{border-bottom-color:var(--steel)}
+h1,h2{font-family:"Songti SC","Noto Serif SC","Noto Serif CJK SC",serif;font-weight:700;color:var(--steel)}
+header{padding:64px 0 8px}
+.kicker{font-size:14px;color:var(--exit);letter-spacing:.14em;margin-bottom:14px}
+h1{font-size:42px;line-height:1.3;letter-spacing:.01em}
+.lede{margin-top:20px;font-size:18.5px;line-height:1.8;color:#33373b;max-width:46em}
+.byline{margin-top:22px;font-size:13.5px;color:var(--sub)}
+.keystats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 6px}
+.keystat{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:18px 18px 14px}
+.keystat .num{font-size:29px;font-weight:700;color:var(--steel);font-variant-numeric:tabular-nums;line-height:1.2}
+.keystat .num.red{color:var(--exit)} .keystat .num.green{color:var(--entry)}
+.keystat .lab{font-size:13px;color:var(--sub);margin-top:6px;line-height:1.55}
+nav.toc{position:sticky;top:0;background:rgba(251,251,253,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--mist);z-index:10;margin-top:26px}
+nav.toc .wrap{display:flex;gap:22px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+nav.toc a{border:none;font-size:14.5px;color:var(--ink);white-space:nowrap}
+nav.toc a:hover{color:var(--steel)}
+section{padding:44px 0 8px}
+h2{font-size:27px;line-height:1.4;padding-bottom:10px;border-bottom:2px solid var(--steel);margin-bottom:18px}
+h2 .en{font-size:15px;color:var(--sub);font-family:-apple-system,"PingFang SC",sans-serif;font-weight:400;margin-left:10px}
+.secintro{color:#33373b;max-width:48em;margin-bottom:22px}
+.chartgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.chart{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:20px 20px 14px}
+.chart.wide{grid-column:1/-1}
+.chart h3{font-size:16.5px;color:var(--steel);margin-bottom:4px}
+.chart .note{font-size:12.5px;color:var(--sub);line-height:1.6;margin-top:10px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:170px;margin-top:14px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .col{width:78%;border-radius:5px 5px 0 0;background:var(--steel)}
+.bar .col.red{background:var(--exit)} .bar .col.green{background:var(--entry)} .bar .col.grey{background:#9aa7b4}
+.bar .col.hatch{background:repeating-linear-gradient(45deg,#14304d 0 6px,#68809b 6px 12px)}
+.bar .v{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-bottom:5px;color:var(--ink)}
+.bar .x{font-size:12px;color:var(--sub);margin-top:7px;text-align:center;line-height:1.35}
+.pairs{display:flex;align-items:flex-end;gap:20px;height:180px;margin-top:14px}
+.pair{flex:1;display:flex;align-items:flex-end;gap:5px;height:100%;justify-content:center}
+.pair .bar .col{width:100%}
+.pairwrap{flex:1;display:flex;flex-direction:column;height:100%}
+.pairlabel{text-align:center;font-size:12.5px;color:var(--sub);margin-top:7px}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--sub);margin-top:12px;flex-wrap:wrap}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.minirow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.mini{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:16px 18px}
+.mini h4{font-size:14.5px;color:var(--steel);margin-bottom:6px}
+.mini .seq{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.mini p{font-size:12.5px;color:var(--sub);margin-top:5px;line-height:1.6}
+footer{margin-top:56px;border-top:1px solid var(--mist);padding:26px 0 60px;font-size:13.5px;color:var(--sub);line-height:1.8}
+@media (max-width:760px){
+  h1{font-size:31px} .lede{font-size:16.5px}
+  .keystats{grid-template-columns:1fr 1fr}
+  .chartgrid{grid-template-columns:1fr}
+  .minirow{grid-template-columns:1fr}
+  .bars{height:140px}.pairs{height:150px}
+  body{font-size:15.5px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="kicker">数 据 特 稿 · 外 资 在 华 四 年</div>
+    <h1>外企在华 2023–2026：<br>不是撤离潮，是分化与重组</h1>
+    <p class="lede">埃森哲拟售大中华区业务的新闻，又一次把「外资撤离中国」推上头条。但把 2023 年以来的事件和数据完整排开，图景并不支持单向叙事：收缩集中在成熟消费、燃油车链条、美资研发与专业服务；加码集中在医药、高端制造、半导体材料与奢侈品。总量还在降，结构却在换——这四年发生的，与其说是撤离，不如说是一次剧烈的重新选址、重新选业。</p>
+    <p class="byline">企划・监修 Qidi ｜ 汇总与核对 Catherine Muse ｜ 数据整理 Pi Ollama ｜ 资料截至 2026 年 10 月 23 日</p>
+    <div class="keystats">
+      <div class="keystat"><div class="num red">−4.3%</div><div class="lab">2026 年 1—9 月实际使用外资同比（商务部）；降幅逐月收窄，9 月单月已转正 +2.5%</div></div>
+      <div class="keystat"><div class="num green">70,392 家</div><div class="lab">2025 年新设外资企业，同比 +19.1%——金额连降三年，企业数连增三年</div></div>
+      <div class="keystat"><div class="num red">−259 亿美元</div><div class="lab">2023 年国际收支直接投资差额，1998 年有数据以来首次年度转负（外汇局）</div></div>
+      <div class="keystat"><div class="num">10,118 家</div><div class="lab">2026 年在华日企家数，2010 年以来最低，日企已由「扩张期」转入「重组期」（帝国数据银行）</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#data">数据全景</a><a href="#timeline">四年时间线</a><a href="#exits">退出／收缩清单</a><a href="#entries">加码／进入清单</a><a href="#analysis">权威分析</a><a href="#caveats">口径提醒</a>
+</div></nav>
+
+<section id="data">
+  <div class="wrap">
+    <h2>数据全景<span class="en">先看数字，再看故事</span></h2>
+    <p class="secintro">中国有两套官方外资数据：商务部的「实际使用外资」（接近毛额）与外汇局国际收支的「直接投资负债」（净额，含利润再投资与公司间债务）。两套数据方向可以相反，本页所有图表都标明口径——选哪套数据，往往就选定了结论。</p>
+    <div class="chartgrid">
+      <div class="chart">
+        <h3>实际使用外资（商务部口径，亿元）</h3>
+        <div class="bars">
+          <div class="bar"><span class="v">11,339</span><div class="col" style="height:100%"></div><span class="x">2023<br>−8.0%</span></div>
+          <div class="bar"><span class="v">8,263</span><div class="col" style="height:72.9%"></div><span class="x">2024<br>−27.1%</span></div>
+          <div class="bar"><span class="v">7,477</span><div class="col" style="height:65.9%"></div><span class="x">2025<br>−9.5%</span></div>
+          <div class="bar"><span class="v">5,488</span><div class="col hatch" style="height:48.4%"></div><span class="x">2026 年 1—9 月<br>−4.3%</span></div>
+        </div>
+        <p class="note">斜纹柱为非完整年度。三年连降后降幅收窄：2026 年 1—7 月 −6.2% → 1—8 月 −5.3% → 1—9 月 −4.3%。来源：商务部各年度发布。</p>
+      </div>
+      <div class="chart">
+        <h3>新设外商投资企业（家）</h3>
+        <div class="bars">
+          <div class="bar"><span class="v">53,766</span><div class="col green" style="height:76.4%"></div><span class="x">2023<br>+39.7%</span></div>
+          <div class="bar"><span class="v">59,080</span><div class="col green" style="height:83.9%"></div><span class="x">2024<br>+9.9%</span></div>
+          <div class="bar"><span class="v">70,392</span><div class="col green" style="height:100%"></div><span class="x">2025<br>+19.1%</span></div>
+          <div class="bar"><span class="v">47,800</span><div class="col grey" style="height:67.9%"></div><span class="x">2026 年 1—9 月<br>−2.3%</span></div>
+        </div>
+        <p class="note">与左图正好背离：金额连降、企业数连增——新设以中小型、服务业、轻资产项目为主，大额绿地投资减少。来源：商务部。</p>
+      </div>
+      <div class="chart wide">
+        <h3>同一中国，两个数字：双口径对照（亿美元）</h3>
+        <div class="pairs">
+          <div class="pairwrap"><div class="pair">
+            <div class="bar"><span class="v">1,633</span><div class="col" style="height:100%"></div></div>
+            <div class="bar"><span class="v">177</span><div class="col red" style="height:10.8%"></div></div>
+          </div><div class="pairlabel">2023 年</div></div>
+          <div class="pairwrap"><div class="pair">
+            <div class="bar"><span class="v">1,162</span><div class="col" style="height:71.2%"></div></div>
+            <div class="bar"><span class="v">186</span><div class="col red" style="height:11.4%"></div></div>
+          </div><div class="pairlabel">2024 年</div></div>
+          <div class="pairwrap"><div class="pair">
+            <div class="bar"><span class="v">1,047</span><div class="col" style="height:64.1%"></div></div>
+            <div class="bar"><span class="v">800</span><div class="col red" style="height:49%"></div></div>
+          </div><div class="pairlabel">2025 年</div></div>
+        </div>
+        <div class="legend"><span><i style="background:#14304d"></i>商务部：实际使用外资（美元折算）</span><span><i style="background:#b3402a"></i>外汇局：直接投资负债（BOP 净额口径）</span></div>
+        <p class="note">差距主要来自统计范围与净额处理：BOP 口径扣减撤资、减资与公司间贷款净偿还（如 2024 年外资净偿还关联债务 543 亿美元），并计入利润再投资。外汇局序列经多次修订——2023 年初值口径曾为 330 亿美元（彭博、瑞银常用），本图采用外汇局各年度《中国国际收支报告》年报值；不同版本水平不同，但「2023 跌落、2024 见底、2025 回升」的方向一致。两套数据不构成互相否证。</p>
+      </div>
+      <div class="chart">
+        <h3>高技术产业占实际使用外资比重</h3>
+        <div class="bars">
+          <div class="bar"><span class="v">37.3%</span><div class="col" style="height:89.7%"></div><span class="x">2023</span></div>
+          <div class="bar"><span class="v">34.7%*</span><div class="col" style="height:83.4%"></div><span class="x">2024</span></div>
+          <div class="bar"><span class="v">32.3%</span><div class="col" style="height:77.6%"></div><span class="x">2025</span></div>
+          <div class="bar"><span class="v">41.6%</span><div class="col green" style="height:100%"></div><span class="x">2026 年 1—9 月</span></div>
+        </div>
+        <p class="note">*2024 年为两项官方数字相除的计算值（当年官方未单列整体占比）。占比随总量同步下滑三年后，2026 年前三季度高技术实际使用外资同比 +33.8%，占比跳升——结构拐点。来源：商务部、《中国外资统计公报 2026》。</p>
+      </div>
+      <div class="chart">
+        <h3>欧盟商会：称「在华经营变得更难」的比例</h3>
+        <div class="bars">
+          <div class="bar"><span class="v">64%</span><div class="col red" style="height:87.7%"></div><span class="x">2023</span></div>
+          <div class="bar"><span class="v">68%</span><div class="col red" style="height:93.2%"></div><span class="x">2024</span></div>
+          <div class="bar"><span class="v">73%</span><div class="col red" style="height:100%"></div><span class="x">2025</span></div>
+          <div class="bar"><span class="v">68%</span><div class="col" style="height:93.2%"></div><span class="x">2026</span></div>
+        </div>
+        <p class="note">2025 年 73% 为该调查历史最高；2026 年五年来首次改善。对未来两年盈利「乐观」的比例：2024 年约 15% → 2025 年 12%（历史最低）→ 2026 年 17%。来源：中国欧盟商会《商业信心调查》各年（与罗兰贝格合作）。</p>
+      </div>
+      <div class="chart wide">
+        <h3>在华日企数量（帝国数据银行调查）</h3>
+        <div class="bars">
+          <div class="bar"><span class="v">14,394</span><div class="col" style="height:100%"></div><span class="x">2012 年（峰值）</span></div>
+          <div class="bar"><span class="v">13,034</span><div class="col" style="height:90.6%"></div><span class="x">2024 年</span></div>
+          <div class="bar"><span class="v">10,118</span><div class="col red" style="height:70.3%"></div><span class="x">2026 年 6 月（2010 年以来最低）</span></div>
+        </div>
+        <p class="note">2024—2026 年间：撤出或无法确认存续 4,137 家（历史最高），同期新进入仅 1,221 家，净减 2,916 家。统计对象为在华当地法人、关系公司与代表处，按企业数计、「无法确认存续」计入撤出，是存续状态变化而非纯撤资统计。</p>
+      </div>
+    </div>
+    <div class="minirow">
+      <div class="mini"><h4>科尔尼 FDI 信心指数：中国全球排名</h4><div class="seq">7 → 3 → 6 → 4</div><p>2023—2026 年；新兴市场榜连续三年居首。测的是全球大企业高管未来三年的投资意向，与实际流量并不同步。</p></div>
+      <div class="mini"><h4>JETRO：日企拟「扩大」在华业务比例</h4><div class="seq">40.9% → 21.3%</div><p>2021 年 40.9%、2023 年 27.7%、2024 年 21.7%、2025 年 21.3%（2007 年以来最低）；同期「维持现状」64.3%。</p></div>
+      <div class="mini"><h4>Conference Board 中国 CEO 信心指数</h4><div class="seq">72 → 54 → 56 → 49 → 37</div><p>2023 上半年至 2025 上半年（50 为荣枯线）。2025 上半年 37 为历史第二低，仅高于 2022 年封控期的 34。</p></div>
+    </div>
+  </div>
+</section>
+
+<style>
+.tl{position:relative;margin:8px 0 0;padding-left:26px}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--mist)}
+.tl .yr{font-family:"Songti SC","Noto Serif SC",serif;font-size:20px;font-weight:700;color:var(--steel);margin:22px 0 8px -26px}
+.tl .ev{position:relative;padding:7px 0 7px 6px;border-bottom:1px dashed #eceef0}
+.tl .ev:last-child{border-bottom:none}
+.tl .ev:before{content:"";position:absolute;left:-24px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--entry);border:2px solid var(--paper)}
+.tl .ev.out:before{background:var(--exit)}
+.tl .d{font-size:13px;color:var(--sub);font-variant-numeric:tabular-nums;margin-right:10px}
+.tl .t{font-size:15.5px}
+.tl .t b{color:var(--steel)}
+.dir{font-size:11.5px;padding:1px 7px;border-radius:20px;vertical-align:2px;margin-left:8px;white-space:nowrap}
+.dir.out{background:#f9e8e3;color:var(--exit)} .dir.in{background:#e2f1e8;color:var(--entry)}
+.ycols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
+.ycol{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:18px 20px 10px}
+.ycol h3{font-size:17px;color:var(--steel);margin-bottom:8px;font-family:"Songti SC","Noto Serif SC",serif}
+.ycol ul{list-style:none}
+.ycol li{padding:8px 0;border-bottom:1px dashed #eceef0;font-size:15px;line-height:1.65}
+.ycol li:last-child{border-bottom:none}
+.ycol li b{color:var(--ink)}
+.tag{font-size:11.5px;padding:1px 7px;border-radius:20px;white-space:nowrap;margin-left:6px;vertical-align:2px}
+.tag.done{background:#e2f1e8;color:var(--entry)}
+.tag.ann{background:#e8eefc;color:#2b4acb}
+.tag.rumor{background:#fdf0d5;color:#8a6100}
+.tag.note{background:#eceff1;color:#546e7a}
+.src{display:block;font-size:12px;color:var(--sub);border:none;margin-top:2px}
+.src:hover{color:var(--steel)}
+.an{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.an .item{background:var(--card);border:1px solid var(--mist);border-radius:14px;padding:18px 20px}
+.an .item h3{font-size:16.5px;color:var(--steel);margin-bottom:6px}
+.an .item p{font-size:14.5px;color:#33373b;line-height:1.7}
+.an .item p+p{margin-top:8px}
+.caveats{background:#fff;border:1px solid var(--mist);border-radius:14px;padding:18px 22px}
+.caveats li{margin:0 0 8px 18px;font-size:14.5px;color:#33373b;line-height:1.7}
+@media (max-width:760px){ .ycols,.an{grid-template-columns:1fr} }
+</style>
+
+<section id="timeline">
+  <div class="wrap">
+    <h2>四年时间线<span class="en">转折点都在这里</span></h2>
+    <div class="tl">
+      <div class="yr">2023</div>
+      <div class="ev out"><span class="d">02-01</span><span class="t"><b>Gap 大中华区</b>由宝尊电商完成收购接盘，美国 Gap 退出自营运营——「卖给本地运营商」模式的开场</span><span class="dir out">退出·本地化</span></div>
+      <div class="ev out"><span class="d">05-09</span><span class="t"><b>领英 LinkedIn</b> 宣布关闭本土求职应用「领英职场」，8 月 9 日停运</span><span class="dir out">退出</span></div>
+      <div class="ev out"><span class="d">06-30</span><span class="t"><b>亚马逊 Kindle</b> 中国电子书店停止运营</span><span class="dir out">退出</span></div>
+      <div class="ev in"><span class="d">07-26</span><span class="t"><b>大众集团</b> 约 7 亿美元入股小鹏汽车 4.99%，共同开发电动车型</span><span class="dir in">加码</span></div>
+      <div class="ev out"><span class="d">10-09</span><span class="t"><b>花旗</b> 将中国个人财富管理组合（约 36 亿美元）售予汇丰中国</span><span class="dir out">退出</span></div>
+      <div class="ev out"><span class="d">10-24</span><span class="t"><b>三菱汽车</b> 宣布终止在华汽车生产，股权转广汽集团，计提 243 亿日元损失</span><span class="dir out">退出</span></div>
+      <div class="yr">2024</div>
+      <div class="ev in"><span class="d">04-11</span><span class="t"><b>大众</b> 追加 25 亿欧元扩合肥生产与创新中心，喊出「在中国，为中国」</span><span class="dir in">加码</span></div>
+      <div class="ev in"><span class="d">04-26</span><span class="t"><b>宝马</b> 沈阳生产基地追加投资 200 亿元</span><span class="dir in">加码</span></div>
+      <div class="ev in"><span class="d">05-23</span><span class="t"><b>特斯拉</b> 上海储能超级工厂开工——其在美国本土之外的第一座储能厂</span><span class="dir in">加码</span></div>
+      <div class="ev out"><span class="d">07-23</span><span class="t"><b>日本制铁</b> 以 17.58 亿元出售宝钢合资 50% 股权，在华产能削减约 70%</span><span class="dir out">退出</span></div>
+      <div class="ev out"><span class="d">07-26</span><span class="t"><b>本田</b> 关停合计约 29 万辆燃油车产能；同年投建两座电动车新厂</span><span class="dir out">收缩·同年加码</span></div>
+      <div class="ev out"><span class="d">08-26</span><span class="t"><b>IBM</b> 宣布关闭中国开发中心与系统中心，1,000+ 名研发人员受影响</span><span class="dir out">退出</span></div>
+      <div class="ev out"><span class="d">09-26</span><span class="t"><b>LG 显示</b> 签约以 108 亿元将广州 LCD 工厂售予 TCL 华星</span><span class="dir out">出售·转进 OLED</span></div>
+      <div class="ev out"><span class="d">12-02</span><span class="t"><b>通用汽车</b> 对中国业务计提超 50 亿美元（含关厂重组）</span><span class="dir out">收缩</span></div>
+      <div class="ev in"><span class="d">12-02</span><span class="t"><b>赛诺菲</b> 签约 10 亿欧元北京胰岛素生产基地——其在华最大单笔投资</span><span class="dir in">加码</span></div>
+      <div class="yr">2025</div>
+      <div class="ev in"><span class="d">02-11</span><span class="t"><b>特斯拉</b> 上海储能厂投产，年产 1 万台 Megapack</span><span class="dir in">加码</span></div>
+      <div class="ev in"><span class="d">02-05</span><span class="t"><b>丰田</b> 宣布在上海独资设立雷克萨斯纯电及电池公司，2027 年后投产</span><span class="dir in">进入</span></div>
+      <div class="ev out"><span class="d">03-01</span><span class="t"><b>IBM（中国）投资公司</b> 停业， IBM 在华研发实体收尾</span><span class="dir out">退出</span></div>
+      <div class="ev in"><span class="d">03-21</span><span class="t"><b>阿斯利康</b> 宣布 25 亿美元北京全球战略研发中心，10 月启用</span><span class="dir in">加码</span></div>
+      <div class="ev out"><span class="d">06-05</span><span class="t"><b>花旗</b> 宣布上海、大连技术中心裁员约 3,500 人</span><span class="dir out">收缩</span></div>
+      <div class="ev in"><span class="d">07-15</span><span class="t"><b>埃克森美孚</b> 惠州乙烯项目投运，总投资超 100 亿美元</span><span class="dir in">加码</span></div>
+      <div class="ev in"><span class="d">10-22</span><span class="t"><b>空客</b> 天津第二条 A320 总装线启用</span><span class="dir in">加码</span></div>
+      <div class="ev in"><span class="d">11-05</span><span class="t"><b>巴斯夫</b> 湛江一体化基地核心装置产出首批产品（总投资约 87–100 亿欧元）</span><span class="dir in">加码</span></div>
+      <div class="ev out"><span class="d">11-10</span><span class="t"><b>汉堡王中国</b>：母公司 RBI 与 CPE 源峰组建合资，CPE 持股 83% 注资 3.5 亿美元</span><span class="dir out">让出控股权</span></div>
+      <div class="ev out"><span class="d">11 月</span><span class="t"><b>星巴克</b> 宣布出售中国业务 60% 股权予博裕资本（2026 年 4 月交割）</span><span class="dir out">让出控股权</span></div>
+      <div class="yr">2026</div>
+      <div class="ev in"><span class="d">01-29</span><span class="t"><b>阿斯利康</b> 承诺 2030 年前在华投资逾 1,000 亿元</span><span class="dir in">加码</span></div>
+      <div class="ev out"><span class="d">05-06</span><span class="t"><b>三星电子</b> 宣布停售中国内地全部家电与电视（保留售后、手机与半导体）</span><span class="dir out">退出</span></div>
+      <div class="ev out"><span class="d">10-18</span><span class="t"><b>埃森哲</b> 被曝聘摩根大通评估出售大中华区业务，估值最高 15 亿美元</span><span class="dir out">传闻·未证实</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="exits">
+  <div class="wrap">
+    <h2>退出／收缩清单<span class="en">按年 · 状态已标注</span></h2>
+    <p class="secintro">「退出」至少有四种含义：关门走人、把控股权卖给中国资本（品牌还在）、关旧厂同时开新厂、以及只关某条业务线。下表按事件归类而不是按公司立场，同一家公司可能同时出现在退出与加码两张表里。</p>
+    <div class="ycols">
+      <div class="ycol"><h3>2023</h3><ul>
+        <li><b>领英 LinkedIn（美）</b>：关闭本土求职应用领英职场（8 月 9 日停运），在华仅保留协助中国企业出海的团队<span class="tag done">已完成</span><span class="src">AFP，2023-05-09</span></li>
+        <li><b>亚马逊 Kindle（美）</b>：中国电子书店 6 月 30 日停运；跨境电商、AWS 等其他业务继续<span class="tag done">已完成</span><span class="src">AFP／Business Times，2023-06-30</span></li>
+        <li><b>Gap（美）→ 宝尊</b>：大中华区运营 2 月 1 日由宝尊收购接盘，Gap 转为纯品牌方<span class="tag done">已完成</span><span class="src">宝尊公告／港交所，2023-02-01</span></li>
+        <li><b>三菱汽车（日）</b>：终止在华生产，广汽三菱股权转广汽集团；2025 年发动机合资亦终止，制造层面完全退出<span class="tag done">已完成</span><span class="src">Reuters，2023-10-24</span></li>
+        <li><b>花旗（美）</b>：个人财富管理组合（约 36 亿美元）售汇丰中国，零售业务关停落地；机构业务保留<span class="tag done">已签约·2024 交割</span><span class="src">花旗公告／Reuters，2023-10</span></li>
+        <li><b>家乐福中国（法品牌）</b>：苏宁运营下崩塌——上半年关店 100+ 家，10 月北京最后一家歇业。注：控股权 2019 年已归苏宁，不算法资当年退出<span class="tag note">业态崩塌</span><span class="src">财新周刊，2023-10-14</span></li>
+        <li><b>北京现代（韩）</b>：重庆工厂以 16.2 亿元售予重庆国资（2017 年投产、投资 77 亿元），在华工厂继续缩减<span class="tag done">已完成</span><span class="src">Korea Times，2024-01-16</span></li>
+        <li><b>尽调咨询行业（美等）</b>：明思集团北京办被查关办、贝恩上海员工被问询、凯盛融英多地被国安调查；《反间谍法》修订 7 月生效<span class="tag note">受查·行业收缩</span><span class="src">Reuters／AP，2023 年</span></li>
+        <li><b>Dentons 大成（国际律所）</b>：与北京大成分拆结束联合体——美资律所退潮的先声<span class="tag done">已完成</span><span class="src">AP，2023-08-11</span></li>
+        <li><b>索尼（日）</b>：供日美欧市场的相机生产转泰国，中国工厂原则上只供中国——「中国+1」去风险，非退出中国市场<span class="tag ann">供应链调整</span><span class="src">Nikkei Asia，2023-01-29</span></li>
+      </ul></div>
+      <div class="ycol"><h3>2024</h3><ul>
+        <li><b>IBM（美）</b>：8 月 26 日宣布关闭中国开发中心（CDL）与系统中心（CSL），1,000+ 人受影响，CEO 称决定「不可逆转」<span class="tag done">已确认</span><span class="src">界面新闻／第一财经／SCMP，2024-08</span></li>
+        <li><b>麦肯锡（美）</b>：两年裁减中国业务约 500 人（约三分之一）、拆分中国业务、削减政府关联客户<span class="tag ann">媒体报道</span><span class="src">WSJ 经 Reuters，2024-10-17</span></li>
+        <li><b>本田（日）</b>：关停广汽本田一条线（5 万辆）＋东风本田一条线（24 万辆），燃油产能 149 万 → 120 万辆；同年投两座 EV 新厂<span class="tag done">已确认</span><span class="src">Reuters，2024-07-26</span></li>
+        <li><b>日产（日）</b>：关闭常州乘用车工厂（年产能 13 万辆）<span class="tag done">已完成</span><span class="src">共同社／日经，2024-06</span></li>
+        <li><b>日本制铁（日）</b>：17.58 亿元出售宝钢合资 50% 股权，在华粗钢产能削减约 70%<span class="tag done">已完成</span><span class="src">Nikkei／Reuters，2024-07-23</span></li>
+        <li><b>通用汽车（美）</b>：12 月对中国业务计提超 50 亿美元，含关闭工厂与重组；合资盈利模式告急<span class="tag ann">已宣布</span><span class="src">CNBC／Reuters，2024-12</span></li>
+        <li><b>LG 显示（韩）</b>：签约以 108 亿元将广州 LCD 工厂售予 TCL 华星，转向 OLED 布局<span class="tag done">已签约</span><span class="src">KED／TrendForce，2024-09-26</span></li>
+        <li><b>丝芙兰（法，LVMH）</b>：8 月中国裁员——彭博称约 10%（约 400 人），公司称不足 3%（不足 120 人）<span class="tag rumor">口径冲突</span><span class="src">Bloomberg vs 公司声明，2024-08</span></li>
+        <li><b>美资律所</b>：Paul Weiss 年底关闭北京办公室（1981 年入华）；WilmerHale 等同年收缩在华据点<span class="tag done">已确认</span><span class="src">财新／Bloomberg Law，2024 年</span></li>
+      </ul></div>
+      <div class="ycol"><h3>2025</h3><ul>
+        <li><b>IBM（美）</b>：3 月 1 日 IBM（中国）投资公司停业，在华研发实体收尾；销售与咨询业务保留<span class="tag done">已完成</span><span class="src">第一财经／SCMP，2025-03</span></li>
+        <li><b>花旗（美）</b>：6 月 5 日宣布上海、大连技术中心裁员约 3,500 人（全球精简一环）；同期仍在华申设全资证券公司<span class="tag ann">已宣布</span><span class="src">财新，2025-06-05</span></li>
+        <li><b>亚马逊 AWS（美）</b>：7 月解散上海 AI 实验室（FT 首报）；亚马逊未直接确认关闭实验室，仅确认 AWS 岗位调整<span class="tag rumor">部分未证实</span><span class="src">FT／AFP，2025-07</span></li>
+        <li><b>麦肯锡（美）</b>：被曝禁止中国内地业务承接生成式 AI 咨询项目——FT 引两名知情人士，Reuters 未能独立证实<span class="tag rumor">单一来源</span><span class="src">FT，2025-07</span></li>
+        <li><b>三菱（日）</b>：沈阳航天三菱发动机合资 7 月终止——继整车之后，制造层面完全退出中国<span class="tag done">已完成</span><span class="src">Reuters，2025-07</span></li>
+        <li><b>LG 显示（韩）</b>：广州 LCD 厂交易 4 月 1 日完成交割<span class="tag done">已完成</span><span class="src">Korea Times／TrendForce，2025-04</span></li>
+        <li><b>家乐福中国残局</b>：苏宁以每家 1 元出售家乐福 4 家子公司，并拟整体出售已资不抵债的家乐福中国<span class="tag note">残局处置</span><span class="src">第一财经，2025 年</span></li>
+        <li><b>汉堡王中国（美 RBI）</b>：11 月与 CPE 源峰组建合资，CPE 持股 83%、注资 3.5 亿美元，RBI 仅留 17%<span class="tag done">已签约</span><span class="src">Nikkei／AFP，2025-11-10</span></li>
+        <li><b>星巴克（美）</b>：11 月宣布出售中国零售业务 60% 予博裕资本（见 2026 交割条）<span class="tag done">已签约</span><span class="src">星巴克公告，2025-11</span></li>
+      </ul></div>
+      <div class="ycol"><h3>2026（截至 10 月 23 日）</h3><ul>
+        <li><b>埃森哲（爱尔兰注册）</b>：FT 称其聘摩根大通评估出售大中华区业务（内地＋港台），估值最高 15 亿美元，或保留少数股权——Reuters 明示无法核实，公司未置评<span class="tag rumor">传闻·未证实</span><span class="src">FT／Reuters，2026-10-18</span></li>
+        <li><b>星巴克（美）</b>：博裕交易 4 月 2 日交割完成：博裕持股 60%、星巴克留 40% 及品牌授权，约 8,000 店转特许经营，长期目标 20,000 店<span class="tag done">已完成</span><span class="src">星巴克 8-K／Business Wire，2026-04-02</span></li>
+        <li><b>三星电子（韩）</b>：5 月 6 日官网宣布停售内地全部家电与电视（仅留售后），保留手机、半导体、医疗<span class="tag ann">已宣布执行</span><span class="src">Korea Herald，2026-05-06</span></li>
+        <li><b>GUESS（美）</b>：3 月 31 日前关完内地全部线上线下直营店，结束约 20 年直营零售<span class="tag done">已完成</span><span class="src">界面新闻／SCMP，2026 年</span></li>
+        <li><b>富达国际</b>：Reuters 独家称其计划退出全资在华公募子公司（规模约 45 亿元，远低于内部盈亏线）；公司回应财新称「战略无变化」<span class="tag rumor">传闻·公司否认</span><span class="src">Reuters，2026-08-20／财新，2026-08-22</span></li>
+        <li><b>本田（日）</b>：再传广汽本田黄埔厂停产、燃油产能近减半（公司未正式公告、合资方称「资源整合」）；7 月又将广汽合资延长至 2038 年<span class="tag note">重组非退出</span><span class="src">Reuters，2026-04／产经，2026-07</span></li>
+        <li><b>大众（德）</b>：Reuters 披露其在华员工已由 9 万降至 7 万，中国产能再减约 50 万辆<span class="tag ann">重组进程</span><span class="src">Reuters，2026-09-25</span></li>
+        <li><b>日系车灯链</b>：小糸制作所 10 月解散清算湖北小糸，在华车灯产能累计削减约 66%；尼得科 5 月称将解散广州电驱动合资、退出「红海」业务<span class="tag ann">已宣布</span><span class="src">日经，2026 年</span></li>
+        <li><b>宜家（瑞典）</b>：2 月起关闭 7 家大型商场，转投 10+ 家小型门店——业态重组，公司强调中国仍是核心市场<span class="tag note">重组非退出</span><span class="src">人民网英文版，2026-01-08</span></li>
+        <li><b>老佛爷百货（法）</b>：5 月关闭北京旗舰店（营业 13 年），保留上海、深圳店<span class="tag done">已完成</span><span class="src">AFP／SCMP，2026-05-27</span></li>
+        <li><b>美妆集群</b>：据行业统计，2026 年 22+ 国际美妆品牌关店、撤柜或暂停内地渠道（梦妆、菲洛嘉、Lanolips 等），多为渠道层收缩<span class="tag note">行业汇总</span><span class="src">Jing Daily 引《化妆品观察》，2026-10</span></li>
+        <li><b>纺织</b>：Cone Denim 宣布年底前退出中国牛仔布生产，嘉兴工厂产能转墨西哥<span class="tag ann">已宣布</span><span class="src">Just-Style，2026-09</span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="entries">
+  <div class="wrap">
+    <h2>加码／进入清单<span class="en">钱投在哪里，方向就在哪里</span></h2>
+    <p class="secintro">加码的形态也在变：从「再建一座厂卖给中国」转向研发中心、本地化生产与和中国伙伴绑定——大众入股小鹏、星巴克让本地资本控股，都是同一逻辑的不同版本。</p>
+    <div class="ycols">
+      <div class="ycol"><h3>2023</h3><ul>
+        <li><b>大众（德）→ 小鹏</b>：约 7 亿美元入股小鹏 4.99%，共同开发两款大众品牌电动车<span class="tag done">已签约</span><span class="src">AFP，2023-07-26</span></li>
+        <li><b>诺和诺德（丹麦）</b>：一季度宣布天津成品车间投资 11.8 亿元，其天津布局的开局之年<span class="tag ann">已宣布</span><span class="src">新华社／TEDA，2023 年</span></li>
+        <li><b>空客（欧）</b>：4 月签署天津第二条 A320 总装线协议（2025 年启用）<span class="tag done">已签约</span><span class="src">空客公告，2023-04</span></li>
+      </ul></div>
+      <div class="ycol"><h3>2024</h3><ul>
+        <li><b>大众（德）</b>：追加 25 亿欧元扩合肥生产与创新中心<span class="tag ann">已宣布</span><span class="src">Reuters，2024-04-11</span></li>
+        <li><b>宝马（德）</b>：沈阳生产基地追加投资 200 亿元<span class="tag ann">已宣布</span><span class="src">Reuters，2024-04-26</span></li>
+        <li><b>特斯拉（美）</b>：上海储能超级工厂 5 月开工，投资约 14.5 亿元<span class="tag done">已开工</span><span class="src">新华社，2024-05</span></li>
+        <li><b>赛诺菲（法）</b>：12 月签约 10 亿欧元北京胰岛素基地，在华最大单笔投资<span class="tag done">已签约</span><span class="src">新华社，2024-12-02</span></li>
+        <li><b>诺和诺德（丹麦）</b>：3 月天津无菌制剂扩建 40 亿元<span class="tag ann">已宣布</span><span class="src">新华社，2024-03-19</span></li>
+        <li><b>礼来（美）</b>：10 月宣布苏州扩产 15 亿元（糖尿病/肥胖药产能）<span class="tag ann">已宣布</span><span class="src">China Daily／新华社，2024-10</span></li>
+        <li><b>苹果（美）</b>：深圳应用研究实验室 10 月启用，称其美国之外最 extensive 的同类实验室；同期供应链继续向印度、越南分散<span class="tag done">已启用</span><span class="src">SCMP，2024-10</span></li>
+        <li><b>Costco（美）</b>：1 月深圳开华南首店（内地第 6 家）、5 月南京第 7 家；山姆会员店同年加速开店<span class="tag done">已开业</span><span class="src">新华社，2024 年</span></li>
+      </ul></div>
+      <div class="ycol"><h3>2025</h3><ul>
+        <li><b>特斯拉（美）</b>：上海储能厂 2 月 11 日投产，年产 1 万台 Megapack<span class="tag done">已投产</span><span class="src">新华社，2025-02-11</span></li>
+        <li><b>埃克森美孚（美）</b>：惠州乙烯项目 7 月 15 日投运，总投资超 100 亿美元、乙烯年产能 160 万吨<span class="tag done">已投运</span><span class="src">新华社／China Daily，2025-07</span></li>
+        <li><b>壳牌 × 中海油（英荷/中）</b>：惠州三期 1 月作最终投资决定，第三套乙烯裂解装置<span class="tag done">已决定</span><span class="src">壳牌公告，2025-01</span></li>
+        <li><b>巴斯夫（德）</b>：湛江一体化基地 11 月 5 日核心装置产出首批产品；总投资约 87 亿欧元（全基地口径约 100 亿欧元），为其史上最大单笔投资<span class="tag done">已投产</span><span class="src">巴斯夫公告，2025-11-05</span></li>
+        <li><b>阿斯利康（英）</b>：3 月宣布 25 亿美元北京全球战略研发中心（10 月启用）；11 月青岛再追加 1.36 亿美元<span class="tag done">已启用</span><span class="src">阿斯利康公告，2025 年</span></li>
+        <li><b>丰田（日）</b>：2 月宣布上海独资雷克萨斯纯电及电池公司，年产能 10 万辆，2027 年后投产，6 月开工<span class="tag done">已开工</span><span class="src">AFP，2025-02-05</span></li>
+        <li><b>空客（欧）</b>：天津第二条 A320 总装线 10 月 22 日启用<span class="tag done">已启用</span><span class="src">空客公告，2025-10-22</span></li>
+        <li><b>西门子医疗（德）</b>：1 月深圳新基地开工，投资超 10 亿元<span class="tag done">已开工</span><span class="src">第一财经／新华社，2025-01</span></li>
+        <li><b>上海乐高乐园（丹麦/英）</b>：7 月 5 日开园，投资约 5.5 亿美元，为全球最大乐高乐园<span class="tag done">已开业</span><span class="src">新华社，2025-07</span></li>
+        <li><b>山姆会员店（美，沃尔玛）</b>：2024 年中国销售额破 1,000 亿元；2025 年 5 月达 55 家店并继续扩张<span class="tag done">扩张中</span><span class="src">新华社，2025 年</span></li>
+        <li><b>诺和诺德（丹麦）</b>：7 月再投 8 亿元建质检实验室，天津累计投资超 100 亿元<span class="tag ann">已宣布</span><span class="src">新华社／TEDA，2025-07</span></li>
+      </ul></div>
+      <div class="ycol"><h3>2026（截至 10 月 23 日）</h3><ul>
+        <li><b>阿斯利康（英）</b>：1 月 29 日承诺 2030 年前在华投资逾 1,000 亿元（约 150 亿美元），覆盖研发、临床与生产；9 月无锡基地再投近 2 亿元<span class="tag ann">已承诺</span><span class="src">财新／界面，2026-01；China Daily，2026-09-17</span></li>
+        <li><b>礼来（美）</b>：3 月 11 日宣布未来十年在华投资 30 亿美元建口服药本土供应体系；同日与康龙化成达成 2 亿美元合作<span class="tag ann">已宣布</span><span class="src">Reuters，2026-03-11</span></li>
+        <li><b>诺华（瑞士）</b>：3 月宣布在华投资逾 33 亿元（北京昌平扩产＋上海园区二期）<span class="tag ann">已宣布</span><span class="src">第一财经，2026-03-23</span></li>
+        <li><b>赫力昂（英）</b>：3 月宣布 6,500 万英镑在上海建口腔健康生产基地<span class="tag ann">已宣布</span><span class="src">赫力昂官方稿，2026-03-11</span></li>
+        <li><b>赛诺菲（法）</b>：3 月 20 日成都创新与运营中心启用，年底前设 600+ 岗位<span class="tag done">已启用</span><span class="src">Reuters／新华社，2026-03-20</span></li>
+        <li><b>克朗斯（德）</b>：太仓二厂 10 月 13 日投产，总投资 2 亿欧元，与一厂组成其德国本土外最大生产基地<span class="tag done">已投产</span><span class="src">凤凰网江苏／新浪财经，2026-10-13</span></li>
+        <li><b>住友电木（日）</b>：10 月年内二度扩产苏州半导体封装材料（与新加坡合计约 100 亿日元），中国占其半导体材料收入约 42.5%<span class="tag ann">已宣布</span><span class="src">观察者网，2026-10-09</span></li>
+        <li><b>EnerVenue（美，电池初创）</b>：首座工厂放弃肯塔基、落江苏常州，9 月量产——CEO 称看中产业集群与供应链深度<span class="tag done">已量产</span><span class="src">Reuters，2026-09-22</span></li>
+        <li><b>丰田雷克萨斯（日）</b>：上海独资 EV 厂 4 月变电站投运，10 月确认将首次使用自研一体化压铸<span class="tag note">建设中</span><span class="src">China Daily，2026-05；Bloomberg，2026-10-16</span></li>
+        <li><b>奢侈品旗舰店</b>：宝诗龙上海中国首家旗舰（3 月）、拉夫劳伦成都中国首店、Michael Kors 北京旗舰、Golden Goose 亚太最大店相继开业<span class="tag done">已开业</span><span class="src">Jing Daily，2026 年上半年</span></li>
+        <li><b>维多利亚的秘密（美）</b>：9 月上海新旗舰开业，年底前在华门店将超 70 家（3 月关店系租约到期搬迁）<span class="tag done">扩张中</span><span class="src">China Daily，2026-10-10</span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="analysis">
+  <div class="wrap">
+    <h2>权威分析<span class="en">机构们怎么解释这四年</span></h2>
+    <div class="an">
+      <div class="item"><h3>「去风险，而非脱钩」</h3><p>冯德莱恩 2023 年 3 月提出「去风险」框架后，它成为西方对华经贸的主叙事；企业端的对应动作是「中国+1」与本地化，而不是清仓离场。到 2026 年，叙事本身又在漂移：上海美国商会调查中，本土竞争（68%）首次超越中美关系（53%）成为在华美企的头号挑战——政治风险正被市场竞争接管。</p></div>
+      <div class="item"><h3>「中国峰值」之争</h3><p>PIIE 所长 Posen 在《外交事务》（2023 年 9/10 月号）提出「经济长新冠」论，认为信心损伤是结构性的；批评者则指出房地产、人口与旧模式耗竭先于疫情存在。最常被引用的硬数据是 2023 年三季度 BOP 直接投资负债出现 1998 年以来首次季度负值（−118 亿美元，彭博）。</p></div>
+      <div class="item"><h3>利润汇出：第一层解释是利差</h3><p>彭博、高盛与 Pantheon 的共识解释：FDI 净额暴跌的第一层原因是外企把利润汇出而非再投资，背后是中美利差倒挂与人民币贬值预期；瑞穗估算，仅子公司提前偿还母公司外币贷款一项，就能解释 2023 年 BOP 跌幅的约三成。2025—2026 年利差收窄后，外汇局口径随即强劲反弹（2026 上半年股权投资 +55%、收益再投资 +31%），周期派得分。</p></div>
+      <div class="item"><h3>「在中国，为中国」</h3><p>留守者的主流策略是深度本地化：大众合肥中心 2024 年喊出「in China, for China」，2026 年进一步演进为「in China, beyond China」；欧盟商会 2025 年调查显示，26% 的欧企在把供应链「上岸」迁入中国，迁出的仅 13%。出售控股权给本地资本（Gap、汉堡王、星巴克）是同一逻辑的资本版。</p></div>
+      <div class="item"><h3>集中度：总量被巨头「绑架」</h3><p>荣鼎与 MERICS 的研究指出，欧洲对华投资的韧性主要来自大众、宝马、奔驰、巴斯夫等少数巨头（车企占德国对华投资约三分之二；德国 2023 年对华投资创纪录的 119 亿欧元几乎全部来自利润再投资），而中小企业在加速退出——德企退出或考虑退出的比例四年翻倍至 9%。「德国加码」与「德企撤离」可以同时为真，取决于看哪个企业层。</p></div>
+      <div class="item"><h3>服务业的独特压力：数据与执法</h3><p>2023 年明思、贝恩、凯盛融英相继被查，《反间谍法》修订生效，律所分拆、数据商限制境外访问——专业服务业的全球一体化模式（人员、数据、系统跨境流动）与中国的属地合规要求正面相撞。麦肯锡拆分中国业务、埃森哲评估出售，都被分析置于这条线索上，而非单纯的业绩问题。</p></div>
+    </div>
+    <p class="secintro" style="margin-top:22px">最大的方法论分歧仍是<b>口径之争</b>：2023 年商务部口径只降 8%，外汇局口径却降 82%——头条结论取决于选哪套数据。折中判断来自 AMRO（2025 年 4 月）：下滑部分是全球 FDI 周期（全球同期也在收缩），但中国跌幅显著大于全球均值，超额部分要用国内需求、竞争格局与政策不确定性解释。而「存量叙事」提醒另一面：商务部 2026 年 10 月披露，在华外企平均利润率 8.7%，中国 FDI 权益存量连续六年增长、居全球第二——流量在低谷，存量仍在赚钱。</p>
+  </div>
+</section>
+
+<section id="caveats">
+  <div class="wrap">
+    <h2>口径与未核实提醒<span class="en">引用本页数字前先看这里</span></h2>
+    <div class="caveats"><ul>
+      <li><b>埃森哲、富达国际</b>两条为未证实传闻（知情人士信源；Reuters 明示无法核实／富达公开否认），请勿当作既成事实引用。</li>
+      <li><b>外汇局 BOP 序列存在多个修订版本</b>：2023 年直接投资负债有初值 330 亿美元、年报值 177 亿美元、AMRO 汇总修订值 513 亿美元三种流传数字；本页图表采用年报系列并已注明，引用时务必带口径与版本。</li>
+      <li><b>美国商会 2026 年调查样本量</b>官方未披露；流传的「368 家」是 2025 年调查的样本，本页未采用该数字描述 2026 年调查。</li>
+      <li><b>「关店/撤柜」≠「法人退出」</b>：美妆、零售的多起案例是渠道层收缩，母公司在华业务仍在；家乐福中国的控股权 2019 年已归苏宁；索尼×TCL 是全球业务分拆而非退出中国——正文已逐条区分。</li>
+      <li><b>未查到、未填充</b>：欧盟商会 2023 年盈利乐观比例、美国商会 2023 年增资/迁出比例、2025 年增资精确百分比（原始 PDF 受限，仅有媒体转述），本页留空不估。</li>
+      <li>本页为新闻报道与机构发布的汇编梳理，非工商登记穷尽统计；个案状态以标注日期为准，后续进展请以公司公告为准。</li>
+    </ul></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>《外企在华 2023–2026：不是撤离潮，是分化与重组》<br>
+    企划・监修：Qidi ｜ 汇总、核对与执笔：Catherine Muse ｜ 数据整理与交叉核对：Pi Ollama<br>
+    主要来源：商务部、国家外汇管理局、中国欧盟商会、中国美国商会、上海美国商会、JETRO、帝国数据银行、科尔尼、UNCTAD、荣鼎集团、MERICS、AMRO，及 Reuters、Financial Times、Bloomberg、Nikkei Asia、财新、第一财经、界面新闻、新华社等媒体报道（2023 年 1 月—2026 年 10 月）。</p>
+  </div>
+</footer>
+</body>
+</html>
