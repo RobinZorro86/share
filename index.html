@@ -8,7 +8,7 @@
 <style>
   :root { color-scheme: light; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; background: #f5f5f7; color: #1d1d1f; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 24px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif; background: #f5f5f7; color: #1d1d1f; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 72px 24px 56px; }
   main { max-width: 560px; width: 100%; text-align: center; }
   .mark { font-size: 13px; letter-spacing: .18em; color: #6e6e73; text-transform: uppercase; margin-bottom: 16px; }
   h1 { font-size: 34px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 20px; }
@@ -20,7 +20,26 @@
   .btn:hover { background: #0077ed; }
   .btn.secondary { background: transparent; color: #0066cc; border: 1px solid #0066cc; }
   .btn.secondary:hover { background: rgba(0, 102, 204, .06); }
-  footer { margin-top: 52px; font-size: 12px; color: #86868b; }
+  footer { margin-top: 52px; font-size: 12px; color: #86868b; text-align: center; }
+
+  /* ——— Index of shared pages ——— */
+  .index { max-width: 720px; width: 100%; margin-top: 72px; text-align: left; }
+  .index .mark { margin-bottom: 10px; }
+  .index h2 { font-size: 24px; font-weight: 700; letter-spacing: -.01em; margin-bottom: 8px; }
+  .index .lede { font-size: 15px; line-height: 1.7; color: #6e6e73; margin-bottom: 10px; }
+  .entry { display: flex; gap: 20px; padding: 20px 2px; border-top: 1px solid #d2d2d7; }
+  .entry:last-child { border-bottom: 1px solid #d2d2d7; }
+  .entry time { flex: 0 0 86px; font-size: 13px; line-height: 1.5; color: #86868b; font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .entry h3 { font-size: 17px; font-weight: 600; line-height: 1.4; margin-bottom: 5px; }
+  .entry h3 a { color: #1d1d1f; text-decoration: none; }
+  .entry h3 a:hover { color: #0066cc; }
+  .entry h3 a .arrow { color: #0066cc; font-weight: 500; }
+  .entry p { font-size: 14px; line-height: 1.65; color: #6e6e73; }
+  @media (max-width: 560px) {
+    body { padding-top: 52px; }
+    .entry { flex-direction: column; gap: 4px; }
+    .entry time { flex: none; padding-top: 0; }
+  }
 </style>
 </head>
 <body>
@@ -34,7 +53,62 @@
     <a class="btn" href="https://qidi.jp/">Visit Qidi in Japan →</a>
     <a class="btn secondary" href="https://gallery.qidi.jp/">QiDi's Gallery — My Photography</a>
   </div>
-  <footer>Based in Osaka, Japan · qidi.jp</footer>
 </main>
+
+<section class="index">
+  <div class="mark">Index</div>
+  <h2>Shared here</h2>
+  <p class="lede">Everything currently published on this site, in the order it appeared.</p>
+
+  <article class="entry">
+    <time datetime="2026-10-21">2026-10-21</time>
+    <div>
+      <h3><a href="/hello/">Hello — a test page <span class="arrow">→</span></a></h3>
+      <p>The tiny connectivity check from the day this site launched. It stays up as a health check: if this page loads, the publishing pipeline works.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <time datetime="2026-10-21">2026-10-21</time>
+    <div>
+      <h3><a href="/eb-5/">EB-5 vs. Japan's visa systems <span class="arrow">→</span></a></h3>
+      <p>A full breakdown of the US EB-5 investor visa — investment amounts, waiting queues, processing speed and the risk of getting your capital back — compared line by line with Japan's business manager, highly skilled professional and engineer visas.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <time datetime="2026-10-21">2026-10-21</time>
+    <div>
+      <h3><a href="/jp-data-leaks-2026/">Japan's year of data leaks, 2026 <span class="arrow">→</span></a></h3>
+      <p>A review of Japan's record-breaking year of information leaks: a timeline of the major incidents, an anatomy of why they happened, and how individuals, companies and the government are responding.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <time datetime="2026-10-23">2026-10-23</time>
+    <div>
+      <h3><a href="/foreign-firms-china-2023-2026/">Foreign firms in China, 2023–2026 <span class="arrow">→</span></a></h3>
+      <p>Not an exodus, but a split and a reshuffle. Who exited or shrank their China business, who doubled down — with exit and expansion lists, official data in both calibers, and chamber-of-commerce confidence trends.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <time datetime="2026-10-24">2026-10-24</time>
+    <div>
+      <h3><a href="/muse-first-agent/">Your first agent: Muse by Meta <span class="arrow">→</span></a></h3>
+      <p>The slide deck from my talk on why Muse is the first AI agent most people should try — free, ready out of the box, and generous enough that you never watch a token meter.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <time datetime="2026-10-26">2026-10-26</time>
+    <div>
+      <h3><a href="/dtc-sku/">DTC few-SKU &amp; cold-start strategy <span class="arrow">→</span></a></h3>
+      <p>Why a standalone store doesn't need many products: the evidence behind few-SKU strategies, nine playbooks, 24 cold-start cases, and a 90-day plan for a small Japanese pearl brand.</p>
+    </div>
+  </article>
+</section>
+
+<footer>Based in Osaka, Japan · qidi.jp</footer>
 </body>
 </html>
