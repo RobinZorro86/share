@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>日本AI培训机构竞品扫描</title>
+    <meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="24家日本AI培训机构竞品扫描：流量与规模、完整定价体系、线下形态，以及AI Agent课程（Dify / Claude Code / Copilot）有无与价格。" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="share.qidi.jp" />
+<meta property="og:title" content="日本AI培训机构竞品扫描 — 24家对比" />
+<meta property="og:description" content="A competitor scan of 24 Japanese AI training providers: scale signals, pricing, offline options, and who actually teaches AI agents." />
+<meta property="og:url" content="https://share.qidi.jp/jp-ai-training-schools/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="日本AI培训机构竞品扫描 — 24家对比" />
+<meta name="twitter:description" content="24家日本AI培训机构：定价体系、线下维度与AI Agent课程对比（2026-11-01核查）。" />
+
+    <style>
+      :root {
+        --bg: #fbfbfc;
+        --surface: #ffffff;
+        --surface-2: #f3f4f6;
+        --ink: #17181c;
+        --ink-2: #3d4048;
+        --muted: #64676f;
+        --line: #e3e4e8;
+        --accent: #b23a26;
+        --accent-soft: rgba(178, 58, 38, 0.08);
+        --yes: #177245;
+        --yes-bg: rgba(23, 114, 69, 0.1);
+        --partial: #8f6206;
+        --partial-bg: rgba(176, 122, 10, 0.12);
+        --no: #787c85;
+        --no-bg: rgba(120, 124, 133, 0.12);
+        --info-bg: #eef1f6;
+        --info-line: #c9d2e0;
+        --info-ink: #2c425f;
+        --band-bg: rgba(23, 114, 69, 0.14);
+        --shadow: 0 1px 2px rgba(20, 22, 28, 0.05), 0 8px 24px rgba(20, 22, 28, 0.05);
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #101114;
+          --surface: #1a1b1f;
+          --surface-2: #232429;
+          --ink: #eceef1;
+          --ink-2: #c9ccd2;
+          --muted: #9ba0a9;
+          --line: #2b2d33;
+          --accent: #e07a5f;
+          --accent-soft: rgba(224, 122, 95, 0.12);
+          --yes: #4cc07f;
+          --yes-bg: rgba(76, 192, 127, 0.13);
+          --partial: #e0aa3e;
+          --partial-bg: rgba(224, 170, 62, 0.13);
+          --no: #9ba0a9;
+          --no-bg: rgba(155, 160, 169, 0.14);
+          --info-bg: #1a2230;
+          --info-line: #33445e;
+          --info-ink: #b9cbe4;
+          --band-bg: rgba(76, 192, 127, 0.18);
+          --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px 64px; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .num { font-variant-numeric: tabular-nums; }
+
+      /* ---- intro ---- */
+      .intro { padding: 40px 0 8px; }
+      .intro h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.2; margin: 0 0 10px; letter-spacing: 0.01em; }
+      .intro .lede { font-size: 17px; color: var(--ink-2); margin: 0 0 14px; max-width: 46em; }
+      .byline { font-size: 13.5px; color: var(--muted); margin: 0 0 6px; }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13.5px; color: var(--muted); }
+      .note-box {
+        margin-top: 20px; background: var(--info-bg); border: 1px solid var(--info-line);
+        border-radius: 10px; padding: 14px 18px; color: var(--info-ink); font-size: 14.5px;
+      }
+      .note-box strong { font-weight: 700; }
+
+      /* ---- KPI ---- */
+      .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 28px 0 8px; }
+      .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; box-shadow: var(--shadow); }
+      .kpi .v { font-size: 26px; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+      .kpi .v small { font-size: 15px; font-weight: 600; color: var(--muted); }
+      .kpi .k { font-size: 13px; color: var(--muted); margin-top: 4px; }
+      @media (max-width: 720px) { .kpis { grid-template-columns: repeat(2, 1fr); } .kpi .v { font-size: 22px; } }
+
+      /* ---- sections ---- */
+      section { margin-top: 44px; }
+      h2 { font-size: 23px; margin: 0 0 6px; line-height: 1.3; }
+      .sec-sub { color: var(--muted); font-size: 14.5px; margin: 0 0 18px; max-width: 52em; }
+      h3 { font-size: 17px; margin: 0; }
+
+      /* ---- conclusions ---- */
+      .conclusions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      @media (max-width: 720px) { .conclusions { grid-template-columns: 1fr; } }
+      .conc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; box-shadow: var(--shadow); display: flex; gap: 14px; }
+      .conc .n { flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 15px; margin-top: 2px; }
+      .conc p { margin: 0; font-size: 15px; color: var(--ink-2); }
+      .conc p strong { color: var(--ink); }
+
+      /* ---- chart ---- */
+      .chart { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); }
+      .bar-row { margin-bottom: 14px; }
+      .bar-row:last-child { margin-bottom: 0; }
+      .bar-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 14px; margin-bottom: 5px; }
+      .bar-head .who { color: var(--ink-2); }
+      .bar-head .who b { color: var(--ink); font-weight: 650; }
+      .bar-head .price { font-weight: 700; white-space: nowrap; }
+      .bar-track { height: 12px; background: var(--surface-2); border-radius: 6px; overflow: hidden; }
+      .bar-fill { height: 100%; background: var(--accent); border-radius: 6px; }
+      .bar-row.band .bar-track { background: transparent; border: 1px dashed var(--yes); height: 14px; position: relative; overflow: visible; }
+      .bar-row.band .band-fill { position: absolute; top: 0; bottom: 0; background: var(--band-bg); border-radius: 4px; }
+      .bar-row.band .who b { color: var(--yes); }
+      .chart-note { font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+      /* ---- filters ---- */
+      .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 6px; }
+      .chip {
+        appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2);
+        border-radius: 999px; padding: 7px 15px; font-size: 14px; cursor: pointer; font-family: inherit;
+      }
+      .chip:hover { border-color: var(--muted); }
+      .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); font-weight: 600; }
+      .search {
+        margin-left: auto; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+        border-radius: 999px; padding: 8px 16px; font-size: 14px; font-family: inherit; min-width: 200px;
+      }
+      .search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+      @media (max-width: 720px) { .search { margin-left: 0; width: 100%; } }
+      .count-line { font-size: 13.5px; color: var(--muted); margin: 10px 0 16px; }
+
+      /* ---- provider cards ---- */
+      .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+      @media (max-width: 420px) { .cards { grid-template-columns: 1fr; } }
+      .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+      .card.hidden { display: none; }
+      .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+      .card h3 { font-size: 18px; line-height: 1.35; }
+      .card h3 .jp { display: block; font-size: 13px; color: var(--muted); font-weight: 500; margin-top: 1px; }
+      .verify { flex: 0 0 auto; font-size: 11.5px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; margin-top: 3px; white-space: nowrap; }
+      .scale { font-size: 13.5px; color: var(--muted); margin: 8px 0 0; }
+      .site-link { font-size: 13.5px; margin-top: 6px; word-break: break-all; }
+      .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; border-radius: 999px; padding: 4px 12px; margin-top: 12px; align-self: flex-start; }
+      .badge.yes { background: var(--yes-bg); color: var(--yes); }
+      .badge.partial { background: var(--partial-bg); color: var(--partial); }
+      .badge.no { background: var(--no-bg); color: var(--no); }
+      .offline-line { margin-top: 10px; display:flex; flex-wrap:wrap; gap:6px; align-items:flex-start; }
+      .offline-tag { display:inline-flex; font-size:12.5px; font-weight:700; border-radius:999px; padding:3px 10px; background:var(--info-bg); color:var(--info-ink); border:1px solid var(--info-line); white-space:nowrap; }
+      .offline-tag.has { background:var(--yes-bg); color:var(--yes); border-color:transparent; }
+      .offline-detail { font-size:13px; color:var(--muted); line-height:1.5; flex:1 1 180px; }
+      .offline-strip { background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px 18px; box-shadow:var(--shadow); margin-top:12px; font-size:14.5px; color:var(--ink-2); }
+      .offline-strip strong { color:var(--ink); }
+      .agent-title { font-size: 14.5px; font-weight: 650; margin: 10px 0 0; }
+      .agent-detail { font-size: 14px; color: var(--ink-2); margin: 4px 0 0; }
+      .card dl { margin: 14px 0 0; border-top: 1px solid var(--line); padding-top: 12px; }
+      .card dt { font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; margin-top: 10px; }
+      .card dt:first-child { margin-top: 0; }
+      .card dd { margin: 3px 0 0; font-size: 14px; color: var(--ink-2); }
+      .card dd ul { margin: 0; padding-left: 1.15em; }
+      .card dd li { margin: 2px 0; }
+      .sources { margin-top: auto; padding-top: 14px; font-size: 12.5px; color: var(--muted); }
+      .sources a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; word-break: break-all; }
+      .empty-msg { display: none; color: var(--muted); font-size: 15px; padding: 24px 0; }
+
+      /* ---- comparison table ---- */
+      .table-wrap { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; }
+      table { width: 100%; border-collapse: collapse; font-size: 14px; }
+      thead th { text-align: left; font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); padding: 12px 14px; border-bottom: 1px solid var(--line); background: var(--surface-2); white-space: nowrap; }
+      tbody td { padding: 11px 14px; border-bottom: 1px solid var(--line); color: var(--ink-2); vertical-align: top; }
+      tbody tr:last-child td { border-bottom: none; }
+      tbody td.name { font-weight: 650; color: var(--ink); white-space: nowrap; }
+      tbody td .agent-y { color: var(--yes); font-weight: 700; }
+      tbody td .agent-p { color: var(--partial); font-weight: 700; }
+      tbody td .agent-n { color: var(--no); font-weight: 700; }
+      @media (max-width: 820px) {
+        .table-wrap { background: transparent; border: none; box-shadow: none; overflow: visible; }
+        table, tbody, tr, td { display: block; width: 100%; }
+        thead { display: none; }
+        tbody tr { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 12px 16px; margin-bottom: 10px; }
+        tbody td { border: none; padding: 3px 0; }
+        tbody td::before { content: attr(data-label); display: block; font-size: 11.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.04em; margin-top: 6px; }
+        tbody td.name { font-size: 16px; }
+        tbody td.name::before { display: none; }
+      }
+
+      /* ---- insights / unverified ---- */
+      .insights { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      @media (max-width: 820px) { .insights { grid-template-columns: 1fr; } }
+      .insight { background: var(--accent-soft); border-radius: 12px; padding: 18px 20px; }
+      .insight h3 { font-size: 15.5px; margin-bottom: 6px; }
+      .insight p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+      .plain-list { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 8px 22px; box-shadow: var(--shadow); }
+      .plain-list li { font-size: 14.5px; color: var(--ink-2); margin: 10px 0; }
+      .appendix { font-size: 14.5px; color: var(--ink-2); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; box-shadow: var(--shadow); margin-top: 14px; }
+      .appendix p { margin: 0 0 8px; }
+      .appendix p:last-child { margin-bottom: 0; }
+
+      footer { margin-top: 52px; border-top: 1px solid var(--line); padding-top: 20px; font-size: 13.5px; color: var(--muted); }
+      footer p { margin: 0 0 6px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <header class="intro">
+        <h1>日本 AI 培训机构竞品扫描</h1>
+        <p class="lede">日本流量与可见度较高的 AI 研修 / AI スクール / 生成 AI 研修机构共 24 家（含新增 6 家线下机构）：定价体系逐项拆解，重点核查各家是否开设 AI Agent（AIエージェント）相关课程、教什么工具、卖多少钱，并新增线下维度——区分纯线上、线上+集合/講師派遣可対面、通学型常设教室、会場公開講座型，注明大阪/关西是否有教室或会场。</p>
+        <p class="byline">企划・监修：Qidi　｜　调研与整理：Catherine Muse</p>
+        <div class="meta-row">
+          <span>核查日期：2026 年 11 月 1 日（价格为该时点快照，签约前请再确认）</span>
+          <span>标注：<b>官网核实</b>＝打开官网页面确认；<b>索引</b>＝搜索引擎索引到的官网/第三方页面；<b>第三方</b>＝比较站转述</span>
+        </div>
+        <div class="note-box">
+          <strong>关于「流量」：</strong>SimilarWeb 的网站级月访问量在核查时大多处于付费墙后，公开可查的只有キカガク一家（见其卡片）。本页不编造任何月访问量，规模一律用可验证的代理指标：会员/受讲者数、导入企业数、教室数、上市披露与搜索可见度。
+        </div>
+      </header>
+
+      <div class="kpis">
+        <div class="kpi"><div class="v num">24 <small>家</small></div><div class="k">纳入扫描的机构（原 18 家 + 新增 6 家线下机构）</div></div>
+        <div class="kpi"><div class="v num">18 <small>/ 24 家</small></div><div class="k">设有明确 AI Agent 课程，2025–2026 集中上线（另有部分/轻量）</div></div>
+        <div class="kpi"><div class="v num">33,000–385,000 <small>円</small></div><div class="k">Agent 课程价格带（1 名，含半日入门公开讲座档）</div></div>
+        <div class="kpi"><div class="v">Dify</div><div class="k">Agent 教学的主导工具；第二波是 Claude Code / Codex</div></div>
+      </div>
+      <div class="offline-strip"><strong>线下维度速览：</strong>24 家中 <strong>14 家有线下形态</strong>（通学型常设教室 / 会場公開講座型 / 集合・講師派遣可対面），10 家为纯线上为主。大阪/关西有常设教室或会场的有：Winスクール（梅田・なんば・天王寺）、ヒューマンアカデミー（梅田・心斎橋・天王寺）、テックジム（大阪梅田等）、AI研究所（大阪公開講座会場）、Generative Agents（大阪梅田開催回）、Insource（来場型・全国拠点）、スキルアップAI（大阪対面開催あり）。可用下方「有线下」筛选只看这 14 家。</div>
+
+      <section>
+        <h2>六条结论</h2>
+        <p class="sec-sub">给关西中小企业 AI 咨询业务的对标要点，先看这里，再看各家明细。</p>
+        <div class="conclusions">
+          <div class="conc"><div class="n">1</div><p><strong>规模梯队清晰，平台型靠 ID 定额碾压价格。</strong>Udemy Japan（国内 200 万人+）、Progate（全球 370 万用户）、Schoo（会员约 135–144 万）、Insource（年受讲 79.2 万人、东证 Prime）以月 1,650–5,990 円/人的定额制占据规模端，中小机构无法正面拼 e-learning 单价。</p></div>
+          <div class="conc"><div class="n">2</div><p><strong>AI 专精梯队各有王牌。</strong>SHIFT AI 付费会员 40,000+、B2C 社区最强；キカガク受讲生 20 万人、导入 1,000 社+；AVILEN 约 1,000 社、东证 Growth 上市；Aidemy 有 400 法人+、2025-11 被 Accenture 收购、个人向 Premium 已于 2026-06-30 结束；DMM 生成AI CAMP 于 2026-03 改版为月额学び放題。</p></div>
+          <div class="conc"><div class="n">3</div><p><strong>Agent 课程已成标配。</strong>24 家中 18 家有明确 AIエージェント课程（另有部分/轻量）。主导工具是无代码的 <strong>Dify</strong>（AVILEN、キカガク、スキルアップAI、トレノケート、CodeCamp、DMM、インターネット・アカデミー都在用）；第二波是 Claude Code / Codex（SHIFT AI、バイテックGEEK、AI Agent Camp、DMM、Progate beta）；微软系企业走 Copilot Studio / Copilot Agent（Insource、AVILEN、Udemy BOC）。</p></div>
+          <div class="conc"><div class="n">4</div><p><strong>Agent 课价格带分四档。</strong>入门 e-learning / 半日 33,000–38,500 円 → 实战ハンズオン 100,000–120,000 円（キカガク Dify 0.5 日 100,000 円税抜、スキルアップAI 120,000 円税込/约 5h）→ 开发养成 165,000–385,000 円 → 套餐/伴走 300,000 円税抜/名（SHIFT AI for Biz）起。</p></div>
+          <div class="conc"><div class="n">5</div><p><strong>没有 Agent 课的是可争夺人群。</strong>Winスクール只有 ChatGPT/Copilot 基础，无 agent 構築课；TechAcademy 的 LLMアプリ開発新規受付一時停止中；スタディサプリ是 K-12、非成人研修竞品。这三家的用户存在迁移空间。</p></div>
+          <div class="conc"><div class="n">6</div><p><strong>免费引流与补助金话术是行业标配。</strong>SHIFT AI 每周约 2 次免费 Agent 实演セミナー、DMM 60 分免费说明、Aidemy Business 免费トライアル、Schoo 每日免费生放送、Progate 免费层、Udemy Business 14 日トライアル；人材開発支援助成金 / 教育訓練給付金（最大 80%）、リスキリング補助金（最大 70%）与「実質 XX 円」话术几乎人人都在用。</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Agent 课程价格阶梯</h2>
+        <p class="sec-sub">单人参加的 Agent 专课标价（円/名）。キカガク与 SHIFT AI 原价为税抜，图中按税込换算以便横向比较；DMM、AI Agent Camp 等订阅制因课含在月额内，未列入此图。</p>
+        <div class="chart">
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>AVILEN</b>　AIエージェント研修（e-learning 全コース）</span><span class="price num">38,500 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+          </div>
+          <div class="bar-row band">
+            <div class="bar-head"><span class="who"><b>价格空档带</b>　入门 e-learning 与实战ハンズオン之间（报告建议的卡位区间）</span><span class="price num">55,000–88,000 円</span></div>
+            <div class="bar-track"><div class="band-fill" style="left:14.3%;width:8.6%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>トレノケート</b>　さわってわかるAIエージェント入門（Dify・1 日）</span><span class="price num">77,000 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:20%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>インターネット・アカデミー</b>　AIエージェント講座（Dify・2 回）</span><span class="price num">78,408 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:20.4%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>キカガク</b>　Dify入門コース（0.5 日・原价 100,000 円税抜）</span><span class="price num">110,000 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:28.6%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>スキルアップAI</b>　Difyを用いたAIエージェント構築講座（ライブ约 5h）</span><span class="price num">120,000 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:31.2%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>CodeCamp</b>　生成AIエンジニア養成Camp（LangChain/LangGraph・计 16h）</span><span class="price num">165,000 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:42.9%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>SHIFT AI for Biz</b>　リスキリングコース套餐（原价 300,000 円税抜/名）</span><span class="price num">330,000 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:85.7%"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-head"><span class="who"><b>トレノケート</b>　AIエージェント開発者養成講座 実践コース（3 日）</span><span class="price num">385,000 円</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+          </div>
+          <p class="chart-note">补充口径：半日入门公开讲座另有 33,000 円档（Insource 半日版会员价 33,600 円、トレノケート公开课 33,000 円〜），低于图中 e-learning 专课的起点；集合研修与定制课多为别途見積，不在此图。</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>机构明细</h2>
+        <p class="sec-sub">每张卡片含规模代理指标、定价体系、Agent 课程判定、线下形态标签（纯线上 / 线上+集合・講師派遣可対面 / 通学型常设教室 / 会場公開講座型，及大阪/关西有无教室或会场）与出处链接。可用下方筛选按 Agent 课程状态、有线下、订阅制或名称查找。</p>
+        <div class="filters" role="group" aria-label="筛选机构">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">全部 24 家</button>
+          <button class="chip" type="button" data-filter="offline" aria-pressed="false">有线下</button>
+          <button class="chip" type="button" data-filter="yes" aria-pressed="false">有 Agent 专课</button>
+          <button class="chip" type="button" data-filter="partial" aria-pressed="false">部分 / 轻量</button>
+          <button class="chip" type="button" data-filter="no" aria-pressed="false">无 Agent 课</button>
+          <button class="chip" type="button" data-filter="sub" aria-pressed="false">订阅 / 定额制</button>
+          <input class="search" id="search" type="search" placeholder="按机构名搜索，如 Dify、キカガク…" aria-label="按机构名搜索" />
+        </div>
+        <p class="count-line" id="countLine"></p>
+        <div class="cards" id="cards"></div>
+        <p class="empty-msg" id="emptyMsg">没有符合当前筛选的机构，试试清除搜索或换一个筛选。</p>
+      </section>
+
+      <section>
+        <h2>一览对比表</h2>
+        <p class="sec-sub">定位速览：规模代理、商业模式、典型价格带、Agent 课程判定与线下形态 / 大阪・关西。价格为税込/名，另有注记者从其注。</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>机构</th><th>规模 / 人气代理</th><th>模式</th><th>典型价格带</th><th>Agent 课</th><th>线下形态 / 大阪・关西</th></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>对关西中小企业的对标启示</h2>
+        <p class="sec-sub">基于上表事实的归纳，供内部定价与课程设计参考。</p>
+        <div class="insights">
+          <div class="insight">
+            <h3>卡价格空档</h3>
+            <p>38,500 円（AVILEN e-learning）与 100,000–120,000 円（キカガク / スキルアップAI ハンズオン）之间、以及「Dify 构建后无伴走」，是中小企业最痛的两点。关西本地对面/混合 + 以自社数据为课题的ハンズオン若定在 55,000–88,000 円/名，正好卡位（参照：インターネット・アカデミー 78,408 円、トレノケート 77,000 円）。</p>
+          </div>
+          <div class="insight">
+            <h3>不拼 ID 定额，拼成果物</h3>
+            <p>Schoo 1,650 円/ID、Progate 1,990 円/人、Udemy 年 18,100 円〜的定额价格无法跟。差异化应放在「构建出可用的成果物 + 课后定着」，而不是课时数量。</p>
+          </div>
+          <div class="insight">
+            <h3>工具选型跟随主流</h3>
+            <p>Dify 是必备第一课，Claude Code 是 2026 年的第二课；微软系企业（Copilot Studio / Copilot Agent）单独成班，对应 Insource 的打法。</p>
+          </div>
+          <div class="insight">
+            <h3>线下教 Agent 在大阪常设层面是空档</h3>
+            <p>线下教 Dify / Claude Code 做 Agent 的供给，在大阪常设层面稀缺，是空档。现有大阪线下多为基础通学（Win、ヒューマン、テックジム）或不定期会場公開講座（AI研究所、Generative Agents 的大阪回、Insource 来場型、スキルアップAI 大阪対面回）；常设教室里持续开 Dify 構築 / Claude Code 实战、且能用客户自社课题做成果物的供给几乎没有。这正是关西本地对面小班可以卡位的地方。</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>未能核实 / 引用前须再确认</h2>
+        <ul class="plain-list">
+          <li><strong>SimilarWeb 月访问量：</strong>除キカガク公司页片段（近 3 个月 total visits 60.5K，Dec 2025 口径）外，其余域名均为付费墙或无公开数据；本页的规模排序是代理指标推断，非精确流量排名。</li>
+          <li><strong>Aidemy：</strong>独立「AIエージェントコース」的确切标题与价格未在官网课程页核实，仅确认 Dify活用術等模块与第三方转述。</li>
+          <li><strong>Schoo：</strong>官网价格页本次抓取失败，价格采用搜索索引到的官网片段与第三方转述交叉一致的口径；30 万円的経営層向け课为第三方转述官网价。</li>
+          <li><strong>TechAcademy：</strong>官网现行价格显示为「-円」且暂停招生，表中价格为停止前的第三方保存价，不可直接用于报价对比。</li>
+          <li><strong>Winスクール：</strong>教室数在官网不同页面有约 37 / 45 / 50 校三种表记并存；生成AI讲座价格亦有 28,600 / 38,500 / 40,700 円多种口径，已在卡片中标注。</li>
+          <li><strong>新增线下机构价格口径：</strong>Generative Agents、.Pro（ドットプロ）、テックジム在本次 2026-11-01 查证 brief 中未给出可直接引用的具体价格（テックジム仅确认月額制、.Pro 仅确认セミオーダー制），本页不编造新价格，卡片中标注为「未在本次查证中给出 / 以官网为准」；AI研究所 38,500 円、i-Learning 165,000 円、Claude Code塾 100,000 円/人税抜为 brief 给出的查证价。</li>
+          <li><strong>バイテックGEEK：</strong>6 か月价格有 348,000 / 398,000 / 438,000 円三种转述并存，卡片取 ALC 口径 438,000 円，须以官网现价再确认。</li>
+        </ul>
+        <div class="appendix">
+          <p><strong>附：ホリエモンAI学校</strong>（<a href="https://horiemon.ai/" target="_blank" rel="noopener">horiemon.ai</a>）——个人：入学金 162,800 円税込 + 月额 16,280 円税込，240+ 講義见放题；法人：年间 310,000 円税抜/人（2 名起）。Agent 判定：无独立 Agent 专课确认，内容以生成AI活用・業務自動化讲义群为主。</p>
+          <p><strong>附：スタディサプリ（リクルート）</strong>——K-12 向（ベーシック 月 2,178 円税込），生成AI仅用于字幕等产品功能，无成人 AI / Agent 研修课程，非直接竞品，仅作流量品牌参考，未列入 18 家。</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>数据来源：各机构官网、官方 PR 与公开资料，逐项出处见各卡片链接；核查日期 2026 年 11 月 1 日。价格与课程为该时点快照，可能已变更。</p>
+        <p>分工：企划・监修 Qidi｜竞品调研、数据核查与页面制作 Catherine Muse</p>
+      </footer>
+
+    </div>
+
+<script>
+var PROVIDERS = [
+{
+name: "AVILEN", jp: "アヴィレン",
+url: "https://avilen.co.jp/", verify: "官网核实",
+scale: "支援实绩约 1,000 社（2026-02 末）；东证 Growth 上市（5591）；自社メディア「AI Trend」月间 25 万 PV（有价证券报告书旧年度口径）",
+mode: "Both（B2B 主）", sub: false,
+offlineType: "hybrid", offlineLabel: "线上+集合/講師派遣可対面", offlineDetail: "集合形式可対面（20–40名/回）；无常设教室，大阪/关西无常设点，法人集合可对应", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "AIエージェント研修（Dify）",
+agentDetail: "座学編（概要・活用事例・仕組み・トレンド）+ 実践編（Dify ハンズオン构建原创 AIエージェントアプリ：チャットボット型→ワークフロー型），成果物即学员以自社业务课题构建的 agent 应用。形式 e-learning 或集合（对面/Web）；另有实践环境サポートオプション（免 API 契约/环境構築）。官网 FAQ 另提及 Copilot AIエージェント構築研修、Claude Code バイブコーディング研修可提案。",
+pricing: [
+"生成AIリテラシー研修 22,000 円/名（e-learning）",
+"生成AI活用研修 44,000 円/名（约 5h）",
+"生成AI業務プロセス適用研修 66,000 円〜/名",
+"AIエージェント研修 e-learning 全コース 38,500 円/名（座学/実践可单买）；集合 20–40 名/回别途見積",
+"个人向：データサイエンティスト研修 入門 55,000 円（约 18h）、速習 82,500 円"
+],
+pricingNote: "均为税込。集合形式（半日约 4h / 1 日约 7h）别途見積；补助金仅 E資格讲座提及可能性（第三方整理）。",
+free: "—",
+scaleShort: "约 1,000 社・上市 5591",
+priceBand: "e-learning 22,000–66,000",
+agentShort: "AIエージェント研修 38,500 円（Dify）",
+sources: [
+["AIエージェント研修（官网）", "https://avilen.co.jp/org/learning/ai-agent/"],
+["生成AI研修・价格（官网）", "https://avilen.co.jp/org/learning/gai-training/"]
+]
+},
+{
+name: "スキルアップAI", jp: "SkillUp AI",
+url: "https://www.skillupai.com/", verify: "官网核实",
+scale: "AI 专精机构，公开讲座 70+ 门",
+mode: "Both", sub: false,
+offlineType: "hybrid", offlineLabel: "线上+集合/講師派遣可対面", offlineDetail: "大阪対面開催あり；本体以 Zoom ライブ・录播为主，无通学常设教室", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "Difyを用いたAIエージェント構築講座",
+agentDetail: "120,000 円/名税込，ライブ講義约 5 時間（Zoom，定員 25、最少催行 5），ハンズオン构建「社内規定QAエージェント」「書籍検索エージェント」，含ナレッジベース与ツール連携。另有 AIエージェント入門讲座（标准约 3h，Dify / Copilot Studio 基础構築）。",
+pricing: [
+"ビジネスパーソンのための対話型生成AI講座 27,500 円税込（動画约 1.7h）",
+"プロンプトエンジニアコース 638,000 円税込（Python 未経験）/ 440,000 円（经验者），給付金最大还元 510,400 / 352,000 円",
+"E資格系 462,000–737,000 円",
+"公开单讲例：Azure OpenAI RAG構築講座 110,000 円税込/名（视听 1 年）"
+],
+pricingNote: "法人价目表非公开，有量价折扣。",
+free: "免费講座（AWS入門等）+ スキルアップAIキャンプ",
+scaleShort: "AI 专精・讲座 70+",
+priceBand: "单讲 27,500–120,000；体系课 440,000–737,000",
+agentShort: "Difyを用いたAIエージェント構築講座 120,000 円",
+sources: [
+["Dify 讲座（官网）", "https://www.skillupai.com/ai-agent-dify-development/"],
+["讲座一览（官网）", "https://www.skillupai.com/open/"]
+]
+},
+{
+name: "Udemy Japan / Benesse", jp: "ユーデミー",
+url: "https://www.benesse.co.jp/udemy/business/", verify: "官网核实",
+scale: "国内利用者 200 万人以上；Udemy Business 约 2,000 社、日経225 的 70% 以上导入（Benesse 公式，2024-12）",
+mode: "Both", sub: true,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主；BOC 集合研修为企划型，无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课（目录 + 集合研修）",
+agentTitle: "Copilotエージェント実践研修（Business Online Campus）等",
+agentDetail: "两种形态：①目录内单买讲座「AIエージェントの教科書」「作って学ぶ Copilot Studio！実践的なAIエージェントを作成」、AIエージェント開発（OpenAI Agents SDK / CrewAI / LangGraph，日文字幕）等；②集合研修 Copilotエージェント実践（3 周×120 分）与「業務改革～プロセス設計（AIエージェント）」。",
+pricing: [
+"エンタープライズ（21 名+）：年 18,100 円〜/ID 税抜（21 名起步价 36,300 円/ID，5,000 名+ 最安 18,100 円；月换算约 1,510–3,030 円），初期费用 0 円，30,000+ 講座",
+"チームプラン（5–20 名）：年 38,000 円/ID 税抜，约 17,000 講座",
+"BOC 集合研修：Copilotエージェント実践 6–10 名 150,000 円/名税別〜；業務改革（AIエージェント）10–20 名 100,000 円/名税別（阶梯价）",
+"B2C 个人版为讲座单买制，定期セール（数千–数万 円/讲座）"
+],
+pricingNote: "",
+free: "Udemy Business 14 日免费トライアル",
+scaleShort: "国内 200 万人・Business 约 2,000 社",
+priceBand: "B2B 年 18,100–38,000/ID 税抜；BOC 研修 100,000–150,000 税抜",
+agentShort: "Copilotエージェント実践研修 / Copilot Studio 讲座",
+sources: [
+["料金（官网核实）", "https://www.benesse.co.jp/udemy/business/price/"],
+["BOC Copilotエージェント（官网）", "https://www.benesse.co.jp/udemy/business/boc/8059"]
+]
+},
+{
+name: "Progate", jp: "プロゲート / Progate for Business",
+url: "https://progate.com/business", verify: "官网核实",
+scale: "全世界用户 370 万人、100 国+（2026-07 PR Times；官网首页显示 3,700,000 ユーザー）",
+mode: "Both", sub: true,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "partial", agentBadge: "轻量（入门级）",
+agentTitle: "生成AI入門 / Claude Code入門（beta）",
+agentDetail: "生成AI入門（约 6h，プロンプト・画像生成・著作権等，部分免费层可学）为 2026 年上线、Progate 首个非编程领域课程；法人目录另有 Claude Code入門（beta），定位「AI 駆動開発的入口」。无 Dify 型 agent 構築专课。Progate Studio ハンズオン研修：生成AIコース Basic 22,000 円/人/2.5h、Advanced 110,000 円/人/12h（资料口径）。",
+pricing: [
+"B2C：プラス 990 円〜/月、プロ 2,490 円〜/月（税込，2026-08 官网口径）",
+"B2B チームプラン：プラスシート 1,990 円/人・月税込、プロシート 5,990 円/人・月税込（1 人起，信用卡）",
+"エンタープライズ：個別見積（发票払い / 助成金案内）"
+],
+pricingNote: "人材開発支援助成金（定額制訓練）中小 60% / 大企业 45%（賃金要件达标 75% / 60%），上限 2 万円/人・月，官方页面明示。",
+free: "B2C 免费层（生成AI入門部分可学）",
+scaleShort: "全球 370 万用户",
+priceBand: "B2B 月 1,990–5,990/人 税込",
+agentShort: "生成AI入門、Claude Code入門（beta）",
+sources: [
+["Progate for Business（官网核实）", "https://progate.com/business"],
+["生成AI入門 PR", "https://prtimes.jp/main/html/rd/p/000000140.000015015.html"]
+]
+},
+{
+name: "キカガク", jp: "Kikagaku",
+url: "https://www.kikagaku.co.jp/", verify: "索引",
+scale: "受讲生 200,000 名以上、导入企业 1,000 社以上（官网首页现行表记）；SimilarWeb 公司页公开片段：kikagaku.co.jp 近 3 个月 total visits 60.5K、平均访问 2:39（数据标注 Dec 2025，口径旧、仅供参考）",
+mode: "Both", sub: false,
+offlineType: "hybrid", offlineLabel: "线上+集合/講師派遣可対面", offlineDetail: "以在线/e-learning 为主，法人研修可集合・対面对应；无通学常设教室，大阪无常设点", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "Dify入門コース（公開講座）",
+agentDetail: "0.5 日・4h，100,000 円税抜/名，内容：Dify 基础、チャットボット作成、RAG、フロー構築。另有 Dify入門 e-learning（1h，見積）、Dify実践（API連携・Agent機能，e-learning 1.5h，見積）；生成AIブートキャンプ 5 日含 Dify 业务自动化的成果物导向教学。",
+pricing: [
+"B2C：DXを推進するAI・データサイエンス人材育成コース 792,000 円税込/6 个月（給付金最大 80% → 158,400 円）",
+"B2C：生成AIビジネス実践コース 264,000 円税込/2 个月（→ 52,800 円）",
+"B2B（官网公开，税抜/名）：生成AI活用/入門 30,000 円〜、プロンプト実践 50,000 円/4h、AI×業務デジタル化 100,000 円/7h、必須AIスキルパッケージ 110,000 円/12.5h、生成AIブートキャンプ 300,000 円/5 日"
+],
+pricingNote: "大企业カスタマイズ为見積；官网有人材開発支援助成金（事業展開等リスキリング支援コース）案内。",
+free: "部分 e-learning 免费体验、免费セミナー多数",
+scaleShort: "受讲 20 万人・导入 1,000 社+",
+priceBand: "B2C 264,000–792,000；B2B 30,000–300,000 税抜",
+agentShort: "Dify入門コース 100,000 円税抜 / 0.5 日",
+sources: [
+["Dify入門コース（官网）", "https://www.kikagaku.co.jp/business/training/search/dify-introduction"],
+["法人研修（官网）", "https://www.kikagaku.co.jp/business/training"]
+]
+},
+{
+name: "SHIFT AI", jp: "シフトエーアイ",
+url: "https://shift-ai.co.jp/", verify: "索引",
+scale: "有料会员 40,000 人超（2026-05-26 时点）、代表 SNS 总粉丝 25 万超（2026-06）；110 コース / 1,100–1,500 本動画（官网 blog 口径）",
+mode: "Both", sub: true,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主；有线下活动但无常设教室，大阪无常设教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课",
+agentTitle: "AIエージェントコース / for Biz「Claude Codeコース」",
+agentDetail: "AI大学内有 AIエージェントコース与ゼミ（Claude Code 编、Dify入門講座等会员制内容）；SHIFT AI for Biz「Claude Codeコース」2025-10-06 提供、2025-11-18 大幅アップデート（环境構築 + ワーク付き基本機能 + 応用テクニック，e-learning）。",
+pricing: [
+"B2C：月払い 21,780 円/月税込、年払い 217,800 円/年、生涯保証 547,800 円一括，入会金 0 円；近每日ウェビナー、Discord 社区、全国リアルイベント",
+"B2B：SHIFT AI for Biz リスキリングコース 300,000 円税抜/名（eラーニング 50,000 + オンライン研修 250,000，合计 14.5–16h+）"
+],
+pricingNote: "for Biz 对应人材開発支援助成金（事業展開等リスキリング支援），官方 LP 称助成后実質 1/4；其余 e-learning / WS 包为个别見積。「导入 2,500 社・受讲 20,000 名」为 SHIFT AI 整体实绩（官方注记）。",
+free: "AIエージェント実演セミナー：免费、每周约 2 次、约 2h，现场用 Codex / Claude Code 做成果物（行业内最强的免费前端）",
+scaleShort: "有料会员 40,000+・SNS 25 万",
+priceBand: "B2C 月 21,780；B2B 300,000 税抜/名 套餐",
+agentShort: "AIエージェントコース、for Biz Claude Codeコース",
+sources: [
+["料金 FAQ（官网）", "https://shift-ai.co.jp/faq/faq_008/"],
+["免费实演セミナー（官网 blog）", "https://shift-ai.co.jp/blog/57491/"]
+]
+},
+{
+name: "Insource", jp: "インソース",
+url: "https://www.insource.co.jp/", verify: "索引",
+scale: "年间研修受讲者 791,798 人、年間実施 36,947 回、取引先累计 48,606 社（2024/4–2025/3 官方介绍资料）；FY2025 売上 145 億円；东证 Prime",
+mode: "B2B", sub: false,
+offlineType: "venue", offlineLabel: "会場公開講座型", offlineDetail: "来場型開催あり・全国拠点セミナールーム（关西含大阪拠点）；オンライン／来場／講師派遣并行", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 课（矩阵最密）",
+agentTitle: "AIエージェント基礎研修（Copilot / Gemini 版）等",
+agentDetail: "多层矩阵：①AIエージェント基礎研修～自分専用の生成AIで業務を自動化する（1 日間）——用 Microsoft Copilot 的 Agent 功能做 RAG 型业务 agent（明确不含 Copilot Studio 高度开发/外部連携/本番公开），半日版会员 33,600 円；②同课 Gemini 版（作成自組織専用 Gem）；③生成AI推進リーダー育成研修（Copilot 有料ライセンスで agent 作成）；④AIエージェント開発研修～LangChain（2 日間，工程师向）；⑤問合せ対応効率化のための AIエージェント研修～CopilotとExcel編（2 日間）会员 82,000 円；另有 1 社 3 名ワークセッション型（2 日）。",
+pricing: [
+"公开讲座（1 名から，会员价公开，税込）：半日 14,300–33,600 円带、1 日 16,500–53,700 円带、2 日 82,000 円等",
+"讲师派遣型：1 社見積；e-learning / 動画见放题另行",
+"AI・生成AI 类公开讲座约 105 门"
+],
+pricingNote: "",
+free: "免费セミナー / 资料、公開講座体验类活动",
+scaleShort: "年受讲 79 万人・取引 48,606 社",
+priceBand: "公开讲座 14,300–82,000 / 讲座",
+agentShort: "AIエージェント基礎研修（Copilot / Gemini / LangChain 多版）",
+sources: [
+["AIエージェント基礎研修（官网）", "https://www.insource.co.jp/ai-solution/custom_ai_agent.html"],
+["LangChain 开发研修（官网）", "https://www.insource.co.jp/ai-solution/langchain_ai_agent.html"]
+]
+},
+{
+name: "Schoo", jp: "スクー",
+url: "https://schoo.jp/biz", verify: "索引",
+scale: "累计会员约 144 万人（新近 PR 口径；2025-09 期实绩 135 万人）、法人导入累计 4,500 社（2025-12）",
+mode: "B2B 主 + B2C", sub: true,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主（生放送・录播定额）；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课（分层）",
+agentTitle: "経営層向けAIエージェント実践 等",
+agentDetail: "定额内有「AIエージェントで業務はどう変わる？」基础 + 実践编课程（2025-06）、Google Workspace Studio 做 agent 的授業等；别料金 AIハンズオン講座 30,000 円税抜/名〜（3h），其中経営層向けAIエージェント実践 300,000 円税抜/名（1 日 + 事后相談会，前提为 Claude Code 有偿プラン）——该价格为第三方转述官网价。",
+pricing: [
+"B2B：月 1,650 円/ID 税抜（税込 1,815 円）+ 初期费用 110,000 円税抜，20 ID 起，9,000+ 授業见放题，有量价折扣",
+"生成AI研修パッケージ（5h58m）、Copilot パッケージ（12h11m）均含在定额内",
+"B2C Personal：免费生放送 + 付费录播"
+],
+pricingNote: "官网价格页本次抓取失败，上记为搜索索引到的官网片段 + 第三方转述交叉一致口径；定额制訓練可能为助成对象（官方案内口径）。",
+free: "每日免费生放送（B2C）",
+scaleShort: "会员约 144 万・导入 4,500 社",
+priceBand: "月 1,650/ID 税抜 + 初期 110,000 税抜",
+agentShort: "経営層向けAIエージェント実践 300,000 円税抜",
+sources: [
+["法人价格（官网）", "https://schoo.jp/biz/price"],
+["生成AI 课程包（官网）", "https://schoo.jp/biz/theme/curriculum/346"]
+]
+},
+{
+name: "DMM 生成AI CAMP", jp: "DMM ジェンエーアイキャンプ",
+url: "https://genai.dmm.com/", verify: "索引",
+scale: "DMM 集团品牌流量 + 约 1,000 レッスン学び放題（2026-09 口径）；法人版 20 名起",
+mode: "Both（订阅）", sub: true,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课（多门，含在月额内）",
+agentTitle: "Difyマスター / n8nマスター / Claude Code・Codexマスター 等",
+agentDetail: "生成AIエンジニアコース（Python / OpenAI API / RAG / LangChain / AIエージェント開発）；Difyマスターコース（RAG、チャットボット・エージェント・ワークフロー構築、API連携）；n8nマスターコース；Claude Code・Codex・Claude Coworkマスターコース；Copilot 系含 Agent Builder——全部含在月额内。",
+pricing: [
+"B2C（2026-03 改版后订阅制）：月額 16,280 円税込（无最低契约期）/ 6 か月一括 90,530 円 / 12 か月一括 162,800 円，入学金・教材费 0 円，約 1,000 レッスン学び放題（職種別 8+、ツール別 14+ コース）",
+"B2B：スタンダード 16,280 円税込/アカウント・月〜（最低 20 名）；エンタープライズ個別見積"
+],
+pricingNote: "旧单コース制（99,000 円〜等）已废止，勿再引用。",
+free: "60 分免费セミナー / 说明会",
+scaleShort: "DMM 品牌・约 1,000 レッスン",
+priceBand: "月额 16,280（个人 / 法人同价起）",
+agentShort: "Dify / n8n / Claude Code マスター等（月额内）",
+sources: [
+["官网", "https://genai.dmm.com/"],
+["法人版（官网）", "https://genai.dmm.com/business/"]
+]
+},
+{
+name: "Aidemy", jp: "アイデミー",
+url: "https://business.aidemy.net/", verify: "索引",
+scale: "Aidemy Business 累计 400 法人以上（2025-05-31 时点 PR）；Accenture 于 2025-11 完成收购",
+mode: "B2B（B2C 已结束）", sub: false,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主（Business e-learning）；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "partial", agentBadge: "部分（模块型，专课未核实）",
+agentTitle: "Dify活用術等课程内模块",
+agentDetail: "Aidemy Business 于 2025-02 新公开「ゼロから“イチ”を生み出す Dify活用術」等模块；第三方 2026 对比称其有面向非工程师的 AIエージェントコース（対応 Claude Code、Copilot Studio、Power Automate、Dify）——未在官网课程页逐项核实标题/价格，签约级引用前须向官方确认。",
+pricing: [
+"B2C「Aidemy Premium」：2026-06-30 新规受付与继续受讲均已结束（旧价：3 个月 528,000 円 / 6 个月 858,000 円 / 9 个月 1,078,000 円税込，教育訓練給付金最大 80% → 実質 105,600 円〜）",
+"B2B：非公开・个别見積，契约 1 / 2 / 3 年，250+ コース，Lite プラン 5 名起；官方称人材開発支援助成金申请可能"
+],
+pricingNote: "个人向旧价来自第三方多源一致口径，仅作历史参考。",
+free: "Business 免费トライアル、免费セミナー（AIエージェント可能性解説等）",
+scaleShort: "累计 400 法人+、Accenture 傘下",
+priceBand: "B2B 非公开・見積（契约 1–3 年）",
+agentShort: "Dify活用術等模块（专课未核实）",
+sources: [
+["Aidemy Business（官网）", "https://business.aidemy.net/"],
+["Dify活用術 报道", "https://ascii.jp/elem/000/004/253/4253535/"]
+]
+},
+{
+name: "トレノケート", jp: "Trainocate",
+url: "https://www.trainocate.co.jp/", verify: "索引",
+scale: "IT 研修大手，公开讲座型 Agent 定价的标杆",
+mode: "B2B", sub: false,
+offlineType: "venue", offlineLabel: "会場公開講座型", offlineDetail: "公開講座会場開催型（全国会場＋オンライン）；非常设通学教室，大阪開催回以官网日程为准", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课（两极）",
+agentTitle: "さわってわかるAIエージェント入門（Dify）/ AIエージェント開発者養成講座",
+agentDetail: "入门：さわってわかるAIエージェント入門～Difyで作って学ぶノーコードAI業務活用～ 77,000 円税込/1 日（9:30–17:00），2026-03-26 提供开始，非 IT 向ハンズオン。高阶：AIエージェント開発者養成講座実践コース 385,000 円税込/3 日（与ジェネラティブエージェンツ合作，Claude Code / MCP / LangGraph / RAG / 評価・運用，含疑似プロジェクト）。",
+pricing: [
+"公开课 33,000 円〜/1 日（ChatGPT 活用等，税込/名）",
+"e-learning 17,600 円〜",
+"Agent 入门 77,000 円/1 日；开发养成 385,000 円/3 日"
+],
+pricingNote: "",
+free: "—",
+scaleShort: "IT 研修大手",
+priceBand: "33,000–385,000",
+agentShort: "Dify 入门 77,000 円 / 开发养成 385,000 円",
+sources: [
+["AIエージェント入門（官网）", "https://www.trainocate.co.jp/reference/course_details.aspx?code=MAC0050G"],
+["開発者養成講座（官网）", "https://www.trainocate.co.jp/reference/course_details.aspx?code=MAC0044R"]
+]
+},
+{
+name: "CodeCamp", jp: "コードキャンプ",
+url: "https://codecamp.jp/", verify: "索引",
+scale: "编程学校头部，长期占据「プログラミングスクール」搜索前列",
+mode: "Both", sub: false,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主（在线レッスン）；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课（公開講座）",
+agentTitle: "生成AIエンジニア養成Camp 等",
+agentDetail: "生成AIエンジニア養成Camp 165,000 円税込，计 16h（ライブ 2 日 + 宿题），用 LangChain / LangGraph 做 RAG チャットボット与 AIエージェントアプリ，Python 经验者向；AIエディタ活用コーディング集中講座 55,000 円税込/4h（AIエディタ 的 agent 功能ハンズオン）；実践Vibe-Coding集中講座 88,000 円税込/6h（非工程师用エージェント型 AI 做原型）；生成AI活用実践 for Biz 110,000 円税込/计 10h（Gemini）。以上为第三方转述官网公開講座价，1 名可报。",
+pricing: [
+"B2C：プログラミングコース 198,000 円税込/2 か月（含入学金 33,000 円）、308,000 円/4 か月、363,000 円/6 か月",
+"エンジニア転職コース 594,000 円/4 か月",
+"法人研修本体为定制見積；给付金/补助对应コース有"
+],
+pricingNote: "",
+free: "—",
+scaleShort: "编程校头部",
+priceBand: "公開講座 55,000–165,000",
+agentShort: "生成AIエンジニア養成Camp 165,000 円（LangChain/LangGraph）",
+sources: [
+["公開講座整理（第三方转述官网）", "https://ai-hack.jp/schools/codecamp"],
+["课程一览（官网）", "https://codecamp.jp/courses"]
+]
+},
+{
+name: "インターネット・アカデミー", jp: "Internet Academy",
+url: "https://www.internetacademy.jp/", verify: "索引",
+scale: "老牌 IT 校；法人导入实绩 1,200 社+（全社口径）",
+mode: "Both", sub: false,
+offlineType: "school", offlineLabel: "通学型常设教室", offlineDetail: "通学型常设教室：東京渋谷・新宿；大阪/关西无教室，ハイブリッド対応", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "AIエージェント講座（Dify）/ AIエージェント活用研修",
+agentDetail: "B2C：AIエージェント講座 78,408 円税込（现价；开讲时 65,340 円）/ 2 回・学习目安 4h，用 Dify 做条件分岐・多ツール連携ワークフロー与 RAG 社内チャットボット，2026-07 开讲。B2B：AIエージェント活用研修 全 12 回×2–3h（计 24–36h），MyGPT / Gems → NotebookLM → Dify → Claude Cowork → Claude Code 阶梯，2026-10-01 提供开始，价格个别見積。",
+pricing: [
+"B2C AIエージェント講座：78,408 円税込 / 2 回",
+"B2B AIエージェント活用研修：全 12 回，个别見積"
+],
+pricingNote: "",
+free: "—",
+scaleShort: "法人 1,200 社+ 实绩",
+priceBand: "B2C Agent 讲座 78,408；B2B 見積",
+agentShort: "AIエージェント講座（Dify）/ 活用研修 12 回",
+sources: [
+["AIエージェント講座（官网）", "https://www.internetacademy.jp/course/business/chair_ai_agent.html"],
+["法人活用研修（官网）", "https://www.internetacademy.co.jp/course/ai/agent_comp.html"]
+]
+},
+{
+name: "バイテックGEEK", jp: "byTech（バイテック）",
+url: "https://bytech.jp/", verify: "索引",
+scale: "2026-07 开讲的 Claude Code 特化新品牌，称累计受讲 2,500 人（第三方口径）",
+mode: "Both", sub: false,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课（Claude Code 专精）",
+agentTitle: "バイテックGEEK / Claude Code研修",
+agentDetail: "以 Claude Code（コーディングエージェント）为专精，面向非工程师做业务自动与 Web アプリ。法人 Claude Code研修为全 5 チャプター・44 レッスン・约 12h 在线课。",
+pricing: [
+"B2C：バイテック生成AI LITE 178,000 円 / PRO 298,000 円税込（ChatGPT / Claude / Gemini / Copilot / Dify / NotebookLM 横贯；Claudeマスター 81 レッスン、Difyマスター 82 レッスン）",
+"バイテックGEEK（Claude Code 特化）：2 か月 228,000 円 / 4 か月 348,000 円 / 6 か月 438,000 円税込，面谈 4 / 8 / 12 回、教材无期限（一括割引 -50,000 円キャンペーン并存口径）",
+"B2B：Claude Code研修 eラーニング 100,000 円〜/名、AI効率化研修 200,000 円〜/名、AI自動化研修 300,000 円〜/名"
+],
+pricingNote: "B2B 研修官方明示为助成金対象外。GEEK 6 か月价另有 348,000 / 398,000 円转述并存，须官网再确认。",
+free: "—",
+scaleShort: "2026-07 新开・Claude Code 特化",
+priceBand: "B2C 228,000–438,000；B2B 100,000〜/名",
+agentShort: "Claude Code研修 / コース",
+sources: [
+["Claude Code研修（法人官网）", "https://biz.bytech.jp/claude-training"],
+["GEEK 价格整理（第三方）", "https://www.alc.co.jp/programming/ai/claude-code-school/"]
+]
+},
+{
+name: "AI Agent Camp", jp: "エーアイエージェントキャンプ",
+url: "https://ai-agent.camp/ja", verify: "索引",
+scale: "2026-04 正式上线的新兴 Agent 专精订阅服务",
+mode: "Both（订阅）", sub: true,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主（订阅在线）；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "yes", agentBadge: "有 Agent 课（专精本命）",
+agentTitle: "AI Agent Camp（Claude Code / Codex / Cursor 特化）",
+agentDetail: "非工程师向，Phase 制ハンズオン做数据分析・メール自動化・アプリ開発；28 モジュール・100+ レッスン，修了目安 50–60h，24h AIチューター + 周 30 分个别（note 口径）。另有姊妹版「AI Agent Camp for Microsoft Copilot」（同价 12,800 円）。",
+pricing: [
+"月额 12,800 円税込，随时可解约、无最低期（ツール代别途：Claude Pro / Cursor 等不含）",
+"法人プラン：個別見積（多名折扣）"
+],
+pricingNote: "",
+free: "—",
+scaleShort: "2026-04 上线・专精",
+priceBand: "月额 12,800",
+agentShort: "Claude Code / Codex / Cursor 特化（本命）",
+sources: [
+["官网", "https://ai-agent.camp/ja"],
+["上线 PR", "https://straightpress.jp/company_news/detail?pr=000000004.000175436"]
+]
+},
+{
+name: "Human Academy", jp: "ヒューマンアカデミー",
+url: "https://haa.athuman.com/", verify: "索引",
+scale: "全国校舎网 + 在线；生成AI・ノーコード講座以リスキリング補助金主推",
+mode: "B2C 主", sub: false,
+offlineType: "school", offlineLabel: "通学型常设教室", offlineDetail: "通学型常设教室：全国32校舎，大阪梅田・心斎橋・天王寺有校；通学＋在线併用", hasOffline: true,
+agentStatus: "yes", agentBadge: "有（课程内进阶段）",
+agentTitle: "AI総合講座 STEP3「AIエージェント実装」",
+agentDetail: "AI総合講座 STEP3 为「AIエージェント実装（Claude Code / AIエージェント活用 / 業務自動化）」；生成AI・ノーコード講座含 Dify 的 AI アプリ開発与业务自动；法人向生成AIビジネス講座课程表含「RAG概要・AIエージェント概要」。以「基础 → 生成AI → エージェント」一贯学习为卖点，但未见单独售卖的 Agent 短课。",
+pricing: [
+"生成AI・ノーコード講座 330,000 円税込（另入学金 55,000 円 + システム利用料 5,940 円，总 390,940 円），最短 4 か月（最大 6 か月），リスキリング補助金最大 70% → 実質 140,000 円（含入学金口径）",
+"AI総合講座：6 か月プラン 440,000 円〜（补助后実質 160,000 円）/ 12 か月 495,000 円〜",
+"法人向 e-learning 生成AIビジネス講座 21,670 円税込 / 3 か月（HAEC）"
+],
+pricingNote: "",
+free: "—",
+scaleShort: "全国校舎网",
+priceBand: "330,000（実質 140,000）–495,000",
+agentShort: "AI総合講座 STEP3 AIエージェント実装（Claude Code）",
+sources: [
+["生成AI・ノーコード講座（官网）", "https://haa.athuman.com/ai/course/generative_ai/"],
+["AI総合講座（官网）", "https://haa.athuman.com/academy/aisogo/"]
+]
+},
+{
+name: "TechAcademy", jp: "テックアカデミー（キラメックス）",
+url: "https://techacademy.jp/", verify: "索引",
+scale: "长期占据编程学校搜索前列；但 2026-10 时点 AI 系コース新規申込一時停止（SHIFT AI TIMES 2026-10-03 确认）",
+mode: "B2C 主", sub: false,
+offlineType: "online", offlineLabel: "纯线上", offlineDetail: "纯线上为主；无常设教室，大阪无教室", hasOffline: false,
+agentStatus: "no", agentBadge: "无 Agent 专课（且暂停招生）",
+agentTitle: "最接近：LLMアプリ開発コース",
+agentDetail: "无 AIエージェント構築专课。最接近的是 LLMアプリ開発コース（Python + OpenAI API + LangChain 做 LLM 应用，最终成果物为应用设计制作）与プロンプト入門。官网价格页现显示「-円」，下记为停止前价格，不可直接用于报价对比。B2B 研修由渠道转售（LLM 研修 182,600 円/名/1 か月起）。",
+pricing: [
+"AIコース（停止前，税込）：4 周 251,900 円 / 8 周 317,900 円 / 12 周 383,900 円 / 16 周 438,900 円（社会人）",
+"はじめてのプロンプトエンジニアリング 149,600 円 / 4 周",
+"LLMアプリ開発コース：149,600 円（4 周）/ 204,600 円（8 周，补助后 74,400 円）/ 259,600 円 / 314,600 円"
+],
+pricingNote: "状态警告：2026-10 时点多门 AI 系课程新規受付一時停止中；リスキリング补助后「実質 91,600 円〜」口径并存，勿混用。",
+free: "—",
+scaleShort: "搜索常青・现暂停招生",
+priceBand: "149,600–438,900（停止前）",
+agentShort: "仅 LLMアプリ開発コース",
+sources: [
+["价格（官网）", "https://techacademy.jp/price"],
+["停止前价格整理（第三方）", "https://www.alc.co.jp/programming/review/techacademy/"]
+]
+},
+{
+name: "Win School", jp: "ウィンスクール",
+url: "https://www.winschool.jp/", verify: "索引",
+scale: "全国约 45–50 校表记并存（官网不同页面；教室检索页实数约 37 校，第三方 2026-09 点数）；累计受讲 30 万人以上为第三方转述",
+mode: "Both（通学）", sub: false,
+offlineType: "school", offlineLabel: "通学型常设教室", offlineDetail: "通学型常设教室：大阪梅田・なんば・天王寺有教室（全国约50校）；通学／在线／併用可", hasOffline: true,
+agentStatus: "no", agentBadge: "无 Agent 课",
+agentTitle: "未发现 AIエージェント構築专课",
+agentDetail: "官网 DX / 生成AI 讲座群（ChatGPT / Copilot 基础、Excel / PowerPoint / VBA × Copilot）中未发现 AIエージェント構築 / Dify / Copilot Studio 专课（2026-11-01 检索官网确认范围）。卖点是「通学 + 个别指导 + Office 连动」，Agent 是明显缺口。",
+pricing: [
+"生成AI（ChatGPT・Copilot）：90 分×3 回（4.5h）合计 38,500 円口径（受講料 26,400 + 入学金 9,900 + 教材 2,200；旧/校别表记 28,600–40,700 円并存，须以官网现价为准）",
+"Excel×生成AI（Copilot）等各 113,520 円带；AIプログラミング実習（機械学習 & Deep Learning）239,800 円 / 30h；Python + データ分析・AI 系套餐 239,800–401,500 円",
+"B2B：法人 e-learning 生成AI講座 11,880 円税込/ID（约 4.5h，2 か月）；讲师派遣为見積"
+],
+pricingNote: "均为税込（官网口径）。",
+free: "—",
+scaleShort: "全国约 45–50 校表记",
+priceBand: "生成AI入门 38,500；法人 e-learning 11,880/ID",
+agentShort: "无",
+sources: [
+["生成AI 讲座（官网）", "https://www.winschool.jp/guidance/dx/"],
+["法人 e-learning（官网）", "https://www.winschool.jp/corporate/elearning/generative_ai.html"]
+]
+},
+{
+name: "AI研究所", jp: "AI研究所（GETT / Proskill）",
+url: "https://proskilll.com/seminar/generative-ai/", verify: "索引（2026-11-01 查证）",
+scale: "线下公開講座型代表；法人研修＋東京・名古屋・大阪会場公開講座（本次查证 brief 口径）",
+mode: "Both（会場公開講座＋法人研修）", sub: false,
+offlineType: "venue", offlineLabel: "会場公開講座型", offlineDetail: "公開講座 東京・名古屋・大阪会場；大阪有会場；法人研修は対面・ライブウェビナー・eラーニング", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 相关课",
+agentTitle: "生成AI / Claude Code 等 2日間公開講座（Dify・AIエージェント含む講座群）",
+agentDetail: "生成AI / ChatGPT / Copilot / Gemini / Claude / Claude Code 等主题的 2日間公開講座；受講形態は対面・ライブウェビナー・eラーニング。法人研修可対面实施。此为 brief 查证口径，个别讲座的 Agent 構築深度以官网讲座页为准。",
+pricing: [
+"2日間公開講座 各 38,500 円税込（生成AI / ChatGPT / Copilot / Gemini / Claude / Claude Code 等，brief 查证价）"
+],
+pricingNote: "价格为 2026-11-01 查证 brief 给出的口径；不同主题/形态可能不同，报名前以官网为准。不在此之外编造新价格。",
+free: "—",
+scaleShort: "東京・名古屋・大阪会場公開講座",
+priceBand: "公開講座 38,500 税込 / 2日間",
+agentShort: "生成AI・Claude Code 等 2日間公開講座 38,500 円",
+sources: [
+["生成AIセミナー講座（官网）", "https://proskilll.com/seminar/generative-ai/"],
+["GETT Proskill（官网）", "https://proskilll.com/"]
+]
+},
+{
+name: "Generative Agents", jp: "ジェネラティブエージェンツ",
+url: "https://www.generative-agents.co.jp/service/edu-ai-coding/", verify: "官网核实（2026-11-01 查证）",
+scale: "AIエージェント专精公司；会場開催型 Claude Code 研修，定員各回合计 20 名（官网）",
+mode: "B2B（会場公開講座＋個社研修）", sub: false,
+offlineType: "venue", offlineLabel: "会場公開講座型", offlineDetail: "会場開催型：2026-10-20 大阪梅田 / 2026-11-10 東京市ヶ谷 / 2026-12-08 東京市ヶ谷；大阪有開催回；個社研修可現地開催（貴社会議室）或オンライン", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "AIコーディング実践講座 - Claude Code研修",
+agentDetail: "会場開催型。内容含 Claude Code 基本操作、MCP（Model Context Protocol）活用、仕様駆動開発（Spec-Driven Development）、実践ハンズオン、Claude Code Deep Dive 与质疑应答。個社研修可到客户会議室現地開催，或オンライン实施。",
+pricing: [
+"公开讲座价格：未在本次查证 brief 中给出具体金额，以官网申込页为准（本页不编造）"
+],
+pricingNote: "トレノケート的同系高阶课（与ジェネラティブエージェンツ合作）价格见トレノケート卡片，不要混同为本讲座直售价。",
+free: "—",
+scaleShort: "会場開催・大阪梅田回あり",
+priceBand: "未在本次查证中给出（以官网为准）",
+agentShort: "AIコーディング実践講座（Claude Code・MCP・仕様駆動）",
+sources: [
+["AIコーディング実践講座（官网）", "https://www.generative-agents.co.jp/service/edu-ai-coding/"]
+]
+},
+{
+name: "i-Learning", jp: "アイ・ラーニング",
+url: "https://www.i-learning.jp/products/detail.php?course_code=AI931", verify: "官网核实（2026-11-01 查证）",
+scale: "IT 研修机构；本讲座为対面专讲（コースコード AI931）",
+mode: "B2B", sub: false,
+offlineType: "venue", offlineLabel: "会場公開講座型", offlineDetail: "受講形態：対面；会場 神田AKスペース（東京）；大阪/关西无常设会場（本讲座口径）", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "AIコーディング実践講座（Claude Code）",
+agentDetail: "受講形態 対面，1日間 10:00–18:00（昼休憩60分），講義＋ハンズオン。AIコーディングツール（コーディングエージェント）として導入事例の多い Claude Code を使用し、AIエージェント主导的新编码手法を体系的に学ぶ。",
+pricing: [
+"受講料 165,000 円（税別 150,000 円）/ 1日間"
+],
+pricingNote: "价格与日程为官网课程页（AI931）2026-11-01 查证口径；開催日・空席以官网为准。",
+free: "—",
+scaleShort: "対面专讲・神田会場",
+priceBand: "165,000（税別 150,000）/ 1日",
+agentShort: "AIコーディング実践講座（Claude Code・対面）165,000 円",
+sources: [
+["AIコーディング実践講座 AI931（官网）", "https://www.i-learning.jp/products/detail.php?course_code=AI931"]
+]
+},
+{
+name: ".Pro", jp: "ドットプロ",
+url: "https://dotpro.net/", verify: "索引（2026-11-01 查证）",
+scale: "対面少人数・通学型专精；6年以上（官网现行表记为7年以上亦有）対面指導実績——本页按 brief 口径记 6年以上",
+mode: "B2C 主（通学）", sub: false,
+offlineType: "school", offlineLabel: "通学型常设教室", offlineDetail: "通学型常设教室：東京渋谷校（道玄坂）；大阪/关西无常设教室（官网口径）", hasOffline: true,
+agentStatus: "partial", agentBadge: "部分（生成AI特化，无独立 Agent 構築专课确认）",
+agentTitle: "生成AI特化カリキュラム（生成AI＋Python並行）",
+agentDetail: "対面少人数・通学型，生成AI特化，セミオーダー制カリキュラムで受講生の目的に合わせて设计；生成AIと Python を並行して学ぶ。未确认有以 Dify / Claude Code 命名的独立 Agent 構築专课，故判定为部分。",
+pricing: [
+"价格：未在本次查证 brief 中给出具体金额，以官网・個別相談为准（本页不编造新价格）"
+],
+pricingNote: "セミオーダー制のため价格随カリキュラム而定，须个别确认。",
+free: "—",
+scaleShort: "渋谷・対面少人数通学",
+priceBand: "未在本次查证中给出（セミオーダー）",
+agentShort: "生成AI＋Python（セミオーダー，专课未确认）",
+sources: [
+[".Pro（官网）", "https://dotpro.net/"],
+["生成AI×Python対面スクール .Pro（官网 LP）", "https://dotpro.net/lp/"]
+]
+},
+{
+name: "テックジム", jp: "TechGYM",
+url: "https://techgym.jp/", verify: "索引（2026-11-01 查证）",
+scale: "通学型・少人数制；東京・大阪ほか主要都市に教室，大阪は梅田校等（官网）",
+mode: "Both（通学・月額制）", sub: true,
+offlineType: "school", offlineLabel: "通学型常设教室", offlineDetail: "通学型常设教室：東京・大阪ほか主要都市に教室；大阪有教室（梅田等）；対面個別サポート", hasOffline: true,
+agentStatus: "partial", agentBadge: "部分（AI／Claude Code 入門等，非 Agent 構築专课体系）",
+agentTitle: "AI 系コース＋Claude Code 入門講座（対面）等",
+agentDetail: "少人数制・自習型カリキュラム＋対面個別サポートが特徴。Python / AI 系コースに加え、Claude Code 入門等の対面講座開催实绩があるが、Dify 等で Agent を構築する体系专课未确认，故判定为部分。",
+pricing: [
+"月額制（定額制）：具体金额未在本次查证 brief 中给出，以官网・各校页为准（本页不编造新价格）；入会金等の有无亦以官网为准"
+],
+pricingNote: "brief 仅确认「月額制・少人数制・対面個別サポート」，金额不在本次查证范围内。",
+free: "初心者向け無料対面講座（東京本校等，每周開催口径・官网）",
+scaleShort: "東京・大阪等に教室・月額制",
+priceBand: "月額制（金额以官网为准）",
+agentShort: "AI系＋Claude Code入門（対面，部分）",
+sources: [
+["テックジム（官网）", "https://techgym.jp/"],
+["大阪梅田校（官网）", "https://techgym.jp/osaka/umeda/"]
+]
+},
+{
+name: "Claude Code塾", jp: "Claude Code塾（claudecode.co.jp）",
+url: "https://claudecode.co.jp/generative-ai-training", verify: "官网核实（2026-11-01 查证）",
+scale: "完全対面专精的生成AI研修；少人数，2名から实施",
+mode: "B2B（完全対面研修）", sub: false,
+offlineType: "venue", offlineLabel: "会場公開講座型", offlineDetail: "完全対面：弊社会場 or 御社オフィスで実施；大阪常设会場未在本次查证中确认，開催地以主催者案内为准", hasOffline: true,
+agentStatus: "yes", agentBadge: "有 Agent 专课",
+agentTitle: "業務ツールを作る研修（Claude Code）",
+agentDetail: "完全対面で業務ツールを作る研修。2日・14時間，対象は営業・事務・企画等非エンジニア，2名から。ログイン・データ保存・権限・承認を備えた業務ツールの試作までをハンズオンで進める形态（官网课程页口径）。",
+pricing: [
+"100,000 円/人 税抜（2日・14時間，業務ツールを作る研修）"
+],
+pricingNote: "官网另有 4日・6日等の段階プラン，本页只列 brief 查证的 2日プラン价格，其余以官网价格页为准。",
+free: "—",
+scaleShort: "完全対面・2名から・非エンジニア向",
+priceBand: "100,000 税抜/人（2日）",
+agentShort: "業務ツールを作る研修（Claude Code・完全対面）100,000 円税抜",
+sources: [
+["生成AI研修（官网）", "https://claudecode.co.jp/generative-ai-training"],
+["料金（官网）", "https://claudecode.co.jp/price"]
+]
+}
+
+];
+</script>
+    <script>
+      (function () {
+        function esc(s) {
+          return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+        }
+        var cardsEl = document.getElementById("cards");
+        var tbodyEl = document.getElementById("tbody");
+        var countEl = document.getElementById("countLine");
+        var emptyEl = document.getElementById("emptyMsg");
+        var searchEl = document.getElementById("search");
+        var currentFilter = "all";
+
+        function cardHTML(p) {
+          var pricingItems = p.pricing.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
+          var srcLinks = p.sources.map(function (s) {
+            return '<a href="' + esc(s[1]) + '" target="_blank" rel="noopener">' + esc(s[0]) + "</a>";
+          }).join("　·　");
+          var note = p.pricingNote ? '<dd>' + esc(p.pricingNote) + "</dd>" : "";
+          var free = (p.free && p.free !== "—") ? "<dt>免费引流</dt><dd>" + esc(p.free) + "</dd>" : "";
+          return '<article class="card" data-status="' + p.agentStatus + '" data-sub="' + (p.sub ? "1" : "0") + '" data-offline="' + (p.hasOffline ? "1" : "0") + '" data-search="' + esc((p.name + " " + p.jp + " " + p.agentTitle + " " + (p.offlineLabel||"") + " " + (p.offlineDetail||"")).toLowerCase()) + '">' +
+            '<div class="card-top"><h3>' + esc(p.name) + '<span class="jp">' + esc(p.jp) + " · " + esc(p.mode) + '</span></h3><span class="verify">' + esc(p.verify) + "</span></div>" +
+            '<p class="scale">' + esc(p.scale) + "</p>" +
+            '<p class="site-link">官网：<a href="' + esc(p.url) + '" target="_blank" rel="noopener">' + esc(p.url.replace(/^https?:\/\//, "").replace(/\/$/, "")) + "</a></p>" +
+            '<div class="offline-line"><span class="offline-tag ' + (p.hasOffline ? "has" : "") + '">' + esc(p.offlineLabel || "纯线上") + '</span><span class="offline-detail">' + esc(p.offlineDetail || "") + "</span></div>" +
+            '<span class="badge ' + p.agentStatus + '">' + (p.agentStatus === "yes" ? "●" : p.agentStatus === "partial" ? "◐" : "○") + " " + esc(p.agentBadge) + "</span>" +
+            '<p class="agent-title">' + esc(p.agentTitle) + "</p>" +
+            '<p class="agent-detail">' + esc(p.agentDetail) + "</p>" +
+            "<dl><dt>定价体系</dt><dd><ul>" + pricingItems + "</ul></dd>" + note + free + "</dl>" +
+            '<div class="sources">出处：' + srcLinks + "</div>" +
+            "</article>";
+        }
+
+        function rowHTML(p) {
+          var cls = p.agentStatus === "yes" ? "agent-y" : p.agentStatus === "partial" ? "agent-p" : "agent-n";
+          var mark = p.agentStatus === "yes" ? "Yes" : p.agentStatus === "partial" ? "部分" : "No";
+          return "<tr>" +
+            '<td class="name" data-label="">' + esc(p.name) + "</td>" +
+            '<td data-label="规模 / 人气代理">' + esc(p.scaleShort) + "</td>" +
+            '<td data-label="模式">' + esc(p.mode) + "</td>" +
+            '<td data-label="典型价格带">' + esc(p.priceBand) + "</td>" +
+            '<td data-label="Agent 课"><span class="' + cls + '">' + mark + "</span> - " + esc(p.agentShort) + "</td>" +
+            '<td data-label="线下形态 / 大阪・关西"><strong>' + esc(p.offlineLabel || "") + "</strong><br>" + esc(p.offlineDetail || "") + "</td>" +
+            "</tr>";
+        }
+
+        cardsEl.innerHTML = PROVIDERS.map(cardHTML).join("");
+        tbodyEl.innerHTML = PROVIDERS.map(rowHTML).join("");
+
+        function apply() {
+          var q = searchEl.value.trim().toLowerCase();
+          var shown = 0;
+          var cards = cardsEl.children;
+          for (var i = 0; i < cards.length; i++) {
+            var c = cards[i];
+            var okFilter = currentFilter === "all" ||
+              (currentFilter === "sub" ? c.getAttribute("data-sub") === "1" : currentFilter === "offline" ? c.getAttribute("data-offline") === "1" : c.getAttribute("data-status") === currentFilter);
+            var okSearch = !q || c.getAttribute("data-search").indexOf(q) !== -1;
+            var show = okFilter && okSearch;
+            c.classList.toggle("hidden", !show);
+            if (show) shown++;
+          }
+          countEl.textContent = "显示 " + shown + " / " + PROVIDERS.length + " 家";
+          emptyEl.style.display = shown === 0 ? "block" : "none";
+        }
+
+        var chips = document.querySelectorAll(".chip");
+        for (var j = 0; j < chips.length; j++) {
+          chips[j].addEventListener("click", function () {
+            for (var k = 0; k < chips.length; k++) chips[k].setAttribute("aria-pressed", "false");
+            this.setAttribute("aria-pressed", "true");
+            currentFilter = this.getAttribute("data-filter");
+            apply();
+          });
+        }
+        searchEl.addEventListener("input", apply);
+        apply();
+      })();
+    </script>
+  </body>
+</html>
