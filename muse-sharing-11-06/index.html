@@ -329,6 +329,28 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 .cloud-line em{font-style:normal;color:var(--primary-deep);}
 .principles.slim{gap:24px;}
 .principles.slim .prin{font-size:42px;padding:22px 38px;}
+/* new: launch timeline (slide 9) — four markets, Japan highlighted */
+.launch-wrap{width:100%;}
+.launch-head{display:flex;align-items:center;gap:24px;margin-bottom:18px;}
+.launch-head .lh-line{flex:1;height:3px;background:var(--border);border-radius:2px;}
+.launch-head .lh-text{font-weight:900;font-size:38px;color:var(--primary-deep);letter-spacing:.08em;white-space:nowrap;}
+.launch-grid{display:flex;gap:28px;position:relative;padding-top:26px;}
+.launch-grid::before{content:"";position:absolute;left:11%;right:11%;top:9px;height:6px;border-radius:3px;background:var(--card-bg-2);}
+.lc{flex:1;background:#fff;border:2px solid var(--border);border-radius:16px;padding:20px 18px 18px;text-align:center;position:relative;display:flex;flex-direction:column;align-items:center;}
+.lc::before{content:"";position:absolute;top:-26px;left:50%;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#fff;border:6px solid var(--primary);z-index:1;}
+.lc-year{font-family:var(--latin);font-weight:700;font-size:32px;letter-spacing:.14em;color:var(--light);}
+.lc-country{margin-top:6px;font-weight:900;font-size:50px;line-height:1.15;color:var(--ink);}
+.lc-date{margin-top:8px;font-weight:900;font-size:60px;line-height:1;color:var(--primary-deep);white-space:nowrap;}
+.lc-date small{font-size:36px;font-weight:900;}
+.lc-note{margin-top:10px;font-size:34px;font-weight:700;line-height:1.35;color:var(--muted);}
+.lc.hot{background:var(--primary);border:5px solid var(--primary-deep);box-shadow:0 18px 40px rgba(0,100,209,.28);padding-top:16px;padding-bottom:16px;}
+.lc.hot::before{background:var(--primary-deep);border-color:#fff;width:30px;height:30px;top:-29px;box-shadow:0 0 0 3px var(--primary-deep);}
+.lc.hot .lc-year{color:rgba(255,255,255,.75);}
+.lc.hot .lc-country{color:#fff;font-size:54px;}
+.lc.hot .lc-date{color:#fff;font-size:68px;}
+.lc.hot .lc-date small{font-size:40px;}
+.lc-badge{background:#fff;color:var(--primary-deep);font-weight:900;font-size:32px;line-height:1;padding:10px 22px;border-radius:100px;margin-bottom:4px;}
+.lc.hot .lc-note{color:#fff;background:rgba(255,255,255,.18);border:1.5px solid rgba(255,255,255,.45);border-radius:100px;padding:10px 14px;font-size:30px;white-space:nowrap;}
 /* new: price tiers (slide 10) */
 .tiers{display:flex;flex-direction:column;gap:24px;margin-top:36px;flex:1;justify-content:center;}
 .tier{display:flex;align-items:center;gap:48px;background:var(--card-bg);border:1.5px solid var(--border);border-radius:14px;padding:34px 52px;}
@@ -556,11 +578,19 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 <!-- 9 每人一台云电脑 -->
 <section class="slide" style="background:var(--bg-alt)">
   <div class="slide-inner">
-    <div class="slide-header rise" style="--i:0"><div class="eyebrow">前言 · 为什么是 Muse</div></div>
-    <div class="cloud-wrap" style="gap:72px">
+    <div class="slide-header rise" style="--i:0;margin-bottom:20px"><div class="eyebrow">前言 · 为什么是 Muse</div></div>
+    <div class="cloud-wrap" style="gap:22px">
       <div class="cloud-line rise" style="--i:1">每人一台，24 小时开着的<em>云电脑</em></div>
       <div class="principles rise" style="--i:2"><div class="prin">关掉手机还在干活</div><div class="prin">记得住你</div><div class="prin">像发消息一样交代</div></div>
-      <div class="cloud-note rise" style="--i:3;font-size:42px">日本已上线</div>
+      <div class="launch-wrap rise" style="--i:3">
+        <div class="launch-head"><div class="lh-line"></div><div class="lh-text">上线时间线 · 全球展开</div><div class="lh-line"></div></div>
+        <div class="launch-grid">
+          <div class="lc"><div class="lc-year">2026</div><div class="lc-country">美国</div><div class="lc-date">9<small>月</small>8<small>日</small></div><div class="lc-note">首发市场</div></div>
+          <div class="lc"><div class="lc-year">2026</div><div class="lc-country">加拿大</div><div class="lc-date">9<small>月</small>18<small>日</small></div><div class="lc-note">第二个市场</div></div>
+          <div class="lc hot"><div class="lc-badge">日本 · 重点</div><div class="lc-year">2026</div><div class="lc-country">日本</div><div class="lc-date">10<small>月</small>23<small>日</small></div><div class="lc-note">北米以外で最初の市場</div></div>
+          <div class="lc"><div class="lc-year">2026</div><div class="lc-country">新加坡</div><div class="lc-date">10<small>月</small>27<small>日</small></div><div class="lc-note">最新开放</div></div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="slide-foot">09 / 31</div>
