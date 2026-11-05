@@ -393,7 +393,23 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 .slide-dark .break-tip{color:#fff;}
 .slide-dark .break-tip .bt-num{background:#fff;color:var(--primary-deep);}
 .slide-dark .break-anon{color:rgba(255,255,255,.82);}
-/* new: Q&A closing slide (slide 30) — deep blue, minimal */
+/* new: three-level ladder (slide 30) — ascending step cards, keywords as inspiration */
+.lv3-zone{display:flex;align-items:flex-end;gap:32px;margin-top:12px;}
+.lv-card{flex:1;background:var(--card-bg);border:1.5px solid var(--border);border-radius:14px;padding:28px 38px;display:flex;flex-direction:column;}
+.lv-card.c1{height:506px;}.lv-card.c2{height:528px;}
+.lv-card.c3{height:552px;background:var(--primary);border-color:var(--primary);}
+.lv-top{display:flex;align-items:center;gap:22px;}
+.lv-num{font-family:var(--latin);font-weight:700;font-size:62px;line-height:1;color:var(--primary);}
+.lv-tag{font-weight:900;font-size:40px;color:var(--ink);}
+.lv-card h3{margin:14px 0 0;font-weight:900;font-size:58px;line-height:1.22;color:var(--ink);}
+.lv-desc{margin:12px 0 0;font-size:40px;font-weight:500;line-height:1.35;color:var(--muted);}
+.lv-keys{margin-top:auto;border-top:2px solid var(--border);padding-top:16px;font-size:38px;font-weight:900;line-height:1.42;color:var(--primary-deep);}
+.lv-card.c3 .lv-num,.lv-card.c3 .lv-tag,.lv-card.c3 h3{color:#fff;}
+.lv-card.c3 .lv-desc{color:rgba(255,255,255,.88);}
+.lv-card.c3 .lv-keys{color:#fff;border-top-color:rgba(255,255,255,.4);}
+.lv-concl{margin-top:16px;text-align:center;font-weight:900;font-size:46px;line-height:1.3;color:var(--ink);}
+.lv-concl em{font-style:normal;color:var(--primary-deep);}
+/* new: Q&A closing slide (slide 31) — deep blue, minimal */
 .qa-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:64px;}
 .qa-icon{width:120px;height:120px;background:#fff;border-radius:28px;box-shadow:0 18px 44px rgba(0,0,0,.28);overflow:hidden;display:block;}
 .qa-icon img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -431,7 +447,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="big-card rise" style="--i:4"><div class="bignum">3</div><h3>交办<br>第一件事</h3><div class="icw"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#0082FB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M8 26l11 11L40 14"/></svg></div></div>
     </div>
   </div>
-  <div class="slide-foot">02 / 30</div>
+  <div class="slide-foot">02 / 31</div>
 </section>
 
 <!-- 3 演化台阶 -->
@@ -448,7 +464,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="steps-conclusion rise" style="--i:6"><span>终端</span><span class="arrow">→</span><span>软件</span><span class="arrow">→</span><span>App</span></div>
   </div>
-  <div class="slide-foot">03 / 30</div>
+  <div class="slide-foot">03 / 31</div>
 </section>
 
 <!-- 4 2026 四个里程碑 -->
@@ -465,7 +481,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       </div>
     </div>
   </div>
-  <div class="slide-foot">04 / 30</div>
+  <div class="slide-foot">04 / 31</div>
 </section>
 
 <!-- 5 先搞懂三个词 -->
@@ -479,7 +495,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="col3 hot word-card rise" style="--i:4;align-items:flex-start;text-align:left"><div class="wterm">TOKEN</div><h3 style="margin:20px 0 10px">token</h3><div class="walias" style="margin:0 0 14px">干活烧的油钱</div><p>每读一个字、每想一步<br>都在烧 token</p><div class="wnote">1 亿 ≈ 一百多本《西游记》</div></div>
     </div>
   </div>
-  <div class="slide-foot">05 / 30</div>
+  <div class="slide-foot">05 / 31</div>
 </section>
 
 <!-- 6 它住在哪 -->
@@ -505,7 +521,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="steps-conclusion rise" style="--i:5;justify-content:center"><span>终端</span><span class="arrow">→</span><span>软件</span><span class="arrow">→</span><span style="color:var(--primary-deep)">App</span></div>
   </div>
-  <div class="slide-foot">06 / 30</div>
+  <div class="slide-foot">06 / 31</div>
 </section>
 
 <!-- 7 Agent 三分类 -->
@@ -519,7 +535,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="col3 hot rise" style="--i:4"><svg width="84" height="84" viewBox="0 0 48 48" fill="none" stroke="#0082FB" stroke-width="2.6" stroke-linecap="round"><rect x="15" y="6" width="18" height="36" rx="5"/><path d="M21 36h6"/></svg><h3>随身助理</h3><p>Muse<br>装个 App 就能用</p></div>
     </div>
   </div>
-  <div class="slide-foot">07 / 30</div>
+  <div class="slide-foot">07 / 31</div>
 </section>
 
 <!-- 8 为什么是 Muse -->
@@ -534,7 +550,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="cell22 rise" style="--i:5"><svg width="76" height="76" viewBox="0 0 48 48" fill="none" stroke="#0082FB" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 10-6 16-14 20C16 38 10 32 10 22V11z"/><path d="M17 24l5 5 9-10"/></svg><div><h3>有看门人</h3><p>对外办事，先过检查</p></div></div>
     </div>
   </div>
-  <div class="slide-foot">08 / 30</div>
+  <div class="slide-foot">08 / 31</div>
 </section>
 
 <!-- 9 每人一台云电脑 -->
@@ -547,7 +563,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="cloud-note rise" style="--i:3;font-size:42px">日本已上线</div>
     </div>
   </div>
-  <div class="slide-foot">09 / 30</div>
+  <div class="slide-foot">09 / 31</div>
 </section>
 
 <!-- 10 免费版，不是阉割版 -->
@@ -562,7 +578,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="tier-note rise" style="--i:5">重度用户，一周也只用 <em>70–80%</em></div>
   </div>
-  <div class="slide-foot">10 / 30</div>
+  <div class="slide-foot">10 / 31</div>
 </section>
 
 <!-- 11 和别家比一比 -->
@@ -578,7 +594,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="cmp-quote rise" style="--i:6">Muse 免费送你一个<em>能干活的助理</em></div>
   </div>
-  <div class="slide-foot">11 / 30</div>
+  <div class="slide-foot">11 / 31</div>
 </section>
 
 <!-- 12 它的大脑，考第几 -->
@@ -596,7 +612,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="tier-note rise" style="--i:8">免费的大脑，<em>同档第一</em></div>
   </div>
-  <div class="slide-foot">12 / 30</div>
+  <div class="slide-foot">12 / 31</div>
 </section>
 
 <!-- 13 不是战甲，是贾维斯 -->
@@ -608,7 +624,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="principles slim rise" style="--i:2"><div class="prin">Codex · 工作战甲</div><div class="prin">Hermes · 自己养的助理</div><div class="prin hot">Muse · 开口就安排好</div></div>
     </div>
   </div>
-  <div class="slide-foot">13 / 30</div>
+  <div class="slide-foot">13 / 31</div>
 </section>
 
 <!-- 14 设置六步总览 -->
@@ -626,7 +642,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 </div>
 <div class="dark-concl rise" style="--i:8">每走完一步，它就多懂你一点</div>
 </div>
-<div class="slide-foot">14 / 30</div>
+<div class="slide-foot">14 / 31</div>
 </section>
 
 <!-- 15 第一步 注册 -->
@@ -643,7 +659,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 </div>
 </div>
 </div>
-<div class="slide-foot">15 / 30</div>
+<div class="slide-foot">15 / 31</div>
 </section>
 
 <!-- 16 第二步 推荐码 -->
@@ -657,7 +673,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 <div class="ticket-sub rise" style="--i:4">设置 → 兑换邀请码 · 加入后 48 小时内</div>
 </div>
 </div>
-<div class="slide-foot">16 / 30</div>
+<div class="slide-foot">16 / 31</div>
 </section>
 
 <!-- 17 第三步 变成你的 -->
@@ -672,7 +688,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 <div class="cell4 rise" style="--i:5"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#0082FB" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 10-6 16-14 20C16 38 10 32 10 22V11z"/></svg><div><h3>铁律</h3><p>不许破的规矩</p></div></div>
 </div>
 </div>
-<div class="slide-foot">17 / 30</div>
+<div class="slide-foot">17 / 31</div>
 </section>
 
 <!-- 18 SOUL 铁律模板 -->
@@ -687,7 +703,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 </div>
 <div class="seal-row rise" style="--i:5"><svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="#0064D1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5l14 5v11c0 10-6 16-14 20C16 37 10 31 10 21V10z"/><path d="M17 24l5 5 9-10"/></svg>写进 SOUL · 它的人格档案</div>
 </div>
-<div class="slide-foot">18 / 30</div>
+<div class="slide-foot">18 / 31</div>
 </section>
 
 <!-- 19 第四步 后台设置 -->
@@ -713,7 +729,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 </div>
 </div>
 </div>
-<div class="slide-foot">19 / 30</div>
+<div class="slide-foot">19 / 31</div>
 </section>
 
 <!-- 20 第五步 连接器 -->
@@ -737,7 +753,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 <div class="principles rise" style="--i:3"><div class="prin">一个一个来</div><div class="prin">先只读，后授权</div><div class="prin">按最痛的事选</div></div>
 <div class="radial-note rise" style="--i:4"><b>注意：</b>同一个连接器，能对接多个账号（如果支持）</div>
 </div>
-<div class="slide-foot">20 / 30</div>
+<div class="slide-foot">20 / 31</div>
 </section>
 
 <!-- 21 第六步 页面构成 -->
@@ -765,7 +781,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       </div>
     </div>
   </div>
-  <div class="slide-foot">21 / 30</div>
+  <div class="slide-foot">21 / 31</div>
 </section>
 
 <!-- 22 四个去处，一句建议 -->
@@ -780,7 +796,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="dir-card rise" style="--i:5"><h3>资料库</h3><p class="dir-one">它做过的一切都在这</p><p class="dir-tip"><span>建议</span>重要的钉住 Pin</p></div>
     </div>
   </div>
-  <div class="slide-foot">22 / 30</div>
+  <div class="slide-foot">22 / 31</div>
 </section>
 
 <!-- 23 主会话 vs 旁聊 -->
@@ -794,7 +810,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="vs-note rise" style="--i:4">用熟后：<em>重活开旁聊</em>，主会话保持清爽</div>
   </div>
-  <div class="slide-foot">23 / 30</div>
+  <div class="slide-foot">23 / 31</div>
 </section>
 
 <!-- 24 休息 · 问卷 -->
@@ -812,7 +828,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       </div>
     </div>
   </div>
-  <div class="slide-foot">24 / 30</div>
+  <div class="slide-foot">24 / 31</div>
 </section>
 
 <!-- 25 交办四要素 -->
@@ -828,7 +844,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="example oneline rise" style="--i:6;margin-bottom:auto"><span class="ex-tag">现场示例</span>「帮我策划这周末的大阪一日游」</div>
   </div>
-  <div class="slide-foot">25 / 30</div>
+  <div class="slide-foot">25 / 31</div>
 </section>
 
 <!-- 26 两段式 -->
@@ -845,7 +861,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     </div>
     <div class="flow-note rise" style="--i:5">不对就<em>直接改</em>，不用重开对话</div>
   </div>
-  <div class="slide-foot">26 / 30</div>
+  <div class="slide-foot">26 / 31</div>
 </section>
 
 <!-- 27 安全 看门人 -->
@@ -866,7 +882,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="gcell rise" style="--i:5">拿不准<br>回来问你</div>
     </div>
   </div>
-  <div class="slide-foot">27 / 30</div>
+  <div class="slide-foot">27 / 31</div>
 </section>
 
 <!-- 28 三条规矩 + 绝不清单 -->
@@ -888,7 +904,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       </div>
     </div>
   </div>
-  <div class="slide-foot">28 / 30</div>
+  <div class="slide-foot">28 / 31</div>
 </section>
 
 <!-- 29 收尾 -->
@@ -903,10 +919,40 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
     <div class="close-big rise" style="--i:4">先用起来，<br>再慢慢懂</div>
     <div class="close-small rise" style="--i:5">最后一个动作：给它排一件 <b>「明天提醒我」</b></div>
   </div>
-  <div class="slide-foot">29 / 30</div>
+  <div class="slide-foot">29 / 31</div>
 </section>
 
-<!-- 30 Q&A -->
+<!-- 30 进阶三级台阶 -->
+<section class="slide">
+  <div class="slide-inner">
+    <div class="slide-header rise" style="--i:0"><div class="eyebrow">启发 · 进阶路线</div><div class="tag-pill">三级台阶</div></div>
+    <h2 class="slide-title rise" style="--i:1">进阶，就三级台阶</h2>
+    <div class="lv3-zone">
+      <div class="lv-card c1 rise" style="--i:2">
+        <div class="lv-top"><div class="lv-num">1</div><div class="lv-tag">第一级</div></div>
+        <h3>派一个小活</h3>
+        <p class="lv-desc">四要素派活 · 只读连接 · 当天出结果</p>
+        <div class="lv-keys">简报 · 分拣邮件 · 算账</div>
+      </div>
+      <div class="lv-card c2 rise" style="--i:3">
+        <div class="lv-top"><div class="lv-num">2</div><div class="lv-tag">第二级</div></div>
+        <h3>留一个巡查</h3>
+        <p class="lv-desc">重复小事定成定时任务，到线才叫你</p>
+        <div class="lv-keys">降价提醒 · 页面变化 · 通知检查</div>
+      </div>
+      <div class="lv-card c3 rise" style="--i:4">
+        <div class="lv-top"><div class="lv-num">3</div><div class="lv-tag">第三级</div></div>
+        <h3>搭一套小系统</h3>
+        <p class="lv-desc">小系统，或主管加专员，必须带验收</p>
+        <div class="lv-keys">CRM · 选题流水线 · 证据包</div>
+      </div>
+    </div>
+    <div class="lv-concl rise" style="--i:5">不挑最炫的，<em>挑最烦的</em>。</div>
+  </div>
+  <div class="slide-foot">30 / 31</div>
+</section>
+
+<!-- 31 Q&A -->
 <section class="slide slide-dark">
   <div class="slide-inner">
     <div class="qa-wrap">
@@ -915,7 +961,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
       <div class="qa-sub rise" style="--i:2">提问时间</div>
     </div>
   </div>
-  <div class="slide-foot">30 / 30</div>
+  <div class="slide-foot">31 / 31</div>
 </section>
 
 </div>
@@ -923,7 +969,7 @@ h1.cover-title .agent{font-family:var(--latin);font-weight:700;background:linear
 <div class="progress" id="progress"></div>
 <div class="deck-controls">
   <button class="nav-btn" id="prevBtn" aria-label="上一页">‹</button>
-  <div class="page-count" id="pageCount">1 / 30</div>
+  <div class="page-count" id="pageCount">1 / 31</div>
   <button class="nav-btn" id="nextBtn" aria-label="下一页">›</button>
 </div>
 <script>
