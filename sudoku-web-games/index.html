@@ -6,9 +6,9 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="data:," />
     <title>线上数独游戏调研</title>
-    <meta name="description" content="网页版数独的受众规模、人口结构与站点格局，以及经典 9×9 之外规则变体与跨品类融合玩法的全景盘点。" />
+    <meta name="description" content="网页版数独垂直市场调研：传统与变体玩家数量与增长趋势、关键词与竞争难度、收费方式与变现能力——TAM 1,380万–1,700万美元/年，大流量、小钱池、头部锁定。" />
     <meta property="og:title" content="线上数独游戏调研" />
-    <meta property="og:description" content="网页版数独的受众规模、人口结构与站点格局，以及经典 9×9 之外规则变体与跨品类融合玩法的全景盘点。" />
+    <meta property="og:description" content="网页版数独垂直市场调研：传统与变体玩家数量与增长趋势、关键词与竞争难度、收费方式与变现能力——TAM 1,380万–1,700万美元/年，大流量、小钱池、头部锁定。" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://share.qidi.jp/sudoku-web-games/" />
     <style>
@@ -217,6 +217,25 @@
       ol.gaps li{ margin-bottom:10px; }
       ol.gaps li strong{ color:var(--accent); }
 
+      /* ---------- keyword difficulty / tam ---------- */
+      .kd{ display:flex; align-items:center; gap:8px; min-width:120px; }
+      .kd .kd-track{ flex:1; height:9px; background:color-mix(in srgb, var(--line) 55%, transparent); }
+      .kd .kd-fill{ height:100%; background:var(--accent); }
+      .kd .kd-fill.mid{ background:var(--gold); }
+      .kd .kd-fill.low{ background:var(--blue); }
+      .kd .kd-num{ font-size:12.5px; font-weight:700; white-space:nowrap; }
+      .grade{
+        display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.05em;
+        padding:2px 9px; border-radius:3px; white-space:nowrap; color:var(--paper); background:var(--ink);
+      }
+      .grade.g-hard{ background:var(--accent); }
+      .grade.g-mid{ background:var(--gold); }
+      .grade.g-easy{ background:var(--blue); }
+      .scen{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0 6px; }
+      .scen .tier .amt{ font-size:clamp(20px,2.6vw,26px); font-weight:800; line-height:1.2; margin:2px 0 4px; }
+      .tam-note{ font-size:12.5px; color:var(--muted); margin-top:4px; }
+      svg text{ font-family:inherit; }
+
       footer{
         margin-top:64px; border-top:1px solid var(--line-strong); padding-top:18px;
         font-size:13px; color:var(--muted); line-height:1.8;
@@ -225,6 +244,7 @@
       .sources li{ margin-bottom:5px; word-break:break-all; }
 
       @media (max-width:760px){
+        .scen{ grid-template-columns:1fr; }
         .stats{ grid-template-columns:1fr 1fr; }
         .verdict{ grid-template-columns:1fr; }
         .mini-grid{ margin:0 auto; }
@@ -253,14 +273,14 @@
 
       <header>
         <p class="kicker">市场调研 · 网页游戏</p>
-        <h1>线上数独游戏调研：<br />受众有多大，经典之外还有什么玩法</h1>
-        <p class="lede">网页版数独的受众规模、人口结构与站点格局，以及经典 9×9 之外——规则变体与跨品类融合玩法——的全景盘点。全部数字标注来源与口径，估算与官方数据严格区分。</p>
-        <p class="byline">调研整理：Catherine（Muse）· 2026 年 11 月 7 日 · 数据期以 2026 年 9 月为主</p>
+        <h1>线上数独游戏调研：<br />大流量、小钱池、头部锁定</h1>
+        <p class="lede">网页版数独的受众规模、增长趋势、关键词格局、收费与变现、竞争难度与进入判断，以及经典 9×9 之外规则变体与跨品类融合玩法的全景盘点。本版融合两轮调研：第一轮受众与玩法盘点，第二轮用三件套方法（叙事深挖 + 对象×字段矩阵 + 双法测算）重查玩家量、关键词、收费变现与竞争。全部数字标注来源与口径，估算与官方数据严格区分。</p>
+        <p class="byline">调研整理：Catherine（Muse）· 2026 年 11 月 7 日（含第二轮垂直调研融合更新）· 数据期以 2026 年 9 月为主</p>
 
         <div class="verdict">
           <div>
             <h2>结论</h2>
-            <p>网页数独是<strong>「中等偏大的长青利基」</strong>：头部一家 sudoku.com 月访问约 4,200 万次，头部约 10 个站点合计月访问保守超过 5,000 万次；但它没有 Wordle 式的社交病毒性，也没有被权威机构单列的「数独市场规模」——它淹没在 122 亿美元/年的移动益智大盘里，单品类收入无公开拆分。增长不在经典盘面，而在两头：大众端的<strong>方块消除融合</strong>（单品 1 亿+下载）与硬核端的<strong>变体社区</strong>。</p>
+            <p>网页数独每月有 <strong>5,000 万量级</strong>的访问，却只对应约 <strong>1,380 万–1,700 万美元/年</strong>的全行业收入池（第二轮双法情景测算）；流量被 sudoku.com 一家以品牌直达锁定，经典玩法已是高位平台期、无增长曲线，<strong>订阅基本不成立</strong>。唯一的缝隙在三处：变体「可玩+讲解」内容、学习教学产品化、区域本地化窄门。新入者 3 年基准情景可及收入（SOM）只有约 <strong>14.5 万–17.9 万美元/年</strong>——能养活小团队副业，养不起公司。</p>
           </div>
           <div class="mini-grid" id="miniGrid" aria-hidden="true"></div>
         </div>
@@ -277,14 +297,14 @@
             <div class="s"><span class="tag est">估算加总</span> SimilarWeb / Semrush，2026 年各月</div>
           </div>
           <div class="stat">
-            <div class="v">1.2–1.3<small> 亿次</small></div>
-            <div class="k">融合产品 Blockudoku / Woodoku 各自的安装量——远超任何硬核变体</div>
-            <div class="s"><span class="tag est">第三方估算</span> AppBrain，2026-11</div>
+            <div class="v">1,380–1,700<small> 万美元/年</small></div>
+            <div class="k">全球网页数独收入池 TAM：自下而上 1,380 万 vs 自上而下 1,700 万，两法差 20.8% 超容差，保留双值不平均</div>
+            <div class="s"><span class="tag est">情景测算</span> K-Dense 双法，2026；非收入事实，假设见变现章</div>
           </div>
           <div class="stat">
-            <div class="v">70.8<small> 万订阅</small></div>
-            <div class="k">变体内容频道 Cracking the Cryptic 的 YouTube 订阅，总观看 3.22 亿+次</div>
-            <div class="s"><span class="tag conf">平台公开数据</span> 2026-10，经 Foundry / Wikipedia 核验</div>
+            <div class="v">14.5–17.9<small> 万美元/年</small></div>
+            <div class="k">新入者 3 年基准情景 SOM；下行 2.8 万–3.4 万、上行 41 万–51 万</div>
+            <div class="s"><span class="tag est">情景测算</span> SAM×可获得份额（基准 35%×3%），2026</div>
           </div>
         </div>
 
@@ -299,6 +319,12 @@
           <a href="#fusion">跨品类融合</a>
           <a href="#tiers">热度分层</a>
           <a href="#trends">趋势</a>
+          <a href="#keywords">三、关键词</a>
+          <a href="#matrix">产品矩阵</a>
+          <a href="#money">收费与变现</a>
+          <a href="#competition">竞争难度</a>
+          <a href="#regions">区域差异</a>
+          <a href="#entry">进入判断</a>
           <a href="#gaps">数据缺口</a>
           <a href="#sources">来源</a>
         </nav>
@@ -355,11 +381,11 @@
                 <td data-l="来源" class="src"><a href="https://www.similarweb.com/website/247sudoku.com/">SimilarWeb 2026-03</a></td>
               </tr>
               <tr>
-                <td>sudokupad.app<span class="sub">变体创作 / 求解平台；7 月 169 万 → 9 月 131 万</span></td>
-                <td class="n" data-l="月访问">131万</td>
-                <td data-l="性别 女/男">—</td>
-                <td class="n" data-l="时长 · 页/次">23:36</td>
-                <td data-l="来源" class="src"><a href="https://www.semrush.com/website/sudokupad.app/overview/">Semrush 2026-09</a></td>
+                <td>sudokupad.app<span class="sub">变体创作 / 求解平台；Semrush 131 万 / SimilarWeb 230 万（同月双口径）；约一半流量来自 YouTube 引荐</span></td>
+                <td class="n" data-l="月访问">131万–230万</td>
+                <td data-l="性别 女/男"><div class="gender"><div class="f" style="width:34%"></div><div class="m"></div></div><div class="gender-lab">34% / 66%</div></td>
+                <td class="n" data-l="时长 · 页/次">11:15 · 5.25</td>
+                <td data-l="来源" class="src"><a href="https://www.semrush.com/website/sudokupad.app/overview/">Semrush 2026-09</a>；<a href="https://www.similarweb.com/website/sudokupad.app/">SimilarWeb 2026-09</a></td>
               </tr>
               <tr>
                 <td>sudoku.game</td>
@@ -401,6 +427,28 @@
         </div>
         <p class="src">地方 / 报纸站示例：德国《时代周报》sudoku.zeit.de 月访问 54.1 万（SimilarWeb 2026-04），性别比 35% 女 / 65% 男，与全球站差异明显。</p>
 
+        <h3>1.1b 增长序列：传统高位平台，变体小而真长（第二轮新增）</h3>
+        <p>第二轮把单月快照换成多月序列，结论变了：sudoku.com 在 Semrush 口径下 2026 年 4 月 4,343 万 → 9 月 3,572 万，高位震荡、<strong>没有增长曲线</strong>；美国主词「sudoku」月搜索量 183 万（Semrush，2026-09）与平台期互证。次梯队同样走平：sudoku.name 五个月在 81.8 万–96.0 万间震荡；thesudoku.com 19 万 → 60 万的跳升靠引荐导流且自然流量反降，不代表品类增长。</p>
+
+        <div class="chart num">
+          <div class="ct">sudoku.com 月访问序列（Semrush 口径，万次）</div>
+          <div class="cs">Semrush 公开 overview，2026 年；SimilarWeb 同月（09）口径为 4,170 万，两工具差约 17%——看走势不看小数点</div>
+          <div class="bar-row"><div class="name">2026-04</div><div class="bar-track"><div class="bar-fill top" style="width:100%"></div></div><div class="val">4,343万</div></div>
+          <div class="bar-row"><div class="name">2026-05</div><div class="bar-track"><div class="bar-fill" style="width:81.5%"></div></div><div class="val">3,540万</div></div>
+          <div class="bar-row"><div class="name">2026-07</div><div class="bar-track"><div class="bar-fill" style="width:82.2%"></div></div><div class="val">3,569万</div></div>
+          <div class="bar-row"><div class="name">2026-08</div><div class="bar-track"><div class="bar-fill" style="width:85.7%"></div></div><div class="val">3,721万</div></div>
+          <div class="bar-row"><div class="name">2026-09</div><div class="bar-track"><div class="bar-fill" style="width:82.3%"></div></div><div class="val">3,572万</div></div>
+        </div>
+
+        <p>变体端是另一幅图，但要带两个限定词。SudokuPad 月访问从约 30 万（约 2024 年，HypeStat 旧快照）升至 2026-09 的 131 万（Semrush）–230 万（SimilarWeb），约 <strong>4–7 倍</strong>；Cracking the Cryptic 订阅从疫情期约 24.5 万（2020）→ 33.3 万（2021-03）→ 70.8 万（2026-10，总观看 3.238 亿）。限定一：SudokuPad 约 <strong>49%–53% 流量来自 YouTube 引荐</strong>（Semrush），它是内容生态的下游，增长可能主要是 CTC 一家渠道的增长。限定二：付费壳层没跟着长——Steam 上 Killer Sudoku 单品平均并发从 42.1（2020-12）跌至 5.2（2026-10，SteamCharts），SudokuPad 的 Steam 壳层峰值并发只有 64。<strong>变体的增长全在免费网页与视频端。</strong></p>
+
+        <div class="chart num">
+          <div class="ct">变体端代理指标：SudokuPad 月访问（万次）</div>
+          <div class="cs">约 2024 年为 HypeStat 旧快照；2026-09 为 Semrush / SimilarWeb 双口径区间。绝对量仍只有 sudoku.com 的约 1/20</div>
+          <div class="bar-row"><div class="name">约 2024</div><div class="bar-track"><div class="bar-fill" style="width:13%"></div></div><div class="val">约 30万</div></div>
+          <div class="bar-row"><div class="name">2026-09</div><div class="bar-track"><div class="bar-fill top" style="width:100%"></div></div><div class="val">131万–230万</div></div>
+        </div>
+
         <div class="callout warn">
           <p class="t">两个「测不到」本身就是发现</p>
           <p><strong>sudoku.org</strong>：SimilarWeb 2026-09 全部字段为「No Data Available」——流量低于其建模阈值或未被收录。老域名 ≠ 有可测流量，不能凭域名资历假设规模。（<a href="https://www.similarweb.com/website/sudoku.org/">SimilarWeb</a>，2026-11-07 直读）</p>
@@ -437,8 +485,8 @@
           </table>
         </div>
         <div class="callout">
-          <p class="t">关键缺口：没有「数独市场规模」这个数字</p>
-          <p style="margin-bottom:0">没有任何权威机构单列数独品类的收入或用户数。数独在 Sensor Tower 分类里只是 Puzzle 大类下的极小子集，且头部产品以广告变现为主、IAP 占比低，因此 122 亿美元大盘<strong>不能</strong>按比例切给数独。能确认的母体量级只有一笔交易：Miniclip 2024 年以 <strong>12 亿美元</strong>收购 Easybrain（旗下含 Sudoku.com、Blockudoku 等多款产品，非数独单品估值）。（<a href="https://www.newmediaxp.com/blog/article/best-sudoku-games">NewMediaXP 综述</a>，2026）</p>
+          <p class="t">关键缺口：没有权威机构单列的「数独市场规模」</p>
+          <p style="margin-bottom:0">没有任何权威机构单列数独品类的收入或用户数。数独在 Sensor Tower 分类里只是 Puzzle 大类下的极小子集，且头部产品以广告变现为主、IAP 占比低，因此 122 亿美元大盘<strong>不能</strong>按比例切给数独。第二轮改用双法情景测算网页端口径（见「收费与变现」章）：TAM 自下而上 1,380 万 / 自上而下 1,700 万美元/年——那是带明示假设的条件计算，不是机构公布的市场规模。能确认的母体量级只有一笔交易：Miniclip 2024 年以 <strong>12 亿美元</strong>收购 Easybrain（旗下含 Sudoku.com、Blockudoku 等 50+ 款产品，非数独单品估值；其 FY23-24 净销售 3.08 亿美元、买量占 45%，Embracer 公告转引）。（<a href="https://www.newmediaxp.com/blog/article/best-sudoku-games">NewMediaXP 综述</a>，2026）</p>
         </div>
 
         <h3>1.4 App 侧溢出信号</h3>
@@ -473,10 +521,14 @@
 
         <h3>设备：网页数独是少数桌面仍强势的品类</h3>
         <ul class="tight">
-          <li>SudokuPad 美国访客：桌面 <strong>71.52%</strong> / 移动 28.48%（Semrush，2026-09）。</li>
+          <li>SudokuPad 美国访客：桌面 <strong>71.52%</strong> / 移动 28.48%（Semrush，2026-09）——硬核解题仍是桌面大屏行为。</li>
           <li>sudoku.coach 美国访客：桌面 37.01% / 移动 <strong>62.99%</strong>（Semrush 同表口径）——同为变体 / 学习型站，设备结构可完全相反，不可一概而论。</li>
+          <li>同一个站在不同国家是不同产品：sudoku.com 美国访客桌面 55.69%，日本移动占 <strong>87.53%</strong>、德国移动 76.34%（Semrush，2026-09）。</li>
           <li>大盘对照：脑力游戏支出移动端占 78.7%（Dataintelo，2025）。网页端的桌面强势与 App 的移动主导并存。</li>
         </ul>
+
+        <h3>行为对照：两种人，两种产品（第二轮新增）</h3>
+        <p>传统端是均衡甚至女性偏多的休闲人群、短会话、习惯性回访；变体端男性偏多、长会话、高页深。sudoku.com 时长 7:31、3.43 页/访、跳出 46.45%；247sudoku 只有 1:44、1.38 页、跳出 73.26%；SudokuPad 达 11:15、5.25 页/访，时长约为 247sudoku 的 6.5 倍（SimilarWeb，2026）。学习站 sudoku.coach 的 Semrush 口径会话时长 16:33、Direct 占 80.47%——<strong>教学用户是最黏的一群</strong>。性别上从休闲到硬核男性占比单调上升：sudoku.game 女 69.96%，而 SudokuPad 男 66.04%、ZEIT Sudoku 男 65.49%。（<a href="https://www.similarweb.com/website/sudokupad.app/">SimilarWeb</a>；<a href="https://www.semrush.com/website/sudoku.coach/overview/">Semrush sudoku.coach</a>，2026-09）反面解读也要成立：Direct 高占比也可以读作「这个品类没有新用户」——增长只能靠 App、视频、报纸等外部生态导流。</p>
       </section>
 
       <section id="variants">
@@ -701,7 +753,7 @@
           </div>
           <div class="tier">
             <div class="th"><span class="tn">第 2 层</span><h4>硬核社区 · 万级日活、十万级观看</h4></div>
-            <p><strong>German Whispers、Kropki、Renban、Anti-Knight、Miracle 类复合变体。</strong>判据在内容生态：CTC 频道 70.8 万订阅、3.22 亿+总观看、Patreon 7,435 名付费会员；Logic Masters 累计 27,000+ 道用户变体；SudokuPad 平均会话 23:36。</p>
+            <p><strong>German Whispers、Kropki、Renban、Anti-Knight、Miracle 类复合变体。</strong>判据在内容生态：CTC 频道 70.8 万订阅、3.238 亿总观看、Patreon 7,435 名付费会员；Logic Masters 累计 27,000+ 道用户变体；SudokuPad 平均会话 11:15、5.25 页/访（SimilarWeb 2026-09），为全场最深。</p>
           </div>
           <div class="tier">
             <div class="th"><span class="tn">第 3 层</span><h4>利基实验 · 千级</h4></div>
@@ -729,22 +781,228 @@
         </div>
       </section>
 
+      <section id="keywords">
+        <div class="sec-head">
+          <div class="no">PART 3</div>
+          <h2>关键词：主词是墙，变体长尾是门</h2>
+        </div>
+        <p>核心词的搜索量真实但不可夺：难度估算 92–100，而 CPC 只有 0.02–0.46 美元、竞价竞争仅 0.04——<strong>广告主也不愿为它付钱，买量套利不存在</strong>。变体词簇单量小、难度低（估算 15–40），且现有供给多是规则说明页而非可玩页。这是全报告唯一一处「量、难度、供给」三项同时对新入者友好的地方——但要带反方读：变体词的低难度有一半是因为量太小，单簇合计约 1 万–2 万/月，只能当获客入口，不能当生意本身。</p>
+        <p class="small"><span class="tag est">口径</span> 月量与 CPC 为 Semrush 公开页印出值（美国库为主，已注明库别）；KD% 在登录墙后不可得，下表 KD 为基于 SERP 构成（头部域名 Authority Score 与占位）的<strong>估算</strong>，不是工具原值。play sudoku / free sudoku / sudoku puzzles / hard sudoku / sudoku tips / sudoku for beginners 六词本轮未取得逐词印出值（估算难度 65–95），列入缺口、不以估算冒充实测。</p>
+
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>关键词</th><th class="n">月量</th><th class="n">CPC（美元）</th><th>KD 估算</th><th>备注</th></tr></thead>
+            <tbody>
+              <tr><td>sudoku</td><td class="n" data-l="月量">1,830,000<span class="sub">美国库；德/法库 673,000</span></td><td class="n" data-l="CPC">0.46<span class="sub">德库 0.23</span></td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill" style="width:98%"></div></div><span class="kd-num">96–100</span></div></td><td class="plain" data-l="备注">竞价竞争仅 0.04，几乎无人竞价</td></tr>
+              <tr><td>sudoku online</td><td class="n" data-l="月量">246,000<span class="sub">混合库；德库 301,000</span></td><td class="n" data-l="CPC">0.07–0.23</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill" style="width:94%"></div></div><span class="kd-num">92–97</span></div></td><td class="plain" data-l="备注">国家库差异巨大，引用必须带库别</td></tr>
+              <tr><td>sudoku extreme</td><td class="n" data-l="月量">33,100</td><td class="n" data-l="CPC">0.40</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill" style="width:75%"></div></div><span class="kd-num">70–80</span></div></td><td class="plain" data-l="备注">难度词簇中量最大</td></tr>
+              <tr><td>killer sudoku</td><td class="n" data-l="月量">33,000–49,000<span class="sub">美国估算</span></td><td class="n" data-l="CPC">0.25–0.79</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill mid" style="width:60%"></div></div><span class="kd-num">55–65</span></div></td><td class="plain" data-l="备注">变体词第一名</td></tr>
+              <tr><td>sudoku solver</td><td class="n" data-l="月量">22,200</td><td class="n" data-l="CPC">0.20</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill" style="width:81%"></div></div><span class="kd-num">78–85</span></div></td><td class="plain" data-l="备注">两页一致印出，可靠性最高的中量词</td></tr>
+              <tr><td>daily sudoku</td><td class="n" data-l="月量">22,200</td><td class="n" data-l="CPC">0.26</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill" style="width:84%"></div></div><span class="kd-num">80–88</span></div></td><td class="plain" data-l="备注">占 dailysudoku.com 流量 46.5%</td></tr>
+              <tr><td>samurai sudoku</td><td class="n" data-l="月量">约 8,100</td><td class="n" data-l="CPC">约 0</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill mid" style="width:52%"></div></div><span class="kd-num">45–60</span></div></td><td class="plain" data-l="备注">变体第二档</td></tr>
+              <tr><td>sudoku solver online</td><td class="n" data-l="月量">1,900</td><td class="n" data-l="CPC">0.15</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill mid" style="width:50%"></div></div><span class="kd-num">45–55</span></div></td><td class="plain" data-l="备注">长尾机会；前排已有小站居首</td></tr>
+              <tr><td>sudoku for experts</td><td class="n" data-l="月量">1,000</td><td class="n" data-l="CPC">0.41</td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill mid" style="width:45%"></div></div><span class="kd-num">40–50</span></div></td><td class="plain" data-l="备注">CPC 为品类最高档之一，用户价值高</td></tr>
+              <tr><td>thermo / arrow / sandwich / jigsaw sudoku、sudoku variants</td><td class="n" data-l="月量">每词 900–8,100<span class="sub">估算</span></td><td class="n" data-l="CPC">0.05–0.15<span class="sub">估算</span></td><td data-l="KD 估算"><div class="kd"><div class="kd-track"><div class="kd-fill low" style="width:27%"></div></div><span class="kd-num">15–40</span></div></td><td class="plain" data-l="备注"><strong>机会簇</strong>：工具未印出，社区 + SERP 定性估算；无强站做「可玩+讲解」页</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="src">来源：Semrush 公开 Website Overview 页（dailysudoku / sudoku.coach / sudoku9x9 / sudokuspoiler 等，2026-09 数据）；多语言硬数据：德语「Sudoku」673,000/月（Semrush DE 库）、法语 sudoku gratuit 301,000、韩语 스도쿠 74,000。日语（ナンプレ / 数独）与中文（数独）本轮测不到可引用数值——日语因「数独」是 Nikoli 注册商标、国内通称ナンプレ而双词分裂，中文需百度指数类登录工具，均列缺口。</p>
+      </section>
+
+      <section id="matrix">
+        <div class="sec-head">
+          <div class="no">PART 3 · 续</div>
+          <h2>产品矩阵：四极分化，没有中间态</h2>
+        </div>
+        <p>13 个对象逐项核查（官网 / 商店清单 / 流量公开页，查不到记 unknown、不编造）。收费与定位呈四极——纯广告、一次性买断、订阅（仅 NYT 一家）、完全免费；变体供给与传统流量完全错位：<strong>流量最大的站变体数为 0</strong>，变体最全的产品（Logic Wiz 40+、SudokuPad 平台级）流量只有头部的 1/20 以下。三个结构发现：①「每日一题 × 全球排行榜」组合几乎空缺——有每日一题的 5 家里带全球榜的只有 Good Sudoku 一家且在 App 端；② 网页端变体靠平台工具（SudokuPad）而非题库站；③ 学习型只有做成课程（sudoku.coach 的 Campaign 闯关）或工具（SudokuWiki 的 Solver）才活得下去，纯静态 Tips 站已衰减到日均数百访问。</p>
+
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>对象</th><th class="n">月访问（工具·月份）</th><th>定位</th><th>变体数</th><th>收费模式</th><th>每日一题</th><th>排行榜 / 多人</th><th>SEO 强度</th></tr></thead>
+            <tbody>
+              <tr><td>sudoku.com</td><td class="n" data-l="月访问">约 4,100 万<span class="sub">SimilarWeb 2026-08；Semrush 2026-09 为 3,572 万</span></td><td class="plain" data-l="定位">传统为主，变体另开独立 App</td><td class="plain" data-l="变体数">本体 0（Killer 独立 App）</td><td class="plain" data-l="收费模式">免费+广告；App 去广告付费</td><td class="plain" data-l="每日一题">有</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">极强（AS 71）</td></tr>
+              <tr><td>websudoku.com</td><td class="n" data-l="月访问">384 万<span class="sub">SimilarWeb；Semrush 210 万，2026-09</span></td><td class="plain" data-l="定位">纯传统</td><td class="plain" data-l="变体数">0</td><td class="plain" data-l="收费模式">免费+广告；Deluxe 买断导流</td><td class="plain" data-l="每日一题">unknown</td><td class="plain" data-l="排行榜/多人">有百分位与挑战好友</td><td class="plain" data-l="SEO">强（引荐域 1,258）</td></tr>
+              <tr><td>sudoku.game</td><td class="n" data-l="月访问">约 110 万<span class="sub">SimilarWeb 2026-03</span></td><td class="plain" data-l="定位">纯传统</td><td class="plain" data-l="变体数">0</td><td class="plain" data-l="收费模式">免费+广告</td><td class="plain" data-l="每日一题">unknown</td><td class="plain" data-l="排行榜/多人">unknown</td><td class="plain" data-l="SEO">中</td></tr>
+              <tr><td>247sudoku.com</td><td class="n" data-l="月访问">约 93 万–180 万<span class="sub">2025–2026 多口径</span></td><td class="plain" data-l="定位">纯传统</td><td class="plain" data-l="变体数">0</td><td class="plain" data-l="收费模式">免费+广告</td><td class="plain" data-l="每日一题">有</td><td class="plain" data-l="排行榜/多人">unknown</td><td class="plain" data-l="SEO">中</td></tr>
+              <tr><td>SudokuPad</td><td class="n" data-l="月访问">131 万–230 万<span class="sub">Semrush / SimilarWeb，2026-09</span></td><td class="plain" data-l="定位">变体平台 / 工具</td><td class="plain" data-l="变体数">平台级（无固定种数）</td><td class="plain" data-l="收费模式">网页免费；App 买断 2.99–4.99 美元</td><td class="plain" data-l="每日一题">无（靠 CTC 每日视频导流）</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">弱（靠 YouTube 引荐约 49%）</td></tr>
+              <tr><td>sudoku.coach</td><td class="n" data-l="月访问">68.2 万<span class="sub">Semrush 2026-09</span></td><td class="plain" data-l="定位">学习型，传统+变体</td><td class="plain" data-l="变体数">数十种</td><td class="plain" data-l="收费模式">100% 免费，无付费墙</td><td class="plain" data-l="每日一题">unknown（有闯关课程）</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">中（Direct 80%）</td></tr>
+              <tr><td>NYT Sudoku</td><td class="n" data-l="月访问">单品 unknown<span class="sub">域名总量 4.514 亿不可误用</span></td><td class="plain" data-l="定位">纯传统</td><td class="plain" data-l="变体数">0</td><td class="plain" data-l="收费模式">订阅（Games 包）</td><td class="plain" data-l="每日一题">有（核心形态）</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">极强（域名 AS 100）</td></tr>
+              <tr><td>Good Sudoku</td><td class="n" data-l="月访问">unknown<span class="sub">纯 App</span></td><td class="plain" data-l="定位">传统+教学</td><td class="plain" data-l="变体数">以经典为主</td><td class="plain" data-l="收费模式">免费 + 4.99 美元一次性解锁</td><td class="plain" data-l="每日一题">有</td><td class="plain" data-l="排行榜/多人">有（Daily 全球榜）</td><td class="plain" data-l="SEO">不适用（App 分发）</td></tr>
+              <tr><td>Logic Wiz Variants</td><td class="n" data-l="月访问">unknown<span class="sub">纯 App，安装约 110 万</span></td><td class="plain" data-l="定位">变体为主</td><td class="plain" data-l="变体数">40+</td><td class="plain" data-l="收费模式">免费+广告+内购解锁</td><td class="plain" data-l="每日一题">unknown</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">不适用（App 分发）</td></tr>
+              <tr><td>CTC 系列 App</td><td class="n" data-l="月访问">unknown<span class="sub">纯 App + YouTube</span></td><td class="plain" data-l="定位">变体手工题</td><td class="plain" data-l="变体数">7 款单变体 App + 题包</td><td class="plain" data-l="收费模式">各 4.99 美元买断，无订阅</td><td class="plain" data-l="每日一题">无（视频充当每日题）</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">不适用（品牌搜索极强）</td></tr>
+              <tr><td>thesudoku.com</td><td class="n" data-l="月访问">60.3 万<span class="sub">Semrush 2026-09</span></td><td class="plain" data-l="定位">纯传统</td><td class="plain" data-l="变体数">0</td><td class="plain" data-l="收费模式">免费+广告（AdSense）</td><td class="plain" data-l="每日一题">有</td><td class="plain" data-l="排行榜/多人">unknown</td><td class="plain" data-l="SEO">中偏弱（AS 33）</td></tr>
+              <tr><td>SudokuWiki（学习型自选）</td><td class="n" data-l="月访问">unknown<span class="sub">十万级以下，小站</span></td><td class="plain" data-l="定位">学习型百科 + Solver</td><td class="plain" data-l="变体数">Solver 覆盖 8 类+</td><td class="plain" data-l="收费模式">免费</td><td class="plain" data-l="每日一题">无</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">中（策略长尾极广）</td></tr>
+              <tr><td>Sudoku Essentials（学习型加选）</td><td class="n" data-l="月访问">unknown<span class="sub">日访约 500 粗估</span></td><td class="plain" data-l="定位">学习型 Tips</td><td class="plain" data-l="变体数">0（教学）</td><td class="plain" data-l="收费模式">免费</td><td class="plain" data-l="每日一题">unknown</td><td class="plain" data-l="排行榜/多人">无</td><td class="plain" data-l="SEO">弱</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="src">矩阵口径：Weizhena 对象×字段；App 对象的月访问一律 unknown 不是疏漏——商店不公布，把安装量当访问量、把 NYT 域名总量当 Sudoku 流量都是错的，已逐项剔除。</p>
+      </section>
+
+      <section id="money">
+        <div class="sec-head">
+          <div class="no">PART 3 · 续</div>
+          <h2>收费与变现：订阅是异类，钱池只有千万级</h2>
+        </div>
+
+        <h3>收费方式：能收到的钱只有三种</h3>
+        <ul class="tight">
+          <li><strong>纯广告</strong>：websudoku、247sudoku；sudoku.com 网页版实测未找到付费去广告入口，网页变现就是纯广告（第三方实测，2026-08）。websudoku 另有桌面 Deluxe 14.95 美元买断导流。</li>
+          <li><strong>一次性买断 4.99–14.99 美元（多在 App 端）</strong>：sudoku.com App 去广告 14.99 美元一次性（美国 App Store 清单，2026-10）；Good Sudoku 全解锁 4.99 美元；CTC 7 款变体 App 各 4.99 美元、合集题包 0.99–4.99 美元；SudokuPad 网页免费+自愿捐赠，移动版 2.99 美元起买断。二手评测站流传的 sudoku.com「3.99 / 4.99 / 5 美元月费」三种说法互相冲突且与清单矛盾，<strong>不采信</strong>。</li>
+          <li><strong>真订阅只有一家</strong>：NYT Games 标准价 6 美元/4 周、50 美元/年（NYT Help Center 转引，2026）——但这是含 Wordle、Connections 的游戏包，数独不可独占这 50 美元。失败的是「数独单品订阅」，不是打包订阅。</li>
+          <li><strong>干脆 100% 免费</strong>：sudoku.coach 官方明示无付费墙（同名异物 mysudokucoach.com 的 3.99 美元/月已剔除）；SudokuPad 网页版同理。CTC 的 Patreon 2 美元/月起、付费会员 7,435 人（2026-10），推算经常性收入下限约 1.5 万美元/月。</li>
+          <li><strong>B2B 是唯一明码的一档</strong>：Web Sudoku 引擎授权最低 400 美元起（官方页，2026-11-07 直读）；白标嵌入平台 PuzzleMe 249 美元/月、Enterprise 500 美元/月起（2026）；2026 年新出现的 ParkerSyndication 是免费嵌入+广告五五分成。Conceptis×King Features、Andrews McMeel、Nikoli 的现行授权价全部询价制、无公开数字。历史锚点：Wayne Gould 当年向报纸免费供题换图书与软件收入——题目本身议价权极低。</li>
+        </ul>
+        <p>广告为什么薄：Google AdSense 官方费率中 Games 类目 Page RPM 只有 <strong>1.21 美元（美洲）–1.80 美元（EMEA）</strong>（Google，2026-05 快照转录）。本报告建模带取保守 1–2、基准 2–5、乐观 5–8 美元。<span class="tag weak">注意</span> 没有任何数独站公开过实测 RPM，全部测算用通用 Games 类目基准；sudoku.com 的四广告位布局暗示其实际值可能更高。</p>
+
+        <h3>变现能力：双法测算 TAM / SAM / SOM（K-Dense 情景计算）</h3>
+        <p>口径：TAM = 全球浏览器数独的年经营收入（展示广告 + 网页端消费者付费 + B2B 授权/白标），<strong>不含原生 App 内购与纸质</strong>——数独的钱主要在 App 与纸质，这是 TAM 只有千万级的根本原因。自下而上拆解：头部站广告约 539 万美元（年页量约 15.4 亿页 × 0.0035 美元/页，RPM 3.5）+ 其余站点广告约 161 万（年页量约 5.38 亿页 × 0.003）+ 网页端消费者付费约 480 万（假设付费用户 40 万 × 12 美元/年，假设驱动、置信低）+ B2B 约 200 万（假设 800 客户 × 2,500 美元/年）。自上而下从移动益智 IAP 122 亿美元（Sensor Tower，2024）与脑力游戏 226 亿美元（Dataintelo，2025，宽口径）两池切分：消费者与广告池 1,400 万 + B2B 池 300 万，份额假设无直接观测。两法中点差 <strong>20.8%</strong>，略超 20% 容差——不做平均、保留双值。</p>
+
+        <div class="chart num">
+          <div class="ct">TAM 双法对账（万美元/年）</div>
+          <div class="cs">K-Dense calculate_market_sizing.py 实跑结果（2026 基准年）；两法差 20.8% 超容差，保留双值</div>
+          <svg viewBox="0 0 640 92" width="100%" role="img" aria-label="TAM 自下而上 1380 万美元，自上而下 1700 万美元">
+            <text x="0" y="20" font-size="13" fill="var(--ink-2)">自下而上</text>
+            <rect x="86" y="6" width="446" height="18" fill="var(--blue)"></rect>
+            <text x="540" y="20" font-size="13" font-weight="700" fill="var(--ink)">1,380万</text>
+            <text x="0" y="58" font-size="13" fill="var(--ink-2)">自上而下</text>
+            <rect x="86" y="44" width="550" height="18" fill="var(--accent)"></rect>
+            <text x="540" y="39" font-size="13" font-weight="700" fill="var(--ink)">1,700万</text>
+            <text x="86" y="84" font-size="11.5" fill="var(--muted)">广告 700万 + 网页付费 480万 + B2B 200万（自下而上拆解）</text>
+          </svg>
+        </div>
+
+        <div class="scen">
+          <div class="tier">
+            <div class="th"><span class="tn">下行</span><h4>单语言单簇</h4></div>
+            <div class="amt num">2.8万–3.4万<small style="font-size:.55em;color:var(--ink-2)"> 美元/年</small></div>
+            <p>SAM = TAM × 20%；SOM = SAM × 1%（3 年可获得份额）</p>
+          </div>
+          <div class="tier t0">
+            <div class="th"><span class="tn">基准</span><h4>双语言多簇</h4></div>
+            <div class="amt num">14.5万–17.9万<small style="font-size:.55em;color:var(--ink-2)"> 美元/年</small></div>
+            <p>SAM 约 483 万–595 万美元；SOM = SAM × 3%。基准情景的立项预算须按此倒推</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">上行</span><h4>赢下变体簇+渠道</h4></div>
+            <div class="amt num">41万–51万<small style="font-size:.55em;color:var(--ink-2)"> 美元/年</small></div>
+            <p>SAM = TAM × 50%；SOM = SAM × 6%</p>
+          </div>
+        </div>
+        <p class="tam-note">敏感性：SOM 对 RPM 与可获得份额最敏感——RPM 从 3 美元跌到 1.5 美元，广告部分直接减半；可获得份额每差 1 个百分点，SOM 差约 5 万美元。反方：若 sudoku.com 以四广告位+矩阵导流实现 8 美元以上有效 RPM，仅其一家广告收入就可能超过本测算的广告分项总和；但头部多赚的每一美元都是从同一批存量用户身上多榨的，不扩大新入者的可及池。</p>
+      </section>
+
+      <section id="competition">
+        <div class="sec-head">
+          <div class="no">PART 3 · 续</div>
+          <h2>竞争难度：壁垒是习惯，不是技术</h2>
+        </div>
+        <p>壁垒三层。<strong>品牌壁垒</strong>：头部 Direct 占比 60%–93%（dailysudoku 达 93.16%，Semrush）——用户不搜、直接来，SEO 赢了排名也赢不到这批人；sudoku.com 的 Direct 在第二轮两工具口径为约 60%（SimilarWeb）至约 80%（Semrush / HypeStat 快照）。<strong>权威壁垒</strong>：sudoku.com Authority Score 71、引荐域 5,869（Semrush / HypeStat，2026）；NYT 域名 AS 100。<strong>供给壁垒反而最低</strong>：「能玩的数独」在模板市场只值 29–149 美元（CodeCanyon 等，2026），产品本身零壁垒，壁垒全在流量与习惯。</p>
+
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>等级</th><th>词簇</th><th>KD 估算</th><th>守擂情况</th></tr></thead>
+            <tbody>
+              <tr><td><span class="grade g-hard">极难</span></td><td class="plain" data-l="词簇">sudoku、sudoku online、free sudoku</td><td class="plain" data-l="KD 估算">92–100</td><td class="plain" data-l="守擂情况">新域 2 年内无望；AS 71 头部 + 报纸域 + 精确匹配域名群</td></tr>
+              <tr><td><span class="grade">难</span></td><td class="plain" data-l="词簇">sudoku solver、daily sudoku、sudoku extreme</td><td class="plain" data-l="KD 估算">70–88</td><td class="plain" data-l="守擂情况">各有 AS 30–45 的垂类站守擂，但已证明中小站可进前五</td></tr>
+              <tr><td><span class="grade g-mid">中</span></td><td class="plain" data-l="词簇">killer sudoku、samurai sudoku、sudoku solver online、sudoku for experts</td><td class="plain" data-l="KD 估算">40–65</td><td class="plain" data-l="守擂情况">垂类专站未锁死 SERP</td></tr>
+              <tr><td><span class="grade g-easy">较易</span></td><td class="plain" data-l="词簇">thermo / arrow / sandwich / jigsaw、sudoku variants、sudoku x</td><td class="plain" data-l="KD 估算">15–40（估算）</td><td class="plain" data-l="守擂情况">无强站做「可玩+讲解」页——唯一与难度相称的切入序</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>冷启动现实：CPC 全线 0.02–0.46 美元、竞价竞争 0.04，买量套利不存在，只能靠 SEO + 内容导流慢养；sudoku.coach 用 Direct 80% 证明留存型小站可行，但其 68 万/月是多年积累。预期管理：新站第一年做到 10 万/月访问已是同类中的好成绩，对应广告收入约每月数百美元。难度低估的风险在 Google 本身——AI 概览与小游戏聚合页正在吞掉工具类长尾（solver 类首当其冲），今天 KD 45 的词，两年后可能被搜索产品形态变化直接清零。</p>
+      </section>
+
+      <section id="regions">
+        <div class="sec-head">
+          <div class="no">PART 3 · 续</div>
+          <h2>区域差异：四个市场，四种生意</h2>
+        </div>
+        <div class="tiers">
+          <div class="tier">
+            <div class="th"><span class="tn">美国</span><h4>订阅捆绑 + 广告双轨</h4></div>
+            <p>sudoku.com 国家构成中美国占 12.12%（Semrush）至 21.13%（HypeStat）（2026-09）；NYT Games 全平台 2024 年日玩家 1,000 万+、付费订阅 100 万+（NYT 口径转引），数独是包中一员。付费习惯接受<strong>订阅捆绑与去广告买断</strong>——是四个市场里唯一跑通订阅的。</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">日本</span><h4>纸刊与商标塑造的生态</h4></div>
+            <p>sudoku.com 的日本流量占 9.41%、约 336 万/月且<strong>移动占 87.53%</strong>（Semrush，2026-09），是全球第二大单一国家市场；但本土生态由 Nikoli 主导——「数独」为注册商标、本土通称<strong>ナンプレ</strong>，纸刊（Fujisan 多刊并行）与 App（Nikoli 官方、Easybrain Killer、LINE ナンプレ居 2026-10 榜单前列）强势，卖点是脑トレ与防呆。外来网页产品在日本首先撞的是商标与用语，不是产品。</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">德国</span><h4>报刊 Rätsel 文化，数字化最慢</h4></div>
+            <p>sudoku.com 德国流量占 7.92%（Semrush，2026-09）；ZEIT 的 sudoku.zeit.de 约 54.1 万/月（SimilarWeb，2026-04）。报刊亭 Rätselheft 月刊订阅文化仍在扩张（2026-09 仍有新刊上市），数字增量主要来自 Readly 类聚合（2024 年德国 Rätsel 与 Sudoku 读者 +31%）。数字化慢意味着<strong>网页增量期更长</strong>，但本地化对手是出版社而非互联网公司。</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">中国</span><h4>不是休闲网页市场，是竞赛与培训市场</h4></div>
+            <p>国家体育总局竞赛体系主导：2025 年全国锦标赛 24 省近 1,200 人（历届最多，U8–O50 分龄），2026 年规程已发布；线上入口是微信小程序，付费发生在报名、培训与家长为专注力买单，不在游戏内购。竞技已兑现：世锦赛 2024 年中国选手包揽个人前三、2025 年戴坦坦与中国队双冠（Wikipedia / WPF，2025）。新形态信号：《Meowdoku》（数独+扫雷式混合）累计下载 2,900 万+、MAU 322 万（点点数据转引，2026）。2018 年「2,000 万爱好者」旧口径无方法论，<strong>不用于测算</strong>。</p>
+          </div>
+        </div>
+        <p class="small">反方：区域结论里日本与德国的本土数据最薄（日本无本土站流量序列、德国无 Rätsel 人群分层），若真要进入日德市场，需另做一轮本地工具核查，不能凭本章定案。</p>
+      </section>
+
+      <section id="entry">
+        <div class="sec-head">
+          <div class="no">PART 4</div>
+          <h2>进入判断：三条缝，三条红线</h2>
+        </div>
+        <p>先把反方说透：网页数独的收入池（千万级）与流量声量（5,000 万/月）严重不匹配，头部一家拿走大半，新入者的期望回报中位数低于多数独立开发者的机会成本——<strong>除非它同时是别的东西</strong>（内容品牌、教学产品、App 的获客口、或 AI 练兵场）。反方的反方：正因为钱少，大厂不会为变体长尾与教学细分投入，小团队反而能守住——sudoku.coach、SudokuPad 都是一人项目，活得比多数创业项目久。这个品类的真实回报函数是「低收入、低成本、长寿命」。</p>
+
+        <div class="tiers">
+          <div class="tier t0">
+            <div class="th"><span class="tn">缝 1</span><h4>变体「可玩+讲解」站</h4></div>
+            <p>吃 thermo / arrow / sandwich / jigsaw 等 <strong>KD 15–40</strong> 的词簇，做「能玩 + 为什么这样解」的页面，对标 SudokuPad 的深度行为（11:15 时长）而非 sudoku.com 的广度；分发必须自建内容渠道（视频 / 社区），不能只等 SEO。全报告唯一量、难度、供给三项都友好的位置。</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">缝 2</span><h4>教学产品化</h4></div>
+            <p>sudoku.coach 已证明 Campaign 闯关教学有 <strong>68 万/月与 80% Direct</strong> 的留存，但它免费——缝在于把教学做成可收费的形态（课程、家长向的儿童数独训练、与中国式竞赛培训衔接）。这是唯一有付费意愿证据的用户群：sudoku for experts 的 CPC 为品类最高档之一。</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">缝 3</span><h4>区域本地化窄门</h4></div>
+            <p>德语市场数字化慢、对手是出版社，节奏友好；日语市场须先解决商标与用语（ナンプレ）并走移动优先；中国市场不要做网页休闲，应做<strong>小程序混合玩法或竞赛培训服务</strong>。</p>
+          </div>
+          <div class="tier">
+            <div class="th"><span class="tn">门槛</span><h4>可证伪的止损线</h4></div>
+            <p>试点 6 个月内，变体词簇页面若不能做到<strong>单簇月访问 2 万</strong>、或平均时长达不到 <strong>5 分钟</strong>（SudokuPad 的一半），说明内容深度不成立，应止损转向教学或区域路线，而不是加大经典词投入。</p>
+          </div>
+        </div>
+
+        <div class="callout warn">
+          <p class="t">三条红线（碰任何一条，建议直接放弃立项）</p>
+          <p>一、不要做又一个经典 9×9 免费站正面打 sudoku.com——KD 96+、Direct 锁定、CPC 0.46 美元，任意一项都足以判死刑。</p>
+          <p>二、不要指望网页订阅——全品类只有一个打包订阅成功样本，单品订阅无一成立。</p>
+          <p style="margin-bottom:0">三、不要把 TAM 当自己的收入预期——基准 SOM 只有约 14.5 万–17.9 万美元/年（3 年口径），立项预算与团队规模必须按这个数倒推，超了就是用爆款的成本做副业的生意。</p>
+        </div>
+
+        <h3>风险清单</h3>
+        <ul class="tight">
+          <li><strong>平台风险</strong>：流量靠 Google 与 YouTube 两个外部渠道，任一算法或推荐变化都能腰斩小站（SudokuPad 对 YouTube 的依赖即样本）。</li>
+          <li><strong>变现风险</strong>：Games 类目 RPM 处于广告体系最低档，且广告拦截在桌面硬核人群中尤为普遍。</li>
+          <li><strong>数据风险</strong>：全部流量为第三方估算、同站同月两工具可差 17%–40%，年龄数据完全缺失，基于这些数字的精细测算都是假精确。</li>
+          <li><strong>品类风险</strong>：AI 解题与生成使题目供给彻底免费化，靠题库建站的价值归零；AI 搜索概览在吞工具类流量。</li>
+          <li><strong>法律与本地化风险</strong>：日本商标、各地隐私与广告合规（德国对追踪的敏感已催生「无广告无追踪」本土小厂卖点）。</li>
+        </ul>
+
+        <div class="callout">
+          <p class="t">可信评估（第二轮台账）</p>
+          <p style="margin-bottom:0">第二轮来源台账 36 条、主张台账 28 条，K-Dense 两个校验脚本（validate_evidence_ledger / audit_claim_citations）均输出 valid。数据类型：第三方估算占流量与关键词类主张的大多数；已公布实际值主要来自商店清单、YouTube 公开数与赛事记录；预测 / 情景仅限变现章 TAM/SAM/SOM，已标注为条件计算。方向性结论（平台期、变体增长、变现薄、壁垒结构）有多源互证，可信度中高；绝对金额为假设驱动的量级估计，可信度低到中，只可用于量级决策、不可用于财务承诺。</p>
+        </div>
+      </section>
+
       <section id="gaps">
         <div class="sec-head">
           <div class="no">附</div>
           <h2>数据缺口：查不到的，明说</h2>
         </div>
         <ol class="gaps">
-          <li><strong>Google Trends 绝对量与 2020–2026 完整序列</strong>——Trends 只给 0–100 归一化指数，公开页无法取得可引用数值；本文以美国关键词量研究替代，全球搜索总量无可信数字。</li>
-          <li><strong>数独单品类市场规模 / 收入</strong>——无权威机构单列；122 亿美元（移动益智）与 226 亿美元（脑力游戏）均为上位大盘且口径互斥，不可切分给数独。</li>
-          <li><strong>年龄分布百分比</strong>——SimilarWeb 免费页年龄图不可读；除「50+ 人群重要」的学术侧证外，无公开可信分布。</li>
-          <li><strong>NYT Sudoku 单游戏数据</strong>——NYT 只披露全平台口径，Sudoku 占比从未单独披露。</li>
-          <li><strong>sudoku.org 流量</strong>——SimilarWeb 无数据，真实规模未知。</li>
-          <li><strong>SudokuPad 日活约 4 万</strong>——仅二手转述，未找到一手原文。</li>
-          <li><strong>Microsoft Sudoku、Good Sudoku 的下载 / 日活</strong>——官方从未披露，商店评分量只能定性。</li>
-          <li><strong>中国网页数独流量与近年爱好者总数</strong>——最新全国性数字仍是 2018 年「2,000 万人」的无方法论口径；墙内小程序 / App 流量不被国际工具覆盖。</li>
-          <li><strong>数独 ×Match-3、数独 ×Nonogram 的机制真融合</strong>——多轮检索未找到有规模的代表作，结论是「未发现」而非「证明不存在」。</li>
-          <li><strong>Steam 融合类产品销量</strong>——Steam 不公开销量，本文以评论数作量级代理，会系统性低估（评论率通常仅为销量的个位数百分比）。</li>
+          <li><strong>2020–2023 年头部站流量序列未取得</strong>——公开工具只回溯约 3 个月，Wayback 的 SimilarWeb 快照本轮未走通；疫情期上升只有定性叙事，无月访问实数。</li>
+          <li><strong>Google Trends 数值曲线未取得</strong>——变体词相对走势无法量化，变体增长结论建立在流量、订阅、题量、并发四组代理指标上。</li>
+          <li><strong>年龄分布百分比无公开可读数据</strong>——SimilarWeb 年龄为图形层；除「50+ 人群重要」的学术侧证外，无公开可信分布，不编造。</li>
+          <li><strong>变体玩家绝对数不存在公开口径</strong>——SudokuPad 无官方 MAU；仅有 2024 年中约 4 万 DAU 的开发者转引，且访谈口径另有约 2.5 万 DAU，两说并存。</li>
+          <li><strong>日语（ナンプレ / 数独）与中文（数独）关键词量测不到可引用数值</strong>；约 6 个英文核心 / 长尾词（play sudoku、free sudoku 等）未取得逐词印出值；全部 KD 为估算（Semrush KD% 在登录墙后、Ahrefs DR 未实测）。</li>
+          <li><strong>sudoku.com 网页版付费层是否存在未定论</strong>——需真实账号走购买流程核实；NYT 官网定价页原文未直开，以 Help Center 转引为准。</li>
+          <li><strong>任何数独站的实测 RPM / CPM 均不存在</strong>——广告测算全部使用通用 Games 类目基准。</li>
+          <li><strong>辛迪加现行单价无公开数字</strong>——Conceptis、Andrews McMeel、Nikoli 均为询价制；询价需以出版商身份对外联系，未获批准，本轮未执行。</li>
+          <li><strong>NYT Sudoku 单品流量与收入、Good Sudoku / CTC 的销量收入、SudokuPad 捐赠额均未公开</strong>；另 sudoku.org 在 SimilarWeb 无数据、Microsoft Sudoku 无官方日活。</li>
+          <li><strong>中国数独小程序单品 MAU、日本本土站流量序列、德国 Rätsel 人群分层均缺失</strong>；中国爱好者总数只有 2018 年无方法论旧口径。另：数独 ×Match-3、数独 ×Nonogram 的机制真融合多轮检索未找到有规模代表作，结论是「未发现」而非「证明不存在」；Steam 不公开销量，评论数作代理会系统性低估。</li>
         </ol>
       </section>
 
@@ -781,6 +1039,18 @@
           <li>SudokuSolver.pro —《When Was Sudoku Popular?》：<a href="https://www.sudokusolver.pro/2024/01/when-was-sudoku-popular.html">sudokusolver.pro</a></li>
           <li>国家体育总局 — 2026 全国数独线上赛通知：<a href="https://www.sport.gov.cn/stzx/n5434/c29887478/content.html">sport.gov.cn</a>；华奥星空 — 2026 全国数独公开赛：<a href="https://www.sports.cn/tcdt/tccyrh/2026/0402/693223.html">sports.cn</a></li>
         </ul>
+        <p class="small" style="margin:16px 0 10px"><strong>第二轮垂直调研新增（关键词 / 收费 / 变现 / 竞争）</strong></p>
+        <ul class="sources tight" style="list-style:none; padding-left:0;">
+          <li>Semrush — sudoku.com overview（2026-04–09 序列）：<a href="https://www.semrush.com/website/sudoku.com/overview/">semrush.com/website/sudoku.com/overview</a>；sudokupad.app：<a href="https://www.semrush.com/website/sudokupad.app/overview/">semrush.com/website/sudokupad.app/overview</a>；sudoku.name：<a href="https://www.semrush.com/website/sudoku.name/overview/">semrush.com/website/sudoku.name/overview</a></li>
+          <li>Semrush 关键词印出页 — dailysudoku.com：<a href="https://www.semrush.com/website/dailysudoku.com/overview/">semrush.com/website/dailysudoku.com/overview</a>；sudoku9x9.com：<a href="https://www.semrush.com/website/sudoku9x9.com/overview/">semrush.com/website/sudoku9x9.com/overview</a>；sudokuspoiler.com：<a href="https://www.semrush.com/website/sudokuspoiler.com/overview/">semrush.com/website/sudokuspoiler.com/overview</a>；tagesspiegel.de（DE 库）：<a href="https://de.semrush.com/website/tagesspiegel.de/overview/">de.semrush.com/website/tagesspiegel.de/overview</a></li>
+          <li>Google AdSense 官方费率（Games 类目 Page RPM，经 PubMonitor 转录，2026-05）：<a href="https://pubmonitor.com/tools/adsense-calculator">pubmonitor.com/tools/adsense-calculator</a></li>
+          <li>Web Sudoku — 引擎授权官方页（2026-11-07 直读）：<a href="http://de.websudoku.com/interactive.php">de.websudoku.com/interactive.php</a>；Deluxe 购买页：<a href="http://www.websudoku.com/deluxebuy.php?f_&mac=0&sp=1">websudoku.com/deluxebuy.php</a></li>
+          <li>sudoku.coach — Google Play 官方描述（2026-11-07 直读）：<a href="https://play.google.com/store/apps/details?id=coach.sudoku.twa&hl=en-us&gl=us">play.google.com/store/apps/details?id=coach.sudoku.twa</a></li>
+          <li>SteamCharts — Killer Sudoku 并发序列：<a href="https://steamcharts.com/app/1471910">steamcharts.com/app/1471910</a>；SteamDB — Sven's SudokuPad：<a href="https://steamdb.info/app/1706870/graphs/">steamdb.info/app/1706870</a></li>
+          <li>MobileGamer — Miniclip 12 亿美元收购 Easybrain（2024-11）：<a href="http://mobilegamer.biz/miniclip-acquires-easybrain-from-embracer-for-1-2bn/">mobilegamer.biz</a></li>
+          <li>国家体育总局 — 2025 全国数独锦标赛：<a href="https://www.sport.gov.cn/stzx/n5437/c28933132/content.html">sport.gov.cn</a>；2026 锦标赛规程：<a href="https://www.sport.gov.cn/stzx/n5434/c29719696/content.html">sport.gov.cn</a>；WPF — 2025 世锦赛结果：<a href="https://worldpuzzle.org/tantan-dai-and-china-are-the-world-champions">worldpuzzle.org</a></li>
+          <li>方法框架 — Kassis et al. (2026)《Scientific Agent Skills》arXiv:2609.00065：<a href="https://doi.org/10.48550/arXiv.2609.00065">doi.org/10.48550/arXiv.2609.00065</a>（K-Dense market-research-reports）</li>
+        </ul>
         <p class="small" style="margin:16px 0 10px"><strong>变体 / 融合 / 社区</strong></p>
         <ul class="sources tight" style="list-style:none; padding-left:0;">
           <li>Logic Wiz — Sudoku Variants：<a href="https://logic-wiz.com/variants/">logic-wiz.com/variants</a>；Sudoku.by — All Sudoku Variants：<a href="https://sudoku.by/sudoku-variants">sudoku.by/sudoku-variants</a></li>
@@ -795,7 +1065,7 @@
       </section>
 
       <footer>
-        <p>本报告数据截至 2026 年 11 月 7 日。流量与下载数字多为第三方估算，引用时请连同口径与日期一并保留；标注「未复核」「弱证据」的内容不应作为决策依据。<br />
+        <p>本报告数据截至 2026 年 11 月 7 日，由两轮调研融合：第一轮（受众与玩法盘点）与第二轮（三件套垂直调研：来源台账 36 条、主张台账 28 条，K-Dense 校验均 valid；TAM/SAM/SOM 为带明示假设的情景计算，不是收入预测或保证）。流量与下载数字多为第三方估算，引用时请连同口径与日期一并保留；标注「未复核」「弱证据」的内容不应作为决策依据。<br />
         需求：Qidi · 调研与成文：Catherine（Muse）</p>
       </footer>
 
