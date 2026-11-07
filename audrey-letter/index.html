@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>给 Audrey 的一封信 —— Catherine 老师和你的宝箱地图</title>
+<meta name="description" content="Catherine 老师写给 Audrey 的一封信：你的三个超能力、宝箱地图、三个小任务，和我们慢慢走的路线图。">
+<meta property="og:title" content="给 Audrey 的一封信 —— 宝箱地图">
+<meta property="og:description" content="你其实比你自己以为的，要厉害得多。这封信里，藏着一张等你慢慢打开的宝箱地图。">
+<meta property="og:image" content="https://share.qidi.jp/audrey-letter/og.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FDF9F0; --ink:#33523F; --ink2:#5C7263;
+    --grass:#7CA982; --grass-deep:#4E7A5A; --mint:#DCEFE4;
+    --kirby:#F49FB8; --kirby-soft:#FDF0F3; --sky:#A8C8E8; --sky-soft:#EEF4FB;
+    --gold:#E9B44C; --grass-soft:#EFF6F0; --line:#E4EAD9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:"Noto Sans SC",-apple-system,"Hiragino Kaku Gothic ProN","PingFang SC",sans-serif;font-size:17.5px;line-height:1.95;-webkit-font-smoothing:antialiased}
+  ::selection{background:#F8D7E2}
+  a:focus-visible{outline:3px solid var(--kirby);outline-offset:3px;border-radius:6px}
+
+  /* ---------- hero ---------- */
+  .hero{background:linear-gradient(180deg,#CFE9DA 0%,#E7F2E4 46%,var(--paper) 100%);padding:56px 20px 8px;text-align:center;position:relative;overflow:hidden}
+  .hero-img{width:min(600px,92vw);margin:0 auto;border-radius:300px 300px 26px 26px;overflow:hidden;box-shadow:0 24px 50px -18px rgba(51,82,63,.35);position:relative;z-index:1}
+  .hero-img img{display:block;width:100%;height:auto}
+  .twinkle{position:absolute;color:var(--gold);z-index:2;animation:tw 2.8s ease-in-out infinite}
+  .twinkle.pink{color:var(--kirby)}
+  .twinkle.t2{animation-delay:.9s}.twinkle.t3{animation-delay:1.7s}
+  @keyframes tw{0%,100%{opacity:.25;transform:scale(.8) rotate(0deg)}50%{opacity:1;transform:scale(1.15) rotate(20deg)}}
+  @media (prefers-reduced-motion: reduce){.twinkle{animation:none;opacity:.8}}
+  .hero h1{font-family:"Noto Serif SC",serif;font-weight:900;font-size:clamp(32px,6.4vw,46px);letter-spacing:.02em;margin:34px 0 4px;color:var(--ink)}
+  .hero .sub{font-family:"Noto Serif SC",serif;font-size:clamp(17px,3.4vw,21px);color:var(--grass-deep);letter-spacing:.06em}
+  .hero .from{margin-top:14px;color:var(--ink2);font-size:15px}
+  .hero .from b{color:var(--kirby);font-weight:700}
+
+  /* ---------- letter body ---------- */
+  .letter{max-width:680px;margin:0 auto;padding:10px 24px 0}
+  .letter p{margin:0 0 1.15em}
+  .letter .lead{font-size:19px}
+  .secret{font-family:"Noto Serif SC",serif;font-weight:600;font-size:20.5px;line-height:1.8;color:var(--ink);background:linear-gradient(transparent 62%,#FBE3EC 62%);display:inline}
+  section{margin-top:64px}
+  h2{font-family:"Noto Serif SC",serif;font-weight:900;font-size:27px;line-height:1.45;color:var(--ink);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+  h2 svg{flex:none;color:var(--gold)}
+  h3{font-family:"Noto Serif SC",serif;font-weight:600;font-size:20.5px;line-height:1.55;margin:34px 0 10px;color:var(--ink)}
+  h3 .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:9px;vertical-align:2px}
+  .divider{display:flex;justify-content:center;gap:16px;margin:64px 0 0;color:var(--grass)}
+  .divider svg:nth-child(2){color:var(--kirby);transform:translateY(-4px)}
+  .divider svg:nth-child(3){color:var(--gold)}
+  strong{color:var(--grass-deep);font-weight:700}
+  .pink-strong{color:#D96C8F}
+
+  /* ---------- chests ---------- */
+  .chest-img{width:min(430px,88vw);margin:6px auto 30px;display:block;border-radius:22px}
+  .chest-row{display:flex;gap:16px;align-items:flex-start;padding:18px 18px 14px;border-radius:18px;margin-bottom:14px;background:#FFFDF7;border:1.5px solid var(--line)}
+  .chest-row .badge{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Noto Serif SC",serif;font-weight:900;font-size:20px;color:#fff;margin-top:2px}
+  .badge.a{background:var(--grass)} .badge.b{background:var(--kirby)} .badge.c{background:#B9C4BB}
+  .chest-row p{margin:0;font-size:16.5px;line-height:1.85}
+  .chest-row .name{font-family:"Noto Serif SC",serif;font-weight:600;font-size:18px;color:var(--ink)}
+  .chest-row.is-b{border-color:#F6C3D4;box-shadow:0 0 0 5px #FBE9F0,0 14px 30px -14px rgba(217,108,143,.35)}
+  .handnote{font-family:"Klee One","Noto Sans SC",sans-serif;color:#D96C8F;font-size:16px}
+
+  /* ---------- quests ---------- */
+  .quest{border-radius:16px;padding:22px 22px 12px;margin-bottom:18px;position:relative;overflow:hidden}
+  .quest.q1{background:var(--sky-soft);border-left:7px solid var(--sky)}
+  .quest.q2{background:var(--grass-soft);border-left:7px solid var(--grass)}
+  .quest.q3{background:var(--kirby-soft);border-left:7px solid var(--kirby)}
+  .quest h3{margin-top:0}
+  .quest p{font-size:16.8px}
+  .quest img.spot{float:right;width:196px;border-radius:14px;margin:2px 0 8px 16px}
+
+  /* ---------- roadmap ---------- */
+  .road{position:relative;margin:34px 0 6px;padding:6px 0}
+  .road:before{content:"";position:absolute;top:8px;bottom:8px;left:50%;border-left:3px dashed #BFD8C3;transform:translateX(-50%)}
+  .station{position:relative;width:50%;padding:0 44px 34px 0;text-align:right}
+  .station:nth-child(even){margin-left:50%;padding:0 0 34px 44px;text-align:left}
+  .station .pin{position:absolute;top:4px;right:-13px;width:26px;height:26px;border-radius:50%;background:var(--kirby);border:4px solid var(--paper);box-shadow:0 0 0 2px #F6C3D4;z-index:1}
+  .station:nth-child(even) .pin{right:auto;left:-13px}
+  .station .when{font-family:"Noto Serif SC",serif;font-weight:900;font-size:19px;color:var(--grass-deep)}
+  .station p{font-size:15.8px;line-height:1.8;color:var(--ink2);margin:2px 0 0}
+  .station.final .pin{background:var(--gold);box-shadow:0 0 0 2px #F3D492,0 0 18px 4px rgba(233,180,76,.45)}
+  .station.final .when{color:#B9822C}
+  .note{background:#FFFDF7;border:1.5px dashed #D9C58F;border-radius:16px;padding:20px 22px 10px;margin-top:8px}
+  .note p{font-size:16.8px}
+
+  /* ---------- closing ---------- */
+  .words p{margin-bottom:1.3em}
+  .sign{margin-top:44px;text-align:right}
+  .sign .hand{font-family:"Klee One","Noto Sans SC",sans-serif;font-size:24px;color:var(--grass-deep)}
+  .sign .date{color:var(--ink2);font-size:14.5px;margin-top:4px}
+  footer{max-width:680px;margin:70px auto 0;padding:22px 24px 40px;border-top:1px solid var(--line);color:#8CA08F;font-size:13px;line-height:1.8;text-align:center}
+
+  /* ---------- mobile ---------- */
+  @media (max-width:640px){
+    body{font-size:17px}
+    .hero{padding-top:38px}
+    .letter{padding:6px 20px 0}
+    section{margin-top:52px}
+    h2{font-size:24px}
+    .quest img.spot{float:none;display:block;width:min(230px,70vw);margin:0 auto 12px}
+    .road:before{left:12px;transform:none}
+    .station,.station:nth-child(even){width:auto;margin-left:0;text-align:left;padding:0 0 30px 44px}
+    .station .pin,.station:nth-child(even) .pin{left:0;right:auto}
+    .chest-row{flex-direction:column;gap:8px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="twinkle" style="top:36px;left:8%" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>
+  <svg class="twinkle pink t2" style="top:110px;right:7%" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>
+  <svg class="twinkle t3" style="top:200px;left:4%" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>
+  <div class="hero-img"><img src="img/hero.webp" alt="树荫下读书的女孩和一口冒出星星的宝箱" width="1200" height="800"></div>
+  <h1>给 Audrey 的一封信</h1>
+  <div class="sub">—— Catherine 老师和你的宝箱地图</div>
+  <div class="from">写信的人：<b>Catherine 老师</b> · 2026 年 11 月 7 日</div>
+</header>
+
+<main class="letter">
+
+  <p class="lead">Audrey，你好呀！</p>
+  <p>这几天，Catherine 老师把你这一年多的考试成绩，从头到尾仔仔细细看了一遍。你猜我发现了什么？</p>
+  <p><span class="secret">发现了一个关于你的秘密：你其实比你自己以为的，要厉害得多。</span></p>
+  <p>这封信，就是想把这个秘密讲给你听。然后，我们一起看看一张“宝箱地图”——看看还有哪些宝箱，等着你慢慢去打开。不着急，一点都不着急。就像芙丽莲一样，我们慢慢走，沿路收集小小的魔法，也能走得很远很远。</p>
+
+  <section>
+    <h2><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>你的三个超能力</h2>
+
+    <h3><span class="dot" style="background:var(--kirby)"></span>超能力 1：你像星之卡比一样，看过的书都会变成你的本事</h3>
+    <p>卡比最厉害的地方，是把东西吸进去，就能变成自己的能力。你其实也一样！</p>
+    <p>你喜欢看漫画、小说、工具书，鬼灭之刃、火影忍者、哆啦A梦、葬送的芙丽莲，什么都看。你看过的每一个故事、每一页书，都悄悄变成了你的国語能力。所以你的国語成绩在班里常常排在前面，有一个月还拿过<strong>全班第一名</strong>呢。</p>
+    <p>所以你要继续开开心心地看书。这不只是玩，这就是你的超能力在升级。</p>
+
+    <h3><span class="dot" style="background:var(--sky)"></span>超能力 2：你说你不喜欢计算，其实你算得可准了</h3>
+    <p>我知道你不太喜欢做计算题。可是我把试卷翻出来一看——<strong>最近三次大考试，你的计算题几乎全对！</strong></p>
+    <p>炭治郎的呼吸法，也是每天一点点练出来的基本功。计算对你来说，就已经是练得很稳的呼吸法了。你不是“不会算”，你只是“不太爱算”，这两件事差得远啦。以后遇到计算题，就想：“哦，是我的拿手好戏来了。”慢慢算、算仔细，你完全没问题。</p>
+
+    <h3><span class="dot" style="background:var(--grass)"></span>超能力 3：你的脑子里，装着一个大大的图鉴</h3>
+    <p>花怎么开，虫子怎么变，星星在哪里——这些图鉴里的知识，你本来就感兴趣。</p>
+    <p>你的理科大考试成绩，是三科里最稳的一个。你的脑子里已经装了一个大图鉴，只是有时候考试前没来得及把它翻出来而已。这个我们有办法，特别简单，你看后面的任务二。</p>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>
+  </div>
+
+  <section>
+    <h2><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>宝箱地图：分数都藏在哪里</h2>
+    <img class="chest-img" src="img/chest.webp" alt="打开的宝箱里飞出粉色和金色的星星，旁边的书上放着放大镜" width="1209" height="1177" loading="lazy" style="width:min(350px,80vw)">
+    <p>每次考试的题目，就像三种宝箱：</p>
+    <div class="chest-row">
+      <div class="badge a">A</div>
+      <p><span class="name">A 宝箱（简单的题）</span>：你已经打开了差不多全部！只剩下一个小宝箱还没开——是一种叫“连接词”的小题。找个时间花十分钟，我们就能打开它。</p>
+    </div>
+    <div class="chest-row is-b">
+      <div class="badge b">B</div>
+      <p><span class="name">B 宝箱（中等的题）</span>：这个你打开了大概一半。<strong>另一半宝物还安安静静躺在里面</strong>，而那些题，你其实大多都会做，只是考试的时候没有稳稳拿下来。这就像在 Minecraft 里挖矿——钻石就在前面几层，不用着急，一镐一镐慢慢挖，总会挖到的。<br><span class="handnote">※ 我们要打开的，就是它。</span></p>
+    </div>
+    <div class="chest-row">
+      <div class="badge c">C</div>
+      <p><span class="name">C 宝箱（很难的题）</span>：这个宝箱在地图最深处，上着锁，就像游戏里等级还不够进的区域。Catherine 老师正式通知你：<strong>现在完全不用管它！</strong>考试的时候遇到难题，大大方方跳过去，一点都不丢人，还能省下时间去检查会做的题。地图先标在这里，等你上五年级、再长大一点，我们再回来开它。</p>
+    </div>
+    <p>我们的计划特别简单：<strong>接下来几个月，我们就慢慢打开 B 宝箱。</strong>不用学新东西，只是把“你本来就会的”，稳稳地拿回来。</p>
+  </section>
+
+  <section>
+    <h2><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>三个小任务</h2>
+    <p>像游戏任务一样，慢慢做就好。</p>
+
+    <div class="quest q1">
+      <img class="spot" src="img/detective.webp" alt="放大镜下有一串小脚印和星星组成的小路" width="640" height="450" loading="lazy">
+      <h3>任务一：当小侦探（算数）</h3>
+      <p>算数里有一类题，表面上是算数，其实是<strong>侦探游戏</strong>——找规律。数字排着队，里面藏着一个小秘密，就像游戏里的隐藏机关，等你发现它。</p>
+      <p>做这类题的时候，先不要动笔算，先看一会儿，在心里说：“哦，我知道它们的秘密了！”然后再写。每个星期玩两次，每次一点点就好。侦探破案不用快，找对最重要。</p>
+    </div>
+
+    <div class="quest q2">
+      <h3>任务二：考试前翻翻图鉴（理科）</h3>
+      <p>你还记得哆啦A梦的记忆面包吗？把面包往书上一印，吃下去就记住了。</p>
+      <p>我们不用真的吃面包，但有差不多的小魔法：理科考试之前两天，花十五分钟，把要考的那一单元<strong>当图鉴书翻一翻</strong>——看看图片，看看哪里有意思，不用背，看眼熟就行。</p>
+      <p>你的记性其实很好，这样翻一翻，考试的时候就会想起来：“啊，这张图我见过！”那些分，就自己跑回来了。</p>
+    </div>
+
+    <div class="quest q3">
+      <h3>任务三：收集错字材料（国語）</h3>
+      <p>以前写错过的汉字，就像 Minecraft 里的材料一样，散落在你的本子里。我们每天花五分钟，把它们一个个捡回来、写对两次，就算收集成功啦。材料攒多了，就能合成厉害的装备——考试的时候，你的字写对了，分就稳稳的。</p>
+      <p>Catherine 老师会帮你记着，你已经收集了哪些“材料”。慢慢攒，不着急。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>我们的路线图</h2>
+    <p>从现在到二月，你升五年级之前，我们要路过三个站，像 Roblox 里一关一关往前走一样。每一关都不用争第一，过关就是胜利：</p>
+    <div class="road">
+      <div class="station">
+        <div class="pin"></div>
+        <div class="when">11 月站</div>
+        <p>最近的一场考试，平常心就好。记住：会的稳稳写，不会的跳过去。</p>
+      </div>
+      <div class="station">
+        <div class="pin"></div>
+        <div class="when">12 月站</div>
+        <p>把 B 宝箱再多打开一点点。</p>
+      </div>
+      <div class="station">
+        <div class="pin"></div>
+        <div class="when">1 月站</div>
+        <p>四年级的最后一场考试，给自己一个漂漂亮亮的收尾。</p>
+      </div>
+      <div class="station final">
+        <div class="pin"></div>
+        <div class="when">二月站 · 终点</div>
+        <p>五年级的新教室，我们到啦。</p>
+      </div>
+    </div>
+    <div class="note">
+      <p>有一个小数字想告诉你：现在你大概站在队伍的正中间，我们的目标，是慢慢走到<strong>前面一点点</strong>的位置。不用跑，不用跟别人比，就按你自己的步子走。走到，是赚到；差一点，也没关系，我们下一站继续。Catherine 老师会一直帮你看地图的。</p>
+    </div>
+  </section>
+
+  <section class="words">
+    <h2><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l2.6 8.3L23 12l-8.4 2.7L12 23l-2.6-8.3L1 12l8.4-2.7z"/></svg>Catherine 老师想对你说的话</h2>
+    <p>第一，<strong>考试没考好，不用难过</strong>。你每次大大咧咧、考完就翻篇，这个本事特别珍贵。心里不装着包袱的人，才能一直开开心心往前走。成绩的账，老师帮你算；你只管好好学、好好玩、好好看书、好好玩游戏。</p>
+    <p>第二，<strong>怕难题，一点都不奇怪</strong>。所有的小朋友都怕。会做的题稳稳拿下，就是很了不起的本事了。难题是给以后的你准备的，不着急。</p>
+    <p>第三，<strong>你不用变成别人</strong>。芙丽莲活了一千多年，从来不跟别人比快，她就按自己的节奏，收集小小的魔法，慢慢地走——结果走得比谁都远。你喜欢看书、喜欢自然、心里装着很多有趣的事，这样的 Audrey，就是最棒的 Audrey。我们要做的，只是把你已经有的本事，一点点亮出来而已。</p>
+    <p>慢慢来，我们一起走。</p>
+    <div class="sign">
+      <div class="hand">—— 你的 Catherine 老师</div>
+      <div class="date">2026 年 11 月 7 日</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  监制：Qidi ｜ 写信、插图与设计：Catherine Muse<br>
+  这封信只写给 Audrey，和爱她的家人。
+</footer>
+
+</body>
+</html>
