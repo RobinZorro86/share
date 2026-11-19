@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>高市早苗执政一年客观评价</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+      * { box-sizing: border-box; }
+      :root {
+        --bg: #ffffff;
+        --bg2: #f2f3f5;
+        --panel: #ffffff;
+        --ink: #14213d;
+        --text: #20293a;
+        --muted: #5b6472;
+        --line: #dde1e8;
+        --red: #b42318;
+        --red-bg: #fdf1f0;
+        --gold: #a8834f;
+        --gold-bg: #faf5ec;
+        --navy-soft: #eef1f6;
+        --good: #1e6b4a;
+        --good-bg: #eef6f1;
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d1424;
+          --bg2: #111a2e;
+          --panel: #131e33;
+          --ink: #dbe4f2;
+          --text: #d5dbe6;
+          --muted: #97a3b6;
+          --line: #2a3752;
+          --red: #e5736a;
+          --red-bg: #2b1a1c;
+          --gold: #c5a880;
+          --gold-bg: #262017;
+          --navy-soft: #1a2742;
+          --good: #6fbf97;
+          --good-bg: #152a22;
+        }
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Noto Sans SC", "Hiragino Sans", "PingFang SC", sans-serif;
+        font-size: 16px;
+        line-height: 1.78;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 72px; }
+      h1, h2, h3, .serif { font-family: "Noto Serif JP", "Noto Serif SC", serif; }
+      a { color: var(--ink); text-decoration-color: var(--gold); text-underline-offset: 3px; }
+      a:hover { text-decoration-color: var(--red); }
+
+      /* ---------- nav ---------- */
+      nav.toc {
+        position: sticky; top: 0; z-index: 20;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav.toc .inner {
+        max-width: 880px; margin: 0 auto; padding: 6px 20px;
+        display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
+      }
+      nav.toc .inner::-webkit-scrollbar { display: none; }
+      nav.toc a {
+        flex: 0 0 auto; display: inline-flex; align-items: center;
+        min-height: 40px; padding: 0 12px; border-radius: 8px;
+        font-size: 14px; font-weight: 500; color: var(--muted); text-decoration: none;
+      }
+      nav.toc a:hover { color: var(--ink); background: var(--bg2); }
+
+      /* ---------- hero ---------- */
+      header.hero { padding: 44px 0 8px; }
+      .hero .kicker {
+        font-size: 13px; letter-spacing: .14em; color: var(--gold);
+        font-weight: 700; margin: 0 0 14px;
+      }
+      .hero h1 {
+        font-size: clamp(30px, 6vw, 44px); line-height: 1.25; font-weight: 900;
+        color: var(--ink); margin: 0 0 10px;
+      }
+      .hero .sub { font-size: 17px; color: var(--muted); margin: 0 0 22px; }
+      .verdict {
+        border-left: 4px solid var(--ink);
+        background: var(--navy-soft);
+        padding: 18px 20px; border-radius: 0 10px 10px 0;
+        font-size: 17.5px; line-height: 1.8;
+      }
+      .verdict strong { color: var(--ink); }
+      .byline { margin: 16px 0 0; font-size: 13.5px; color: var(--muted); }
+      .sourcerule {
+        margin-top: 14px; font-size: 13.5px; color: var(--muted);
+        border: 1px dashed var(--line); border-radius: 8px; padding: 10px 14px;
+      }
+      .sourcerule b { color: var(--ink); }
+
+      /* ---------- contrast panel ---------- */
+      .contrast {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 30px 0 6px;
+      }
+      .contrast .col { border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 8px; background: var(--panel); }
+      .contrast .col.power { border-top: 4px solid var(--gold); }
+      .contrast .col.pressure { border-top: 4px solid var(--red); }
+      .contrast h3 { margin: 0 0 4px; font-size: 17px; color: var(--ink); }
+      .contrast .cap { font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+      .stat { margin: 0 0 14px; }
+      .stat .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+      .stat .label { font-size: 14px; }
+      .stat .val { font-family: "Noto Serif JP", serif; font-weight: 700; font-size: 19px; color: var(--ink); white-space: nowrap; }
+      .stat .val.red { color: var(--red); }
+      .bar { height: 7px; border-radius: 4px; background: var(--bg2); margin-top: 5px; overflow: hidden; }
+      .bar i { display: block; height: 100%; border-radius: 4px; background: var(--gold); }
+      .bar.red i { background: var(--red); }
+      .stat .src { font-size: 12px; color: var(--muted); margin-top: 3px; }
+
+      /* ---------- sections ---------- */
+      section { margin-top: 56px; }
+      section > h2 {
+        font-size: 27px; font-weight: 900; color: var(--ink);
+        margin: 0 0 6px; padding-bottom: 10px; border-bottom: 2px solid var(--ink);
+      }
+      section > .lede { font-size: 16.5px; color: var(--text); margin: 14px 0 4px; }
+      h3.sub {
+        font-size: 19px; color: var(--ink); margin: 30px 0 8px; font-weight: 700;
+      }
+      p { margin: 10px 0; }
+      .src-note { font-size: 12.5px; color: var(--muted); }
+      .flag {
+        display: inline-block; font-size: 11.5px; font-weight: 700; letter-spacing: .04em;
+        padding: 1px 7px; border-radius: 20px; vertical-align: 2px; margin-left: 6px;
+      }
+      .flag.warn { background: var(--red-bg); color: var(--red); }
+      .flag.info { background: var(--navy-soft); color: var(--ink); }
+
+      .versus { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0 6px; }
+      .versus .box { border-radius: 12px; padding: 16px 18px 6px; }
+      .versus .pro { background: var(--good-bg); }
+      .versus .con { background: var(--red-bg); }
+      .versus h4 { margin: 0 0 8px; font-size: 15.5px; font-family: "Noto Sans SC", sans-serif; font-weight: 700; }
+      .versus .pro h4 { color: var(--good); }
+      .versus .con h4 { color: var(--red); }
+      .versus ul { margin: 0; padding-left: 18px; }
+      .versus li { margin-bottom: 9px; font-size: 15px; line-height: 1.7; }
+
+      blockquote {
+        margin: 16px 0; padding: 12px 18px; border-left: 3px solid var(--gold);
+        background: var(--gold-bg); border-radius: 0 8px 8px 0; font-size: 15.5px;
+      }
+      blockquote .who { display: block; margin-top: 6px; font-size: 13px; color: var(--muted); }
+
+      /* ---------- data table ---------- */
+      .dtable { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14.5px; }
+      .dtable th, .dtable td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+      .dtable th { color: var(--ink); font-weight: 700; background: var(--bg2); }
+      .dtable td.num { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; }
+      .neg { color: var(--red); font-weight: 700; }
+
+      /* ---------- chart ---------- */
+      .chartbox { border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin: 16px 0; background: var(--panel); }
+      .chartbox h4 { margin: 0 0 2px; font-size: 16px; color: var(--ink); font-family: "Noto Sans SC", sans-serif; }
+      .chartbox .cap { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
+      .chartbox svg { width: 100%; height: auto; display: block; }
+      .legend { display: flex; gap: 18px; font-size: 13px; color: var(--muted); margin-top: 8px; flex-wrap: wrap; }
+      .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+      .legend .l1::before { background: var(--gold); }
+      .legend .l2::before { background: var(--ink); }
+
+      /* ---------- media table / timeline ---------- */
+      .mtable { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14.5px; }
+      .mtable th, .mtable td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+      .mtable th { width: 128px; color: var(--ink); background: var(--bg2); font-weight: 700; }
+      .timeline { list-style: none; margin: 16px 0 0; padding: 0; }
+      .timeline li { position: relative; padding: 0 0 18px 118px; }
+      .timeline li::before {
+        content: ""; position: absolute; left: 96px; top: 8px; bottom: -2px; width: 2px; background: var(--line);
+      }
+      .timeline li:last-child::before { display: none; }
+      .timeline li::after {
+        content: ""; position: absolute; left: 91.5px; top: 7px; width: 11px; height: 11px;
+        border-radius: 50%; background: var(--bg); border: 3px solid var(--gold);
+      }
+      .timeline .date {
+        position: absolute; left: 0; top: 2px; width: 84px; text-align: right;
+        font-size: 13px; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums;
+      }
+      .timeline .ev { font-size: 15px; }
+      .timeline .ev b { color: var(--ink); }
+
+      .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+      .card { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px 8px; background: var(--panel); }
+      .card h4 { margin: 0 0 8px; font-size: 16px; color: var(--ink); font-family: "Noto Sans SC", sans-serif; }
+      .card ul { margin: 0; padding-left: 18px; }
+      .card li { margin-bottom: 8px; font-size: 14.5px; line-height: 1.7; }
+
+      .sources { font-size: 13.5px; color: var(--muted); }
+      .sources li { margin-bottom: 7px; overflow-wrap: anywhere; }
+      footer { margin-top: 60px; border-top: 1px solid var(--line); padding-top: 18px; font-size: 13px; color: var(--muted); }
+
+      @media (max-width: 640px) {
+        .contrast, .versus, .twocol { grid-template-columns: 1fr; }
+        .timeline li { padding-left: 0; padding-top: 22px; }
+        .timeline li::before, .timeline li::after { display: none; }
+        .timeline .date { position: static; text-align: left; width: auto; display: block; margin-bottom: 2px; }
+        .mtable th { width: 92px; }
+        section > h2 { font-size: 24px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="toc" aria-label="目录">
+      <div class="inner">
+        <a href="#verdict">总评</a>
+        <a href="#politics">政治</a>
+        <a href="#economy">经济</a>
+        <a href="#diplomacy">外交·安保</a>
+        <a href="#polls">支持率</a>
+        <a href="#media">媒体分野</a>
+        <a href="#timeline">时间线</a>
+        <a href="#sources">来源</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <header class="hero">
+        <p class="kicker">执政一周年评估 · 2025.10.21 — 2026.11.19</p>
+        <h1>高市早苗执政一年：<br />权力达到顶峰，成果尚未跟上</h1>
+        <p class="sub">日本首位女性首相的第一年——政治、经济、外交三线的贡献与不足</p>
+        <div class="verdict" id="verdict">
+          <strong>总判断：</strong>第一年确立了<em>权力与方向</em>——从少数派政权到战后首个单一政党三分之二多数、战后最清晰的保守纲领、多年未见的美韩关系热度；但在选民最在意的两件事——<strong>物价与财政信誉</strong>——上尚未拿出结果，且日本最重要的双边关系（对华）被冻结整整一年。第二年的考题已经排定日期：参议院的食品消费税法案、2027 年度预算、12 月日本银行决议、年底前的安保三文件修订，以及深圳的一次握手能否变成一次会谈。
+        </div>
+        <p class="byline">撰文：Catherine Muse ｜ 监修：Qidi ｜ 评估截止：2026 年 11 月 19 日</p>
+        <p class="sourcerule"><b>语料规则：</b>本页仅使用<b>日文与英文</b>权威媒体及官方资料（NHK、日经、朝日、读卖、每日、产经、共同社、时事社、路透、AP、彭博、Japan Times、Nikkei Asia 等），<b>未使用任何中文语料</b>。涉及中国内政的记述均转引自日/英媒体报道。自媒体内容仅作舆论参考并明确标注，不作事实依据。每个关键数字均标注出处与日期；未能核实的事项在文末单列。</p>
+      </header>
+
+      <!-- ======== memory point: power vs pressure ======== -->
+      <div class="contrast" aria-label="权力与压力对照">
+        <div class="col power">
+          <h3>权力面：战后最强授权</h3>
+          <p class="cap">2026 年 2 月 8 日众议院选举后</p>
+          <div class="stat">
+            <div class="row"><span class="label">自民党众议院席位</span><span class="val">316 / 465</span></div>
+            <div class="bar"><i style="width:68%"></i></div>
+            <p class="src">战后首个单一政党三分之二多数；联合政权合计 352 席（共同社）</p>
+          </div>
+          <div class="stat">
+            <div class="row"><span class="label">内阁支持率（日经，10 月）</span><span class="val">62%</span></div>
+            <div class="bar"><i style="width:62%"></i></div>
+            <p class="src">日经系列全年维持 50% 以上——1987 年该调查开始以来仅第二次安倍内阁做到过（日经，2026-10-26）</p>
+          </div>
+          <div class="stat">
+            <div class="row"><span class="label">防卫费 2% 目标</span><span class="val">提前 2 年</span></div>
+            <div class="bar"><i style="width:100%"></i></div>
+            <p class="src">按 2022 年度 GDP 口径计入补充预算后于 2025 年度达成（口径注记见外交章）</p>
+          </div>
+        </div>
+        <div class="col pressure">
+          <h3>压力面：市场与对华</h3>
+          <p class="cap">同一时期累积的代价</p>
+          <div class="stat">
+            <div class="row"><span class="label">日元汇率（2026 年 7 月）</span><span class="val red">≈¥164/$</span></div>
+            <div class="bar red"><i style="width:92%"></i></div>
+            <p class="src">约 40 年低点；全年干预约 ¥20 万亿，含 7 月 31 日 2011 年以来首次美日联合干预</p>
+          </div>
+          <div class="stat">
+            <div class="row"><span class="label">10 年期国债收益率（9 月 1 日）</span><span class="val red">3.0%</span></div>
+            <div class="bar red"><i style="width:75%"></i></div>
+            <p class="src">约 30 年高点；30 年期 10 月 5 日创 4.235% 历史纪录</p>
+          </div>
+          <div class="stat">
+            <div class="row"><span class="label">中国访日游客（1–7 月）</span><span class="val red">670万 → 190万</span></div>
+            <div class="bar red"><i style="width:28%"></i></div>
+            <p class="src">2025 年同期 670 万人 → 2026 年 190 万人（日经等报道）</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= 政治 ================= -->
+      <section id="politics">
+        <h2>一、国内政治：从少数派到三分之二多数</h2>
+        <p class="lede">政治是这一年最无争议的「成功故事」——但成功的引擎是高市个人的人气，而非自民党本身；立法交付则明显慢于权力扩张的速度。</p>
+
+        <h3 class="sub">起点：失去公明党，与维新组阁外联合</h3>
+        <p>2025 年 10 月 4 日高市当选自民党总裁（FCCJ 分析称麻生太郎阵营的支持起决定作用）。公明党随即以政治资金改革不力为由，退出长达 26 年的自公联合。10 月 20 日，自民党与日本维新会签署 12 项联合协议：众议院议席削减 10%、大阪副首都、社会保障改革、高中免费、废除汽油暂定税率、食品消费税两年减免、企业捐款问题设论坛并在高市总裁任期结束（2027 年 9 月）前得出结论、修宪起草机构、国家情报局、专任外国人政策大臣等。维新最初不派阁僚（阁外合作），联合政权仅有 231/465 席——差 2 席才过半数。高市以 237 票当选首相。<span class="src-note">（欧洲议会简报，2025-10；路透，2025-10-20）</span></p>
+
+        <h3 class="sub">转折点：2026 年 2 月 8 日大选</h3>
+        <p>1 月 19 日，高市宣布在通常国会开幕日（1 月 23 日）解散众议院——1992 年以来首次开幕日解散，解散到投票仅 16 天，为战后最短。她称选民需要评判不在 2024 年自民党竞选纲领内的新联合与新政策，并承诺若联合失去多数将辞职。朝日新闻社论（1 月 12 日）提前谴责此举「把自民党的利益置于国民日常生活之上」，并将推迟 2026 年度预算。</p>
+        <p>结果：<strong>自民党 316 席</strong>（选前 198 席），战后首个单一政党单独三分之二；维新 36 席，联合合计 <strong>352 席</strong>。由立宪民主党与公明党众议员于 1 月 15 日仓促合并组成的「中道改革联合」从 167 席崩至 <strong>49 席</strong>，为战后主要在野党最差成绩（共同社），并在 9 月即宣布解散。高市 2 月 18 日以众议院 354 票再次当选首相；参议院仍为少数，她经决选以 125–65 胜出。<span class="src-note">（朝日新闻；共同社，2026-02）</span></p>
+
+        <div class="versus">
+          <div class="box pro">
+            <h4>贡献</h4>
+            <ul>
+              <li><strong>权力重构完成：</strong>少数派政权 → 战后首个单一政党三分之二多数，在野党弱于数十年任何时点。</li>
+              <li><strong>汽油暂定税率废除：</strong>实行 51 年的每升 ¥25.1 暂定税率于 2025 年 12 月 31 日废止（11 月 28 日参议院全会一致通过）；柴油暂定税率 2026 年 4 月 1 日废止。</li>
+              <li><strong>「收入之壁」：</strong>免税门槛提至 ¥160 万（2025 年），经国民民主党合作，最低课税线达 <strong>¥178 万</strong>（约 ¥0.66 万亿减税）。</li>
+              <li><strong>皇室典范修订</strong>（2026 年 10 月下旬施行）：允许旧宫家男系后代养子入籍、女性皇族婚后保留身份——但不含继承权。</li>
+              <li><strong>国家情报局/会议</strong>于 2026 年 7 月底设立；国旗损毁罪入法。维新方面评价高中免费、校餐、防卫装备移转放宽等「已推进或有结论」。</li>
+              <li>创纪录的 2026 年度初始预算（¥122.3 万亿）于 4 月 7 日成立。</li>
+            </ul>
+          </div>
+          <div class="box con">
+            <h4>不足</h4>
+            <ul>
+              <li><strong>政治资金改革被推迟：</strong>公明党正因此离去，联合协议却只设「论坛」；2026 年 6 月自维法案仅设专家会议、2027 年 9 月才出结论。朝日社论（2025-10-22）：「对企业捐款毫无行动……是把期限礼貌地推后两年。」高市称黑金问题「已了结」，重新公认曾被取消公认的候选人。</li>
+              <li><strong>参议院仍是少数：</strong>自民 101 + 维新 19，重要法案仍需在野党票数或众议院三分之二再表决——食品税法案即卡在此处。</li>
+              <li><strong>预算审议被压缩：</strong>2026 年度预算 4 月 7 日才成立，为 11 年来首次越过 4 月 1 日，需 ¥8.56 万亿临时预算过渡；朝日报道审议被压缩至约 115 小时。</li>
+              <li><strong>议席削减缩水未决：</strong>承诺的削减 45 席（10%）僵持后，10 月 28–29 日与国民民主党折中为削减 <strong>31 席</strong>，法案瞄准 12 月 12 日闭幕的临时国会——维新曾以此威胁退出联合，是联合最明显的裂痕。</li>
+              <li><strong>修宪无进展：</strong>高市 4 月 12 日在自民党大会上自设期限（下届大会前），11 月初共同社报道国会宪法审查会「无值得注意的进展」。<span class="flag info">单一来源转引</span></li>
+              <li><strong>维新自评：</strong>对 12 项联合协议的自民党交付率仅约 <strong>56–57%</strong>。<span class="flag info">政治简报转述</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub">人事与风格：梁田农相辞职事件</h3>
+        <p>高市本人无派阀，麻生支持是其上台关键。East Asia Forum（2026-11-10）解读 9 月 17 日改组为围绕她本人重组权力：留任外相茂木敏充与防卫相小泉进次郎（把竞争者留在内阁）、给维新首个阁僚职位（中司宏·规制改革相），但也任命了曾受黑金处分的大臣——农相梁田（Kazuo Yana）。梁田 2026 年 5 月曾称「大幅削减」了未支持其连任的市町村的道路预算，后续又爆出选举法与政治资金问题。高市 10 月 8 日拒绝罢免、13 日转向、<strong>14 日接受其辞职</strong>——任命后不到一个月，成为本届政府首位丑闻辞职阁僚。时事社称之为「事实上的罢免」「严重打击」；共同社民调显示 57.7% 认为换人「太晚」、81.5% 认为辞职理所当然。但日经民调中 48% 认为其应对有问题、43% 认为没有——日经/产经/JNN 系列的内阁支持率并未因此下跌。</p>
+        <blockquote>「她打算事事亲自决定」，政府内部沟通堵塞；改组人事由她独自根据议员问卷决定；与执政党干部和省厅会面稀少；国会出席「远低于历届内阁」且频繁答非所问。党内不满在累积，但议员们保持沉默，因为她「恢复了党的运势」。
+          <span class="who">—— 每日新闻社论《执政一年，高市独断风格正在扩大日本的分裂》，2026-10-21</span>
+        </blockquote>
+        <p>朝日新闻一周年社论警告：拒绝听取不同意见，有滑向「无人能制衡」的独断之虞。读卖新闻报道党内已出现支持其连任的声音（同时非主流派保持警惕）；产经刊载麻生评价：「日本无疑变得明亮了。」<span class="flag info">朝日/读卖/产经部分为日媒综述转引</span></p>
+      </section>
+
+      <!-- ================= 经济 ================= -->
+      <section id="economy">
+        <h2>二、经济：「负责任的积极财政」与市场的反击</h2>
+        <p class="lede">「Sanaenomics（サナエノミクス）」= 責任ある積極財政：结束「过度紧缩」，以危机管理与成长投资优先，财政纪律以<strong>债务/GDP 比率下降</strong>而非单年度基础财政收支顺差为锚。2026 年 7 月 21 日内阁通过的「骨太方针 2026」将其成文化：多年期基础收支管理 + 债务/GDP 稳定下降，并承诺不再以预设年末补充预算来编预算——尽管 6 月的中东补充预算已在实践中开了例外。</p>
+
+        <table class="dtable">
+          <thead><tr><th>指标</th><th>数据</th><th>出处 / 日期</th></tr></thead>
+          <tbody>
+            <tr><td>2025 年度补充预算</td><td class="num">一般会计 ¥17.7 万亿（总额 ¥18.3 万亿）</td><td>首相官邸；总额为共同社报道数字<span class="flag warn">口径注记</span></td></tr>
+            <tr><td>2026 年度初始预算</td><td class="num">¥122.3 万亿（连续第二年纪录）</td><td>财务省，2026-04-07；税收预计创纪录约 ¥83.7 万亿，新发国债 ¥29.58 万亿</td></tr>
+            <tr><td>2026 年度中东补充预算</td><td class="num">¥3.11 万亿</td><td>路透，2026-06-02（能源价格补贴为主）</td></tr>
+            <tr><td>春斗 2026（最终集计）</td><td class="num">+5.01%</td><td>联合（Rengo）最终集计；连续第三年超 5%，为 1989–91 年以来最强；初期集计曾报约 5.2%<span class="flag info">集计時点差</span></td></tr>
+            <tr><td>实际工资</td><td class="num">7 月同比 +2.4%（连续 7 个月正增长）</td><td>厚生劳动省；但实际家庭支出连续 8 个月下降（7 月 −3.6%）</td></tr>
+            <tr><td>GDP（内阁府）</td><td class="num">Q4'25 +0.3% · Q1'26 +0.5% · Q2'26 年率 +1.4% · Q3'26 <span class="neg">年率 −0.1%</span></td><td>内阁府，2026-11-16 发布 Q3：四季以来首次收缩，个人消费连续两季下降</td></tr>
+            <tr><td>日本银行政策利率</td><td class="num">0.75%（25 年 12 月）→ 1.00%（26 年 6 月）→ 1.25%（9 月）</td><td>9 月加息 7 比 2 通过，高市任命的两名审议委员均反对；路透调查（11-18）：86% 经济学家预期 12 月升至 1.50%</td></tr>
+            <tr><td>日经 225</td><td class="num">收盘纪录 72,366（2026-06-25）</td><td>「高市交易」+ 全球 AI 热；上半年 +35%；11 月因 AI 估值疑虑跌约 7%</td></tr>
+            <tr><td>政府总债务</td><td class="num">约 230–240% / GDP（G7 最高）</td><td>苏黎世保险集团 2026-10 分析：债务危机可能性低，但按市场利率再融资是 5–10 年的真实脆弱点</td></tr>
+          </tbody>
+        </table>
+
+        <div class="versus">
+          <div class="box pro">
+            <h4>贡献</h4>
+            <ul>
+              <li><strong>生活成本措施落地快：</strong>汽油税废止（约 ¥1.0–1.5 万亿减税，官邸称每户年省约 ¥12,000）；2026 年 3 月中东战争推高油价（零售汽油创纪录 ¥190.8/升）后，3 月 19 日起恢复补贴把价格压在 ¥170 附近，补贴峰值达每升 ¥52.4。</li>
+              <li><strong>电费燃气费补贴</strong>多轮实施（2026 年 1–3 月、7–9 月，另已决定 12 月–2027 年 2 月冬季动用 ¥6,518 亿储备）。<span class="flag info">单一来源</span></li>
+              <li><strong>工资三十年最强：</strong>春斗 5.01%，基本工资 +3.5%；实际工资 2026 年转正。</li>
+              <li><strong>成长战略：</strong>2026 年 6 月 24 日发布——2040 年度前 17 个战略领域官民投资逾 <strong>¥370 万亿</strong>，AI+半导体合计 ¥101.6 万亿（半导体 ¥68 万亿），另含物理 AI、自动驾驶、次世代无线、量子、生物、造船、宇宙、防卫、能源、内容。</li>
+              <li><strong>对加息保持克制：</strong>曾批评紧缩的高市公开表示货币政策「交给日本银行」，未批评三次加息。</li>
+              <li><strong>企业界评价不低：</strong>路透 224 家企业调查（8 月下旬–9 月初）：<strong>68% 正面评价</strong>其经济政策——最强的亲高市企业界数据点。</li>
+            </ul>
+          </div>
+          <div class="box con">
+            <h4>不足</h4>
+            <ul>
+              <li><strong>旗舰承诺未兑现：</strong>食品消费税——竞选承诺 <strong>0%</strong>，内阁最终定为 2027 年 4 月起两年 <strong>1%</strong>（年约 ¥4–5 万亿，约 GDP 的 0.8%），且<strong>未指明财源</strong>。法案 10 月 9 日内阁通过、11 月 6 日众议院通过，截至 11 月 19 日仍在参议院审议、<strong>尚未成立</strong>。</li>
+              <li><strong>日元失守：</strong>加息之下仍跌至约 ¥164（40 年低点）；干预约 ¥20 万亿（含春季创纪录 ¥11.73 万亿与 7 月 31 日美日联合干预约 ¥8.5 万亿），11 月仍在 ¥158–160。高市 10 月 19 日「断然否认」日元贬值归咎于己。</li>
+              <li><strong>国债收益率飙升：</strong>10 年期 9 月 1 日达 3.0%（约 30 年高点），30 年期 10 月 5 日创 4.235% 纪录。大和证券（10-14）预计 10 年期将在 3% 附近受财政风险与通胀预期主导；植田行长本人亦提及「市场对财政政策的看法」是收益率驱动因素。</li>
+              <li><strong>增长动能熄火：</strong>Q3 2026 GDP 年率 −0.1%，消费连续两季负增长；内阁府 7 月 30 日展望：2026 年度实际增长约 0.9%。</li>
+              <li><strong>解释不足：</strong>日经民调中 76% 认为政府对税改财政影响的说明不充分，64% 担忧消费税所支撑的社会保障财源；路透企业调查中，反对食品税减税者占负面评价者的 68%。</li>
+              <li><strong>成长战略缺结构改革：</strong>East Asia Forum（9-1）批评其为「没有结构性改革承诺的产业政策」，且政府自身预测显示若生产率停滞，2030 年代中期债务/GDP 将掉头上升。</li>
+            </ul>
+          </div>
+        </div>
+        <blockquote>财政政策「勉强及格」，货币政策「80 分」——肯定汽油税废止、收入之壁修正与债务/GDP 框架，但指出 2027 年度预算才是新框架的第一次真正考验。
+          <span class="who">—— 《Newsweek 日本版》一周年经济评分，2026-10-27</span>
+        </blockquote>
+        <blockquote>收益率升至约 3% 反映的是名义增长预期超过 3% 与政策正常化，并给出「六项证据」反驳财政不安论。
+          <span class="who">—— 反方观点：法国农业信贷银行 Takuji Aida，2026-10-29；渣打银行则称之为债市逼出的「政策转向 / 静默投降」，并提及美财长贝森特要求果断行动的表态（2026-09-17）</span>
+        </blockquote>
+      </section>
+
+      <!-- ================= 外交 ================= -->
+      <section id="diplomacy">
+        <h2>三、外交与安保：对美韩的成功，对华的冻结</h2>
+        <p class="lede">外交是评价分野最大的一章：华盛顿与首尔给出近乎一致的肯定；北京则是一场持续整年、代价可量化的僵局。</p>
+
+        <h3 class="sub">对美：本年最清晰的成功</h3>
+        <p>2025 年 10 月 28 日，特朗普访日，两人宣布同盟「新黄金时代」，签署石破时代达成的关税/投资框架实施文件（美国关税含汽车封顶 <strong>15%</strong>，日本设 <strong>5,500 亿美元</strong>投资框架）及关键矿产/稀土框架。2026 年 3 月 19 日白宫会谈，高市是美国对伊朗动武后首位受接待的 G7 领导人，并顶住压力未承诺向霍尔木兹海峡派舰、未在对华问题上被牵引（FPRI 分析）。战略投资倡议项目分两批公布共 <strong>6 个项目、约 1,090 亿美元</strong>（俄亥俄燃气电厂、得州原油出口设施、佐治亚合成钻石；田纳西/阿拉巴马小型模块化反应堆上限 $400 亿、宾州/得州燃气发电上限 $330 亿）。</p>
+        <p><strong>保留注记：</strong>两国对 5,500 亿的描述仍不同——特朗普称美国可「按自己意愿投资」且 90% 利润归美；东京称之为对日企的贷款、担保与股权支持。一年过去，仅约 20% 有具体项目对应，全部项目仍属「最终决定前」。<span class="flag warn">争议点</span></p>
+
+        <h3 class="sub">对华：台湾发言与一年的冻结</h3>
+        <p>2025 年 10 月 31 日庆州首次习高会气氛良好，双方确认「战略互惠关系」与建设性稳定关系。但 11 月 7 日众议院预算委员会上，高市表示中国对台动武/海上封锁可能构成日本行使有限集体自卫权的<strong>「存立危机事态」</strong>——突破了历届首相刻意保持的模糊。11 月 10 日她拒绝撤回，称答辩是「设想了最坏情况」。</p>
+        <p>北京的反制（据日/英媒体报道）：11 月 14 日发布赴日旅行警告；11 月 19 日重启日本水产品进口禁令；11 月 21 日致信联合国秘书长；2026 年 1 月收紧两用物项出口管制、禁止对日军用出口；至 2 月 24 日约 40 家日企被列入管制清单；5 月大连两名富士电机集团员工被拘（日经）。JETRO 口径报道：中国产钇对日出口（2026 年 1–9 月）骤减 <strong>98%</strong>，镝/铽氧化物出货实际停止。</p>
+        <table class="dtable">
+          <thead><tr><th>对华冻结的可量化代价</th><th>数据</th></tr></thead>
+          <tbody>
+            <tr><td>中国访日游客（1–7 月）</td><td class="num">670 万人（2025）→ <span class="neg">190 万人（2026）</span>；大阪 1–9 月仅为 2025 年的 36.7%</td></tr>
+            <tr><td>在华日企数量</td><td class="num">10,118 家，较 2024 年减约 30%（帝国数据库）</td></tr>
+            <tr><td>潜在 GDP 影响</td><td class="num">北方信托估算：若重演 2012 年式抵制，2026 年 GDP 最多被拉低 <span class="neg">0.4%</span></td></tr>
+            <tr><td>APEC 深圳（11 月 18–19 日）</td><td class="num">欢迎宴会上与习近平握手，但无正式会谈——主要与会国中唯一未获会谈者（共同社）</td></tr>
+          </tbody>
+        </table>
+        <p>部分对冲：京都等地以欧美游客替代了中国需求，弱日元下入境游整体仍强。东京未撤回发言、重申 1972 年立场；高市在秋季政策演说中再称中国为「重要邻国」，同时表示「坚定主张我方立场」<span class="flag info">单一来源</span>。日经一周年评估（11-06）：她「不向北京伸出橄榄枝，依赖美国外交」，而压力在「经济、外交、安保各领域持续」。国内舆论：ANN 10 月民调 55% 希望努力改善对华关系、35% 不希望；日经 10 月民调亦记录要求加强对华对话的声音。</p>
+        <blockquote>除非日方发出近似道歉的信号，会谈「极不可能」。
+          <span class="who">—— Bonnie Glaser（德国马歇尔基金会）对 AFP，2026-11；AFP 的 Tomohiro Osaki 称「一次短暂、不带笑容的握手可能就是她能得到的全部」。保守派（产经）多赞赏其在压力下拒绝撤回、认为发言只是陈述现行法律；自由派（朝日、每日、东京新闻）称之为打破五十年模糊的「不必要的失误」，施加了真实经济代价且无退出策略——每日：「连打破僵局的头绪都还没有找到。」</span>
+        </blockquote>
+
+        <h3 class="sub">对韩与印太：安静的成功</h3>
+        <p>一年内四次李在明—高市会谈：庆州（2025 年 10 月）、李在明访奈良（2026 年 1 月）、高市访李的故乡安东（5 月）、马尼拉（11 月 17 日）——李在明称两国民众相互好感度「处于或接近历史最高」，双方承诺继续「穿梭外交」及经济、能源、安保与美日韩协调。以高市的鹰派声誉，历史问题没有引爆，被广泛计为一项成就——亦得益于李在明的前倾姿态。<span class="src-note">（联合新闻，2026-11-17；Nikkei Asia；Japan Times，2026-11-16）</span>在马尼拉东盟峰会（11 月 16–17 日），她会见菲律宾总统马科斯、泰国总理阿努廷，承诺强化与东盟合作及「自由开放的印太」。</p>
+
+        <h3 class="sub">防卫：2% 达成与其口径</h3>
+        <div class="versus">
+          <div class="box pro">
+            <h4>贡献</h4>
+            <ul>
+              <li>2025 年 10 月 24 日政策演说承诺防卫费 <strong>2026 年 3 月前达 GDP 2%</strong>，比岸田计划提前两年；含 12 月补充预算（安保外交 ¥1.7 万亿）后政府计为 2025 年度达成，总额约 ¥11 万亿。</li>
+              <li>2026 年度防卫省核心预算创纪录 <strong>¥9.04 万亿</strong>；首批「战斧」导弹 2026 年 3 月到货（$23.5 亿对外军售，交付至 2028 年）；反击能力、SHIELD 沿岸防御（¥1,000 亿）、无人/网络/太空扩张；防卫装备移转规则按联合协议放宽。</li>
+              <li>美方声明日本将把 SM-3 Block IIA 授权生产「迅速增至四倍」并共研 AMRAAM。</li>
+            </ul>
+          </div>
+          <div class="box con">
+            <h4>不足 / 注记</h4>
+            <ul>
+              <li><strong>口径警告：</strong>2% 是以 <strong>2022 年度 GDP</strong> 为分母。2026 年度防卫+关联费用 ¥10.6 万亿 = 2022 年度 GDP 的 1.9%，但仅为 <strong>2026 年度 GDP 的约 1.5%</strong>（小泉防卫相，2026-04-17）。</li>
+              <li><strong>下一阶段未定且财源争议中：</strong>安保三文件须于 2026 年底前修订。共同社报道的下一个五年计划框架从财务省的 ¥50 万亿台（年约 ¥11–12 万亿、GDP 的 1.5–1.7%）到政府/执政党圈子流传的 ¥70–80 万亿，另有北约式 3.5% 目标的讨论——截至 11 月 19 日无任何决定。</li>
+              <li>片山财务相 10 月 20 日公开承诺「财政可持续性」与独立判断——防卫增额与财政纪律的张力已公开化。</li>
+              <li>无核三原则见直、核动力潜艇仅见于「讨论」层面的二次报道，无决定。<span class="flag info">未核实为决定</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub">外国人政策：她最受欢迎的国内政策</h3>
+        <p>2026 年 1 月发布《外国人接纳与有序共生综合对策》，由专任大臣小野田纪美负责（9 月改组留任）。2026 年 10 月 1 日起：永住申请须收入高于平均、具备年金缴纳准备与会话级日语；永住申请费拟由 ¥10,000 提至 ¥200,000；归化居住年限由 5 年倍增至 <strong>10 年</strong>；经营管理签证资本金已由 ¥500 万提至 ¥3,000 万（2025 年末）并须雇佣全职日本人/永住者；外国人购地监控收紧。政治效果：2026 年 1 月框架出台后，移民议题在 2 月大选中降温，参政党的势头被卸压；选后调查中约 66.5% 支持收紧外国人购地规则。朝日/大阪大学面板调查中，外国人政策是她评价最好的领域（57%「好」）。张力面：在日外国人创纪录达 <strong>428 万人（占人口 3.4%）</strong>，特定技能劳动者是增长最快群体，商界警告劳动力短缺；她 10 月政策演说以「AX」（AI 转型：2040 年前 ¥10.5 万亿、1,000 万台 AI 机器人）作为人口问题的答案，综合人口战略定于 2026 年底前出台。</p>
+      </section>
+
+      <!-- ================= 支持率 ================= -->
+      <section id="polls">
+        <h2>四、内阁支持率：全年走势</h2>
+        <p class="lede">方法决定读数：时事社（面对面）系统性最低，日经、产经/FNN、JNN 最高。一周年时点，没有任何一家民调出现不支持率超过支持率——这是与岸田、石破（一年内即反转）的最大不同。</p>
+        <div class="chartbox">
+          <h4>各媒体支持率：上台时（2025 年 10 月）→ 一周年（2026 年 10–11 月）</h4>
+          <p class="cap">单位：%。周年值为各媒体 2026 年 10 月下旬至 11 月的最近读数（NHK 为 11 月、JNN 为 10 月 31 日–11 月 1 日，其余为 10 月）。</p>
+          <svg viewBox="0 0 720 340" role="img" aria-label="各媒体内阁支持率斜率图：上台时与一周年对比">
+            <!-- gridlines: x for 40,50,60,70,80 -> plot x from 150 to 620 mapping 30..85 -->
+            <g stroke="var(--line)" stroke-width="1">
+              <line x1="235" y1="18" x2="235" y2="300" />
+              <line x1="321" y1="18" x2="321" y2="300" />
+              <line x1="406" y1="18" x2="406" y2="300" />
+              <line x1="491" y1="18" x2="491" y2="300" />
+              <line x1="577" y1="18" x2="577" y2="300" />
+            </g>
+            <g font-size="11" fill="var(--muted)" text-anchor="middle">
+              <text x="235" y="318">40</text><text x="321" y="318">50</text><text x="406" y="318">60</text><text x="491" y="318">70</text><text x="577" y="318">80</text>
+            </g>
+            <!-- rows: y positions 40,75,110,145,180,215,250,285 ; scale: x = 150 + (v-30)*8.545 -->
+            <!-- Sankei 75.4 -> 62.6 -->
+            <g font-size="13">
+              <text x="140" y="44" text-anchor="end" fill="var(--text)">产经 / FNN</text>
+              <line x1="538" y1="40" x2="429" y2="40" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="538" cy="40" r="5" fill="var(--gold)" /><circle cx="429" cy="40" r="5" fill="var(--ink)" />
+              <text x="550" y="44" fill="var(--muted)">75.4</text><text x="398" y="44" fill="var(--ink)" font-weight="700">62.6</text>
+              <text x="140" y="79" text-anchor="end" fill="var(--text)">日经 / 东京电视台</text>
+              <line x1="526" y1="75" x2="423" y2="75" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="526" cy="75" r="5" fill="var(--gold)" /><circle cx="423" cy="75" r="5" fill="var(--ink)" />
+              <text x="538" y="79" fill="var(--muted)">74</text><text x="392" y="79" fill="var(--ink)" font-weight="700">62</text>
+              <text x="140" y="114" text-anchor="end" fill="var(--text)">读卖</text>
+              <line x1="500" y1="110" x2="381" y2="110" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="500" cy="110" r="5" fill="var(--gold)" /><circle cx="381" cy="110" r="5" fill="var(--ink)" />
+              <text x="512" y="114" fill="var(--muted)">71</text><text x="350" y="114" fill="var(--ink)" font-weight="700">57</text>
+              <text x="140" y="149" text-anchor="end" fill="var(--text)">NHK</text>
+              <line x1="458" y1="145" x2="346" y2="145" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="458" cy="145" r="5" fill="var(--gold)" /><circle cx="346" cy="145" r="5" fill="var(--ink)" />
+              <text x="470" y="149" fill="var(--muted)">66</text><text x="315" y="149" fill="var(--ink)" font-weight="700">53</text>
+              <text x="140" y="184" text-anchor="end" fill="var(--text)">朝日</text>
+              <line x1="475" y1="180" x2="321" y2="180" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="475" cy="180" r="5" fill="var(--gold)" /><circle cx="321" cy="180" r="5" fill="var(--ink)" />
+              <text x="487" y="184" fill="var(--muted)">68</text><text x="290" y="184" fill="var(--ink)" font-weight="700">50</text>
+              <text x="140" y="219" text-anchor="end" fill="var(--text)">共同社</text>
+              <line x1="444" y1="215" x2="313" y2="215" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="444" cy="215" r="5" fill="var(--gold)" /><circle cx="313" cy="215" r="5" fill="var(--ink)" />
+              <text x="456" y="219" fill="var(--muted)">64.4</text><text x="272" y="219" fill="var(--ink)" font-weight="700">49.1</text>
+              <text x="140" y="254" text-anchor="end" fill="var(--text)">每日</text>
+              <line x1="449" y1="250" x2="278" y2="250" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="449" cy="250" r="5" fill="var(--gold)" /><circle cx="278" cy="250" r="5" fill="var(--ink)" />
+              <text x="461" y="254" fill="var(--muted)">65</text><text x="247" y="254" fill="var(--ink)" font-weight="700">45</text>
+              <text x="140" y="289" text-anchor="end" fill="var(--text)">时事（面对面）</text>
+              <line x1="439" y1="285" x2="256" y2="285" stroke="var(--muted)" stroke-width="2" />
+              <circle cx="439" cy="285" r="5" fill="var(--gold)" /><circle cx="256" cy="285" r="5" fill="var(--ink)" />
+              <text x="451" y="289" fill="var(--muted)">63.8</text><text x="215" y="289" fill="var(--ink)" font-weight="700">42.4</text>
+            </g>
+          </svg>
+          <div class="legend"><span class="l1">上台时（2025 年 10 月）</span><span class="l2">一周年（2026 年 10–11 月）</span></div>
+        </div>
+        <p>年内轨迹：6 月开始下滑（NHK/时事 6 月 60%/54.3%），每日 7 月触及 41% 低点，8 月共同社/时事出现首批低于 50 的读数，时事 9 月 44.1%（连续第四个月下跌、当时纪录低点）；10 月中旬多家探底（共同社 49.1% 首次破 50、NHK 51%、ANN 47.1% 跌 11.2 点、时事 42.4% 五连跌）；10 月下旬至 11 月部分回稳（日经 62% 持平、产经/FNN 62.6%、JNN 64.9%、NHK 11 月回升至 53%）。</p>
+        <p><strong>支持的性质是个人而非政党：</strong>每日新闻总编辑古本（2026-10-24）指出，每日 9 月民调中自民党支持率仅约 26%、内阁支持率约 45%，支持者中 43% 看重「领导力期待」、仅 18% 看重「政策」。Japan Times（11-05）同论：支持在高物价、对华冻结与税改未兑现之下依然存续。NHK 11 月调查中，支持理由以「比其他内阁好」33%、「执行力」28% 居前，「政策期待」仅 16%。朝日/大阪大学面板调查（11-02 报道）：对高市个人的好感度一年内由 55% 降至 40%；六个政策领域中政治资金评价最差（56%「差」）、外国人政策最好（57%「好」）、整体政策 45%「差」对 26%「好」。经济记者矶山友幸（President Online，11-17）称之为「高市泡沫」——是期待而非成果——但也承认 NHK 53% 相比岸田、石破具有历史性的耐久度。</p>
+      </section>
+
+      <!-- ================= 媒体分野 ================= -->
+      <section id="media">
+        <h2>五、媒体分野：四种评价</h2>
+        <table class="mtable">
+          <tbody>
+            <tr><th>保守派<br />产经 · 读卖</th><td>总体支持。产经/FNN 民调最高（62.6%）；麻生在产经称「日本无疑变得明亮了」。读卖报道党内支持连任动向。强调决断力、防卫、对北京不低头。批评时集中于财政财源与被稀释的议席削减。</td></tr>
+            <tr><th>自由派<br />朝日 · 每日 · 东京</th><td>朝日（2025-10）：维新协议是以推迟金钱政治改革换权力；朝日（2026-10）：一人统治风险、无内部刹车。每日社论（2026-10-21）：「独断风格扩大分裂」——沟通不良、轻视国会、无财源的派钱、3% 收益率、对华僵局。东京新闻质疑「强国」承诺与预算优先级。三家共同强调：无财源的食品税减税与防卫增额同时推进。</td></tr>
+            <tr><th>财经界<br />日经等</th><td>日经民调最有利（62%），并强调全年 50% 以上支持的历史性耐久；但日经报道同时是市场/财政警告的主要来源（76% 认为税改说明不足；要求对华对话），也是对华冻结损失清单的来源。路透企业调查 68% 正面评价经济政策，食品税减税是主要反对点。</td></tr>
+            <tr><th>英文国际媒体<br />路透 · AP · 彭博 · FT · Japan Times 等</th><td>总体判断：耐久且具后果的第一年；肯定对特朗普的经营、对韩穿梭外交与选举支配力；怀疑集中于三点——(i) 财政信誉（「债券义勇军」、40 年低点的日元）；(ii) 对华冻结是无下台阶的自伤；(iii) 交付风险（旗舰税改仍未成法、成长战略目标多而结构改革少）。Japan Times（11-05）：她「违抗政治引力」——支持靠的是个人形象与在野党的缺席，而非成果。AFP（10-21）：「疏远了中国、以扩张性支出扰动市场、工作狂式的领导人」。</td></tr>
+          </tbody>
+        </table>
+        <p class="src-note">舆论氛围（次级参考，非事实依据）：社交媒体上围绕 JNN 64.9% 读数的传播与「高市泡沫」评论显示，其个人品牌在线上同时跑赢政党支持率与政策支持率。</p>
+
+        <h3 class="sub">共识与争议</h3>
+        <div class="twocol">
+          <div class="card">
+            <h4>跨光谱共识</h4>
+            <ul>
+              <li>政治上是「转型之年」：少数派 → 战后首个单一政党三分之二多数；在野党数十年来最弱。</li>
+              <li>支持属个人性、期待型，耐久异常但在侵蚀——较上台高点回落约 10–25 点（视媒体/方法），最陡的下跌出现在临时国会保守立法与梁田事件之后。</li>
+              <li>对美、对韩是真成就；对华冻结是真失败——无论对发言本身持何立场。</li>
+              <li>物价在体感层面未被击败：工资三十年最佳，消费却在下降，旗舰税改仍未成法。</li>
+              <li>约束她的已不是国会而是市场：3% 长期利率、40 年低点日元、在其任命委员反对下仍加息的央行，迫使 9 月后财政语言明显收敛。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4>仍在争议</h4>
+            <ul>
+              <li><strong>财政：</strong>增长派（Aida、武者研究所、路透企业调查）看名义增长下债务/GDP 下降；批评派（朝日、每日、大和、渣打）看无财源的年 ¥4–5 万亿减税 + 防卫增额 + ¥370 万亿投资野心对 230%+ 债务/GDP。2027 年度预算是未决的考验。</li>
+              <li><strong>台湾发言：</strong>原则性的法律澄清与威慑（保守派；她未撤回、基本盘奖励之）vs 打破五十年模糊的非受迫性失误（自由派/国际媒体）。</li>
+              <li><strong>执政风格：</strong>终结石破式漂移的「决断力」（保守/财经）vs 损害国会审查、内阁沟通与用人判断（梁田）的「独断」（自由派）。</li>
+              <li><strong>防卫口径：</strong>「提前两年达成 2%」（政府）vs「以讨巧的 2022 年 GDP 为分母、实际约 1.5%，下一目标在 ¥50 万亿与 ¥80 万亿五年框架间未定」（媒体检视）。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 时间线 ================= -->
+      <section id="timeline">
+        <h2>六、关键时间线</h2>
+        <ol class="timeline">
+          <li><span class="date">2025-10-04</span><span class="ev">高市当选自民党总裁；10 月 10 日公明党退出 26 年联合。</span></li>
+          <li><span class="date">2025-10-20</span><span class="ev">自民—维新签署 12 项联合协议；<b>10 月 21 日高市就任首相</b>（第 104 代、日本首位女性），少数派联合 231/465 席。</span></li>
+          <li><span class="date">2025-10-24</span><span class="ev">首次政策演说：防卫费 2026 年 3 月前达 GDP 2%、废除汽油暂定税率、收入门槛 ¥160 万。</span></li>
+          <li><span class="date">2025-10-28</span><span class="ev">特朗普访日：同盟「新黄金时代」、5,500 亿美元框架实施文件与关键矿产框架；横须贺航母演说。</span></li>
+          <li><span class="date">2025-10-31</span><span class="ev">庆州 APEC：首次习高会确认建设性稳定关系；同场首次李高会。</span></li>
+          <li><span class="date">2025-11-07</span><span class="ev"><b>国会答辩称台湾有事可构成「存立危机事态」</b>；11 月 10 日拒绝撤回。11 月 14 日中国发赴日警告、19 日重启水产禁令。</span></li>
+          <li><span class="date">2025-12-16</span><span class="ev">2025 年度补充预算成立；12 月日银加息至 0.75%；<b>12 月 31 日汽油暂定税率废止</b>（1974 年以来）。</span></li>
+          <li><span class="date">2026-01</span><span class="ev">中国收紧两用物项管制；外国人「有序共生」框架出台；李在明访奈良。1 月 15 日中道改革联合成立；19 日宣布解散；23 日众议院解散。</span></li>
+          <li><span class="date">2026-02-08</span><span class="ev"><b>大选：自民 316 席、维新 36 席、联合 352 席；中道改革联合仅 49 席。</b>2 月 18 日高市再任首相；首批 5,500 亿项目公布（$360 亿）。</span></li>
+          <li><span class="date">2026-03</span><span class="ev">中东战争推高能源价格，3 月 19 日恢复燃油补贴；首批「战斧」到货；<b>3 月 19 日白宫会谈</b>，第二批项目公布，合计约 $1,090 亿 / 6 个项目。</span></li>
+          <li><span class="date">2026-04</span><span class="ev">4 月 1 日柴油暂定税率废止；<b>4 月 7 日 ¥122.3 万亿 2026 年度预算成立</b>；4 月 12 日自设修宪期限。4 月 30 日–5 月 27 日创纪录 ¥11.73 万亿日元干预。</span></li>
+          <li><span class="date">2026-05</span><span class="ev">高市访韩国安东；两名富士电机员工在大连被拘（日经报道）。</span></li>
+          <li><span class="date">2026-06</span><span class="ev">中东补充预算 ¥3.11 万亿成立；<b>6 月 16 日日银加息至 1.00%</b>；6 月 24 日成长战略（2040 年 ¥370 万亿）；<b>6 月 25 日日经创收盘纪录 72,366</b>。</span></li>
+          <li><span class="date">2026-07</span><span class="ev">7 月 21 日「骨太方针 2026」（债务/GDP 锚）；7 月底国家情报局设立；7 月 30 日内阁府展望（2026 年度 +0.9%）；<b>7 月 31 日 2011 年以来首次美日联合外汇干预</b>，此前日元曾跌至约 ¥164。</span></li>
+          <li><span class="date">2026-08</span><span class="ev">内阁定食品消费税为 2027 年 4 月起 1%（两年）；共同社/时事民调触及 50 以下与纪录低点。</span></li>
+          <li><span class="date">2026-09</span><span class="ev"><b>9 月 1 日 10 年期国债收益率达 3.0%</b>；9 月 9–11 日中道改革联合解散；9 月 17 日内阁改组；<b>9 月 18 日日银加息至 1.25%</b>，高市任命委员反对。</span></li>
+          <li><span class="date">2026-10</span><span class="ev">10 月 1 日永住收紧生效；10 月 5 日临时国会开幕、30 年期国债创 4.235% 纪录；10 月 9 日食品税法案内阁通过；<b>10 月 14 日农相梁田辞职</b>；10 月 28–29 日议席削减 31 席折中达成。</span></li>
+          <li><span class="date">2026-11</span><span class="ev">11 月 6 日食品税法案众议院通过（参议院审议中）；11 月 16 日 Q3 GDP 年率 −0.1%；11 月 17 日马尼拉第四次李高会；<b>11 月 18–19 日 APEC 深圳：与习近平宴会握手，无正式会谈</b>；路透调查：86% 预期日银 12 月加息至 1.50%。</span></li>
+        </ol>
+      </section>
+
+      <!-- ================= 未核实 ================= -->
+      <section id="open">
+        <h2>七、未能核实与开放问题</h2>
+        <ul>
+          <li><strong>2027 年度预算草案约 ¥143 万亿</strong>：仅见于一周年综述类二次来源，未从财务省核实，本页未采用为定论。</li>
+          <li><strong>2025 年度补充预算总额 ¥18.3 万亿</strong>：首相官邸口径为一般会计 ¥17.7 万亿；¥18.3 万亿为共同社报道并被英文媒体广泛转引，本次未在共同社/日文一手页面直接读取，已在文中标注。</li>
+          <li><strong>春斗 5.01% 与 5.2% 之差</strong>：为联合最终集计与初期集计的时点差，非矛盾，文中已注明。</li>
+          <li><strong>无核三原则/核潜艇</strong>：仅为年底安保文件修订的「讨论」层面二次报道，无决定。</li>
+          <li><strong>修宪「无进展」</strong>：据共同社报道经二次政治站点转引，原文未直接开启核对。</li>
+          <li>部分 Nikkei Asia 一周年文章付费墙后内容以其标题、摘要及日经日文版等交叉报道为准，未读全文。</li>
+          <li>北京方面的立场表述均按共同社/日经/AFP 的转述呈现——依语料规则未使用中文来源。</li>
+        </ul>
+      </section>
+
+      <!-- ================= 来源 ================= -->
+      <section id="sources">
+        <h2>主要来源（日文 / 英文）</h2>
+        <ul class="sources">
+          <li>每日新闻社论《1 yr into office, PM Takaichi's go-it-alone style is widening Japan's divisions》，2026-10-21 — <a href="https://mainichi.jp/english/articles/20261021/p2a/00m/0op/015000c">mainichi.jp</a></li>
+          <li>Nikkei Asia《Takaichi cabinet maintains 62% approval rating despite minister controversy》，2026-10-26 — <a href="https://asia.nikkei.com/politics/takaichi-cabinet-maintains-62-approval-rating-despite-minister-controversy">asia.nikkei.com</a>；日经日文版民调，2026-10-26 — <a href="https://www.nikkei.com/article/DGXZQOUA2517L0V21C26A0000000/">nikkei.com</a></li>
+          <li>Nikkei Asia《China-Japan row over Takaichi's Taiwan comment enters 2nd year》，2026-11-06 — <a href="https://asia.nikkei.com/politics/international-relations/japan-china-tensions/china-japan-row-over-takaichi-s-taiwan-comment-enters-2nd-year">asia.nikkei.com</a></li>
+          <li>Nikkei Asia《Japan's Q3 GDP drops an annualized 0.1%》，2026-11-16 — <a href="https://asia.nikkei.com/economy/japan-s-q3-gdp-drops-an-annualized-0.1-below-market-expectations">asia.nikkei.com</a></li>
+          <li>朝日新闻：社论（企业捐款）<a href="https://cdn-ssl.asahi.com/ajw/articles/16107437">ajw/articles/16107437</a>；解散报道 <a href="https://cdn-ssl.asahi.com/ajw/articles/16293793">ajw/articles/16293793</a>；预算报道 <a href="https://www.asahi.com/ajw/articles/16483290">asahi.com/ajw/articles/16483290</a></li>
+          <li>Japan Times：支持率与梁田辞职（2026-10-20）<a href="https://www.japantimes.co.jp/news/2026/10/20/japan/politics/cabinet-support-rates-yana-resign/">japantimes.co.jp</a>；《What keeps Takaichi defying political gravity?》（2026-11-05）<a href="https://www.japantimes.co.jp/news/2026/11/05/japan/politics/takaichi-popularity/">japantimes.co.jp</a>；片山财政审慎表态（2026-10-20）<a href="https://www.japantimes.co.jp/business/2026/10/20/economy/japan-katayama-defense-spending/">japantimes.co.jp</a></li>
+          <li>nippon.com（时事社）民调分析，2026 年 9–10 月 — <a href="https://www.nippon.com/en/articles/-/54942">nippon.com/-/54942</a>、<a href="https://www.nippon.com/en/articles/-/54939">nippon.com/-/54939</a>；每日新闻民调，2026-10-26 — <a href="https://mainichi.jp/english/articles/20261026/p2a/00m/0na/018000c">mainichi.jp</a></li>
+          <li>共同社《Takaichi, Xi shake hands at APEC summit amid frosty Japan-China ties》，2026-11-18 — <a href="https://english.kyodonews.net/articles/-/91833">english.kyodonews.net</a>；时事社《Embattled Japan Farm Minister Quits in Effective Dismissal》，2026-10-14 — <a href="https://jen.jiji.com/jc/eng?g=eco&k=2026101401223">jen.jiji.com</a></li>
+          <li>路透《Japan's govt finalises $19 billion extra budget…》，2026-06-02 — <a href="https://www.reuters.com/world/asia-pacific/japans-govt-finalises-19-billion-extra-budget-subsidise-surging-fuel-costs-2026-06-02/">reuters.com</a>；路透日银调查（经 InvestingLive），2026-11-18 — <a href="https://investinglive.com/central-banks/boj-tipped-to-hike-to-1-50-in-december-its-first-three-hike-year-in-37-years/">investinglive.com</a></li>
+          <li>财务省《Introducing the FY2026 Budget》，2026-04-07 — <a href="https://mof-gov.note.jp/n/n5e30ba514a73?hl=en">mof-gov.note.jp</a>；首相官邸记者会，2025-11-21 — <a href="https://japan.kantei.go.jp/104/statement/202511/21kaiken.html">japan.kantei.go.jp</a></li>
+          <li>美国国会研究处《U.S.-Japan Relations》，2026-03-26 — <a href="https://www.EveryCRSReport.com/files/2026-03-26_IF10199_8692a53a14a380fd1a099871844e4006c9a3be8b.html">EveryCRSReport.com</a>；RUSI《The Trump–Takaichi Summit and Japan's Emerging Economic Statecraft》— <a href="https://www.rusi.org/explore-our-research/publications/commentary/trump-takaichi-summit-and-japans-emerging-economic-statecraft">rusi.org</a>；FPRI，2026-03 — <a href="https://www.fpri.org/article/2026/03/fpri-experts-react-the-cost-of-a-win-win-for-us-japan-relations/">fpri.org</a></li>
+          <li>联合新闻李高马尼拉会谈，2026-11-17 — <a href="https://en.yna.co.kr/view/AEN20261117010051315?section=national/diplomacy">en.yna.co.kr</a>；Nikkei Asia 日韩关系，2026-11-17 — <a href="https://asia.nikkei.com/politics/international-relations/japan-and-south-korea-sustain-thaw-ahead-of-key-apec-gathering">asia.nikkei.com</a></li>
+          <li>每日新闻（共同社）：防卫预算 2026-04-17 <a href="https://mainichi.jp/english/articles/20260417/p2g/00m/0na/032000c">mainichi.jp</a>；成长战略 2026-06-24 <a href="https://mainichi.jp/english/articles/20260624/p2g/00m/0na/051000c">mainichi.jp</a>；读卖 Japan News 成长战略，2026-06-25 — <a href="https://japannews.yomiuri.co.jp/politics/politics-government/20260625-334745/">japannews.yomiuri.co.jp</a></li>
+          <li>大和证券 JGB 展望，2026-10-14 — <a href="https://uk.daiwacm.com/media/297411/14oct26dv.pdf">daiwacm.com</a>；苏黎世《Sayonara zero》，2026-10 — <a href="https://www.zurich.com/-/media-assets/project/zurich/dotcom/economics-and-markets/docs/2026/topical-thoughts/topical-thoughts-sayonara-zero.pdf">zurich.com</a>；渣打《Japan bond yields force Takaichi's policy shift》，2026-09-17 — <a href="https://www.sc.com/sg/wealth-insights/bond-vigilantes-strike-in-japan/">sc.com</a></li>
+          <li>East Asia Forum：改组分析 2026-11-10 <a href="https://eastasiaforum.org/2026/11/10/takaichis-cabinet-reshuffle-strengthens-the-ldps-political-hand/">eastasiaforum.org</a>；成长战略批评 2026-09-01 <a href="https://eastasiaforum.org/2026/09/01/takaichis-growth-strategy-needs-an-outward-turn/">eastasiaforum.org</a>；ISPI 对华与保守议程分析，2026-11 — <a href="https://www.ispionline.it/en/publication/between-a-rock-and-a-hard-place-takaichi-tries-to-mend-fences-with-beijing-251410">ispionline.it</a></li>
+          <li>欧洲议会简报，2025-10 — <a href="https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/777965/EPRS_BRI(2025)777965_EN.pdf">europarl.europa.eu</a>；《Newsweek 日本版》一周年评估（经 Yahoo News Japan），2026-10-27 — <a href="https://news.yahoo.co.jp/articles/94c38343a96cbc74f6cee8691e49b2ab543e7ab4">news.yahoo.co.jp</a></li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>本页基于 2026 年 11 月 19 日的深度调研整理：语料仅限日文与英文权威媒体及官方资料，未使用中文语料；所有数字均附出处与日期，报告附带的保留与口径注记（补充预算口径、防卫费 2% 的 2022 年度 GDP 分母、春斗集计時点差等）已随文保留，未能核实事项单列于第七章。评估截止日之后的发展（食品消费税法案参议院审议、12 月日银会议、安保三文件修订）不在本页范围内。</p>
+        <p>撰文：Catherine Muse ｜ 监修：Qidi ｜ 2026 年 11 月 19 日</p>
+      </footer>
+    </div>
+  </body>
+</html>
