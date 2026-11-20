@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Muse vs Grok Bot vs Gemini Tasks 对比 — 三个 Agent 怎么分工</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="2026年11月最新版对比：Muse 免费版、Grok Bot Premium $30、Gemini Tasks（Google AI Pro $19.99）的模型、Agent 架构、独占强项与分工手册。">
+<meta property="og:title" content="Muse vs Grok Bot vs Gemini Tasks 对比 — 三个 Agent 怎么分工">
+<meta property="og:description" content="2026年11月最新版对比：Muse 免费版、Grok Bot Premium $30、Gemini Tasks（Google AI Pro $19.99）的模型、Agent 架构、独占强项与分工手册。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://share.qidi.jp/muse-grok-gemini/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf8; --surface:#ffffff; --surface2:#f3f2ee; --ink:#191c1f; --ink2:#4b5563; --ink3:#6b7280;
+  --line:#e5e2da; --line2:#d8d4c9;
+  --muse:#0f766e; --muse-bg:#e6f4f1; --grok:#1f2937; --grok-bg:#eceff3; --gem:#1d4ed8; --gem-bg:#e8eefc;
+  --warn:#b45309; --warn-bg:#fdf3e3; --good:#15803d; --bad:#b91c1c;
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#121315; --surface:#1b1d20; --surface2:#24262b; --ink:#f2f1ed; --ink2:#c3c7cd; --ink3:#9aa0a8; --line:#2e3036; --line2:#3a3d44; --muse-bg:#12332e; --grok-bg:#262a33; --gem-bg:#1c2a52; --warn-bg:#3a2c14; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans SC",-apple-system,"PingFang SC","Hiragino Sans",sans-serif;line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:var(--gem);text-decoration-thickness:1px;text-underline-offset:3px}
+button,select{font:inherit;min-height:44px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px 80px}
+.serif{font-family:"Noto Serif SC",serif}
+h1,h2,h3{line-height:1.35;margin:0}
+h2{font-family:"Noto Serif SC",serif;font-size:clamp(24px,4vw,32px);font-weight:900;margin-bottom:10px}
+h3{font-size:18px;font-weight:900}
+p{margin:8px 0}
+.small{font-size:13.5px;color:var(--ink2)}
+.muted{color:var(--ink2)}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:999px;border:1px solid var(--line2);background:var(--surface)}
+.dot{width:9px;height:9px;border-radius:50%;flex:none}
+.dot-m{background:var(--muse)} .dot-g{background:var(--grok)} .dot-e{background:var(--gem)}
+/* hero */
+.hero{padding:44px 0 8px}
+.hero h1{font-family:"Noto Serif SC",serif;font-size:clamp(30px,6vw,52px);font-weight:900;line-height:1.2;letter-spacing:-.01em}
+.hero .lead{font-size:clamp(16px,2.4vw,19px);color:var(--ink2);max-width:760px;margin-top:14px}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.verdict{margin-top:26px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--ink);border-radius:var(--radius);padding:22px 22px 18px}
+.verdict h2{font-size:22px}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px}
+@media(max-width:760px){.verdict-grid{grid-template-columns:1fr}}
+.vbox{border-radius:10px;padding:14px 16px}
+.vbox p{font-size:14.5px;margin:4px 0 0}
+.vbox .who{font-weight:900;font-size:15px}
+.vm{background:var(--muse-bg)} .vg{background:var(--grok-bg)} .ve{background:var(--gem-bg)}
+section{margin-top:52px}
+.sec-head{border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:18px}
+.sec-head .no{font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--ink3)}
+/* cards */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.cards3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.card .price{font-family:"Noto Serif SC",serif;font-size:30px;font-weight:900}
+.card ul{margin:10px 0 0;padding-left:18px}
+.card li{margin:5px 0;font-size:14.5px}
+.card .philo{font-size:15px;font-weight:700}
+.badge{display:inline-block;font-size:12px;font-weight:900;padding:2px 9px;border-radius:6px;color:#fff}
+.b-m{background:var(--muse)} .b-g{background:var(--grok)} .b-e{background:var(--gem)}
+@media(prefers-color-scheme:dark){.b-g{background:#4b5563}}
+/* tables */
+.tblwrap{overflow:visible}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:14.5px}
+th,td{padding:11px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface2);font-weight:900;font-size:13.5px}
+tr:last-child td{border-bottom:none}
+td .yes{color:var(--good);font-weight:700} td .no{color:var(--bad);font-weight:700} td .mid{color:var(--warn);font-weight:700}
+@media(max-width:760px){
+  table,thead,tbody,tr,td,th{display:block;width:100%}
+  thead{display:none}
+  tr{border-bottom:8px solid var(--bg);padding:6px 0}
+  td{border-bottom:1px dashed var(--line);display:flex;gap:12px;justify-content:space-between}
+  td::before{content:attr(data-l);font-weight:900;font-size:12.5px;color:var(--ink3);flex:none;padding-top:2px;max-width:38%}
+  td:first-child{font-weight:900;background:var(--surface2)}
+  td:first-child::before{content:"维度"}
+}
+/* lists */
+.checklist{list-style:none;padding:0;margin:12px 0}
+.checklist li{padding:10px 14px 10px 40px;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:8px;font-size:15px}
+.checklist li::before{content:"✓";position:absolute;left:14px;top:9px;font-weight:900;color:var(--good)}
+.warnlist li::before{content:"!";color:var(--warn)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.panel h3{margin-bottom:6px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:14.5px;margin-top:10px}
+.kv dt{font-weight:900;color:var(--ink3);font-size:13px;padding-top:2px}
+.kv dd{margin:0}
+.callout{background:var(--warn-bg);border:1px solid var(--line2);border-radius:var(--radius);padding:16px 18px;font-size:14.5px;margin-top:14px}
+.callout b{color:var(--warn)}
+@media(prefers-color-scheme:dark){.callout b{color:#fbbf24}}
+/* router + calc */
+.tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.tool select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line2);background:var(--bg);color:var(--ink)}
+.route-out{margin-top:16px;border-radius:10px;padding:16px 18px;background:var(--surface2);font-size:15px}
+.route-out:empty{display:none}
+.calc-rows{display:grid;gap:10px;margin-top:6px}
+.calc-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.calc-row label{display:flex;align-items:center;gap:10px;font-weight:700;min-height:44px;cursor:pointer;flex:1}
+.calc-row input{width:20px;height:20px;accent-color:var(--ink)}
+.calc-total{font-family:"Noto Serif SC",serif;font-size:26px;font-weight:900;margin-top:14px}
+.prompt-box{background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-top:10px}
+.prompt-box code{font-family:ui-monospace,Menlo,monospace;font-size:13.5px;white-space:pre-wrap;word-break:break-word;display:block;line-height:1.7}
+.copybtn{margin-top:10px;padding:8px 16px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--ink);cursor:pointer;font-weight:700;min-height:40px}
+.copybtn:active{transform:scale(.98)}
+.steps{counter-reset:st;list-style:none;padding:0;margin:14px 0}
+.steps li{counter-increment:st;padding:14px 16px 14px 58px;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;font-size:15px}
+.steps li::before{content:counter(st);position:absolute;left:14px;top:12px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.steps b{display:block}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+nav.toc a{display:inline-flex;align-items:center;min-height:36px;padding:4px 13px;border:1px solid var(--line2);border-radius:999px;background:var(--surface);color:var(--ink);text-decoration:none;font-size:13.5px;font-weight:700}
+footer{margin-top:60px;border-top:1px solid var(--line);padding-top:18px}
+footer li{font-size:13.5px;margin:4px 0;word-break:break-all}
+footer ul{padding-left:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>三个 Agent，不是三选一<br>是分工问题</h1>
+  <p class="lead">Muse（免费版）、Grok Bot（Premium $30/月）、Gemini Tasks（Google AI Pro $19.99/月）——最新版本、模型与功能的完整对比，以及一套按你的电商 + 家庭日常拆任务的方法。你现在的感受很准确：<strong>Muse 基本够用、Grok 总觉得不够用、Gemini Tasks 还没用起来</strong>——这页会解释为什么，并给出解法。</p>
+  <div class="meta-row">
+    <span class="tag">📅 数据快照：2026 年 11 月 20 日核查</span>
+    <span class="tag"><span class="dot dot-m"></span>Muse · Spark 1.3 / Wonder</span>
+    <span class="tag"><span class="dot dot-g"></span>Grok Bot 1.0 · Grok 4.7 家族</span>
+    <span class="tag"><span class="dot dot-e"></span>Gemini Tasks · Gemini 4 Hydrogen / Neon</span>
+  </div>
+  <nav class="toc" aria-label="目录">
+    <a href="#diagnosis">你的现状诊断</a><a href="#matrix">能力矩阵</a><a href="#common">都能做的事</a><a href="#unique">独占强项</a><a href="#split">任务拆分手册</a><a href="#gemini-start">Gemini 上手</a><a href="#grok-save">Grok 省额度</a><a href="#cost">组合成本</a><a href="#caveats">未确认事项</a>
+  </nav>
+
+  <div class="verdict">
+    <h2>先说结论：推荐组合</h2>
+    <p class="muted" style="margin-top:2px">三家是三种完全不同的产品哲学，硬比“谁更强”没有意义。按性价比和互补性：</p>
+    <div class="verdict-grid">
+      <div class="vbox vm"><div class="who">① 主力骨干 — Gemini AI Pro $19.99</div><p>Google 生态原生 + Deep Research + 1M 上下文，是三者里最适合做“研究与文档中枢”的。日本在 Tasks 免费开放的 6 国之内，你的 Pro 主要买的是 4 倍用量、50 条定时任务和 Neon 模型。</p></div>
+      <div class="vbox vg"><div class="who">② 免费常驻 — Muse Free $0</div><p>继续当个人管家用：WhatsApp 随手交代、Instagram / Shopify / Stripe 场景它独一份。额度咬人时再升 Power $20，不要提前付。</p></div>
+      <div class="vbox ve" style="background:var(--grok-bg)"><div class="who">③ 按需保留 — Grok Premium $30</div><p>只有当 X 实时情报、Slack 团队 Bot、Cursor 编程这三样对你营收关键时才值 $30。它“不够用”是结构性的（见下文），不是你用法错了。</p></div>
+    </div>
+    <p class="small" style="margin-top:12px">三家全付费 = $19.99 + $20 + $30 = <strong>$69.99/月</strong>；最互补的付费对子是 Gemini Pro + Grok Premium = <strong>$49.99/月</strong>，Muse 用免费版当第三人。来源：研究报告 §13 综合建议（基于 x.ai、Google、Meta 官方定价页，2026-11-20 核查）。</p>
+  </div>
+</header>
+
+<section id="diagnosis">
+  <div class="sec-head"><div class="no">01 · DIAGNOSIS</div><h2>你的三个感受，分别是什么原因</h2></div>
+  <div class="cards3">
+    <div class="card">
+      <span class="badge b-m">Muse 免费版</span>
+      <h3 style="margin-top:10px">“基本够用” — 合理</h3>
+      <p class="small">免费版给的是<strong>完整 Agent</strong>，不是阉割版聊天：专属云端电脑（Secure VM）、长期记忆、连接器、WhatsApp 入口、审批后代发邮件/下单都包含。有每周用量上限，但<strong>官方从未公布免费版的具体数字</strong>（网传 100M tokens/周来自扎克伯格发布视频，不是帮助页口径）。11 月 6 日起，用 Muse Wonder 训练的专用模型已推给全部用户，免费版也吃到了 Active Memory / Active Focus 的提升。</p>
+      <p class="small"><strong>什么时候会不够：</strong>全天高频跑连接器、大量长任务时。届时可考虑 Power——多家对 Meta 帮助页的转述一致显示为 $20/月、500M tokens/周，但研究时 muse.ai 官网被拦截，未能实时核实（详见第 10 节）。</p>
+    </div>
+    <div class="card">
+      <span class="badge b-g">Grok Bot Premium</span>
+      <h3 style="margin-top:10px">“不够用” — 是计费结构的问题</h3>
+      <p class="small">Premium 的额度是一个<strong>全家共享的每周池子</strong>：Grok 聊天、Imagine 生图、语音、Grok Bot、Cursor 编程<strong>全从同一个池子里扣</strong>，Premium 只是 Plus 的 4 倍。xAI <strong>不公布任何绝对数字</strong>（多少条消息、多少 token 都没有），不同任务扣费速度还不一样，Bot 跑长任务烧得最快——11 月初已有大量用户反馈池子见底，官方未调整倍数。池子耗尽后付费功能暂停到下周重置，或买额外额度。</p>
+      <p class="small"><strong>结论：</strong>你不是不会用，是这个池子本来就不经 Bot + Cursor 一起烧。解法在 <a href="#grok-save">第 7 节</a>。</p>
+    </div>
+    <div class="card">
+      <span class="badge b-e">Gemini Tasks</span>
+      <h3 style="margin-top:10px">“还不会用” — 因为它藏得深</h3>
+      <p class="small">Tasks 不是独立 App，也没有人设，就是 Gemini 输入框上方的一个开关：<strong>Chat ↔ Task</strong>。它原名 Gemini Spark（2026 年 5 月 I/O 发布），10 月改名 Task，很多人没跟上。它跑在 Gemini 4 Hydrogen 上，用 Google Cloud 的隔离虚拟机干活，最多 <strong>15 个任务并行</strong>。2026 年 11 月 17 日起，日本等 6 国已<strong>免费开放</strong> Tasks——你的 Pro 买的是更高用量和更强的定时任务。</p>
+      <p class="small"><strong>结论：</strong>不用学新软件，学的是“把活写成任务 + 设定时”的习惯。上手路径在 <a href="#gemini-start">第 6 节</a>。</p>
+    </div>
+  </div>
+</section>
+
+<section id="profiles">
+  <div class="sec-head"><div class="no">02 · PROFILES</div><h2>三者定位：管家、团队、生态引擎</h2></div>
+  <div class="cards3">
+    <div class="card">
+      <span class="badge b-m">Muse · Meta</span>
+      <p class="philo" style="margin-top:10px">一个管家 + 一台被看守的电脑</p>
+      <div class="price">$0 <span style="font-size:15px;color:var(--ink2)">起 · Power $20 / Maximum $100*</span></div>
+      <p class="small" style="margin-top:2px">* Muse 付费档价格与额度为多家对 Meta 帮助页的一致转述，研究时官网未能实时打开核实。</p>
+      <dl class="kv">
+        <dt>上线</dt><dd>2026 年 9 月 8 日（美国）；日本 10 月 23 日</dd>
+        <dt>模型</dt><dd>免费/默认 Muse Spark 1.3（约 1M 上下文）；Wonder 为订阅/API 层（App 内是否完整上线未确认，见未确认事项）</dd>
+        <dt>电脑</dt><dd>每人一台专属 Secure VM，另有独立的 Sentinel 审查 Agent 把关联网动作</dd>
+        <dt>入口</dt><dd>Muse App（iOS/Android/Mac/Web）、WhatsApp、专属邮箱地址</dd>
+        <dt>覆盖</dt><dd><strong>仅 6 国</strong>：美、加、日、新加坡、墨西哥、澳大利亚</dd>
+      </dl>
+      <ul>
+        <li>连接器约 54 个：Gmail / Google 全家桶、Outlook、Instagram / Facebook / Threads / Messenger、Shopify、Stripe、QuickBooks、Notion、Slack 等</li>
+        <li>购物用 Stripe 的 Link 一次性虚拟卡，带破损/丢件/降价/免邮退货保障（官方称首个受此保障的 Agent）</li>
+        <li>语言：App 支持英文 + 38 种，含日文、简繁中文</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge b-g">Grok Bot · SpaceXAI</span>
+      <p class="philo" style="margin-top:10px">雇一支有名有姓的 AI 团队</p>
+      <div class="price">$30 <span style="font-size:15px;color:var(--ink2)">/月起 · Super $100 / Ultra $200</span></div>
+      <dl class="kv">
+        <dt>上线</dt><dd>Beta 2026 年 8 月 11 日；<strong>1.0 于 2026 年 11 月</strong>（官方帖元数据 11 月 2 日、页面 11 月 11 日）</dd>
+        <dt>模型</dt><dd><strong>Bot 内无模型选择器，Bot 自己挑模型</strong>；家族旗舰 Grok 4.7（9 月 21 日，500K 上下文）</dd>
+        <dt>电脑</dt><dd>每位用户<strong>一台</strong>持久云电脑（浏览器+文件系统+终端），<strong>你所有 Bot 共用它</strong></dd>
+        <dt>入口</dt><dd>桌面/手机 App、Slack、Microsoft Teams、视频会议、X 上 @bot 派活</dd>
+        <dt>覆盖</dt><dd>官方未公布国家清单；@bot 派活在欧盟/英国/澳大利亚等地区不可用</dd>
+      </dl>
+      <ul>
+        <li>核心设计就是多 Bot：每个 Bot 有名字、岗位、独立记忆；可设“总管 Bot”协调其他 Bot 互相交活</li>
+        <li>教一次流程（录屏约 10 分钟内）存为 Skill，按时间表或事件（邮件、Slack、Linear、Sentry、Webhook）自动重跑为 Routine</li>
+        <li>$30 套餐 = The X Subscription：Grok + Grok Bot + Cursor + X Premium+ 打包（官方称原分开买约 $90/月）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="badge b-e">Gemini Tasks · Google</span>
+      <p class="philo" style="margin-top:10px">Gemini 里的一个任务模式</p>
+      <div class="price">$19.99 <span style="font-size:15px;color:var(--ink2)">/月 Pro · 6 国 Tasks 已免费</span></div>
+      <dl class="kv">
+        <dt>上线</dt><dd>前身 Gemini Spark 2026 年 5 月 19 日 I/O 发布；10 月改名 Task；11 月 17 日免费扩围</dd>
+        <dt>模型</dt><dd>Tasks 跑 <strong>Gemini 4 Hydrogen</strong>（1M 上下文）；Pro 聊天另有 11 月 18 日新发布的 <strong>Gemini 4 Neon</strong>；Carbon 为 Ultra 层</dd>
+        <dt>电脑</dt><dd>Google Cloud Agent Compute Engine：按账号隔离的虚拟机 + 云端浏览器，也可用你本机 Chrome 自动浏览</dd>
+        <dt>入口</dt><dd>Gemini App / 网页内的 Chat↔Task 开关、Scheduled 定时页；美国另有短信、转发邮件入口</dd>
+        <dt>覆盖</dt><dd>Tasks 免费：美、日、韩、加、澳、印度；其余靠 Pro/Ultra，<strong>但 EEA/英国/瑞士/尼日利亚完全没有</strong>；仅限个人 Google 账号</dd>
+      </dl>
+      <ul>
+        <li>Workspace 原生直连：Gmail、日历、Docs、Drive、Sheets、Slides、Keep、相册、钱包，无需装连接器</li>
+        <li>第三方 Connected Apps 60+（Instacart、OpenTable、Canva 等），支持自定义 MCP</li>
+        <li>语言：Gemini App 支持 70+ 种，含日文、简繁中文（Tasks 专用语言清单未单独公布）</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout"><b>⚠ 一个容易踩的坑（Gemini）：</b>Tasks 只能用<strong>个人 Google 账号</strong>，公司/学校的 Workspace 账号用不了——哪怕数据就在 Workspace 里，也得用个人账号那套 Gmail/Drive。对正清这类用公司账号办公的人，先想清楚哪套数据放个人账号。</div>
+</section>
+
+<section id="matrix">
+  <div class="sec-head"><div class="no">03 · MATRIX</div><h2>能力矩阵（你实际付的这三档）</h2><p class="muted">Muse Free $0 ｜ Grok Premium $30 ｜ Gemini Pro $19.99。手机上表格会自动变成卡片式逐行对照。</p></div>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th style="width:17%">维度</th><th>Muse Free</th><th>Grok Bot Premium</th><th>Gemini Tasks · Pro</th></tr></thead>
+    <tbody>
+      <tr><td data-l="维度">专属云电脑</td><td data-l="Muse">有，Secure VM + Sentinel 审查</td><td data-l="Grok">有，一台电脑<strong>全体 Bot 共用</strong></td><td data-l="Gemini">有，账号隔离 VM + 云端浏览器</td></tr>
+      <tr><td data-l="维度">多 Agent 团队</td><td data-l="Muse"><span class="no">无</span> — 一人一个管家</td><td data-l="Grok"><span class="yes">有 · 核心卖点</span> — 命名 Bot、总管 Bot、互相交活、Team Bots（团队版）</td><td data-l="Gemini"><span class="no">无</span> — 单 Agent，最多 15 个任务并行</td></tr>
+      <tr><td data-l="维度">长期记忆</td><td data-l="Muse">有，默认开启，可编辑/定向遗忘</td><td data-l="Grok">有，每个 Bot 各自岗位记忆 + 少量共享个人信息</td><td data-l="Gemini">Personal Intelligence + 历史记录（必须开历史）</td></tr>
+      <tr><td data-l="维度">定时/后台任务</td><td data-l="Muse">目标、提醒、主动巡查；无公开配额表</td><td data-l="Grok"><span class="yes">最强触发器</span> — 定时 + 邮件/Slack/Linear/Sentry/Webhook 事件触发</td><td data-l="Gemini">Pro 可存 <strong>50 条</strong>定时（免费 10 条）；支持 Gmail 监听、话题监听</td></tr>
+      <tr><td data-l="维度">邮箱 / 日历</td><td data-l="Muse">Gmail + Outlook，审批后发送</td><td data-l="Grok">Gmail + Google 日历（一次一个邮箱）</td><td data-l="Gemini"><span class="yes">原生最深</span> Gmail + 日历零配置</td></tr>
+      <tr><td data-l="维度">文档/表格/演示</td><td data-l="Muse">可产出 PDF/表格/文档/图片，存 Library</td><td data-l="Grok">文档、演示 + 可编辑交互 Pages（1.0 强化）</td><td data-l="Gemini"><span class="yes">格式清单最全</span> docx/xlsx/pptx/pdf/代码/html/音视频等 + 原生 Docs/Sheets/Slides</td></tr>
+      <tr><td data-l="维度">深度研究</td><td data-l="Muse">能做网络研究出报告，无同名品牌化产品</td><td data-l="Grok">DeepSearch（网页 + <strong>X 实时</strong>）</td><td data-l="Gemini"><span class="yes">Deep Research</span> 带引用报告 + Notebook 音频概览</td></tr>
+      <tr><td data-l="维度">编程</td><td data-l="Muse"><span class="mid">轻量</span> — 能建小工具/网页；专业编程是另收费的 Muse Code</td><td data-l="Grok"><span class="yes">最强打包</span> — Cursor + Grok Build + 终端 + 代码托管/审查全含在 $30 里</td><td data-l="Gemini"><span class="mid">入门级</span> — Antigravity 在 Pro 只有入门速率额度</td></tr>
+      <tr><td data-l="维度">生图</td><td data-l="Muse">有</td><td data-l="Grok">有（Imagine）</td><td data-l="Gemini">有（Nano Banana，Tasks 内可用）</td></tr>
+      <tr><td data-l="维度">生视频</td><td data-l="Muse"><span class="no">未证实</span> — 实时 Avatar 是视频通话形象，不是文生视频</td><td data-l="Grok"><span class="yes">有</span> — Premium 起（1080p 15 秒在 Super 以上）</td><td data-l="Gemini"><span class="yes">有</span> — Flow / Omni，Pro 每月 1,000 点</td></tr>
+      <tr><td data-l="维度">语音对话</td><td data-l="Muse">Realtime Voice（对话时后台继续干活）</td><td data-l="Grok">Grok Voice + Bot 语音通话/留言</td><td data-l="Gemini">Gemini Live</td></tr>
+      <tr><td data-l="维度">打电话给商家</td><td data-l="Muse"><span class="no">无</span></td><td data-l="Grok"><span class="no">无</span>（Bot 是加入<em>你的</em>视频会议）</td><td data-l="Gemini"><span class="yes">有 · 独占</span> — 仅美国（5 个州除外），会等占线并写回日历</td></tr>
+      <tr><td data-l="维度">购物结账保障</td><td data-l="Muse"><span class="yes">Stripe Link</span> 一次性卡 + 破损/降价/退货保障</td><td data-l="Grok"><span class="mid">弱</span> — 浏览器内按审批结账，无品牌化保障方案</td><td data-l="Gemini">Google Pay / AP2 令牌化 + 自设消费上限（美国先行）</td></tr>
+      <tr><td data-l="维度">社交数据</td><td data-l="Muse"><span class="yes">Meta 全家</span> Instagram/Facebook/Threads + 商家后台</td><td data-l="Grok"><span class="yes">X 独占</span> 实时搜索、@bot 派活、舆情监听</td><td data-l="Gemini">YouTube；无 X / Meta 连接器</td></tr>
+      <tr><td data-l="维度">额度透明度</td><td data-l="Muse"><span class="mid">中</span> — 付费版价格/token 数为帮助页转述口径（官网未实时核实），免费版额度未公布</td><td data-l="Grok"><span class="no">最低</span> — 只有“×倍”说法，全家共用一池</td><td data-l="Gemini"><span class="mid">中低</span> — 按算力计，无固定条数，Pro = 免费 4 倍</td></tr>
+      <tr><td data-l="维度">上下文</td><td data-l="Muse">Spark 1.3 约 1M tokens</td><td data-l="Grok">家族旗舰 Grok 4.7 为 500K（Bot 内不可选模型）</td><td data-l="Gemini">Neon / Hydrogen 均 1M；FAQ 口径可传约 1,500 页文件</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small">矩阵依据研究报告 §10（来源：Meta 发布稿、x.ai 官方帖与文档、Google 官方博客与帮助页，2026-11-20）。三家均未公布 Agent 任务成功率基准或速度 SLA，所有“更快/更可靠”均为厂商表述。</p>
+</section>
+
+<section id="common">
+  <div class="sec-head"><div class="no">04 · COMMON GROUND</div><h2>三家都能做好的事 — 别重复付费</h2></div>
+  <p class="muted">下面这些任务随便派给哪一家都行，应该派给<strong>额度最宽裕/最顺手</strong>的那一家，而不是三家各跑一遍：</p>
+  <ul class="checklist">
+    <li><strong>邮箱分诊 + 起草回复、日历排期与冲突提醒</strong> — 三家都有 Gmail/日历接入，敏感动作（发送）前都会停下来等你批准。</li>
+    <li><strong>多步网络调研 → 汇总成文档/演示</strong> — 搜集、比价、盯航班酒店价格并提醒，三家都能闭着 App 在后台跑。</li>
+    <li><strong>浏览器代办</strong> — 订旅行/餐厅、填表单、比价下单，关键步骤交回你确认。</li>
+    <li><strong>周期性后台活</strong> — Muse 的目标/提醒、Grok 的 Routine、Gemini 的定时任务，本质都是“关掉手机它继续干”。</li>
+    <li><strong>基于已有文件起草文档/表格/演示</strong> — 三家都能读 Drive/Docs 再产出新文件（接入方式不同：原生 vs 连接器）。</li>
+    <li><strong>语音交代任务 + 生图</strong> — 三家都支持（唯一的例外是生视频，Muse 未证实）。</li>
+  </ul>
+</section>
+
+<section id="unique">
+  <div class="sec-head"><div class="no">05 · UNIQUE STRENGTHS</div><h2>只有一家能做 / 明显最强的</h2></div>
+  <div class="cards3">
+    <div class="card">
+      <span class="badge b-m">只找 Muse</span>
+      <ul>
+        <li><strong>$0 起步的完整 Agent</strong> — 三家里唯一免费就有专属电脑+记忆+连接器的（Gemini Tasks 免费仅限 6 国且刚开放）。</li>
+        <li><strong>Instagram / Facebook / Shopify 经营</strong> — Meta 商家后台、广告账号、Shopify 建品/改库存/发折扣码原生打通，做 TheTokyoTrove / ARIELLE.R 这类社媒电商时无可替代。</li>
+        <li><strong>WhatsApp 里派活</strong> — 像给真人发消息一样交代事，出门在外最顺手。</li>
+        <li><strong>消费购物保障最明确</strong> — Link 一次性卡 + 破损/丢失/降价/退货保障条款写得最细。</li>
+      </ul>
+      <div class="callout" style="margin-top:14px"><b>边界：</b>Shopify 连接器<strong>不能</strong>退款、取消/捕获订单、处理退货、改线上主题、改支付/税费/域名设置。涉及钱的售后仍要人工。</div>
+    </div>
+    <div class="card">
+      <span class="badge b-g">只找 Grok Bot</span>
+      <ul>
+        <li><strong>“团队”形态</strong> — 报销 Bot、线索 Bot、研究 Bot + 总管 Bot 互相交活，还能以 Team Bots 形式进 Slack/Teams 开会——另外两家结构上做不到。</li>
+        <li><strong>X 实时数据</strong> — DeepSearch 直读 X、X 上 @bot 派活、Overheard 监听 X/Reddit/Hacker News 的品牌提及。追热点、看舆情只有它。</li>
+        <li><strong>编程全家桶</strong> — $30 内含 Cursor（本地+云端编程 Agent）+ Grok Build + 代码审查，另两家编程要么另收费、要么只有入门额度。</li>
+        <li><strong>事件触发自动化</strong> — Sentry 报警、Linear 工单、PagerDuty 事件直接唤醒 Bot 干活，适合运维型流程。</li>
+      </ul>
+      <div class="callout" style="margin-top:14px"><b>边界：</b>所有 Bot 共用一台电脑 = 共用登录态和文件。<strong>不要用不同 Bot 来隔离不同客户/公司的账号</strong>，官方明确警告 Bot 之间不是安全边界。</div>
+    </div>
+    <div class="card">
+      <span class="badge b-e">只找 Gemini</span>
+      <ul>
+        <li><strong>打电话给商家（独占）</strong> — 替你给车行/店铺打电话、等占线、把预约写回日历。仅美国、5 个州除外，日本暂不可用——知道有这功能，出差美国时用得上。</li>
+        <li><strong>带引用的深度研究报告</strong> — Deep Research + Notebook 音频概览 + 1M 上下文，长文档/多来源调研它是默认首选。</li>
+        <li><strong>Google 原生零配置</strong> — Gmail/Drive/Docs/相册/钱包/地图/购物图谱本来就在 Google 手里，不用逐个授权连接器。</li>
+        <li><strong>定时 + 监听最规整</strong> — Pro 50 条定时，Gmail 监听（“老板来信带待办就起草回复”）、话题监听（新店开业/机票降价）都是现成模板。</li>
+      </ul>
+      <div class="callout" style="margin-top:14px"><b>边界：</b>Google 自己标注 Tasks 为实验性功能，有些网站会走到最后一步把点击交回给你；且<strong>个人账号限定</strong>、欧洲/英国完全不可用。</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:28px">各自的硬伤（决定“不要派给它”的清单）</h3>
+  <div class="grid2" style="margin-top:12px">
+    <div class="panel"><h3><span class="dot dot-m" style="display:inline-block"></span> Muse</h3><p class="small">只有 6 国，离开这 6 国长期出差就没得用；无团队/多 Bot；生视频未证实；Wonder 是否完整进 App 说法不一；日本本地连接器（Mercari、Money Forward ME、Ticket Pia）发布时仍标注“推进中”，落后于美国。</p></div>
+    <div class="panel"><h3><span class="dot dot-g" style="display:inline-block"></span> Grok Bot</h3><p class="small">入门最贵（$30）且额度最不透明、烧得最快；Bot 内不能选模型；无品牌化结账保障、无打电话、无 Meta 社交；电脑在美国托管，欧盟/英国用户的数据合规要自行核实。</p></div>
+    <div class="panel"><h3><span class="dot dot-e" style="display:inline-block"></span> Gemini Tasks</h3><p class="small">个人账号限定（公司 Workspace 账号不行）；EEA/英国/瑞士/尼日利亚完全没有；打电话、Pay 结账、短信/转发邮件等高级功能美国先行；模型迭代极快（Argon→Neon 只隔 5 周，Carbon 锁在 Ultra），能力规划容易被版本打乱。</p></div>
+    <div class="panel"><h3>共同提醒</h3><p class="small">三家都<strong>没有公布</strong>任务成功率基准。涉及付款、退款、对外发送的动作，三家默认都要你批准——保持这个设置，不要为了省事开“始终允许”给高风险动作。</p></div>
+  </div>
+</section>
+
+<section id="split">
+  <div class="sec-head"><div class="no">06 · PLAYBOOK</div><h2>任务拆分手册：按你的实际工作派活</h2></div>
+  <div class="tblwrap">
+  <table>
+    <thead><tr><th style="width:20%">你的工作</th><th style="width:26%">主派</th><th>副派 / 说明</th></tr></thead>
+    <tbody>
+      <tr><td data-l="工作">市场 / 竞品 / 趋势调研</td><td data-l="主派"><strong>Gemini Pro</strong></td><td data-l="说明">Deep Research 出带引用报告直落 Docs/Sheets；再用 <strong>Grok</strong> 补一层 X 实时舆情和品牌提及。Muse 能做但无品牌化研究产品、无 X 数据。</td></tr>
+      <tr><td data-l="工作">商品内容（Listing、社媒、演示、视频）</td><td data-l="主派"><strong>Gemini Pro</strong>（量产）</td><td data-l="说明">Nano Banana 生图 + Flow 视频（Pro 每月 1,000 点，约合每天一条 10 秒视频的量级，要省着用）；内容若是 Instagram/Facebook 首发、要吃商家后台数据，改派 <strong>Muse</strong>；X 原生发布流走 <strong>Grok</strong>。</td></tr>
+      <tr><td data-l="工作">编程 / 店铺工具 / 自动化脚本</td><td data-l="主派"><strong>Grok Premium</strong></td><td data-l="说明">Cursor + Build + Bot 终端是唯一全包的。注意它和 Bot 共用额度池，编程重活会挤占 Bot 的量（见第 7 节）。</td></tr>
+      <tr><td data-l="工作">日常个人 / 家庭管理</td><td data-l="主派"><strong>Muse Free</strong> 或 <strong>Gemini Tasks</strong></td><td data-l="说明">Muse 胜在 WhatsApp 随手派活和主动提醒（重复订阅、计划变更）；Gemini 胜在学校邮件→日历、Gmail 监听这类 Google 原生流。在日本，两家的本地化都还在追赶美国，别指望打电话代订这类美国功能。</td></tr>
+      <tr><td data-l="工作">店铺运营（Shopify、账款、营销）</td><td data-l="主派"><strong>Muse（Small Business）</strong></td><td data-l="说明">Shopify / QuickBooks / Stripe / Klaviyo 的“读 + 起草”型操作，审批后执行；流程若是团队协作型、活在 Slack 里且需要多个专职 Bot，改派 <strong>Grok Bot</strong>。退款/支付/主题这类权限两家都不要给。</td></tr>
+      <tr><td data-l="工作">热点追踪 / 舆情</td><td data-l="主派"><strong>Grok</strong></td><td data-l="说明">X 实时搜索 + Overheard 监听是独占能力；新闻面再用 Gemini 定时话题监听补全。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="tool" style="margin-top:20px">
+    <h3>快速派活器 — 选任务，看派给谁</h3>
+    <p class="small">按上面的手册固化的小工具，拿不准时点一下。</p>
+    <label for="taskSel" class="small" style="font-weight:700">我要做的事是…</label>
+    <select id="taskSel">
+      <option value="">— 请选择 —</option>
+      <option value="research">写一份带来源的竞品/市场调研报告</option>
+      <option value="x">看看 X 上大家在怎么议论某个话题/品牌</option>
+      <option value="content">批量做商品图和短视频素材</option>
+      <option value="ig">发 Instagram / Facebook 内容、看商家数据</option>
+      <option value="code">写代码、改店铺工具、修 Bug</option>
+      <option value="inbox">每天早上整理邮箱和日历、列出今日重点</option>
+      <option value="shopify">Shopify 上新、改库存、发折扣码</option>
+      <option value="refund">处理退款 / 退货 / 改店铺支付设置</option>
+      <option value="family">家庭杂事：订阅巡查、行程、提醒</option>
+      <option value="team">让几个专职助手分工协作跑一条流程</option>
+      <option value="call">打电话给商家订位/询价</option>
+    </select>
+    <div class="route-out" id="routeOut" role="status"></div>
+  </div>
+</section>
+
+<section id="gemini-start">
+  <div class="sec-head"><div class="no">07 · GEMINI ONBOARDING</div><h2>Gemini Tasks 上手：从“不会用”到每天自动跑</h2></div>
+  <p class="muted">前提检查：用<strong>个人 Google 账号</strong>登录 Gemini（App / Mac App / gemini.google.com），保持<strong>历史记录开启</strong>，并按提示开启 Personal Intelligence。你在日本，Tasks 本身已免费开放，Pro 的价值在用量（4 倍）、定时条数（50 条）和频率自由度。</p>
+  <ol class="steps">
+    <li><b>找到开关</b>打开 Gemini，在输入框上方把模式从 Chat 切到 <strong>Task</strong>。切过去之后，你说的话会被当成“要办完的任务”，它会在云端虚拟机里开浏览器、用你的 Google 应用干活，干完把结果和文件交回对话。</li>
+    <li><b>第一件活先派个小的</b>用下方模板 1（每日简报）试跑一次，白天看它怎么分步骤、哪里会停下来问你。Tasks 是实验性功能，先用低风险任务摸它的脾气。</li>
+    <li><b>把一次性的活变成定时</b>跑顺的任务去 <strong>Scheduled（定时）页</strong>存成日程：Pro 可设任意频率（每小时/每天/每周…），免费版只能每天一次且时段粗略。先把简报设成每天早上 7 点。</li>
+    <li><b>再上两个监听器</b>Gmail 监听：“收到某人带待办的邮件就起草回复”；话题监听：“某航线降价/某类新品出现就通知我”。这是 Pro 才有的能力，也是 Tasks 真正区别于普通聊天的地方。</li>
+    <li><b>把常用指令存成 Skill</b>反复用的任务写法（比如周报的固定结构）存为 Skill，下次一句话调用，不用每次重写要求。</li>
+    <li><b>守住并行上限</b>同时最多跑 <strong>15 个任务</strong>，满了定时任务不会启动。长任务别一口气排太多，重要任务错峰。</li>
+  </ol>
+
+  <h3 style="margin-top:22px">5 个可以直接粘贴的起步任务（中文）</h3>
+  <div class="prompt-box"><strong style="font-size:14px">模板 1 · 每日简报（先跑通它）</strong><code>每天早上 7 点，检查我的 Gmail、日历和 Drive：列出今天必须处理的 3 件事、需要回复的邮件（只起草、不发送）、以及今天日程里的冲突或空档，汇总成一份简短简报发给我。</code><button class="copybtn" data-copy="每天早上 7 点，检查我的 Gmail、日历和 Drive：列出今天必须处理的 3 件事、需要回复的邮件（只起草、不发送）、以及今天日程里的冲突或空档，汇总成一份简短简报发给我。">复制这条</button></div>
+  <div class="prompt-box"><strong style="font-size:14px">模板 2 · 竞品周报（电商调研）</strong><code>每周一上午，搜索过去 7 天 eBay 和 Shopify 的平台政策变化与重要动态，逐条附来源链接和发布日期，整理成中文表格存到 Drive，并标注每条对跨境卖家的实际影响。只收录能核对到最近 7 天内发生的事件，日期不明的不要收。</code><button class="copybtn" data-copy="每周一上午，搜索过去 7 天 eBay 和 Shopify 的平台政策变化与重要动态，逐条附来源链接和发布日期，整理成中文表格存到 Drive，并标注每条对跨境卖家的实际影响。只收录能核对到最近 7 天内发生的事件，日期不明的不要收。">复制这条</button></div>
+  <div class="prompt-box"><strong style="font-size:14px">模板 3 · Gmail 监听（Pro）</strong><code>当我收到带明确待办事项的重要邮件时，帮我起草一封回复放在草稿箱，并在这里通知我。不要自动发送任何邮件。</code><button class="copybtn" data-copy="当我收到带明确待办事项的重要邮件时，帮我起草一封回复放在草稿箱，并在这里通知我。不要自动发送任何邮件。">复制这条</button></div>
+  <div class="prompt-box"><strong style="font-size:14px">模板 4 · 深度研究（单次任务）</strong><code>用 Deep Research 调研日本珍珠饰品在美国市场的竞争格局：主要品牌、价格带、渠道分布、消费者评价关键词。输出带引用来源的报告，并另存一份要点版到 Google Docs。</code><button class="copybtn" data-copy="用 Deep Research 调研日本珍珠饰品在美国市场的竞争格局：主要品牌、价格带、渠道分布、消费者评价关键词。输出带引用来源的报告，并另存一份要点版到 Google Docs。">复制这条</button></div>
+  <div class="prompt-box"><strong style="font-size:14px">模板 5 · 价格监听</strong><code>帮我盯这条航线/这件商品的价格：低于我设定的目标价时立刻通知我，并附上对比链接。不要替我下单。</code><button class="copybtn" data-copy="帮我盯这条航线/这件商品的价格：低于我设定的目标价时立刻通知我，并附上对比链接。不要替我下单。">复制这条</button></div>
+  <p class="small" style="margin-top:12px">模板里的航线、商品、目标价请按你的实际需求替换后再粘贴。所有模板都默认“只起草/只通知、不自动发送/下单”——先保持人工批准，用顺了再逐项放开。</p>
+</section>
+
+<section id="grok-save">
+  <div class="sec-head"><div class="no">08 · GROK BUDGET</div><h2>Grok Bot“不够用”的解法：管住共享池</h2></div>
+  <p class="muted">Premium 的池子 = Plus 的 4 倍，Grok 聊天、生图、语音、Bot、Cursor <strong>共用</strong>，且官方不公布绝对量。你能做的不是“省着聊天”，而是<strong>给消耗排优先级</strong>：</p>
+  <ul class="checklist">
+    <li><strong>分工隔离消耗：</strong>日常聊天、调研、写文档尽量走 Gemini / Muse，把 Grok 的池子留给只有它能干的活——X 情报、Bot 团队流程、Cursor 编程。</li>
+    <li><strong>Bot 只建“岗位 Bot”，别建一堆闲聊 Bot：</strong>每个 Bot 一个明确职务（如线索、报销、研究），用 Skill + Routine 让它按固定流程跑，避免每次长对话式试错烧额度。</li>
+    <li><strong>生图/生视频是隐形大户：</strong>Imagine 和视频生成与 Bot 同池。素材量产走 Gemini Flow（Pro 自带 1,000 点），Grok 只做 X 场景真正需要的图。</li>
+    <li><strong>编程重活错峰：</strong>Cursor 云端 Agent 跑大任务时，Bot 的例行 Routine 尽量排到另一个时段，避免同一周前半周就把池子打空。</li>
+    <li><strong>每周盯一次余量节奏：</strong>池子是每周重置的。如果连续两周都在周中见底，说明你的用法已经超出 Premium 的设计量——这时先考虑把某个消耗大户迁走，而不是急着升 Super（$100，15 倍）。</li>
+  </ul>
+  <ul class="checklist warnlist">
+    <li><strong>不要</strong>把不同客户/公司的账号隔离寄托在不同 Bot 上——共用电脑共用登录态，官方明说这不是安全边界。需要隔离就用不同用户/不同产品。</li>
+    <li><strong>不要</strong>在 Bot 里纠结选模型——Bot 没有模型选择器，它自己挑；你能控制的是任务写法和流程，不是模型。</li>
+  </ul>
+  <div class="callout"><b>判断题：</b>如果迁走聊天和生图之后，池子还是不够，问题就不是用法而是套餐与需求不匹配——届时对比 Super $100（15 倍池子 + 1080p 15 秒视频 + 高峰优先）再决定，不要在 Premium 上买零散加量包硬撑（先算单价）。</div>
+</section>
+
+<section id="cost">
+  <div class="sec-head"><div class="no">09 · COST</div><h2>组合成本试算</h2></div>
+  <div class="tool">
+    <p class="small" style="margin-top:0">勾选你打算保留的付费项（Muse 三档单选其一，免费版为 $0）。Grok 与 Gemini 价格为 2026 年 11 月 20 日在官方页面实时核查的美元月价；Muse 付费档价格来自多家对 Meta 帮助页的一致转述，官网未能实时打开核实。均未含税。</p>
+    <div class="calc-rows">
+      <div class="calc-row"><label><input type="radio" name="musePlan" value="0" checked> Muse Free — 免费版</label><span>$0</span></div>
+      <div class="calc-row"><label><input type="radio" name="musePlan" value="20"> Muse Power — 500M tokens/周（转述口径）</label><span>$20</span></div>
+      <div class="calc-row"><label><input type="radio" name="musePlan" value="100"> Muse Maximum — 3B tokens/周（转述口径）</label><span>$100</span></div>
+      <div class="calc-row"><label><input type="checkbox" id="ckGem" checked> Gemini Google AI Pro — Tasks 高用量 + Neon</label><span>$19.99</span></div>
+      <div class="calc-row"><label><input type="checkbox" id="ckGrok" checked> Grok Premium（The X Subscription）— Bot + Cursor + X</label><span>$30</span></div>
+    </div>
+    <div class="calc-total">合计：<span id="calcTotal">$49.99</span>/月</div>
+    <p class="small" id="calcNote">当前组合 = 推荐的互补对子：Gemini 当研究与文档骨干，Grok 管 X + 团队 Bot + 编程，Muse 免费版当随身管家。</p>
+  </div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="panel"><h3>什么时候该动套餐</h3><p class="small"><strong>升 Muse Power：</strong>免费版连续撞周上限、且撞限的活确实是 Instagram/Shopify/WhatsApp 场景时。<br><strong>停 Grok Premium：</strong>连续一个月 X 情报、Team Bot、Cursor 三样都没产生实际产出时——它是三家中最容易“为可能性付费”的一项。<br><strong>Gemini Pro 别停：</strong>它是你 Drive/Gmail 数据的原生入口，停了等于把研究中枢拆了；真要省，先从 Grok 侧省。</p></div>
+    <div class="panel"><h3>地理现实（你在大阪）</h3><p class="small">Muse：日本在 6 国名单内，可用，但本地连接器仍在补齐。<br>Gemini Tasks：日本在免费 6 国内，Pro 正常可用；打电话/Google Pay 结账等高级功能是美国先行，日本暂无。<br>Grok Bot：无官方国家清单，电脑在美国托管；X 上 @bot 派活的地区限制不含日本，但请以你账号内实际可用为准。</p></div>
+  </div>
+</section>
+
+<section id="caveats">
+  <div class="sec-head"><div class="no">10 · OPEN QUESTIONS</div><h2>未确认事项 — 报告里明确没查实的</h2></div>
+  <ul class="checklist warnlist">
+    <li><strong>Muse 的全部价格与额度（含付费档）均未实时核实：</strong>免费版额度官方帮助页未公布，网传数字来自发布视频，不要按它做规划；Power $20/500M tokens/周、Maximum $100/3B tokens/周同样只是多家对 Meta 帮助页的独立转述——研究时 muse.ai 页面被拦截，未能实时打开官网核价，本页涉及 Muse 付费档的金额与合计均按此转述口径计算。</li>
+    <li><strong>Muse Wonder 是否完整进入消费版 App：</strong>来源互相矛盾。已确认的是 11 月 6 日起 Wonder 训练的专用模型推给全体用户；“$20 就能用满血 Wonder”不要当定论，以 App 内实际显示为准。</li>
+    <li><strong>Grok / Gemini 的绝对用量：</strong>两家都不公布池子的绝对条数/token 数，网上任何“能跑 X 个任务”的说法都是估算。</li>
+    <li><strong>速度与成功率：</strong>三家均无公开基准，本页不引用任何一家的“更快”宣传作为事实。</li>
+    <li><strong>Grok Bot 的国家清单、Gemini Tasks 的专用语言清单：</strong>均未公布，本页用的是 @bot 限制清单与 App 语言清单作参照。</li>
+    <li><strong>模型版本迭代极快：</strong>Gemini 在 5 周内从 Argon 换到 Neon、Grok Bot 8 月 Beta 到 11 月 1.0、Muse 11 月连发国家扩张——本页是 2026 年 11 月 20 日的快照，重大决定前请再核一眼各家定价页。</li>
+  </ul>
+</section>
+
+<footer>
+  <h3>主要来源（2026-11-20 核查）</h3>
+  <ul>
+    <li>Meta 发布稿 Introducing Muse（2026-09-08）— about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/</li>
+    <li>Meta AI：Introducing Muse Spark（2026-04-08）— ai.meta.com/blog/introducing-muse-spark-msl/</li>
+    <li>x.ai：Introducing Grok Bot（2026-08-11）— x.ai/news/introducing-grok-bot；Grok Bot 1.0（2026-11）— x.ai/news/grok-bot-1-0；The X Subscription（2026-10-12）— x.ai/news/x-subscription；定价页（实时核查）— x.ai/pricing；文档 — docs.x.ai/grok-bot/overview</li>
+    <li>Google 博客：Tasks in Gemini（2026-11-17）— blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/；Gemini 4 Neon（2026-11-18）— blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/；订阅页（美国站实时核查）— gemini.google/us/subscriptions/；帮助页 — support.google.com/gemini/answer/17094507、17094710</li>
+    <li>独立报道：TechCrunch（Muse 发布 2026-09-08、Muse for Small Business 2026-09-29、Gemini Spark 2026-05-19）、9to5Google（Gemini 4 Neon，2026-11-18）等，详见对比口径见正文各节标注。</li>
+  </ul>
+  <p class="small">本页由 Catherine 基于 2026 年 11 月 20 日深度研究报告整理，内容为产品对比与使用建议，不构成购买承诺；价格与可用性以各官方页面实时显示为准。</p>
+</footer>
+
+</div>
+<script>
+(function(){
+  var routes = {
+    research:["Gemini Pro","Deep Research 出带引用报告，Neon/Hydrogen 1M 上下文吃长材料，结果直落 Docs/Drive。副手：Grok 补 X 舆情。"],
+    x:["Grok（独占）","实时 X 搜索、@bot 派活、Overheard 监听 X/Reddit/HN——另两家都没有 X 原生数据。注意它烧的是共享池，查完就停。"],
+    content:["Gemini Pro 量产","Nano Banana 生图 + Flow 视频（每月 1,000 点，省着用）；文档/演示同生态完成。Instagram 首发的内容改走 Muse。"],
+    ig:["Muse","Instagram/Facebook/Threads + Meta 商家后台原生连接，还能在 WhatsApp 里派活。免费版先跑，撞限再升 Power。"],
+    code:["Grok Premium","Cursor + Grok Build + Bot 终端全包在 $30 里。提醒：编程与 Bot 共用每周池子，大任务请错峰。"],
+    inbox:["Gemini Tasks","Gmail/日历原生：设成每天 7 点的定时简报（模板 1），再加 Gmail 监听自动起草回复（只起草不发送）。"],
+    shopify:["Muse（Small Business）","Shopify 连接器可建品、改库存、发折扣码，执行前要你批准。退款、改支付/主题它做不了，别派。"],
+    refund:["人工处理 — 三家都别派","Muse 的 Shopify 连接器明确不能退款/退货/改支付设置；这类动钱的售后请在 Shopify 后台人工办，Agent 只做资料整理。"],
+    family:["Muse Free 或 Gemini Tasks","随手派活、主动提醒选 Muse（WhatsApp）；学校邮件→日历、Google 生态联动选 Gemini。两家在日本的本地功能都还在补齐中。"],
+    team:["Grok Bot（独占形态）","建岗位 Bot + 总管 Bot 互相交活，进 Slack/Teams 协作。注意：Bot 之间共用登录态，不能拿来隔离不同客户的账号。"],
+    call:["Gemini（独占，但限美国）","能替你打电话给商家、等占线并写回日历；仅美国且 5 个州除外——日本目前用不了，出差美国时再启用。"]
+  };
+  var sel = document.getElementById('taskSel');
+  var out = document.getElementById('routeOut');
+  sel.addEventListener('change', function(){
+    var v = sel.value;
+    if(!v || !routes[v]){ out.textContent=''; return; }
+    out.innerHTML = '';
+    var b = document.createElement('strong'); b.textContent = '→ 派给 ' + routes[v][0] + '：';
+    out.appendChild(b); out.appendChild(document.createTextNode(routes[v][1]));
+  });
+  // cost calc
+  var total = document.getElementById('calcTotal');
+  var note = document.getElementById('calcNote');
+  function calc(){
+    var muse = 0;
+    var radios = document.getElementsByName('musePlan');
+    for(var i=0;i<radios.length;i++){ if(radios[i].checked) muse = parseFloat(radios[i].value); }
+    var gem = document.getElementById('ckGem').checked ? 19.99 : 0;
+    var grok = document.getElementById('ckGrok').checked ? 30 : 0;
+    var sum = muse + gem + grok;
+    total.textContent = '$' + sum.toFixed(2);
+    if(muse===0 && gem>0 && grok>0) note.textContent = '当前组合 = 推荐的互补对子：Gemini 当研究与文档骨干，Grok 管 X + 团队 Bot + 编程，Muse 免费版当随身管家。';
+    else if(muse===20 && gem>0 && grok>0) note.textContent = '三家全付费组合（Muse 取 Power 档）= $69.99/月。只有当 Muse 免费版确实连续撞限时才需要这一档。';
+    else if(gem===0 && grok===0 && muse===0) note.textContent = '全免费组合：Muse Free + Gemini Tasks 免费版（日本在免费 6 国内，10 条定时）也能跑起来，适合先验证 Gemini Tasks 是否顺手。';
+    else note.textContent = '按你的勾选实时合计。调整原则：先迁消耗、再升套餐；Grok 是最先复核的一项。';
+  }
+  var inputs = document.querySelectorAll('#cost input');
+  for(var j=0;j<inputs.length;j++){ inputs[j].addEventListener('change', calc); }
+  calc();
+  // copy buttons
+  var btns = document.querySelectorAll('.copybtn');
+  for(var k=0;k<btns.length;k++){
+    btns[k].addEventListener('click', function(){
+      var text = this.getAttribute('data-copy');
+      var btn = this;
+      function done(){ var old = btn.textContent; btn.textContent='已复制 ✓'; setTimeout(function(){ btn.textContent = old; }, 1600); }
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallback(); }); } else { fallback(); }
+      function fallback(){
+        var ta = document.createElement('textarea'); ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.select();
+        try{ document.execCommand('copy'); done(); }catch(e){ btn.textContent='复制失败，请长按文本复制'; }
+        document.body.removeChild(ta);
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
