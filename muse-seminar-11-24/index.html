@@ -205,6 +205,28 @@ h1.ttl .accent{color:var(--accent);}
 .break-slide{background:linear-gradient(140deg,var(--paper) 0%,var(--paper-2) 100%);}
 .break-wrap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 160px;}
 .break-time{font-family:var(--font-num);font-size:150px;font-weight:700;color:var(--accent);line-height:1;}
+.feat-row{display:flex;gap:20px;margin-bottom:38px;}
+.feat{flex:1;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:24px 26px;font-size:27px;font-weight:700;box-shadow:0 8px 24px rgba(28,43,74,0.05);}
+.rollout-label{font-size:24px;font-weight:900;color:var(--muted);letter-spacing:.08em;margin-bottom:16px;}
+.rollout{display:flex;gap:16px;margin-bottom:42px;}
+.ro-item{flex:1;background:var(--card);border:2px solid var(--line);border-radius:20px;padding:26px 12px 22px;text-align:center;}
+.ro-item .ro-date{font-family:var(--font-num);font-size:30px;font-weight:700;color:var(--ink);}
+.ro-item .ro-country{font-size:28px;font-weight:900;margin:6px 0 4px;}
+.ro-item .ro-note{font-size:18px;color:var(--muted);line-height:1.5;}
+.ro-item.jp{border-color:var(--accent);background:#FBF1E8;}
+.ro-item.jp .ro-country{color:var(--accent);}
+.center-content{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.kata-logo{font-size:94px;font-weight:900;letter-spacing:.05em;color:var(--ink);line-height:1.15;}
+.kata-slogan{font-size:44px;font-weight:900;color:var(--accent);margin:12px 0 26px;}
+.kata-lead{font-size:29px;line-height:1.85;color:var(--ink-2);margin-bottom:44px;}
+.kata-steps{display:flex;align-items:stretch;gap:18px;justify-content:center;margin-bottom:48px;}
+.kstep{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:26px 28px;width:410px;text-align:left;}
+.kstep .ks-num{font-size:20px;font-weight:900;color:var(--accent);letter-spacing:.1em;}
+.kstep h3{font-size:29px;font-weight:900;margin:8px 0 6px;}
+.kstep p{font-size:22px;color:var(--muted);line-height:1.55;}
+.kstep-arrow{align-self:center;font-size:34px;color:var(--accent);font-weight:900;}
+.kata-url{font-family:var(--font-num);font-size:42px;font-weight:700;color:var(--ink);}
+.kata-op{display:block;font-family:var(--font-jp);font-size:22px;font-weight:500;color:var(--muted);margin-top:10px;}
 .break-row{display:flex;align-items:center;gap:72px;}
 .break-main{display:flex;flex-direction:column;align-items:center;max-width:1010px;}
 .app-figure{flex:none;text-align:center;}
@@ -321,7 +343,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="takeaway reveal d4"><div class="num-badge">3</div><div><h3>実際に1つ、仕事を頼んで終わらせる</h3><p>後半で、ご自分のスマートフォンで、AIに仕事を1つ頼んでみます。</p></div></div>
     </div>
   </div>
-  <div class="pagenum">2 / 24</div>
+  <div class="pagenum">2 / 26</div>
 </section>
 
 <!-- ========== 3. Example (作成例) ========== -->
@@ -343,7 +365,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       </div>
     </div>
   </div>
-  <div class="pagenum">3 / 24</div>
+  <div class="pagenum">3 / 26</div>
 </section>
 
 <!-- ========== 4. Glossary ========== -->
@@ -359,7 +381,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="gloss-note reveal d5">安心してください。覚えなくて大丈夫です。この言葉が出てくるたびに、ふだんの言葉で言い換えます。</p>
   </div>
-  <div class="pagenum">4 / 24</div>
+  <div class="pagenum">4 / 26</div>
 </section>
 
 <!-- ========== 4. Timeline ========== -->
@@ -377,7 +399,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">今日の1文</span>前の2年は「答えるAI」。今は「働くAI」です。</div>
   </div>
-  <div class="pagenum">5 / 24</div>
+  <div class="pagenum">5 / 26</div>
 </section>
 
 <!-- ========== 5. Nature of generative AI ========== -->
@@ -391,7 +413,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d4"><span class="m-label">習慣にしてください</span>金額・日付・住所は、最後に自分の目で一度確認する。</div>
   </div>
-  <div class="pagenum">6 / 24</div>
+  <div class="pagenum">6 / 26</div>
 </section>
 
 <!-- ========== 6. Why people stop using it ========== -->
@@ -406,7 +428,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">まとめると2つ</span>「どう頼むか」と「どう任せるか」。まず「頼み方」から解決します。</div>
   </div>
-  <div class="pagenum">7 / 24</div>
+  <div class="pagenum">7 / 26</div>
 </section>
 
 <!-- ========== 7. The framework (official four) ========== -->
@@ -422,7 +444,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
   </div>
   <div class="source-footer">出典：OpenAI 公式ガイド「Prompting」（learn.chatgpt.com）／ Anthropic 公式ガイド「Prompting best practices」（platform.claude.com）——世界最大の2社が、同じ4つを挙げています</div>
-  <div class="pagenum">8 / 24</div>
+  <div class="pagenum">8 / 26</div>
 </section>
 
 <!-- ========== 8. Statement (main line) ========== -->
@@ -432,7 +454,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     <p class="statement reveal d1">背景をはっきり。<br>結果をはっきり。<br><span class="accent">やり方は任せる。</span></p>
     <p class="statement-note reveal d3">公式の4つ（目的・背景・欲しい形・境界）を、覚えやすい3つの文にまとめた言い方です。<br>出典：OpenAI／Anthropic 両社の公式ガイドの要約</p>
   </div>
-  <div class="pagenum" style="color:#8FA0C4">9 / 24</div>
+  <div class="pagenum" style="color:#8FA0C4">9 / 26</div>
 </section>
 
 <!-- ========== 9. Context: before / after ========== -->
@@ -447,7 +469,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     <div class="memory reveal d4"><span class="m-label">確かめ方</span>読み返して、よく知らない人が迷う文章なら、AIも迷います。</div>
   </div>
   <div class="source-footer">出典：Anthropic 公式ガイド「Prompting best practices」——AIは「事情を知らない新入社員」と考える</div>
-  <div class="pagenum">10 / 24</div>
+  <div class="pagenum">10 / 26</div>
 </section>
 
 <!-- ========== 10. Result-first ========== -->
@@ -465,7 +487,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="lead reveal d5" style="margin-top:30px;">してほしいことを言うのがコツです。〔出典：Anthropic 公式ガイド〕</p>
   </div>
-  <div class="pagenum">11 / 24</div>
+  <div class="pagenum">11 / 26</div>
 </section>
 
 <!-- ========== 11. Compare demo ========== -->
@@ -486,7 +508,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       </div>
     </div>
   </div>
-  <div class="pagenum">12 / 24</div>
+  <div class="pagenum">12 / 26</div>
 </section>
 
 <!-- ========== 12. Sources ========== -->
@@ -500,7 +522,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="lead reveal d4" style="margin-top:36px;">私の個人的な工夫ではなく、2つの会社が公開している公式ガイドです。写真に撮って、家で確かめてみてください。</p>
   </div>
-  <div class="pagenum">13 / 24</div>
+  <div class="pagenum">13 / 26</div>
 </section>
 
 <!-- ========== 13. First-half recap ========== -->
@@ -514,7 +536,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="takeaway reveal d4"><div class="num-badge">3</div><div><h3>やり方は任せて、大事なところは先に聞いてもらう</h3><p>「分からないところは、先に聞いてください」と添えるのが保険です。</p></div></div>
     </div>
   </div>
-  <div class="pagenum">14 / 24</div>
+  <div class="pagenum">14 / 26</div>
 </section>
 
 <!-- ========== 14. Break ========== -->
@@ -534,7 +556,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       </figure>
     </div>
   </div>
-  <div class="pagenum">15 / 24</div>
+  <div class="pagenum">15 / 26</div>
 </section>
 
 <!-- ========== 15. Versus ========== -->
@@ -549,7 +571,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">今日の1文</span>エージェントは「自分で働くAI」です。</div>
   </div>
-  <div class="pagenum">16 / 24</div>
+  <div class="pagenum">16 / 26</div>
 </section>
 
 <!-- ========== 16. Why Muse ========== -->
@@ -564,7 +586,31 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="card reveal d5"><div class="c-num">理由 4</div><h3>見守る仕組みがある</h3><p>外へ働きかける前に、独立した安全チェックが入ります。次のパートで説明します。</p></div>
     </div>
   </div>
-  <div class="pagenum">17 / 24</div>
+  <div class="pagenum">17 / 26</div>
+</section>
+
+<!-- ========== 18. Rollout timeline ========== -->
+<section class="slide">
+  <div class="slide-content">
+    <div class="kicker reveal"><span class="half">後半</span>03　エージェントとは</div>
+    <h2 class="stitle reveal d1">1人1台、24時間働く「クラウドの相棒」</h2>
+    <div class="feat-row">
+      <div class="feat reveal d2">📱 スマホを閉じても、働き続けます</div>
+      <div class="feat reveal d3">🧠 あなたのことを、覚えています</div>
+      <div class="feat reveal d4">💬 頼み方は、メッセージを送るだけ</div>
+    </div>
+    <p class="rollout-label reveal d4">世界での広がり（2026年）</p>
+    <div class="rollout">
+      <div class="ro-item reveal d4"><div class="ro-date">9月8日</div><div class="ro-country">アメリカ</div><div class="ro-note">最初の市場</div></div>
+      <div class="ro-item reveal d4"><div class="ro-date">9月18日</div><div class="ro-country">カナダ</div><div class="ro-note">2番目の市場</div></div>
+      <div class="ro-item jp reveal d5"><div class="ro-date">10月23日</div><div class="ro-country">日本</div><div class="ro-note">北米以外で、最初の市場</div></div>
+      <div class="ro-item reveal d5"><div class="ro-date">10月27日</div><div class="ro-country">シンガポール</div><div class="ro-note">アジア2番目</div></div>
+      <div class="ro-item reveal d5"><div class="ro-date">11月5日</div><div class="ro-country">メキシコ</div><div class="ro-note">ラテンアメリカで最初</div></div>
+      <div class="ro-item reveal d5"><div class="ro-date">11月17日</div><div class="ro-country">オーストラリア</div><div class="ro-note">いちばん新しい市場</div></div>
+    </div>
+    <div class="memory reveal d5"><span class="m-label">ポイント</span>日本は、北米の次に選ばれた市場です。今も、世界で6か国だけです。</div>
+  </div>
+  <div class="pagenum">18 / 26</div>
 </section>
 
 <!-- ========== NEW. Mail & Voice (added 2026-11-24) ========== -->
@@ -580,7 +626,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">今日の1文</span>頼み方は、文字だけではありません。</div>
   </div>
-  <div class="pagenum">18 / 24</div>
+  <div class="pagenum">19 / 26</div>
 </section>
 
 <!-- ========== 17. Setup steps ========== -->
@@ -594,7 +640,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="step reveal d4"><div class="s-num">3</div><div><h3>ルールを1つ決める</h3><p>この文を、そのまま送ってください。この先ずっと、あなたを守ります。<span class="say">「お金がかかること、外にメッセージを送ることは、必ず先に私の許可を取ってください」</span></p></div></div>
     </div>
   </div>
-  <div class="pagenum">19 / 24</div>
+  <div class="pagenum">20 / 26</div>
 </section>
 
 <!-- ========== 18. Safety rules ========== -->
@@ -609,7 +655,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">正直にお伝えします</span>見守る仕組み（Sentinel）があっても、絶対に安全とは言えません。だから、この3つをお願いします。</div>
   </div>
-  <div class="pagenum">20 / 24</div>
+  <div class="pagenum">21 / 26</div>
 </section>
 
 <!-- ========== 19. Practice options ========== -->
@@ -625,7 +671,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="lead reveal d5" style="margin-top:32px;">型は同じです。まず「自分は誰で、どんな事情か」、次に「欲しい結果」。慌てなくて大丈夫です。</p>
   </div>
-  <div class="pagenum">21 / 24</div>
+  <div class="pagenum">22 / 26</div>
 </section>
 
 <!-- ========== 20. Closing check ========== -->
@@ -640,7 +686,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">最後に、今やってください</span>明日の朝、1つリマインドをもらいましょう。「家に電話するのを思い出させて」で大丈夫です。</div>
   </div>
-  <div class="pagenum">22 / 24</div>
+  <div class="pagenum">23 / 26</div>
 </section>
 
 <!-- ========== 22. Three steps (from 11-06 p30, localized; replaces questionnaire slide) ========== -->
@@ -655,7 +701,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">コツは1つ</span>派手なことより、毎日の「面倒くさい」から任せることです。</div>
   </div>
-  <div class="pagenum">23 / 24</div>
+  <div class="pagenum">24 / 26</div>
 </section>
 
 <!-- ========== 23. Q&A ========== -->
@@ -667,7 +713,26 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     <p class="lead reveal d3" style="max-width:1200px;margin:0 auto;">どんな小さな質問でも大丈夫です。<br>今日分からなかったところを、もう一度聞いてください。</p>
     <p class="reveal d4" style="margin-top:56px;font-size:28px;color:var(--ink-soft);font-weight:500;">お帰りの前に、アンケート用紙を出口の回収箱へお願いします。<br>ご協力、ありがとうございました。</p>
   </div>
-  <div class="pagenum">24 / 24</div>
+  <div class="pagenum">25 / 26</div>
+</section>
+
+<!-- ========== 26. KATA AI DOJO ========== -->
+<section class="slide">
+  <div class="slide-content center-content">
+    <div class="kicker reveal" style="justify-content:center"><span class="half">ご案内</span></div>
+    <h2 class="kata-logo reveal d1">KATA AI DOJO</h2>
+    <p class="kata-slogan reveal d2">答えるAIから、任せるAIへ。</p>
+    <p class="kata-lead reveal d3">AIに興味はあるけれど、技術には詳しくない方のための「道場」です。<br>対面・少人数で、手を動かして練習します。今日の体験会は、その第一歩です。</p>
+    <div class="kata-steps">
+      <div class="kstep reveal d3"><div class="ks-num">ステップ 1</div><h3>体験会（90分）</h3><p>今日の会です</p></div>
+      <div class="kstep-arrow reveal d4">→</div>
+      <div class="kstep reveal d4"><div class="ks-num">ステップ 2</div><h3>入門編（全2回）</h3><p>設定と安全、頼み方の型を覚えます</p></div>
+      <div class="kstep-arrow reveal d5">→</div>
+      <div class="kstep reveal d5"><div class="ks-num">ステップ 3</div><h3>実践編（全3回＋4週間の伴走）</h3><p>自分の「定番の任せ方」を作ります</p></div>
+    </div>
+    <p class="kata-url reveal d5">kataaidojo.com<span class="kata-op">運営：不二株式会社</span></p>
+  </div>
+  <div class="pagenum">26 / 26</div>
 </section>
 
 </main>
@@ -675,7 +740,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
 
 <div class="deck-controls">
   <button id="prevBtn" aria-label="前へ">←</button>
-  <span id="pageLabel">1 / 21</span>
+  <span id="pageLabel">1 / 26</span>
   <button id="nextBtn" aria-label="次へ">→</button>
 </div>
 <div class="edit-hotzone"></div>
