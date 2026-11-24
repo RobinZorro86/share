@@ -209,6 +209,18 @@ h1.ttl .accent{color:var(--accent);}
 .break-wrap p{font-size:34px;line-height:1.75;color:var(--ink-soft);font-weight:500;max-width:1300px;}
 .break-wrap .staff{display:inline-block;margin-top:34px;background:var(--ink);color:#FFF7EA;font-size:30px;font-weight:700;padding:18px 36px;border-radius:999px;}
 
+/* === Stairs (closing) === */
+.stairs{display:flex;gap:28px;align-items:flex-start;}
+.stair{flex:1;background:#fff;border:2px solid var(--line);border-radius:24px;padding:34px 32px;}
+.stair .s-no{font-family:var(--font-num);font-size:58px;font-weight:700;color:var(--accent);line-height:1;}
+.stair .s-step{font-size:24px;font-weight:700;color:var(--muted);margin-top:10px;letter-spacing:0.08em;}
+.stair h3{font-size:37px;font-weight:900;margin:10px 0 12px;line-height:1.35;}
+.stair p{font-size:26px;line-height:1.65;color:var(--ink-soft);font-weight:500;}
+.stair .ex{margin-top:16px;padding-top:14px;border-top:2px dashed var(--line);font-size:25px;line-height:1.6;color:var(--ink);font-weight:700;}
+.stair.up1{margin-top:84px;}
+.stair.up2{margin-top:42px;}
+.stair.up3{margin-top:0;}
+
 /* === Versus === */
 .versus{display:flex;gap:40px;align-items:stretch;}
 .vs-card{flex:1;border-radius:28px;padding:48px 46px;}
@@ -303,7 +315,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="takeaway reveal d4"><div class="num-badge">3</div><div><h3>実際に1つ、仕事を頼んで終わらせる</h3><p>後半で、ご自分のスマートフォンで、AIに仕事を1つ頼んでみます。</p></div></div>
     </div>
   </div>
-  <div class="pagenum">2 / 23</div>
+  <div class="pagenum">2 / 24</div>
 </section>
 
 <!-- ========== 3. Example (作成例) ========== -->
@@ -325,7 +337,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       </div>
     </div>
   </div>
-  <div class="pagenum">3 / 23</div>
+  <div class="pagenum">3 / 24</div>
 </section>
 
 <!-- ========== 4. Glossary ========== -->
@@ -341,7 +353,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="gloss-note reveal d5">安心してください。覚えなくて大丈夫です。この言葉が出てくるたびに、ふだんの言葉で言い換えます。</p>
   </div>
-  <div class="pagenum">4 / 23</div>
+  <div class="pagenum">4 / 24</div>
 </section>
 
 <!-- ========== 4. Timeline ========== -->
@@ -359,7 +371,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">今日の1文</span>前の2年は「答えるAI」。今は「働くAI」です。</div>
   </div>
-  <div class="pagenum">5 / 23</div>
+  <div class="pagenum">5 / 24</div>
 </section>
 
 <!-- ========== 5. Nature of generative AI ========== -->
@@ -373,7 +385,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d4"><span class="m-label">習慣にしてください</span>金額・日付・住所は、最後に自分の目で一度確認する。</div>
   </div>
-  <div class="pagenum">6 / 23</div>
+  <div class="pagenum">6 / 24</div>
 </section>
 
 <!-- ========== 6. Why people stop using it ========== -->
@@ -388,7 +400,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">まとめると2つ</span>「どう頼むか」と「どう任せるか」。まず「頼み方」から解決します。</div>
   </div>
-  <div class="pagenum">7 / 23</div>
+  <div class="pagenum">7 / 24</div>
 </section>
 
 <!-- ========== 7. The framework (official four) ========== -->
@@ -404,7 +416,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
   </div>
   <div class="source-footer">出典：OpenAI 公式ガイド「Prompting」（learn.chatgpt.com）／ Anthropic 公式ガイド「Prompting best practices」（platform.claude.com）——世界最大の2社が、同じ4つを挙げています</div>
-  <div class="pagenum">8 / 23</div>
+  <div class="pagenum">8 / 24</div>
 </section>
 
 <!-- ========== 8. Statement (main line) ========== -->
@@ -414,7 +426,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     <p class="statement reveal d1">背景をはっきり。<br>結果をはっきり。<br><span class="accent">やり方は任せる。</span></p>
     <p class="statement-note reveal d3">公式の4つ（目的・背景・欲しい形・境界）を、覚えやすい3つの文にまとめた言い方です。<br>出典：OpenAI／Anthropic 両社の公式ガイドの要約</p>
   </div>
-  <div class="pagenum" style="color:#8FA0C4">8 / 21</div>
+  <div class="pagenum" style="color:#8FA0C4">9 / 24</div>
 </section>
 
 <!-- ========== 9. Context: before / after ========== -->
@@ -429,7 +441,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     <div class="memory reveal d4"><span class="m-label">確かめ方</span>読み返して、よく知らない人が迷う文章なら、AIも迷います。</div>
   </div>
   <div class="source-footer">出典：Anthropic 公式ガイド「Prompting best practices」——AIは「事情を知らない新入社員」と考える</div>
-  <div class="pagenum">10 / 23</div>
+  <div class="pagenum">10 / 24</div>
 </section>
 
 <!-- ========== 10. Result-first ========== -->
@@ -447,7 +459,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="lead reveal d5" style="margin-top:30px;">してほしいことを言うのがコツです。〔出典：Anthropic 公式ガイド〕</p>
   </div>
-  <div class="pagenum">11 / 23</div>
+  <div class="pagenum">11 / 24</div>
 </section>
 
 <!-- ========== 11. Compare demo ========== -->
@@ -468,7 +480,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       </div>
     </div>
   </div>
-  <div class="pagenum">12 / 23</div>
+  <div class="pagenum">12 / 24</div>
 </section>
 
 <!-- ========== 12. Sources ========== -->
@@ -482,7 +494,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="lead reveal d4" style="margin-top:36px;">私の個人的な工夫ではなく、2つの会社が公開している公式ガイドです。写真に撮って、家で確かめてみてください。</p>
   </div>
-  <div class="pagenum">13 / 23</div>
+  <div class="pagenum">13 / 24</div>
 </section>
 
 <!-- ========== 13. First-half recap ========== -->
@@ -496,7 +508,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="takeaway reveal d4"><div class="num-badge">3</div><div><h3>やり方は任せて、大事なところは先に聞いてもらう</h3><p>「分からないところは、先に聞いてください」と添えるのが保険です。</p></div></div>
     </div>
   </div>
-  <div class="pagenum">14 / 23</div>
+  <div class="pagenum">14 / 24</div>
 </section>
 
 <!-- ========== 14. Break ========== -->
@@ -508,7 +520,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     <span class="staff reveal d3">スタッフが1人ずつお手伝いします</span>
     <p class="reveal d4" style="margin-top:32px;font-size:28px;">お手元のアンケート用紙も、休憩の間にご記入いただけると助かります。<br>ご協力ありがとうございます（匿名です）</p>
   </div>
-  <div class="pagenum">15 / 23</div>
+  <div class="pagenum">15 / 24</div>
 </section>
 
 <!-- ========== 15. Versus ========== -->
@@ -523,7 +535,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">今日の1文</span>エージェントは「自分で働くAI」です。</div>
   </div>
-  <div class="pagenum">16 / 23</div>
+  <div class="pagenum">16 / 24</div>
 </section>
 
 <!-- ========== 16. Why Muse ========== -->
@@ -538,7 +550,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="card reveal d5"><div class="c-num">理由 4</div><h3>見守る仕組みがある</h3><p>外へ働きかける前に、独立した安全チェックが入ります。次のパートで説明します。</p></div>
     </div>
   </div>
-  <div class="pagenum">17 / 23</div>
+  <div class="pagenum">17 / 24</div>
 </section>
 
 <!-- ========== NEW. Mail & Voice (added 2026-11-24) ========== -->
@@ -554,7 +566,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">今日の1文</span>頼み方は、文字だけではありません。</div>
   </div>
-  <div class="pagenum">18 / 23</div>
+  <div class="pagenum">18 / 24</div>
 </section>
 
 <!-- ========== 17. Setup steps ========== -->
@@ -568,7 +580,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
       <div class="step reveal d4"><div class="s-num">3</div><div><h3>ルールを1つ決める</h3><p>この文を、そのまま送ってください。この先ずっと、あなたを守ります。<span class="say">「お金がかかること、外にメッセージを送ることは、必ず先に私の許可を取ってください」</span></p></div></div>
     </div>
   </div>
-  <div class="pagenum">19 / 23</div>
+  <div class="pagenum">19 / 24</div>
 </section>
 
 <!-- ========== 18. Safety rules ========== -->
@@ -583,7 +595,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">正直にお伝えします</span>見守る仕組み（Sentinel）があっても、絶対に安全とは言えません。だから、この3つをお願いします。</div>
   </div>
-  <div class="pagenum">20 / 23</div>
+  <div class="pagenum">20 / 24</div>
 </section>
 
 <!-- ========== 19. Practice options ========== -->
@@ -599,7 +611,7 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <p class="lead reveal d5" style="margin-top:32px;">型は同じです。まず「自分は誰で、どんな事情か」、次に「欲しい結果」。慌てなくて大丈夫です。</p>
   </div>
-  <div class="pagenum">21 / 23</div>
+  <div class="pagenum">21 / 24</div>
 </section>
 
 <!-- ========== 20. Closing check ========== -->
@@ -614,28 +626,34 @@ body.editing [contenteditable]{outline:2px dashed var(--accent);outline-offset:3
     </div>
     <div class="memory reveal d5"><span class="m-label">最後に、今やってください</span>明日の朝、1つリマインドをもらいましょう。「家に電話するのを思い出させて」で大丈夫です。</div>
   </div>
-  <div class="pagenum">22 / 23</div>
+  <div class="pagenum">22 / 24</div>
 </section>
 
-<!-- ========== 21. Questionnaire ========== -->
+<!-- ========== 22. Three steps (from 11-06 p30, localized; replaces questionnaire slide) ========== -->
 <section class="slide">
   <div class="slide-content">
     <div class="kicker reveal"><span class="half">後半</span>締めくくり</div>
-    <h2 class="stitle reveal d1">アンケートのお願い</h2>
-    <div class="qr-wrap">
-      <div class="qr-box reveal d2">
-        <div class="qr-t">アンケート<br>用紙</div>
-        <div class="qr-s">お手元の用紙に<br>ご記入ください</div>
-      </div>
-      <div class="qr-side reveal d3">
-        <h3>ご記入をお願いします</h3>
-        <p>次の回を良くするために、とても助かります。3分ほどで終わります。書きながら退室していただいて大丈夫です。</p>
-        <span class="anon">匿名です。お名前は書かなくて大丈夫です</span>
-      </div>
+    <h2 class="stitle reveal d1">上達は、3段だけ</h2>
+    <div class="stairs">
+      <div class="stair up1 reveal d2"><div class="s-no">1</div><div class="s-step">第1段</div><h3>小さな仕事を、1つ頼む</h3><p>今日やったことです。頼み方の「型」で頼んで、その日に結果をもらいます。</p><div class="ex">メールの仕分け／お知らせの要約／買い物の相談</div></div>
+      <div class="stair up2 reveal d3"><div class="s-no">2</div><div class="s-step">第2段</div><h3>くり返しを、見守らせる</h3><p>決まった時間に確認させて、大事なときだけ知らせてもらいます。</p><div class="ex">値下げのチェック／学校や役所のお知らせ確認／毎朝の天気とメール要約</div></div>
+      <div class="stair up3 reveal d4"><div class="s-no">3</div><div class="s-step">第3段</div><h3>得意な仕事は、仕組みごと任せる</h3><p>慣れたら、まとまった仕事を「仕組み」として丸ごと任せられます。</p><div class="ex">お店や教室のSNS運営／ポスター・画像づくり／家族や趣味の動画づくり</div></div>
     </div>
-    <p class="lead reveal d4" style="margin-top:44px;">本日はありがとうございました。</p>
+    <div class="memory reveal d5"><span class="m-label">コツは1つ</span>派手なことより、毎日の「面倒くさい」から任せることです。</div>
   </div>
-  <div class="pagenum">23 / 23</div>
+  <div class="pagenum">23 / 24</div>
+</section>
+
+<!-- ========== 23. Q&A ========== -->
+<section class="slide">
+  <div class="slide-content" style="text-align:center;padding-top:70px;">
+    <div class="kicker reveal" style="justify-content:center;"><span class="half">後半</span>締めくくり</div>
+    <div class="reveal d1" style="font-family:var(--font-num);font-size:150px;font-weight:700;color:var(--accent);line-height:1.1;">Q&amp;A</div>
+    <h2 class="stitle reveal d2" style="text-align:center;">質問の時間です</h2>
+    <p class="lead reveal d3" style="max-width:1200px;margin:0 auto;">どんな小さな質問でも大丈夫です。<br>今日分からなかったところを、もう一度聞いてください。</p>
+    <p class="reveal d4" style="margin-top:56px;font-size:28px;color:var(--ink-soft);font-weight:500;">お帰りの前に、アンケート用紙を出口の回収箱へお願いします。<br>ご協力、ありがとうございました。</p>
+  </div>
+  <div class="pagenum">24 / 24</div>
 </section>
 
 </main>
