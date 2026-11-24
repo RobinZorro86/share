@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Google vs Meta：珠宝独立站先投谁 — 学习版</title>
+<meta name="description" content="把 Gemini 4 Neon 的 2.9 万字深度研究讲成人话：按客单价决定先投 Google 还是 Meta，附盈亏平衡水位图和计算器。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google vs Meta：珠宝独立站先投谁">
+<meta property="og:description" content="2.9 万字深度研究的通俗学习版：三档客单价算账、真实案例、三层仪表盘与 0→1 路线图。">
+<meta property="og:image" content="https://share.qidi.jp/google-vs-meta-jewelry/og.jpg">
+<meta property="og:url" content="https://share.qidi.jp/google-vs-meta-jewelry/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F2340; --navy2:#16355E; --paper:#FAF7F2; --ink:#1C2733; --muted:#5D6B7A;
+  --gold:#C6A15B; --gold-soft:#F0E6D2; --line:#E3DCCB;
+  --gblue:#2B6CB0; --mpurple:#6D5DF6; --good:#1E7D4F; --bad:#B3402E;
+  --card:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans SC",-apple-system,"Hiragino Kaku Gothic ProN",sans-serif;background:var(--paper);color:var(--ink);font-size:16.5px;line-height:1.85;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:"Noto Serif SC",serif;line-height:1.35}
+h2{font-size:27px;font-weight:900;color:var(--navy);margin-bottom:6px}
+h3{font-size:19px;font-weight:700;color:var(--navy);margin:26px 0 8px}
+p{margin:10px 0}
+.small{font-size:13.5px;color:var(--muted);line-height:1.7}
+strong{color:var(--navy)}
+a{color:var(--gblue)}
+.lesson{padding:52px 0 8px}
+.lesson-no{font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.14em;margin-bottom:8px}
+.lesson .q{font-size:15px;color:var(--muted);margin-bottom:14px}
+.takeaway{background:var(--navy);color:#EDEAE2;border-radius:14px;padding:18px 20px;margin:22px 0;font-size:15.5px;line-height:1.75}
+.takeaway b{color:var(--gold)}
+/* hero */
+.hero{background:var(--navy);color:#F3EFE4;padding:0 0 44px}
+.hero img{width:100%;height:340px;object-fit:cover;object-position:center 82%;opacity:.92}
+.hero .wrap{padding-top:34px}
+.hero .kicker{font-size:13px;letter-spacing:.16em;color:var(--gold);font-weight:700;margin-bottom:14px}
+.hero h1{font-size:36px;font-weight:900;line-height:1.3}
+.hero .sub{margin-top:14px;font-size:16.5px;color:#C9D2DE;line-height:1.8;max-width:620px}
+.byline{margin-top:22px;font-size:13px;color:#93A3B8;border-top:1px solid #2A4568;padding-top:14px}
+/* verdict cards */
+.verdicts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:24px 0 6px}
+.vcard{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:16px}
+.vcard .tag{font-size:12.5px;font-weight:700;color:var(--muted)}
+.vcard .who{font-family:"Noto Serif SC",serif;font-weight:700;font-size:17px;color:var(--navy);margin:4px 0 6px;line-height:1.45}
+.vcard p{font-size:14px;line-height:1.7;margin:0}
+.vcard.g{border-top-color:var(--gblue)} .vcard.m{border-top-color:var(--mpurple)}
+/* two-col compare */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.vs .col{border-radius:14px;padding:20px;color:#fff}
+.vs .gcol{background:var(--gblue)} .vs .mcol{background:var(--mpurple)}
+.vs h3{color:#fff;margin:0 0 6px;font-size:20px}
+.vs .slogan{font-size:14px;opacity:.85;margin-bottom:10px}
+.vs ul{list-style:none;font-size:14.5px;line-height:1.75}
+.vs li{padding:5px 0;border-top:1px solid rgba(255,255,255,.22)}
+.vs li:first-of-type{border-top:none}
+/* change list */
+.change{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px;margin:18px 0}
+.change .row{padding:14px 0;border-top:1px solid var(--line)}
+.change .row:first-child{border-top:none}
+.change .row b{color:var(--navy)}
+.change .num{display:inline-block;background:var(--gold-soft);color:#8A6D2F;font-weight:700;font-size:13px;border-radius:999px;padding:1px 10px;margin-right:8px}
+/* waterline chart */
+.chart{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:20px 0}
+.chart h3{margin-top:0}
+.tier{margin:20px 0 6px}
+.tier .tname{font-weight:700;color:var(--navy);font-size:15.5px;margin-bottom:8px}
+.tier .tname span{color:var(--muted);font-weight:400;font-size:13.5px}
+.bar-row{display:grid;grid-template-columns:118px 1fr 64px;align-items:center;gap:10px;margin:6px 0;font-size:13.5px}
+.bar-row .lbl{color:var(--muted)}
+.bar-track{position:relative;height:20px;background:#F1EDE1;border-radius:6px}
+.bar{height:100%;border-radius:6px}
+.bar.g{background:var(--gblue)} .bar.m{background:var(--mpurple)} .bar.s{background:#9AA7B4}
+.beline{position:absolute;top:-4px;bottom:-4px;width:2.5px;background:var(--bad);border-radius:2px}
+.beline::after{content:"盈亏线";position:absolute;top:-17px;left:50%;transform:translateX(-50%);font-size:10.5px;color:var(--bad);white-space:nowrap;font-weight:700;display:none}
+.tier .bar-row:nth-of-type(2) .beline::after{display:block}
+.bar-row .val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--navy);text-align:right}
+.legend{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.7}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin:0 4px 0 10px;vertical-align:-1px}
+/* calculator */
+.calc{background:var(--navy);border-radius:16px;padding:24px;color:#EDEAE2;margin:20px 0}
+.calc h3{color:#fff;margin-top:0}
+.calc label{display:block;font-size:14px;margin:16px 0 4px;color:#C9D2DE}
+.calc label b{color:#fff;font-size:17px;font-variant-numeric:tabular-nums}
+.calc input[type=range]{width:100%;accent-color:var(--gold);height:28px}
+.calc .out{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.calc .box{background:var(--navy2);border-radius:12px;padding:14px 16px}
+.calc .box .n{font-size:26px;font-weight:700;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.3}
+.calc .box .d{font-size:13px;color:#A9B8CC}
+.calc .verdict{margin-top:14px;font-size:14.5px;line-height:1.75;background:rgba(198,161,91,.14);border:1px solid rgba(198,161,91,.45);border-radius:12px;padding:12px 16px}
+/* cases */
+.case{border-left:3px solid var(--gold);padding:2px 0 2px 16px;margin:18px 0}
+.case h3{margin-top:0}
+.case .metric{font-family:"Noto Serif SC",serif;color:var(--gold);font-weight:900}
+figure{margin:22px 0}
+figure img{border-radius:16px;width:100%;max-height:540px;object-fit:cover;object-position:center 28%}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+/* dashboard layers */
+.layers{display:grid;gap:10px;margin:18px 0}
+.layer{border-radius:12px;padding:16px 18px;color:#fff}
+.layer small{display:block;opacity:.85;font-size:13px}
+.layer b{font-size:17px}
+.l1{background:var(--navy)} .l2{background:var(--gblue)} .l3{background:#8A97A5}
+/* tables */
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14.5px;background:var(--card);border-radius:12px;overflow:hidden}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:700;font-size:14px}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;line-height:1.65}
+tr td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+.checklist{list-style:none;margin:14px 0}
+.checklist li{padding:9px 0 9px 30px;position:relative;border-top:1px solid var(--line)}
+.checklist li:first-child{border-top:none}
+.checklist li::before{content:"";position:absolute;left:2px;top:13px;width:15px;height:15px;border:2px solid var(--gold);border-radius:4px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+summary{font-weight:700;color:var(--navy);cursor:pointer}
+details p,details li{font-size:14.5px}
+details ul{padding-left:20px;margin:8px 0}
+.warn{background:#FBEEE9;border:1px solid #E5B7A9;border-radius:12px;padding:14px 18px;margin:16px 0;font-size:15px}
+footer{margin-top:56px;background:var(--navy);color:#93A3B8;padding:30px 0 40px;font-size:13.5px;line-height:1.8}
+footer .wrap div{border-top:1px solid #2A4568;padding-top:16px}
+@media (max-width:640px){
+  body{font-size:16px}
+  .hero img{height:230px}
+  .hero h1{font-size:29px}
+  h2{font-size:24px}
+  .verdicts{grid-template-columns:1fr}
+  .vs{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:86px 1fr 56px;font-size:12.5px;gap:7px}
+  .calc .out{grid-template-columns:1fr 1fr}
+  table,thead,tbody,tr,td,th{display:block}
+  thead{display:none}
+  tr{border-top:1px solid var(--line);padding:8px 0}
+  tr:first-child{border-top:none}
+  td{border-top:none;padding:4px 12px}
+  tr td:first-child{white-space:normal;font-size:15px}
+  .lesson{padding-top:40px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="assets/hero.webp" alt="深蓝绸缎上的珍珠项链与金色耳饰">
+  <div class="wrap">
+    <div class="kicker">学习版 · GOOGLE ADS × META ADS</div>
+    <h1>珠宝独立站先投谁？<br>先看你卖多少钱</h1>
+    <p class="sub">Gemini 4 Neon 用 2.9 万字研究了一个问题：新上线的 Shopify 珠宝站去美国投广告，先投 Google 还是先投 Meta？这页把它讲成人话——结论不复杂，难的是算账。读完你能自己拍板。</p>
+    <div class="byline">整理：Catherine Muse（源：Gemini 4 Neon 深度研究《美区饰品DTC广告渠道对比》） · 监修：Qidi</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="lesson">
+  <div class="lesson-no">先给答案</div>
+  <h2>一页结论：按客单价分工</h2>
+  <p>不存在「哪个平台更好」，只有「你的价位适合谁先上」。核心变量就三个：<strong>客单价、产品是不是要靠看图种草、首单毛利够不够厚</strong>。</p>
+  <div class="verdicts">
+    <div class="vcard">
+      <div class="tag">AOV $1,500+</div>
+      <div class="who">真金 · 培育钻 · 定制</div>
+      <p><strong>Google 先行。</strong>买家会反复搜材质、克拉、证书，搜索就是成交场。Meta 只做种草教育和再营销追单。</p>
+    </div>
+    <div class="vcard g">
+      <div class="tag">AOV $90–150</div>
+      <div class="who">轻奢饰品 · 防水镀金</div>
+      <p><strong>Google Shopping 先稳现金流，Meta 决定上限。</strong>先用购物广告跑出正毛利，同时拿 Meta 测爆款素材。</p>
+    </div>
+    <div class="vcard m">
+      <div class="tag">AOV &lt;$50</div>
+      <div class="who">时尚配饰 · 强视觉款</div>
+      <p><strong>两个都别急着投。</strong>先靠套装把客单价抬到 $90 以上，再以 Meta 短视频为主阵地。单品直投大概率亏。</p>
+    </div>
+  </div>
+  <p class="small">还有一句前置提醒：公开数据里没有一份「按客单价细分、双平台同口径」的权威对照表，文中的数字来自不同机构的不同口径（后文逐个标注）。最终拍板只认一个东西——<strong>你自己 Shopify 后台的真实毛利</strong>。</p>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">第一课</div>
+  <h2>先分清：这是两种完全不同的生意</h2>
+  <p class="q">解决什么问题：为什么同一笔预算，在两个平台上的花法、看法、等法都不一样。</p>
+  <div class="vs">
+    <div class="col gcol">
+      <h3>Google：人找货</h3>
+      <div class="slogan">接住已经存在的需求</div>
+      <ul>
+        <li>用户带着「买什么、多少钱」主动来搜，意图现成</li>
+        <li>Shopping 广告 = 商品图 + 价格先亮出来，点进来的人已经被价格筛过一遍</li>
+        <li>点击便宜：Shopping 跨行业参考均价约 <b>$0.66/次</b>，只有纯文字搜索的约 13%</li>
+        <li>短板：没人搜的东西，它变不出来——新设计、新品牌词，搜索量是零</li>
+      </ul>
+    </div>
+    <div class="col mcol">
+      <h3>Meta：货找人</h3>
+      <div class="slogan">在刷手机的人心里种下需求</div>
+      <ul>
+        <li>靠图片和短视频打断滑动，「看到才想要」是它的主场</li>
+        <li>扩量没有天花板，不受搜索量限制</li>
+        <li>短板：冷流量直接成交难，首单回报中位数只有约 <b>1.88 倍</b>（投 1 块回 1.88 块，还没扣成本）</li>
+        <li>真正的杀招在后段：把看过、加购过的人追回来（再营销）</li>
+      </ul>
+    </div>
+  </div>
+  <div class="takeaway">一句话记住：<b>Google 胜在「准和稳」，Meta 胜在「爆和广」。</b>高客单靠 Google 吃存量，风格款靠 Meta 破圈——后面五课都是在给这句话算账。</div>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">第二课</div>
+  <h2>2026 年，牌桌变了四次</h2>
+  <p class="q">解决什么问题：为什么两三年前的投放经验，今年直接套用会算错账。</p>
+  <div class="change">
+    <div class="row"><span class="num">变化 1</span><b>亚马逊退出了美国 Google Shopping 竞价。</b>2025 年 7 月起大买家缺席，购物广告出现罕见的「量涨价稳」：点击量涨约 17–19%，平均点击价反而微降 1%。对独立站，这是几年一遇的窗口。</div>
+    <div class="row"><span class="num">变化 2</span><b>Meta 在美国贵到四年新高，但便宜的口子在 Reels。</b>美国电商 CPM 中位约 $16–22，Facebook 信息流 CPM 一年涨 24%；而 Instagram Reels 展示涨 17%、CPM 只涨 1%，比传统信息流便宜 30–40%。还拿精修图主投 Facebook 信息流，等于主动交溢价。</div>
+    <div class="row"><span class="num">变化 3</span><b>Meta 换了大脑（Andromeda 2.0）：创意就是定向。</b>系统先「看懂」你的素材长什么样、讲什么，再决定推给谁。长得差不多的素材会被当成同一条折叠掉。代理商的通行做法：一个系列备 <strong>8–12 个钩子、场景、人设都不同</strong>的创意，而不是一条素材改十个版本。</div>
+    <div class="row"><span class="num">变化 4</span><b>新站的技术门槛变高了。</b>Shopify 2026 年的像素优化让原生数据流少了 15–25%，免费版 Meta 数据回传的质量分（EMQ）只有 4–6 分（满分 10，服务端方案能到 8–9）；Google 这边，新站最容易死在商户中心「虚假陈述」封号——退货政策前后矛盾、页脚没有真实地址，都能直接锁死投放资格。</div>
+  </div>
+  <p class="small">数据来源：Tinuiti 季度报告、Triple Whale 年度追踪（2025.11–2026.10，4.1 万家独立站）、Lebesgue / AdKit CPM 测算等，均为原文引用口径。</p>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">第三课 · 全页最重要的一课</div>
+  <h2>算账：你的价位，谁在水上，谁在水下</h2>
+  <p class="q">解决什么问题：把「感觉能投」变成「数字上投得起」。</p>
+  <p>先学一个词：<strong>盈亏平衡 CPA</strong>——一单最多能花多少广告费还不亏。它 = 客单价 × 净贡献毛利率（扣掉货、运费、关税、退货之后真正剩下的比例）。花超了，卖一单亏一单。</p>
+  <p>原文用三档模型算了一遍（假设点击价、转化率取 2025–2026 行业基准）。把结果画成水位图：<strong>红线是盈亏线，条越短越便宜；条伸过红线 = 这个渠道在这个价位亏钱。</strong></p>
+
+  <div class="chart">
+    <h3>三档客单价 × 三个渠道的模拟获客成本</h3>
+    <div class="tier">
+      <div class="tname">低客单 · 模型 AOV $45 <span>毛利 58% · 盈亏线 $24.01</span></div>
+      <div class="bar-row"><span class="lbl">Google 购物</span><div class="bar-track"><div class="bar g" style="width:27.9%"></div><div class="beline" style="left:20.6%"></div></div><span class="val">$32.50</span></div>
+      <div class="bar-row"><span class="lbl">Meta</span><div class="bar-track"><div class="bar m" style="width:33.1%"></div><div class="beline" style="left:20.6%"></div></div><span class="val">$38.64</span></div>
+      <div class="bar-row"><span class="lbl">Google 文字搜</span><div class="bar-track"><div class="bar s" style="width:100%"></div><div class="beline" style="left:20.6%"></div></div><span class="val">$116.67</span></div>
+    </div>
+    <div class="tier">
+      <div class="tname">中客单 · 模型 AOV $110 <span>毛利 59% · 盈亏线 $58.54</span></div>
+      <div class="bar-row"><span class="lbl">Google 购物</span><div class="bar-track"><div class="bar g" style="width:29.1%"></div><div class="beline" style="left:46.8%"></div></div><span class="val">$36.36</span></div>
+      <div class="bar-row"><span class="lbl">Meta</span><div class="bar-track"><div class="bar m" style="width:48.9%"></div><div class="beline" style="left:46.8%"></div></div><span class="val">$61.11</span></div>
+      <div class="bar-row"><span class="lbl">Google 文字搜</span><div class="bar-track"><div class="bar s" style="width:100%"></div><div class="beline" style="left:46.8%"></div></div><span class="val">$125.00</span></div>
+    </div>
+    <div class="tier">
+      <div class="tname">高客单 · 模型 AOV $450 <span>毛利 52% · 盈亏线 $205.92</span></div>
+      <div class="bar-row"><span class="lbl">Google 购物</span><div class="bar-track"><div class="bar g" style="width:44.2%"></div><div class="beline" style="left:98.5%"></div></div><span class="val">$78.57</span></div>
+      <div class="bar-row"><span class="lbl">Meta</span><div class="bar-track"><div class="bar m" style="width:100%"></div><div class="beline" style="left:98.5%"></div></div><span class="val">$177.78</span></div>
+      <div class="bar-row"><span class="lbl">Google 文字搜</span><div class="bar-track"><div class="bar s" style="width:99.9%"></div><div class="beline" style="left:98.5%"></div></div><span class="val">$177.60</span></div>
+    </div>
+    <p class="legend">读法：<span class="dot" style="background:var(--gblue)"></span>Google Shopping<span class="dot" style="background:var(--mpurple)"></span>Meta<span class="dot" style="background:#9AA7B4"></span>Google 文字搜索。高客单档三条都没过线（红线在最右），所以比的是谁离线更远、余量更大——购物广告只花了盈亏线的 38%。低客单档三条全部过线：不是选谁，是先别投。</p>
+  </div>
+
+  <h3>三条容易被忽略的规律</h3>
+  <p><strong>1. 中高客单，Shopping 是最快跑出正现金流的引擎。</strong>$110 和 $450 两档，它的模拟获客成本只有 Meta 的 44–60%，而且每月约 $1,100–2,400 就能攒够 30 单、喂饱智能出价。</p>
+  <p><strong>2. 高客单在 Meta 上有个「学习期死循环」。</strong>Meta 一个广告组要 7 天跑满约 50 单才算学完。$450 客单、获客成本 $178 的话，学完一组要烧约 $1,270/天、近 $3.8 万/月。预算几千美元的新站拆一堆广告组，只会永远卡在没学完的状态。</p>
+  <p><strong>3. 中低客单碰文字搜索泛词 = 送钱。</strong>服饰珠宝搜索点击中位价 $4.44，大城市 $6+，模拟回报只有 0.39–0.88 倍。这个价位在 Google 只留品牌词和极少数长尾词，主力给 Shopping。</p>
+
+  <div class="calc">
+    <h3>自己算一遍：你的盈亏线在哪</h3>
+    <label>客单价 AOV：<b>$<span id="aovVal">180</span></b></label>
+    <input type="range" id="aov" min="40" max="500" step="5" value="180">
+    <label>净贡献毛利率（扣货、运费、关税、退货后）：<b><span id="mVal">30</span>%</b></label>
+    <input type="range" id="margin" min="15" max="70" step="1" value="30">
+    <div class="out">
+      <div class="box"><div class="n">$<span id="beCpa">54.0</span></div><div class="d">盈亏平衡 CPA：一单广告费的上限</div></div>
+      <div class="box"><div class="n"><span id="beRoas">3.33</span>x</div><div class="d">盈亏平衡 ROAS：低于它就是亏</div></div>
+    </div>
+    <div class="verdict" id="verdict"></div>
+    <p class="small" style="color:#A9B8CC;margin-top:12px">简化口径：盈亏 CPA = AOV × 净毛利率。参照线：Meta 服饰配饰垂类 CPA 中位数 $37.41（Triple Whale）。ARIELLE.R 按此前审计口径（计入对日关税 12.5% 封顶、清关与退货计提）真实 BE CPA 约 $38–58，与滑杆默认档大致吻合。</p>
+  </div>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">第四课</div>
+  <h2>别人是怎么打赢的</h2>
+  <p class="q">解决什么问题：把抽象策略落到真实品牌的打法上。注意：以下多为代理商披露的成功样本，看结构、别照抄数字。</p>
+
+  <figure>
+    <img src="assets/tryon.webp" alt="真人叠戴珍珠与金饰的上身效果">
+    <figcaption>Meta 的主场长这样：真人、上身、叠戴——先让人想要，再谈成交。</figcaption>
+  </figure>
+
+  <div class="case">
+    <h3>Mejuri / Ana Luisa（轻奢日常珠宝）— Meta 靠「创意序列」，不靠单条爆款</h3>
+    <p>很多新站的病是想用一条素材走完「陌生人 → 下单」全程。Mejuri 的做法是分工：上层用叠戴与品牌故事的短视频/UGC 种草，下层用<strong>增强型目录广告</strong>收口——就是把目录里的白底商品图换成真实场景图 + 五星好评 + 卖点徽章。地理隔离实验结果：新客营收净增 <span class="metric">+12.9%</span>、增量 ROAS <span class="metric">+57%</span>；叠戴轮播的点击率是静态图的 2 倍。行业拆解的结论很直白：UGC 负责以 2–2.5% 的点击率「推开门」，真正以 4–6 倍回报收割六七成成交的，是被喂饱的目录再营销。</p>
+  </div>
+  <div class="case">
+    <h3>The Art of Jewels / NYC Luxury（真金与定制）— Google 是主干，留存是复利</h3>
+    <p>前者在修好数据追踪、重构 Google 体系后，三年把预算放大 18 倍、稳态 ROAS <span class="metric">4.5 倍</span>（旺季峰值 6.8）。后者（纽约定制金饰）的分工更值得抄：Meta 专攻三大爆款的微距、上手、开箱视频 + 追击弃购；Google 一边品牌词防截流，一边把商品标题按美国人真实搜法重写（gold / Cuban / pendant / custom…）；再加邮件短信「短信先行、邮件补刀」——11–12 月两个月贡献了下半年近一半营收。</p>
+  </div>
+  <div class="case">
+    <h3>小预算翻盘组 — 先修结构，再谈放量</h3>
+    <p>House of Harlow（AOV $412）：黑五 38 天全渠道统一折扣码、只打折往季库存保护新品价，Meta ROAS 从亏损的 0.81 拉到黑五周 <span class="metric">6.0 倍</span>。UM Marketing 的中型站重构：先把低价配件踢出 Google 商户中心、重写高意图标题，Meta 改推「畅销款合集」，最终 Google 3.2 倍 / Meta 从 0.9 扭亏到 2.8 倍，预算结构约 78/22。还有一个月花 $1,000 的极小样本：100% 只买「buy gold earrings online」这类购买意图词 + Shopping，跑出 6.37 倍——小预算的活法是<strong>窄，而不是省</strong>。</p>
+  </div>
+  <div class="warn"><strong>反面教材：Brilliant Earth。</strong>美国上市培育钻龙头，2025 年卖了 4.375 亿美元、毛利率 57.5%，却净亏 640 万。死因不是产品，是获客与履约成本把营业利润拖到 -1.2%。珠宝毛利再厚，盯着平台表面回报盲目扩量，只会把亏损放大。</div>
+  <p>另外两个珠宝特有的漏斗事实，决定了打法：全行业转化率垫底（奢侈珠宝站平均约 0.7%、弃购率 78.7%），但退货率只有 9.8%（远低于服饰的 25–30%）、复购率也只有 19.1%。翻译成人话：<strong>珠宝不能学保健品「首单亏钱赌复购」，首单就要力争打平以上；但买家决策慢、跨几天跨设备比价，没有再营销承接的冷流量基本等于白烧。</strong>还有个好消息：美国消费者买珠宝最看重品质工艺（39%）和设计（21%），把品牌名气排第一的只有 6%——新品牌用微距视频、材质证明、防敏防水实测，是能绕开大牌护城河的。</p>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">第五课</div>
+  <h2>别被后台的 ROAS 骗了</h2>
+  <p class="q">解决什么问题：为什么「砍掉看起来亏的 Meta、全给 Google」会在两三周后让 Google 也跟着跌。</p>
+  <p>因为两个平台在互相喂饭：约 <strong>35–45% 看过 Meta 广告的人不点广告，而是转头去 Google 搜品牌名下单</strong>。因果实验平台 Haus 汇总 640 场实验的结论：只按 7 天点击算，Meta 后台每报 $100 营收，真实增量其实是 $115——点击口径系统性低估了它。反过来，没排除品牌词的 Google 智能广告会把「本来就会自然进站买的人」记成自己的功劳，表面 4.5 倍里有泡沫。加上 Meta 在 2026 年 1 月、3 月两次收紧归因口径，今年它后台的数字注定比往年难看——不理解口径变化，就会误杀渠道。</p>
+  <div class="layers">
+    <div class="layer l1"><small>顶层 · 决定能不能放量</small><b>全站 MER 与 CM3</b> — 总营收 ÷ 总营销费；扣完货、履约、退货和全部广告后的净贡献。低复购的珠宝，CM3 稳态建议守在 18% 以上。</div>
+    <div class="layer l2"><small>中层 · 判断拉新真假</small><b>新客 ROAS 与新客成本</b> — 品牌词回报涨、新客数却不动，就是预算在收割老客，要补上层拉新了。</div>
+    <div class="layer l3"><small>底层 · 只做日常诊断</small><b>平台内 ROAS / CPA / 点击率</b> — 只用来在同一平台里给素材和商品赛马，永远不拿它跨平台分预算。</div>
+  </div>
+  <div class="takeaway">判断顺序记牢：<b>先看全站赚不赚钱，再看新客有没有进来，最后才看单个平台的数字。</b>顺序反了，越优化越亏。</div>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">第六课</div>
+  <h2>0→1 路线图：先排雷，再分档启动</h2>
+  <p class="q">解决什么问题：把前五课变成一张能照着做的执行表。</p>
+
+  <h3>上线前 14 天：三件必修（没做完别花广告费）</h3>
+  <ul class="checklist">
+    <li><strong>数据管道换服务端。</strong>月广告费过 $1,000 就别只用 Shopify 原生回传：目标 Meta 事件质量分 EMQ ≥ 8、Google 增强转化覆盖 ≥ 80%，订单金额和币种正确回传、事件去重做好。EMQ 高低能带来 20–35% 的获客成本差。</li>
+    <li><strong>Google 商户中心防封六查。</strong>公司名、真实地址、客服邮箱电话在网站页脚、联系页、商户中心、收款账户五处 100% 一致；退货政策逐字核对（首页写的和政策页不能打架）；运费与真实时效配准；别拿供应商白牌标题直接上；纯线上品牌别乱建本地商家资料。</li>
+    <li><strong>商品页与客单价底盘。</strong>移动端速度分 60+；首屏讲清材质/镀层、防敏、证书、送达日期和质保（美国人最看重品质，占 39%）；AOV 低于 $80 的，先配好叠戴推荐、满额包邮阶梯、多件优惠，把客单价抬过安全线再投。</li>
+  </ul>
+
+  <h3>预算配比：三档 × 三阶段</h3>
+  <table>
+    <thead><tr><th>你的档位</th><th>冷启动（1–2 月）</th><th>成长期（3–6 月）</th><th>打法要点</th></tr></thead>
+    <tbody>
+      <tr><td>低客单<br>（先捆绑到 $90+）</td><td>Meta 80% / Google 20%<br><span class="small">月预算 &lt;$2,000 可全给 Meta + 少量品牌词</span></td><td>Meta 65% / Google 20% / TikTok 15%</td><td>Meta 单一销售系列宽泛投，首批 8–10 个差异化短视频（开箱、防水实测、叠戴教程）；Google 只跑品牌词 + 礼盒套装</td></tr>
+      <tr><td>中客单<br>AOV $90–180</td><td>Google Shopping 60% / Meta 40%</td><td>Meta 50% / Google 50%</td><td>Google：标题埋材质/场景词，标准购物控核心款、智能购物排除品牌词；Meta：种草视频 → 材质教育 → 增强目录收口，每 14 天一轮素材迭代</td></tr>
+      <tr><td>高客单<br>AOV $1,500+</td><td>Google 75% / Meta 25%</td><td>Google 60% / Meta 40%</td><td>Google 按转化价值出价、词根精确到克拉/金属/戒型；Meta 不硬推冷流量直购，做工艺与信任教育 + 28 天长周期再营销和留资咨询</td></tr>
+    </tbody>
+  </table>
+  <p class="small">预算极紧时的大忌：两边平分。$2,000/月拆成两份 $1,000，两边都攒不够数据，算法都学不完——先喂饱一边。</p>
+
+  <h3>全年节奏：珠宝的钱集中在四个窗口</h3>
+  <table>
+    <thead><tr><th>节点</th><th>大盘</th><th>提前动作</th></tr></thead>
+    <tbody>
+      <tr><td>1 月</td><td>竞价全年谷底</td><td>全年最佳测试期：密集测情人节创意、跑新品、攒互动受众和邮箱名单</td></tr>
+      <tr><td>情人节 2/14</td><td>全美珠宝礼赠约 $70 亿</td><td>1 月下旬上礼赠页：标注截单日期和礼盒，直击男性买家「怕选错、怕迟到」</td></tr>
+      <tr><td>母亲节 5 月 + 婚庆季 4–8 月</td><td>母亲节全美支出 $380 亿、珠宝超 $70 亿</td><td>4 月中预热刻字/生辰石/家庭纪念款；婚戒、伴娘礼长尾词在 Google 放量</td></tr>
+      <tr><td>黑五网一 + 圣诞（Q4）</td><td>Google 购物建议占全年预算 30–37%</td><td>10 月中完成创意预热和 VIP 名单；只折往季库存、护住新品价；目标回报容忍度下调 15–20% 接住高价流量</td></tr>
+    </tbody>
+  </table>
+  <p class="small">旺季竞价通胀参考：Meta Q4 的 CPM 常较年均涨 60–150%，Google Shopping 约涨 25–30%。节前一周才加预算 = 用最贵的价格买没学完的广告组。</p>
+
+  <h3>落到 ARIELLE.R：一页裁定</h3>
+  <p>ARIELLE.R 是 Akoya 珍珠、AOV 约 $180、真实盈亏平衡 CPA 约 $38–58——正落在「中客单轻奢」档的上沿。按这份研究的框架：</p>
+  <div class="change">
+    <div class="row"><b>先手不是二选一，是先后。</b>现有学习版结论（Meta 为主阵地）管的是「扩量与种草」；这份研究补上了冷启动的另一半：先用 Google Shopping 以约 $1,000–1,500/月跑出正向现金流和首批真实转化数据，Meta 同步小步测素材、承接再营销。</div>
+    <div class="row"><b>开投前先过 14 天清单。</b>尤其是 EMQ（此前审计为 4.4，待修）和商户中心防封六查——珍珠的材质表述（Akoya、镀层、证书）在商品 Feed 里必须和落地页逐字一致，这正是「虚假陈述」的高发区。</div>
+    <div class="row"><b>判断成败只认三层仪表盘。</b>全站 MER/CM3 守 18%+，新客成本对 $38–58 的盈亏带，平台数字只做赛马。情人节是珍珠礼赠的天然窗口，按日历 1 月就要开始蓄水。</div>
+  </div>
+</section>
+
+<section class="lesson">
+  <div class="lesson-no">附录</div>
+  <h2>名词速查（人话版）</h2>
+  <details><summary>先看这 6 个词，其余遇到再查</summary>
+    <ul>
+      <li><b>CPA</b>：买到一个付费客户花了多少广告费。唯一要天天盯的成本。</li>
+      <li><b>ROAS</b>：广告费的回报倍数，投 1 回几。注意它不扣货和运费，好看不等于赚钱。</li>
+      <li><b>MER</b>：全站总营收 ÷ 全部营销费。绕开平台互相抢功的唯一总账。</li>
+      <li><b>CM3</b>：扣完货、履约、退货和全部广告后，一单真正剩下的钱的比例。</li>
+      <li><b>增强型 DPA</b>：把「你看过的商品」自动追投给你，但图上加了场景、好评和卖点徽章的目录广告。</li>
+      <li><b>学习期</b>：Meta 广告组「攒够约 50 单/周才学完」的阶段，没学完时成本高且不稳定。</li>
+    </ul>
+  </details>
+  <details><summary>口径与来源说明（读数字前先看）</summary>
+    <p>本页是 Gemini 4 Neon 深度研究的学习转述，原文约 2.9 万字、引用 80+ 来源（Tinuiti、Triple Whale、WordStream、Grand View Research、Haus、NRF 等），Google 文档原文由 Robin 提供，Catherine 已全量读取存档。文中三档算账表为<strong>基于行业基准的模拟测算，不是任何真实店铺的实测</strong>；品牌案例多为代理商披露的成功样本，存在幸存者偏差。个别数字在不同来源间口径不一（如 CPM、转化率），本页取原文主口径并标注了来源。做预算决策时，请以自家后台数据复核后再执行。</p>
+  </details>
+  <div class="takeaway">最后收成一句：<b>不是 Google 或 Meta 二选一，而是先用客单价定先手——中高客单 Google 先稳现金流，中低客单先抬客单价再用 Meta 撕增量；底盘（追踪 + 合规）夯实之后，拼的是「Meta 造需 + Google 收割 + 邮件锁利」的复合飞轮。</b></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>整理：Catherine Muse · 监修：Qidi<br>来源：Gemini 4 Neon 深度研究《新上线珠宝饰品 DTC 独立站（Shopify）美国市场投放深度研究：Google Ads 与 Meta Ads 全面对比与破局策略》（2026-11-24 读取）<br>个人学习用，非商业用途。</div>
+  </div>
+</footer>
+
+<script>
+const aov=document.getElementById('aov'), mar=document.getElementById('margin');
+const aovVal=document.getElementById('aovVal'), mVal=document.getElementById('mVal');
+const beCpa=document.getElementById('beCpa'), beRoas=document.getElementById('beRoas'), verdict=document.getElementById('verdict');
+function fmt(n){return n.toFixed(1)}
+function calc(){
+  const a=+aov.value, m=+mar.value;
+  aovVal.textContent=a; mVal.textContent=m;
+  const cpa=a*m/100, roas=100/m;
+  beCpa.textContent=fmt(cpa); beRoas.textContent=roas.toFixed(2);
+  let t='';
+  if(cpa<30){t='盈亏线不到 $30：比 Meta 服饰配饰 CPA 中位数（$37.41）还低，冷流量直投大概率亏。先想办法抬客单价（套装、满额包邮）或提毛利，再谈投放。';}
+  else if(cpa<60){t='盈亏线 $'+fmt(cpa)+'：和 Meta 中位数 CPA（$37.41）贴身肉搏，素材稍差就亏。打法：Google Shopping 先稳正现金流，Meta 只测素材 + 做再营销。ARIELLE.R 就在这一档。';}
+  else if(cpa<120){t='盈亏线 $'+fmt(cpa)+'：有容错空间了。Google Shopping 大概率能跑正，Meta 冷流量也有机会打平，可以双线推进、用新客成本校准配比。';}
+  else{t='盈亏线 $'+fmt(cpa)+'：高客单的余量。优先 Google（购物 + 精准搜索）吃高意图流量；Meta 别硬推直购，拿来做信任教育和长周期追单。';}
+  verdict.textContent=t;
+}
+aov.addEventListener('input',calc); mar.addEventListener('input',calc); calc();
+</script>
+</body>
+</html>
