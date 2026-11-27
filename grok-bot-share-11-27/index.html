@@ -359,21 +359,27 @@ ul.clean li::before{content:"";position:absolute;left:0;top:.6em;width:.4em;heig
 
 <!-- 14 证据 + 金字塔 -->
 <section class="slide">
-  <span class="tag">土豆姐的 Agent 思维 · 通用</span>
-  <h2 style="margin-bottom:1.2vh">五、验证，才是真正的瓶颈</h2>
-  <p class="mid" style="max-width:52em">她打了个比方，叫「早餐工厂」：一份早餐有吐司、咖啡和煮鸡蛋。吐司一分钟，咖啡一分钟，<strong>煮鸡蛋要三分钟</strong>。所以这家店一小时能卖多少份早餐，不看最快的，看最慢的那个鸡蛋。<br>Agent 干活也一样：它写东西快得很，慢的是<strong>你检查它写得对不对</strong>。检查跟不上，开再多 Agent，也只是多堆一堆没人验过的东西。</p>
-  <div class="quote"><p>「『我修好了』不算数。给我看修之前失败、修之后通过的证据。」</p></div>
+  <div class="kicker">土豆姐的 Agent 思维 · 通用</div>
+  <h2 style="margin-bottom:1.6vh">真正的瓶颈，不是干活，是验证</h2>
+  <div style="display:flex;align-items:stretch;justify-content:center;gap:1.2vw;margin-bottom:2.2vh">
+    <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6vh 1.6vw;text-align:center;min-width:150px"><div style="font-size:34px">🍞</div><b>吐司</b><div class="muted" style="font-size:14px;margin-top:.4vh">1 分钟</div></div>
+    <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.6vh 1.6vw;text-align:center;min-width:150px"><div style="font-size:34px">☕</div><b>咖啡</b><div class="muted" style="font-size:14px;margin-top:.4vh">1 分钟</div></div>
+    <div style="background:rgba(232,169,94,.1);border:2px solid var(--warn);border-radius:14px;padding:1.6vh 1.6vw;text-align:center;min-width:150px"><div style="font-size:34px">🥚</div><b>煮鸡蛋</b><div style="margin-top:.4vh"><span style="background:var(--warn);color:#161006;font-weight:700;font-size:14px;padding:2px 10px;border-radius:99px">3 分钟 · 最慢</span></div></div>
+    <div style="align-self:center;font-size:26px;color:var(--muted)">→</div>
+    <div style="align-self:center;max-width:15em"><span class="mid" style="font-size:clamp(16px,1.8vw,23px);line-height:1.5">一小时能出几份早餐，<strong>看最慢的鸡蛋</strong>。Agent 写得快，慢的是你检查。</span></div>
+  </div>
   <div class="pyr">
-    <div class="l1">改结构（最可靠）</div>
-    <div class="l2">自动检查</div>
-    <div class="l3">写成 Skill</div>
-    <div class="l4">靠人检查（她评价：没前途）</div>
+    <div style="width:44%;background:#8a93a3">写在纸面上的规矩 · 最不可靠</div>
+    <div style="width:62%;background:#b9c6d8">做成技能（Skill）</div>
+    <div style="width:80%;background:#7db4f0">自动检查</div>
+    <div style="width:98%;background:#4c9aff">改结构，让它没机会犯 · 最可靠</div>
   </div>
-  <div style="display:flex;align-items:center;justify-content:center;gap:1.6vw;margin:.5vh 0 1.4vh">
-    <span style="font-size:clamp(34px,4vw,50px);font-weight:800;color:var(--accent)">70%</span>
-    <span class="mid" style="max-width:24em;font-size:clamp(16px,1.75vw,22px);line-height:1.42">土豆姐说，她们现在大约 <strong>70% 的用量花在验证上</strong>，不是花在干活上。干活越来越便宜，验活才是花钱的地方。</span>
+  <div style="display:flex;align-items:center;justify-content:center;gap:2.5vw;margin-top:2.2vh;flex-wrap:wrap">
+    <div style="display:flex;align-items:center;gap:1vw"><span style="font-size:clamp(34px,4vw,50px);font-weight:800;color:var(--accent)">70%</span><span style="max-width:15em;font-size:clamp(15px,1.6vw,20px);line-height:1.45">她们大约 70% 的用量花在<strong>验证</strong>上，不是干活上</span></div>
+    <div style="display:flex;align-items:center;gap:1vw"><span style="font-size:32px">🚫</span><span style="max-width:13em;font-size:clamp(15px,1.6vw,20px);line-height:1.45">每个 Bot 写死一张<strong>禁区清单</strong></span></div>
+    <div style="display:flex;align-items:center;gap:1vw"><span style="font-size:32px">🔁</span><span style="max-width:13em;font-size:clamp(15px,1.6vw,20px);line-height:1.45">重复的活<strong>写成小程序</strong>自动跑</span></div>
   </div>
-  <p class="mid muted" style="text-align:center;font-size:clamp(15px,1.5vw,18px);line-height:1.45">外加两条：给每个 Bot 写死一张「禁区清单」：绝对不能做什么。没事的时候，就闭嘴；<strong style="color:#ddd">重复的活，让它写成小程序自动跑，别每次亲手一步步做</strong>。写个小程序是一次的成本，亲手做是每次都烧钱。<br>顺序别反了：<strong style="color:#ddd">先把活做对，再谈自动化。里层的活要是垃圾，自动化只会把垃圾放大。</strong></p>
+  <p class="mid" style="text-align:center;margin-top:2.4vh">顺序别反了：<strong>先把活做对，再谈自动化。</strong>里层的活要是垃圾，自动化只会把垃圾放大。</p>
 </section>
 
 <!-- 15 实战印证 -->
